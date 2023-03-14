@@ -7,4 +7,4 @@
 	251572
 
 # **Curso**
-	Matemática Aplicada
+	Ciência da Computação
