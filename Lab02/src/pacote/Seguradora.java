@@ -2,16 +2,20 @@ package pacote;
 
 public class Seguradora {
     private String nome;
-    private int telefone;
+    private long telefone;
     private String email;
     private String endereco;
 
     // Construtor
-    public Seguradora(String nome, int telefone, String email, String endereco) {
+    public Seguradora(String nome, long telefone, String email, String endereco) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         this.endereco = endereco;
+    }
+
+    public String toString(String nome, long telefone, String email, String endereco) {
+        return String.format("Nome: %s.\nTelefone: %s.\nEmail: %s.\nEndereço: %s.", nome, telefone, email, endereco);
     }
 
     //Getters e Setters
@@ -23,11 +27,11 @@ public class Seguradora {
         this.nome = nome;
     }
 
-    public int getTelefone() {
+    public long getTelefone() {
         return this.telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(long telefone) {
         this.telefone = telefone;
     }
 
