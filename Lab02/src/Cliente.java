@@ -2,10 +2,11 @@ public class Cliente {
     private String nome;
     private String cpf;
     private String dataNascimento;
-    private String idade;
+    private int idade;
     private String endereco;
 
-    public Cliente(String nome, String cpf, String dataNascimento, String idade, String endereco) {
+    // Construtor
+    public Cliente(String nome, String cpf, String dataNascimento, int idade, String endereco) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
@@ -13,10 +14,11 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    // public String toString() {
-    //     return String.format("Nome: %s.\nCPF: %d.\nData de Nascimento: %d.\nIdade: %d.\nEndereço: %s.");
-    // }
+    public String toString() {
+        return String.format("Nome: %s.\nCPF: %s.\nData de Nascimento: %s.\nIdade: %d.\nEndereço: %s.", getNome(), getCpf(), getDataNascimento(), getIdade(), getEndereco());
+    }
 
+    //Getters e Setters
     public String getNome() {
         return this.nome;
     }
@@ -41,11 +43,11 @@ public class Cliente {
         this.dataNascimento = dataNascimento;
     }
 
-    public String getIdade() {
+    public int getIdade() {
         return this.idade;
     }
 
-    public void setIdade(String idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
 

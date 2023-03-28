@@ -1,22 +1,22 @@
 public class Seguradora {
     private String nome;
-    private long telefone;
+    private String telefone;
     private String email;
     private String endereco;
 
     // Construtor
-    public Seguradora(String nome, long telefone, String email, String endereco) {
+    public Seguradora(String nome, String telefone, String email, String endereco) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         this.endereco = endereco;
     }
 
-    public String toString(String nome, long telefone, String email, String endereco) {
-        return String.format("Nome: %s.\nTelefone: %d.\nEmail: %s.\nEndereço: %s.", nome, telefone, email, endereco);
+    public String toString() {
+        return String.format("Nome: %s.\nTelefone: %s.\nEmail: %s.\nEndereço: %s.", getNome(), getTelefone(), getEmail(), getEndereco());
     }
 
-    //Getters e Setters
+    // Getters e Setters
     public String getNome() {
         return this.nome;
     }
@@ -25,11 +25,11 @@ public class Seguradora {
         this.nome = nome;
     }
 
-    public long getTelefone() {
+    public String getTelefone() {
         return this.telefone;
     }
 
-    public void setTelefone(long telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
