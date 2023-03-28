@@ -57,9 +57,11 @@ public class Main {
         System.out.println(seguradora.toString(novo_nome, novo_telefone, novo_email, novo_endereco));
 
 
+        /////////////// TESTANDO CLIENTE ///////////////
 
 
-        
+
+
 
         input.close();
     }
