@@ -15,6 +15,7 @@ public class Sinistro {
         return String.format("ID: %03d.\nData: %s.\nEndereço: %s.\n", getId(), getData(), getEndereco());
     }
 
+    // Função que gera ID único (começa em 0 e vai acumulando a cada novo objeto criado).
     public int gerarId(){
         contador_id += 1;
         return contador_id;

@@ -16,7 +16,7 @@ public class Main {
                 break;
             }
 
-            // TESTANDO SEGURADORA
+            // TESTAR SEGURADORA
             else if (comando == 1) {
                 // Lendo os dados da entrada padrão
                 System.out.print("Insira o nome: ");
@@ -55,7 +55,7 @@ public class Main {
                 System.out.println(seguradora.toString());
             }
 
-            // TESTANDO CLIENTE
+            // TESTAR CLIENTE
             else if (comando == 2) {
                 // Lendo os dados da entrada padrão
                 System.out.print("Insira o nome: ");
@@ -123,7 +123,7 @@ public class Main {
                 }
             }
 
-            // TESTANDO VEÍCULO
+            // TESTAR VEÍCULO
             else if (comando == 3) {
                 // Lendo os dados da entrada padrão
                 System.out.print("Insira a placa: ");
@@ -157,7 +157,7 @@ public class Main {
                 System.out.println(veiculo.toString());
             }
 
-            // TESTANDO SINISTRO
+            // TESTAR SINISTRO
             else if (comando == 4) {
                 // Lendo os dados da entrada padrão
                 System.out.print("Insira a data: ");

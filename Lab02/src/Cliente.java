@@ -18,6 +18,7 @@ public class Cliente {
         return String.format("Nome: %s.\nCPF: %s.\nData de Nascimento: %s.\nIdade: %d.\nEndereço: %s.\n", getNome(), getCpf(), getDataNascimento(), getIdade(), getEndereco());
     }
 
+    // Função que retorna 'true' se os dígitos de um cpf forem todos iguais e 'false' caso contrário.
     private boolean digitosIguais(String cpf){
         char firstChar = cpf.charAt(0);
         for (int i = 1; i < cpf.length(); i++) {
@@ -29,16 +30,19 @@ public class Cliente {
         return true;
     }
 
+    // Função que retorna 'true' se os dígitos verificadores de um cpf estiverem corretos e 'false' caso contrário.
     private boolean digitosVerificadores(String cpf){
         int num, r1, r2, d1, d2;
         int sum1 = 0, sum2 = 0;
 
         // Primeiro dígito verificador
+        // Soma com pesos
         for (int i = 0, j = 10; i < cpf.length() - 2; i++, j--) {
             num = (int)(cpf.charAt(i) - 48);
             sum1 += num * j;
         }
 
+        // Cálculo do dígito verificador
         r1 = sum1 % 11;
         if (r1 == 0 || r1 == 1) {
             d1 = 0;
@@ -46,16 +50,19 @@ public class Cliente {
             d1 = 11 - r1;
         }
 
-        if (d1 != (int)(cpf.charAt(9) - 48)) {
+        // Comparação do dígito calculado com o dígito passado
+        if (d1 != (int)(cpf.charAt(9) - 48)) { // Subtraio 48 ('0' na tabelas ASCII) para transformar em inteiro
             return false;
         }
 
         // Segundo dígito verificador
+        // Soma com pesos
         for (int i = 1, j = 10; i < cpf.length() - 1; i++, j--) {
-            num = (int)(cpf.charAt(i) - 48);
+            num = (int)(cpf.charAt(i) - 48); // Subtraio 48 ('0' na tabelas ASCII) para transformar em inteiro
             sum2 += num * j;
         }
 
+        // Cálculo do dígito verificador
         r2 = sum2 % 11;
         if (r2 == 0 || r2 == 1) {
             d2 = 0;
@@ -63,7 +70,8 @@ public class Cliente {
             d2 = 11 - r2;
         }
 
-        if (d2 != (int)(cpf.charAt(10) - 48)) {
+        // Comparação do dígito calculado com o dígito passado
+        if (d2 != (int)(cpf.charAt(10) - 48)) { // Subtraio 48 ('0' na tabelas ASCII) para transformar em inteiro
             return false;
         }
 
@@ -71,7 +79,7 @@ public class Cliente {
     }
 
     public boolean validarCPF(String cpf_original){ 
-        String cpf_num = cpf_original.replaceAll("[^0-9]", "");
+        String cpf_num = cpf_original.replaceAll("[^0-9]", ""); // Retira todos os caracteres não numéricos
         int tam = cpf_num.length();
 
         if (tam != 11) {
