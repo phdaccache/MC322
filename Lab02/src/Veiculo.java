@@ -3,6 +3,7 @@ public class Veiculo {
     private String marca;
     private String modelo;
 
+    // Construtor
     public Veiculo(String placa, String marca, String modelo) {
         this.placa = placa;
         this.marca = marca;
@@ -13,6 +14,7 @@ public class Veiculo {
         return String.format("Placa: %s.\nMarca: %s.\nModelo: %s.\n", getPlaca(), getMarca(), getModelo());
     }
 
+    // Getters e Setters
     public String getPlaca() {
         return this.placa;
     }

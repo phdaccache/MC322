@@ -159,11 +159,63 @@ public class Main {
 
             // TESTANDO SINISTRO
             else if (comando == 4) {
+                // Lendo os dados da entrada padrão
+                System.out.print("Insira a data: ");
+                String data = input.nextLine();
+                System.out.print("Insira o endereço: ");
+                String endereco = input.nextLine();
+
+                // Criando sinistro com os dados inseridos
+                // O ID é gerado automaticamente
+                Sinistro sinistro = new Sinistro(data, endereco);
                 
+                // Imprimindo os dados na saída padrão
+                System.out.println("\nResumo dos dados tirados da classe Sinistro:");
+                System.out.println(sinistro.toString());
+
+
+                // Lendo os dados da entrada padrão para mudança
+                System.out.print("Insira a nova data: ");
+                String nova_data = input.nextLine();
+                System.out.print("Insira o novo endereço: ");
+                String novo_endereco = input.nextLine();
+
+                sinistro.setData(nova_data);
+                sinistro.setEndereco(novo_endereco);
+
+                // Opção para mudar o ID
+                System.out.println("Deseja mudar o ID? Digite 's' para sim ou 'n' para não.\nOBS: Não poderemos mais garantir que ele será único.");
+                String c1 = input.nextLine();
+                if (c1.equals("s")){
+                    System.out.print("Novo ID: ");
+                    int novo_id = input.nextInt();
+                    sinistro.setId(novo_id);
+                }
+
+                // Imprimindo os dados na saída padrão
+                System.out.println("\nResumo dos dados tirados da classe Sinistro:");
+                System.out.println(sinistro.toString());
+
+                System.out.println("Deseja adicionar outro sinistro? Digite 's' para sim ou 'n' para não.\nOBS: testar outros sinistro para ver se o ID está acumulando.");
+                String c2 = input.nextLine();
+                if (c2.equals("s")){
+                    // Lendo os dados da entrada padrão
+                    System.out.print("Insira a data: ");
+                    String data2 = input.nextLine();
+                    System.out.print("Insira o endereço: ");
+                    String endereco2 = input.nextLine();
+
+                    // Criando sinistro com os dados inseridos
+                    // O ID é gerado automaticamente
+                    Sinistro sinistro2 = new Sinistro(data2, endereco2);
+                    
+                    // Imprimindo os dados na saída padrão
+                    System.out.println("\nResumo dos dados tirados da classe Sinistro:");
+                    System.out.println(sinistro2.toString());
+                }
             }
         }
 
         input.close();
-
     }
 }
