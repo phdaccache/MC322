@@ -125,7 +125,36 @@ public class Main {
 
             // TESTANDO VEÍCULO
             else if (comando == 3) {
+                // Lendo os dados da entrada padrão
+                System.out.print("Insira a placa: ");
+                String placa = input.nextLine();
+                System.out.print("Insira a marca: ");
+                String marca = input.nextLine();
+                System.out.print("Insira o modelo: ");
+                String modelo = input.nextLine();
 
+                // Criando veículo com os dados inseridos
+                Veiculo veiculo = new Veiculo(placa, marca, modelo);
+                
+                // Imprimindo os dados na saída padrão
+                System.out.println("\nResumo dos dados tirados da classe Veiculo:");
+                System.out.println(veiculo.toString());
+
+                // Lendo os dados da entrada padrão para mudança
+                System.out.print("Insira a nova placa: ");
+                String nova_placa = input.nextLine();
+                System.out.print("Insira a nova marca: ");
+                String nova_marca = input.nextLine();
+                System.out.print("Insira o novo modelo: ");
+                String novo_modelo = input.nextLine();
+
+                veiculo.setPlaca(nova_placa);
+                veiculo.setMarca(nova_marca);
+                veiculo.setModelo(novo_modelo);
+
+                // Imprimindo os dados na saída padrão
+                System.out.println("\nResumo dos dados tirados da classe Veiculo:");
+                System.out.println(veiculo.toString());
             }
 
             // TESTANDO SINISTRO
