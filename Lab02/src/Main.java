@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("INSTRUÇÕES:\n\nDigite 1 para testar a Seguradora.\nDigite 2 para testar o Cliente.\nDigite 3 para testar o Veículo.\nDigite 4 para testar o Sinistro.\nDigite 0 para encerrar a execução.\n");
+        System.out.println("INSTRUCOES:\n\nDigite 1 para testar a Seguradora.\nDigite 2 para testar o Cliente.\nDigite 3 para testar o Veiculo.\nDigite 4 para testar o Sinistro.\nDigite 0 para encerrar a execucao.\n");
 
         while (true) {
             System.out.print("Comando: ");
@@ -67,7 +67,7 @@ public class Main {
                 System.out.print("Insira a idade: ");
                 int idade = input.nextInt();
                 input.nextLine();
-                System.out.print("Insira o endereço: ");
+                System.out.print("Insira o endereco: ");
                 String endereco = input.nextLine();
 
                 // Criando cliente com os dados inseridos
@@ -78,13 +78,13 @@ public class Main {
                 System.out.println(cliente.toString());
 
                 // Opção para validar o CPF
-                System.out.println("Validar CPF? Digite 's' para sim ou 'n' para não.");
+                System.out.println("Validar CPF? Digite 's' para sim ou 'n' para nao.");
                 String val_cpf = input.nextLine();
                 if (val_cpf.equals("s")){
                     if (cliente.validarCPF(cpf) == true){
-                        System.out.println("CPF Válido.");
+                        System.out.println("CPF Valido.");
                     } else {
-                        System.out.println("CPF Inválido.");
+                        System.out.println("CPF Invalido.");
                     }
                 }
 
@@ -98,7 +98,7 @@ public class Main {
                 System.out.print("Insira a nova idade: ");
                 int nova_idade = input.nextInt();
                 input.nextLine();
-                System.out.print("Insira o novo endereço: ");
+                System.out.print("Insira o novo endereco: ");
                 String novo_endereco = input.nextLine();
 
                 cliente.setNome(novo_nome);
@@ -112,18 +112,18 @@ public class Main {
                 System.out.println(cliente.toString());
 
                 // Opção para validar o CPF
-                System.out.println("Validar CPF? Digite 's' para sim ou 'n' para não.");
+                System.out.println("Validar CPF? Digite 's' para sim ou 'n' para nao.");
                 val_cpf = input.nextLine();
                 if (val_cpf.equals("s")){
                     if (cliente.validarCPF(cpf) == true){
-                        System.out.println("CPF Válido.");
+                        System.out.println("CPF Valido.");
                     } else {
-                        System.out.println("CPF Inválido.");
+                        System.out.println("CPF Invalido.");
                     }
                 }
             }
 
-            // TESTAR VEÍCULO
+            // TESTAR VEICULO
             else if (comando == 3) {
                 // Lendo os dados da entrada padrão
                 System.out.print("Insira a placa: ");
@@ -162,7 +162,7 @@ public class Main {
                 // Lendo os dados da entrada padrão
                 System.out.print("Insira a data: ");
                 String data = input.nextLine();
-                System.out.print("Insira o endereço: ");
+                System.out.print("Insira o endereco: ");
                 String endereco = input.nextLine();
 
                 // Criando sinistro com os dados inseridos
@@ -177,18 +177,19 @@ public class Main {
                 // Lendo os dados da entrada padrão para mudança
                 System.out.print("Insira a nova data: ");
                 String nova_data = input.nextLine();
-                System.out.print("Insira o novo endereço: ");
+                System.out.print("Insira o novo endereco: ");
                 String novo_endereco = input.nextLine();
 
                 sinistro.setData(nova_data);
                 sinistro.setEndereco(novo_endereco);
 
                 // Opção para mudar o ID
-                System.out.println("Deseja mudar o ID? Digite 's' para sim ou 'n' para não.\nOBS: Não poderemos mais garantir que ele será único.");
+                System.out.println("Deseja mudar o ID? Digite 's' para sim ou 'n' para nao.\nOBS: Nao poderemos mais garantir que o ID sera unico.");
                 String c1 = input.nextLine();
                 if (c1.equals("s")){
                     System.out.print("Novo ID: ");
                     int novo_id = input.nextInt();
+                    input.nextLine();
                     sinistro.setId(novo_id);
                 }
 
@@ -196,13 +197,13 @@ public class Main {
                 System.out.println("\nResumo dos dados tirados da classe Sinistro:");
                 System.out.println(sinistro.toString());
 
-                System.out.println("Deseja adicionar outro sinistro? Digite 's' para sim ou 'n' para não.\nOBS: testar outros sinistro para ver se o ID está acumulando.");
+                System.out.println("Deseja adicionar outro sinistro? Digite 's' para sim ou 'n' para nao.\nOBS: testar outros sinistros para ver se o ID esta acumulando.");
                 String c2 = input.nextLine();
                 if (c2.equals("s")){
                     // Lendo os dados da entrada padrão
                     System.out.print("Insira a data: ");
                     String data2 = input.nextLine();
-                    System.out.print("Insira o endereço: ");
+                    System.out.print("Insira o endereco: ");
                     String endereco2 = input.nextLine();
 
                     // Criando sinistro com os dados inseridos

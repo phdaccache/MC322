@@ -13,7 +13,7 @@ public class Seguradora {
     }
 
     public String toString() {
-        return String.format("Nome: %s.\nTelefone: %s.\nEmail: %s.\nEndereço: %s.\n", getNome(), getTelefone(), getEmail(), getEndereco());
+        return String.format("Nome: %s.\nTelefone: %s.\nEmail: %s.\nEndereco: %s.\n", getNome(), getTelefone(), getEmail(), getEndereco());
     }
 
     // Getters e Setters

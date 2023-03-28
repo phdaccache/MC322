@@ -15,7 +15,7 @@ public class Cliente {
     }
 
     public String toString() {
-        return String.format("Nome: %s.\nCPF: %s.\nData de Nascimento: %s.\nIdade: %d.\nEndereço: %s.\n", getNome(), getCpf(), getDataNascimento(), getIdade(), getEndereco());
+        return String.format("Nome: %s.\nCPF: %s.\nData de Nascimento: %s.\nIdade: %d.\nEndereco: %s.\n", getNome(), getCpf(), getDataNascimento(), getIdade(), getEndereco());
     }
 
     // Função que retorna 'true' se os dígitos de um cpf forem todos iguais e 'false' caso contrário.
