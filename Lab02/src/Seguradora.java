@@ -1,5 +1,3 @@
-package pacote;
-
 public class Seguradora {
     private String nome;
     private long telefone;
@@ -15,7 +13,7 @@ public class Seguradora {
     }
 
     public String toString(String nome, long telefone, String email, String endereco) {
-        return String.format("Nome: %s.\nTelefone: %s.\nEmail: %s.\nEndereço: %s.", nome, telefone, email, endereco);
+        return String.format("Nome: %s.\nTelefone: %d.\nEmail: %s.\nEndereço: %s.", nome, telefone, email, endereco);
     }
 
     //Getters e Setters
