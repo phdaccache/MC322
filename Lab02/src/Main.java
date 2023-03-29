@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+import pacote.Cliente;
+import pacote.Seguradora;
+import pacote.Sinistro;
+import pacote.Veiculo;
+
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

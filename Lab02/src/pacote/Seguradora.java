@@ -1,3 +1,4 @@
+package pacote;
 public class Seguradora {
     private String nome;
     private String telefone;

@@ -1,3 +1,4 @@
+package pacote;
 public class Sinistro {
     private int id;
     private String data;

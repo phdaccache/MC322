@@ -1,3 +1,4 @@
+package pacote;
 public class Veiculo {
     private String placa;
     private String marca;
