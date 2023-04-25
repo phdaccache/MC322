@@ -125,15 +125,15 @@ public class Main {
                 break;
             }
             else if (opcao == 1){
-                System.out.println("\nPessoas Juridicas:");
+                System.out.println("\nPESSOAS JURIDICAS:");
                 seguradora.listarClientes("PJ");
-                System.out.println("\nPessoas Fisicas:");
+                System.out.println("\nPESSOAS FISICAS:");
                 seguradora.listarClientes("PF");
 
                 showMenuSeguradora();
             }
             else if (opcao == 2){
-                System.out.println("\nSinistros:");
+                System.out.println("\nSINISTROS:");
                 seguradora.listarSinistros();
 
                 showMenuSeguradora();
@@ -264,7 +264,7 @@ public class Main {
 
                 for (Cliente cliente: seguradora.getListaClientes()) {
                     if (cliente.getNome().equals(nome)) {
-                        System.out.printf("\nResumo Cliente %s:\n", cliente.getNome());
+                        System.out.printf("\nRESUMO CLIENTE %s:\n", cliente.getNome());
                         System.out.println(cliente.toString());
                     }
                 }
@@ -352,6 +352,8 @@ public class Main {
                         System.out.println(cliente.getListaVeiculos().toString());
                     }
                 }
+
+                showMenuVeiculo();
             }
             else {
                 System.out.println("\nOpcao Invalida.\n");
@@ -382,6 +384,8 @@ public class Main {
                         System.out.println(seguradora.getListaSinistros().toString());
                     }
                 }
+
+                showMenuSinistro();
             }
             else {
                 System.out.println("\nOpcao Invalida.\n");

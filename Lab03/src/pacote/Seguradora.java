@@ -23,10 +23,12 @@ public class Seguradora {
     @Override
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
-        joiner.add("\nNome: " + getNome());
+        joiner.add("---------------------------------");
+        joiner.add("Nome: " + getNome());
         joiner.add("Telefone: " + getTelefone());
         joiner.add("Email: " + getEmail());
         joiner.add("Endereco: " + getEndereco());
+        joiner.add("---------------------------------");
 
         return joiner.toString();
     }

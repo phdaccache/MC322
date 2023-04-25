@@ -19,7 +19,8 @@ public class ClientePJ extends Cliente {
     @Override
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
-        joiner.add("\nNome: " + getNome());
+        joiner.add("\n#################################");
+        joiner.add("Nome: " + getNome());
         joiner.add("Endereco: " + getEndereco());
         joiner.add("CNPJ: " + getCNPJ());
 
@@ -32,9 +33,14 @@ public class ClientePJ extends Cliente {
             joiner.add("Sem veiculos cadastrados.");
         } else {
             for (Veiculo veiculo : getListaVeiculos()) {
+                joiner.add("---------------------------------");
                 joiner.add(veiculo.toString());
             }
+
+            joiner.add("---------------------------------");            
         }
+
+        joiner.add("#################################\n");
 
         return joiner.toString();
     }

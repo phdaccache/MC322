@@ -19,12 +19,17 @@ public class Cliente {
     @Override
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
-        joiner.add("\nNome: " + getNome());
+        joiner.add("\n#################################");
+        joiner.add("Nome: " + getNome());
         joiner.add("Endereco: " + getEndereco());
         joiner.add("Veiculos: ");
         for (Veiculo veiculo : listaVeiculos) {
+            joiner.add("---------------------------------");
             joiner.add(veiculo.toString());
         }
+
+        joiner.add("---------------------------------");
+        joiner.add("#################################\n");
 
         return joiner.toString();
     }

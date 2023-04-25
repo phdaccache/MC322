@@ -30,15 +30,17 @@ public class Sinistro {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         StringJoiner joiner = new StringJoiner("\n");
+        joiner.add("---------------------------------");
         joiner.add(String.format("ID: %03d", getID()));
 
 		String dataString = getData().format(dtf);
         joiner.add("Data: " + dataString);
 
         joiner.add("Endereco: " + getEndereco());
-        joiner.add("Seguradora: " + getSeguradora().toString());
-        joiner.add("Veiculo: " + getVeiculo().toString());
-        joiner.add("Cliente: " + getCliente().toString());
+        joiner.add("Seguradora: \n" + getSeguradora().toString());
+        joiner.add("Veiculo: \n" + getVeiculo().toString());
+        joiner.add("\nCliente: " + getCliente().toString());
+        joiner.add("---------------------------------");
 
         return joiner.toString();
     }

@@ -1,5 +1,7 @@
 package pacote;
 
+import java.util.StringJoiner;
+
 public class Veiculo {
     private String placa;
     private String marca;
@@ -15,8 +17,12 @@ public class Veiculo {
 
     @Override
     public String toString() {
-        return String.format("Placa: %s.\nMarca: %s\nModelo: %s.\nAno de Fabricacao: %d.\n",
-                            getPlaca(), getMarca(), getModelo(), getAnoFabricacao());
+        StringJoiner joiner = new StringJoiner("\n");
+
+        joiner.add(String.format("Placa: %s.\nMarca: %s\nModelo: %s.\nAno de Fabricacao: %d.",
+                            getPlaca(), getMarca(), getModelo(), getAnoFabricacao()));
+
+        return joiner.toString();
     }
 
     public String getPlaca() {
