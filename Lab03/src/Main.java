@@ -21,19 +21,19 @@ public class Main {
                 break;
             }
             else if (opcao == 1){
-                menuSeguradora();
+                menuSeguradora(seguradora);
                 showMenu();
             }
             else if (opcao == 2){
-                menuCliente();
+                menuCliente(seguradora);
                 showMenu();
             }
             else if (opcao == 3){
-                menuVeiculo();
+                menuVeiculo(seguradora);
                 showMenu();
             }
             else if (opcao == 4){
-                menuSinistro();
+                menuSinistro(seguradora);
                 showMenu();
             }
             else {
@@ -109,7 +109,7 @@ public class Main {
         System.out.println("|-------------------------------|\n");
     }
 
-    private static void menuSeguradora() {
+    private static void menuSeguradora(Seguradora seguradora) {
         showMenuSeguradora();
 
         while (true) {
@@ -146,7 +146,7 @@ public class Main {
     /**
      * Esse menu é apenas para instanciar o método toString() do Cliente na main.
      */
-    private static void menuCliente() {
+    private static void menuCliente(Seguradora seguradora) {
         showMenuCliente();
 
         while (true) {
@@ -159,8 +159,8 @@ public class Main {
             else if (opcao == 1){
                 System.out.print("Insira o nome do cliente: ");
                 String nome = input.nextLine();
-                // Cliente cliente = visualizarCliente(nome)
-                // System.out.println(cliente.getNome());
+                Cliente cliente = visualizarCliente(nome, seguradora);
+                System.out.println(cliente.toString());
             }
             else {
                 System.out.println("\nOpcao Invalida.\n");
@@ -169,19 +169,21 @@ public class Main {
 
     }
 
-    // private static Cliente visualizarCliente(String nome) {
-    //     ArrayList<Cliente> listaClientes = seguradora.getListaClientes();
-    //     for(Cliente cliente : listaClientes) {
-    //         if (nome.equals(cliente.getNome())) {
-    //             return cliente;
-    //         }
-    //     }
-    // }
+    private static Cliente visualizarCliente(String nome, Seguradora seguradora) {
+        ArrayList<Cliente> listaClientes = seguradora.getListaClientes();
+        for(Cliente cliente : listaClientes) {
+            if (nome.equals(cliente.getNome())) {
+                return cliente;
+            }
+        }
+
+        return null;
+    }
 
     /**
      * Esse menu é apenas para instanciar o método toString() do Veiculo na main.
      */
-    private static void menuVeiculo() {
+    private static void menuVeiculo(Seguradora seguradora) {
         showMenuVeiculo();
 
         while (true) {
@@ -203,7 +205,7 @@ public class Main {
     /**
      * Esse menu é apenas para instanciar o método toString() do Sinistro na main.
      */
-    private static void menuSinistro() {
+    private static void menuSinistro(Seguradora seguradora) {
         showMenuSinistro();
 
         while (true) {
