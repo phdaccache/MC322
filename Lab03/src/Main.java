@@ -216,6 +216,8 @@ public class Main {
                 if (!seguradora.visualizarSinistro(nome)) {
                     System.out.printf("\nO cliente %s nao tem nenhum sinistro", nome);
                 }
+
+                showMenuSeguradora();
             }
             else if (opcao == 6){
                 System.out.print("Insira a data que ocorreu o sinistro (dd/MM/yyyy): ");
