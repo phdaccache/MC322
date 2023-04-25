@@ -1,10 +1,10 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import pacote.Cliente;
 import pacote.ClientePF;
 import pacote.ClientePJ;
 import pacote.Seguradora;
+import pacote.Sinistro;
 import pacote.Veiculo;
 
 public class Main {
@@ -336,12 +336,20 @@ public class Main {
         while (true) {
             System.out.print("Digite uma opcao: ");
             int opcao = input.nextInt();
+            input.nextLine();
 
             if (opcao == 0) {
                 break;
             }
             else if (opcao == 1){
-                
+                System.out.print("Digite o nome do cliente: ");
+                String nome = input.nextLine();
+
+                for (Cliente cliente: seguradora.getListaClientes()) {
+                    if (cliente.getNome().equals(nome)) {
+                        System.out.println(cliente.getListaVeiculos().toString());
+                    }
+                }
             }
             else {
                 System.out.println("\nOpcao Invalida.\n");
@@ -358,12 +366,20 @@ public class Main {
         while (true) {
             System.out.print("Digite uma opcao: ");
             int opcao = input.nextInt();
+            input.nextLine();
 
             if (opcao == 0) {
                 break;
             }
             else if (opcao == 1){
-                
+                System.out.print("Digite o nome do cliente: ");
+                String nome = input.nextLine();
+
+                for (Sinistro sinistro: seguradora.getListaSinistros()) {
+                    if (sinistro.getCliente().getNome().equals(nome)) {
+                        System.out.println(seguradora.getListaSinistros().toString());
+                    }
+                }
             }
             else {
                 System.out.println("\nOpcao Invalida.\n");
