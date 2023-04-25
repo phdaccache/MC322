@@ -81,7 +81,7 @@ public class Main {
         System.out.println("| Opcao 4 - Remover Cliente     |");
         System.out.println("| Opcao 5 - Visualizar Sinistro |");
         System.out.println("| Opcao 6 - Gerar Sinistro      |");
-        System.out.println("| Opcao 0 - Sair                |");
+        System.out.println("| Opcao 0 - Voltar              |");
         System.out.println("|-------------------------------|\n");
     }
 
@@ -89,7 +89,7 @@ public class Main {
         System.out.println("\n######### Menu Cliente ##########");
         System.out.println("|-------------------------------|");
         System.out.println("| Opcao 1 - Checar dados        |");
-        System.out.println("| Opcao 0 - Sair                |");
+        System.out.println("| Opcao 0 - Voltar               |");
         System.out.println("|-------------------------------|\n");
     }
 
@@ -97,7 +97,7 @@ public class Main {
         System.out.println("\n######### Menu Veiculo ##########");
         System.out.println("|-------------------------------|");
         System.out.println("| Opcao 1 - Checar dados        |");
-        System.out.println("| Opcao 0 - Sair                |");
+        System.out.println("| Opcao 0 - Voltar              |");
         System.out.println("|-------------------------------|\n");
     }
 
@@ -105,7 +105,7 @@ public class Main {
         System.out.println("\n######### Menu Sinistro #########");
         System.out.println("|-------------------------------|");
         System.out.println("| Opcao 1 - Checar dados        |");
-        System.out.println("| Opcao 0 - Sair                |");
+        System.out.println("| Opcao 0 - Voltar              |");
         System.out.println("|-------------------------------|\n");
     }
 
