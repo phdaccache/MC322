@@ -1,6 +1,7 @@
 package pacote;
 
 import java.util.ArrayList;
+import java.util.StringJoiner;
 
 public class Seguradora {
     private String nome;
@@ -21,14 +22,31 @@ public class Seguradora {
 
     @Override
     public String toString() {
-        return "{" +
-            " nome='" + getNome() + "'" +
-            ", telefone='" + getTelefone() + "'" +
-            ", email='" + getEmail() + "'" +
-            ", endereco='" + getEndereco() + "'" +
-            ", listaSinistros='" + getListaSinistros() + "'" +
-            ", listaClientes='" + getListaClientes() + "'" +
-            "}";
+        StringJoiner joiner = new StringJoiner("\n");
+        joiner.add("\nNome: " + getNome());
+        joiner.add("Telefone: " + getTelefone());
+        joiner.add("Email: " + getEmail());
+        joiner.add("Endereco: " + getEndereco());
+
+        joiner.add("Sinistros: ");
+        if (getListaSinistros().isEmpty()) {
+            joiner.add("Sem sinistros cadastrados.");
+        } else {
+            for (Sinistro sinistro : getListaSinistros()) {
+                joiner.add(sinistro.toString());
+            }
+        }
+
+        joiner.add("Clientes: ");
+        if (getListaClientes().isEmpty()) {
+            joiner.add("Sem clientes cadastrados.");
+        } else {
+            for (Cliente cliente : getListaClientes()) {
+                joiner.add(cliente.toString());
+            }
+        }
+
+        return joiner.toString();
     }
 
     public boolean cadastrarCliente(Cliente cliente) {
