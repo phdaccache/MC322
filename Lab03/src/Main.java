@@ -208,7 +208,24 @@ public class Main {
 
             }
             else if (opcao == 6){
+                System.out.print("Insira a data que ocorreu o sinistro (dd/MM/yyyy): ");
+                String data = input.nextLine();
+                System.out.print("Insira o nome do cliente: ");
+                String nome = input.nextLine();
+                System.out.print("Insira o endereco: ");
+                String endereco = input.nextLine();
+                System.out.print("Insira a placa do veiculo: ");
+                String placa = input.nextLine();
 
+                if (seguradora.gerarSinistro(data, nome, endereco, placa)) {
+                    System.out.printf("\nSinistro gerado.\nNome do cliente: %s.\nPlaca do Veiculo: %s.\n",
+                                    nome, placa);
+                } else {
+                    System.out.printf("\nNao foi possivel gerar o sinistro para o cliente %s com veiculo de placa %s.\n",
+                                    nome, placa);
+                }
+
+                showMenuSeguradora();
             }
             else {
                 System.out.println("\nOpcao Invalida.\n");

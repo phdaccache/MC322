@@ -48,6 +48,25 @@ public class Seguradora {
         }
     }
 
+    public boolean gerarSinistro(String data, String nomeCliente, String endereco, String placaVeiculo) {
+        for (Cliente cliente: listaClientes){
+            if (cliente.getNome().equals(nomeCliente)) {
+                for (Veiculo veiculo: cliente.getListaVeiculos()) {
+                    if (veiculo.getPlaca().equals(placaVeiculo)) {
+                        Sinistro sinistro = new Sinistro(data, endereco, this, veiculo, cliente);
+                        if (listaSinistros.contains(sinistro)) {
+                            return false;
+                        }
+                        listaSinistros.add(sinistro);
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
     public String getNome() {
         return this.nome;
     }
