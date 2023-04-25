@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import pacote.Cliente;
+import pacote.ClientePF;
+import pacote.ClientePJ;
 import pacote.Seguradora;
 import pacote.Veiculo;
 
@@ -126,7 +128,60 @@ public class Main {
 
             }
             else if (opcao == 3){
+                System.out.println("| Opcao 1 - Pessoa Juridica     |");
+                System.out.println("| Opcao 2 - Pessoa Fisica       |");
+                int tipo = input.nextInt();
+                input.nextLine();
 
+                Cliente cliente;
+
+                if (tipo == 1) {
+                    System.out.print("Insira o nome: ");
+                    String nome = input.nextLine();
+                    System.out.print("Insira o endereco: ");
+                    String endereco = input.nextLine();
+                    System.out.print("Insira o cnpj: ");
+                    String cnpj = input.nextLine();
+                    System.out.print("Insira a data de fundacao (dd/MM/yyyy): ");
+                    String data = input.nextLine();
+
+                    cliente = new ClientePJ(nome, endereco, cnpj, data);
+
+                    if (seguradora.cadastrarCliente(cliente)) {
+                        System.out.println("Cliente cadastrado.");
+                    } else {
+                        System.out.println("Nao foi possivel cadastrar o cliente.");
+                    }
+
+                } else if (tipo == 2) {
+                    System.out.print("Insira o nome: ");
+                    String nome = input.nextLine();
+                    System.out.print("Insira o endereco: ");
+                    String endereco = input.nextLine();
+                    System.out.print("Insira o cpf: ");
+                    String cpf = input.nextLine();
+                    System.out.print("Insira o genero: ");
+                    String genero = input.nextLine();
+                    System.out.print("Insira a data de licenca (dd/MM/yyyy): ");
+                    String dataLicenca = input.nextLine();
+                    System.out.print("Insira o nivel de educacao: ");
+                    String educacao = input.nextLine();
+                    System.out.print("Insira a data de nascimento (dd/MM/yyyy): ");
+                    String dataNascimento = input.nextLine();
+                    System.out.print("Insira a classe economica: ");
+                    String classe = input.nextLine();
+
+                    cliente = new ClientePF(nome, endereco, cpf, genero, dataLicenca,
+                                            educacao, dataNascimento, classe);
+
+                    if (seguradora.cadastrarCliente(cliente)) {
+                        System.out.println("Cliente cadastrado.");
+                    } else {
+                        System.out.println("Nao foi possivel cadastrar o cliente.");
+                    }
+                }
+
+                showMenuSeguradora();
             }
             else if (opcao == 4){
 
