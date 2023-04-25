@@ -48,6 +48,16 @@ public class Seguradora {
         }
     }
 
+    public void listarSinistros() {
+        if (listaSinistros.isEmpty()) {
+            System.out.println("Nao ha sinistros gerados.");
+        } else {
+            for (Sinistro sinistro: listaSinistros) {
+                System.out.println(sinistro.toString());
+            }
+        }
+    }
+
     public boolean gerarSinistro(String data, String nomeCliente, String endereco, String placaVeiculo) {
         for (Cliente cliente: listaClientes){
             if (cliente.getNome().equals(nomeCliente)) {

@@ -90,7 +90,7 @@ public class Main {
     private static void showMenuCliente() {
         System.out.println("\n######### Menu Cliente ##########");
         System.out.println("|-------------------------------|");
-        System.out.println("| Opcao 1 - Checar dados        |");
+        System.out.println("| Opcao 1 - Checar dados        |"); // cadastrar veiculos, validar cpf/cnpj, toString()
         System.out.println("| Opcao 0 - Voltar               |");
         System.out.println("|-------------------------------|\n");
     }
@@ -98,7 +98,7 @@ public class Main {
     private static void showMenuVeiculo() {
         System.out.println("\n######### Menu Veiculo ##########");
         System.out.println("|-------------------------------|");
-        System.out.println("| Opcao 1 - Checar dados        |");
+        System.out.println("| Opcao 1 - Checar dados        |"); // toString()
         System.out.println("| Opcao 0 - Voltar              |");
         System.out.println("|-------------------------------|\n");
     }
@@ -106,7 +106,7 @@ public class Main {
     private static void showMenuSinistro() {
         System.out.println("\n######### Menu Sinistro #########");
         System.out.println("|-------------------------------|");
-        System.out.println("| Opcao 1 - Checar dados        |");
+        System.out.println("| Opcao 1 - Checar dados        |"); // toString()
         System.out.println("| Opcao 0 - Voltar              |");
         System.out.println("|-------------------------------|\n");
     }
@@ -131,7 +131,10 @@ public class Main {
                 showMenuSeguradora();
             }
             else if (opcao == 2){
+                System.out.println("\nSinistros:");
+                seguradora.listarSinistros();
 
+                showMenuSeguradora();
             }
             else if (opcao == 3){
                 System.out.println("\n######## Tipo de Cliente ########");
@@ -233,9 +236,6 @@ public class Main {
         }
     }
 
-    /**
-     * Esse menu é apenas para instanciar o método toString() do Cliente na main.
-     */
     private static void menuCliente(Seguradora seguradora) {
         showMenuCliente();
 
