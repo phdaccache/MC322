@@ -318,6 +318,8 @@ public class Main {
                         System.out.println("\nVeiculo adicionado.");
                     }
                 }
+
+                showMenuCliente();
             }
             else {
                 System.out.println("\nOpcao Invalida.\n");

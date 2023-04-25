@@ -19,6 +19,18 @@ public class Seguradora {
         this.listaClientes = new ArrayList<>();
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+            " nome='" + getNome() + "'" +
+            ", telefone='" + getTelefone() + "'" +
+            ", email='" + getEmail() + "'" +
+            ", endereco='" + getEndereco() + "'" +
+            ", listaSinistros='" + getListaSinistros() + "'" +
+            ", listaClientes='" + getListaClientes() + "'" +
+            "}";
+    }
+
     public boolean cadastrarCliente(Cliente cliente) {
         if (listaClientes.contains(cliente)){
             return false;
