@@ -28,24 +28,6 @@ public class Seguradora {
         joiner.add("Email: " + getEmail());
         joiner.add("Endereco: " + getEndereco());
 
-        joiner.add("Sinistros: ");
-        if (getListaSinistros().isEmpty()) {
-            joiner.add("Sem sinistros cadastrados.");
-        } else {
-            for (Sinistro sinistro : getListaSinistros()) {
-                joiner.add(sinistro.toString());
-            }
-        }
-
-        joiner.add("Clientes: ");
-        if (getListaClientes().isEmpty()) {
-            joiner.add("Sem clientes cadastrados.");
-        } else {
-            for (Cliente cliente : getListaClientes()) {
-                joiner.add(cliente.toString());
-            }
-        }
-
         return joiner.toString();
     }
 
@@ -110,7 +92,7 @@ public class Seguradora {
     public boolean visualizarSinistro(String nomeCliente) {
         for (Sinistro sinistro: listaSinistros) {
             if (nomeCliente.equals(sinistro.getCliente().getNome())) {
-                System.out.println("znSinistro:");
+                System.out.println("\nSinistro:");
                 System.out.println(sinistro);
                 return true;
             }
