@@ -33,7 +33,7 @@ public class Sinistro {
         joiner.add(String.format("ID: %03d", getID()));
 
 		String dataString = getData().format(dtf);
-        joiner.add("Data :" + dataString);
+        joiner.add("Data: " + dataString);
 
         joiner.add("Endereco: " + getEndereco());
         joiner.add("Seguradora: " + getSeguradora().toString());

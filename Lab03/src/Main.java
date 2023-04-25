@@ -100,7 +100,7 @@ public class Main {
     private static void showMenuVeiculo() {
         System.out.println("\n######### Menu Veiculo ##########");
         System.out.println("|-------------------------------|");
-        System.out.println("| Opcao 1 - Checar Dados        |"); // toString()
+        System.out.println("| Opcao 1 - Checar Dados        |");
         System.out.println("| Opcao 0 - Voltar              |");
         System.out.println("|-------------------------------|\n");
     }
@@ -108,7 +108,7 @@ public class Main {
     private static void showMenuSinistro() {
         System.out.println("\n######### Menu Sinistro #########");
         System.out.println("|-------------------------------|");
-        System.out.println("| Opcao 1 - Checar Dados        |"); // toString()
+        System.out.println("| Opcao 1 - Checar Dados        |");
         System.out.println("| Opcao 0 - Voltar              |");
         System.out.println("|-------------------------------|\n");
     }
@@ -210,7 +210,12 @@ public class Main {
                 showMenuSeguradora();
             }
             else if (opcao == 5){
-                
+                System.out.print("Digite o nome do cliente: ");
+                String nome = input.nextLine();
+
+                if (!seguradora.visualizarSinistro(nome)) {
+                    System.out.printf("\nO cliente %s nao tem nenhum sinistro", nome);
+                }
             }
             else if (opcao == 6){
                 System.out.print("Insira a data que ocorreu o sinistro (dd/MM/yyyy): ");
