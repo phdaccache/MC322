@@ -30,7 +30,7 @@ public class Sinistro {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         StringJoiner joiner = new StringJoiner("\n");
-        joiner.add("ID: " + getID());
+        joiner.add(String.format("ID: %03d", getID()));
 
 		String dataString = getData().format(dtf);
         joiner.add("Data :" + dataString);

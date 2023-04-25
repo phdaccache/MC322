@@ -77,6 +77,19 @@ public class Seguradora {
         return false;
     }
 
+    public boolean visualizarSinistro(String nomeCliente) {
+        for (Sinistro sinistro: listaSinistros) {
+            if (nomeCliente.equals(sinistro.getCliente().getNome())) {
+                System.out.println("Sinistro:");
+                System.out.println(sinistro);
+                return true;
+            }
+        }
+
+        System.out.printf("O cliente %s nao tem nenhum sinistro", nomeCliente);
+        return false;
+    }
+
     public String getNome() {
         return this.nome;
     }

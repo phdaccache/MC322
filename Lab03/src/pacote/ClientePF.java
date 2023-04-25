@@ -33,7 +33,7 @@ public class ClientePF extends Cliente {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         StringJoiner joiner = new StringJoiner("\n");
-        joiner.add("Nome: " + getNome());
+        joiner.add("\nNome: " + getNome());
         joiner.add("Endereco: " + getEndereco());
         joiner.add("CPF: " + getCPF());
         joiner.add("Genero: " + getGenero());
@@ -60,8 +60,8 @@ public class ClientePF extends Cliente {
         return joiner.toString();
     }
 
-    public boolean validarCPF(String cpf) {
-        return validarID(cpf);
+    public boolean validarCPF() {
+        return validarID(CPF);
     }
 
     public String getCPF() {

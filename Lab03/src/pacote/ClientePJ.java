@@ -19,7 +19,7 @@ public class ClientePJ extends Cliente {
     @Override
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
-        joiner.add("Nome: " + getNome());
+        joiner.add("\nNome: " + getNome());
         joiner.add("Endereco: " + getEndereco());
         joiner.add("CNPJ: " + getCNPJ());
 
@@ -39,8 +39,8 @@ public class ClientePJ extends Cliente {
         return joiner.toString();
     }
 
-    public boolean validarCNPJ(String cnpj) {
-        return validarID(cnpj);
+    public boolean validarCNPJ() {
+        return validarID(CNPJ);
     }
 
     public String getCNPJ() {

@@ -90,15 +90,17 @@ public class Main {
     private static void showMenuCliente() {
         System.out.println("\n######### Menu Cliente ##########");
         System.out.println("|-------------------------------|");
-        System.out.println("| Opcao 1 - Checar dados        |"); // cadastrar veiculos, validar cpf/cnpj, toString()
-        System.out.println("| Opcao 0 - Voltar               |");
+        System.out.println("| Opcao 1 - Checar Dados        |");
+        System.out.println("| Opcao 2 - Validar Documento   |");
+        System.out.println("| Opcao 3 - Adicionar Veiculo   |");
+        System.out.println("| Opcao 0 - Voltar              |");
         System.out.println("|-------------------------------|\n");
     }
 
     private static void showMenuVeiculo() {
         System.out.println("\n######### Menu Veiculo ##########");
         System.out.println("|-------------------------------|");
-        System.out.println("| Opcao 1 - Checar dados        |"); // toString()
+        System.out.println("| Opcao 1 - Checar Dados        |"); // toString()
         System.out.println("| Opcao 0 - Voltar              |");
         System.out.println("|-------------------------------|\n");
     }
@@ -106,7 +108,7 @@ public class Main {
     private static void showMenuSinistro() {
         System.out.println("\n######### Menu Sinistro #########");
         System.out.println("|-------------------------------|");
-        System.out.println("| Opcao 1 - Checar dados        |"); // toString()
+        System.out.println("| Opcao 1 - Checar Dados        |"); // toString()
         System.out.println("| Opcao 0 - Voltar              |");
         System.out.println("|-------------------------------|\n");
     }
@@ -208,7 +210,7 @@ public class Main {
                 showMenuSeguradora();
             }
             else if (opcao == 5){
-
+                
             }
             else if (opcao == 6){
                 System.out.print("Insira a data que ocorreu o sinistro (dd/MM/yyyy): ");
@@ -232,6 +234,8 @@ public class Main {
             }
             else {
                 System.out.println("\nOpcao Invalida.\n");
+
+                showMenuSeguradora();
             }
         }
     }
@@ -242,32 +246,78 @@ public class Main {
         while (true) {
             System.out.print("Digite uma opcao: ");
             int opcao = input.nextInt();
+            input.nextLine();
 
             if (opcao == 0) {
                 break;
             }
             else if (opcao == 1){
-                System.out.print("Insira o nome do cliente: ");
+                System.out.print("Digite o nome do cliente: ");
                 String nome = input.nextLine();
-                Cliente cliente = visualizarCliente(nome, seguradora);
-                System.out.println(cliente.toString());
+
+                for (Cliente cliente: seguradora.getListaClientes()) {
+                    if (cliente.getNome().equals(nome)) {
+                        System.out.printf("\nResumo Cliente %s:\n", cliente.getNome());
+                        System.out.println(cliente.toString());
+                    }
+                }
+
+                showMenuCliente();
+            }
+            else if (opcao == 2) {
+                System.out.print("Digite o nome do cliente: ");
+                String nome = input.nextLine();
+
+                for (Cliente cliente: seguradora.getListaClientes()) {
+                    if (cliente.getNome().equals(nome)) {
+                        if (cliente.getTipo().equals("PJ")) {
+                            ClientePJ cliente_pj = (ClientePJ)cliente;
+
+                            if (cliente_pj.validarCNPJ() == true){
+                                System.out.println("\nCNPJ Valido.");
+                            } else {
+                                System.out.println("\nCNPJ Invalido.");
+                            }
+                        } else {
+                            ClientePF cliente_pf = (ClientePF)cliente;
+
+                            if (cliente_pf.validarCPF() == true){
+                                System.out.println("\nCPF Valido.");
+                            } else {
+                                System.out.println("\nCPF Invalido.");
+                            }
+                        }
+                    }
+                }
+
+                showMenuCliente();
+            }
+            else if (opcao == 3) {
+                System.out.print("Digite o nome do cliente: ");
+                String nome = input.nextLine();
+
+                for (Cliente cliente: seguradora.getListaClientes()) {
+                    if (cliente.getNome().equals(nome)) {
+                        System.out.print("Digite a placa: ");
+                        String placa = input.nextLine();
+                        System.out.print("Digite a marca: ");
+                        String marca = input.nextLine();
+                        System.out.print("Digite o modelo: ");
+                        String modelo = input.nextLine();
+                        System.out.print("Digite o ano de fabricacao: ");
+                        int ano = input.nextInt();
+
+                        Veiculo veiculo = new Veiculo(placa, marca, modelo, ano);
+                        
+                        cliente.adicionarVeiculo(veiculo);
+                        System.out.println("\nVeiculo adicionado.");
+                    }
+                }
             }
             else {
                 System.out.println("\nOpcao Invalida.\n");
             }
         }
-
-    }
-
-    private static Cliente visualizarCliente(String nome, Seguradora seguradora) {
-        ArrayList<Cliente> listaClientes = seguradora.getListaClientes();
-        for(Cliente cliente : listaClientes) {
-            if (nome.equals(cliente.getNome())) {
-                return cliente;
-            }
-        }
-
-        return null;
     }
 
     /**

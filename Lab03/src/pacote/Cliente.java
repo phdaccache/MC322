@@ -19,7 +19,7 @@ public class Cliente {
     @Override
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
-        joiner.add("Nome: " + getNome());
+        joiner.add("\nNome: " + getNome());
         joiner.add("Endereco: " + getEndereco());
         joiner.add("Veiculos: ");
         for (Veiculo veiculo : listaVeiculos) {
@@ -27,6 +27,10 @@ public class Cliente {
         }
 
         return joiner.toString();
+    }
+
+    public void adicionarVeiculo(Veiculo veiculo) {
+        listaVeiculos.add(veiculo);
     }
 
     // Função que retorna 'true' se os dígitos de um id forem todos iguais e 'false' caso contrário.
