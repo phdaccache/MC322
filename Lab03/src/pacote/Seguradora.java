@@ -15,6 +15,8 @@ public class Seguradora {
         this.telefone = telefone;
         this.email = email;
         this.endereco = endereco;
+        this.listaSinistros = new ArrayList<>();
+        this.listaClientes = new ArrayList<>();
     }
 
     public String getNome() {

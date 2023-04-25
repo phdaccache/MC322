@@ -1,12 +1,15 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import pacote.Cliente;
 import pacote.Seguradora;
+import pacote.Veiculo;
 
 public class Main {
     static final Scanner input = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        cadastrarSeguradora();
+    public static void main(String[] args) { 
+        Seguradora seguradora = cadastrarSeguradora();
 
         showMenu();
 
@@ -59,7 +62,7 @@ public class Main {
     }
 
     private static void showMenu() {
-        System.out.println("############# Menu ##############");
+        System.out.println("\n############# Menu ##############");
         System.out.println("|-------------------------------|");
         System.out.println("| Opcao 1 - Seguradora          |");
         System.out.println("| Opcao 2 - Cliente             |");
@@ -70,7 +73,7 @@ public class Main {
     }
 
     private static void showMenuSeguradora() {
-        System.out.println("######## Menu Seguradora ########");
+        System.out.println("\n######## Menu Seguradora ########");
         System.out.println("|-------------------------------|");
         System.out.println("| Opcao 1 - Listar Clientes     |");
         System.out.println("| Opcao 2 - Listar Sinistros    |");
@@ -83,7 +86,7 @@ public class Main {
     }
 
     private static void showMenuCliente() {
-        System.out.println("######### Menu Cliente ##########");
+        System.out.println("\n######### Menu Cliente ##########");
         System.out.println("|-------------------------------|");
         System.out.println("| Opcao 1 - Checar dados        |");
         System.out.println("| Opcao 0 - Sair                |");
@@ -91,7 +94,7 @@ public class Main {
     }
 
     private static void showMenuVeiculo() {
-        System.out.println("######### Menu Veiculo ##########");
+        System.out.println("\n######### Menu Veiculo ##########");
         System.out.println("|-------------------------------|");
         System.out.println("| Opcao 1 - Checar dados        |");
         System.out.println("| Opcao 0 - Sair                |");
@@ -99,7 +102,7 @@ public class Main {
     }
 
     private static void showMenuSinistro() {
-        System.out.println("######### Menu Sinistro #########");
+        System.out.println("\n######### Menu Sinistro #########");
         System.out.println("|-------------------------------|");
         System.out.println("| Opcao 1 - Checar dados        |");
         System.out.println("| Opcao 0 - Sair                |");
