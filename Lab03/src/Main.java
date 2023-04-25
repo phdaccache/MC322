@@ -117,19 +117,29 @@ public class Main {
         while (true) {
             System.out.print("Digite uma opcao: ");
             int opcao = input.nextInt();
+            input.nextLine();
 
             if (opcao == 0) {
                 break;
             }
             else if (opcao == 1){
-                
+                System.out.println("\nPessoas Juridicas:");
+                seguradora.listarClientes("PJ");
+                System.out.println("\nPessoas Fisicas:");
+                seguradora.listarClientes("PF");
+
+                showMenuSeguradora();
             }
             else if (opcao == 2){
 
             }
             else if (opcao == 3){
+                System.out.println("\n######## Tipo de Cliente ########");
+                System.out.println("|-------------------------------|");
                 System.out.println("| Opcao 1 - Pessoa Juridica     |");
                 System.out.println("| Opcao 2 - Pessoa Fisica       |");
+                System.out.println("|-------------------------------|\n");
+                System.out.print("Digite uma opcao: ");
                 int tipo = input.nextInt();
                 input.nextLine();
 
@@ -145,12 +155,12 @@ public class Main {
                     System.out.print("Insira a data de fundacao (dd/MM/yyyy): ");
                     String data = input.nextLine();
 
-                    cliente = new ClientePJ(nome, endereco, cnpj, data);
+                    cliente = new ClientePJ(nome, endereco, "PJ", cnpj, data);
 
                     if (seguradora.cadastrarCliente(cliente)) {
-                        System.out.println("Cliente cadastrado.");
+                        System.out.println("\nCliente cadastrado.");
                     } else {
-                        System.out.println("Nao foi possivel cadastrar o cliente.");
+                        System.out.println("\nNao foi possivel cadastrar o cliente.");
                     }
 
                 } else if (tipo == 2) {
@@ -171,20 +181,28 @@ public class Main {
                     System.out.print("Insira a classe economica: ");
                     String classe = input.nextLine();
 
-                    cliente = new ClientePF(nome, endereco, cpf, genero, dataLicenca,
+                    cliente = new ClientePF(nome, endereco, "PF", cpf, genero, dataLicenca,
                                             educacao, dataNascimento, classe);
 
                     if (seguradora.cadastrarCliente(cliente)) {
-                        System.out.println("Cliente cadastrado.");
+                        System.out.println("\nCliente cadastrado.");
                     } else {
-                        System.out.println("Nao foi possivel cadastrar o cliente.");
+                        System.out.println("\nNao foi possivel cadastrar o cliente.");
                     }
                 }
 
                 showMenuSeguradora();
             }
             else if (opcao == 4){
+                System.out.print("Insira o nome do cliente que deseja remover: ");
+                String nome = input.nextLine();
+                if (seguradora.removerCliente(nome)) {
+                    System.out.printf("\nCliente de nome '%s' removido.\n", nome);
+                } else {
+                    System.out.printf("\nNao foi possivel remover o cliente de nome '%s'.\n", nome);
+                }
 
+                showMenuSeguradora();
             }
             else if (opcao == 5){
 

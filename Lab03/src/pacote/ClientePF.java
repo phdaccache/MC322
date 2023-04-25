@@ -12,11 +12,11 @@ public class ClientePF extends Cliente {
     private LocalDate dataNascimento;
     private String classeEconomica;
 
-    public ClientePF(String nome, String endereco, String CPF,
+    public ClientePF(String nome, String endereco, String tipo, String CPF,
                     String genero, String dataLicenca, String educacao,
                     String dataNascimento, String classeEconomica) {
                         
-        super(nome, endereco);
+        super(nome, endereco, tipo);
         
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         
@@ -33,24 +33,28 @@ public class ClientePF extends Cliente {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         StringJoiner joiner = new StringJoiner("\n");
-        joiner.add("Nome:" + getNome());
-        joiner.add("Endereco:" + getEndereco());
-        joiner.add("CPF:" + getCPF());
-        joiner.add("Genero:" + getGenero());
+        joiner.add("Nome: " + getNome());
+        joiner.add("Endereco: " + getEndereco());
+        joiner.add("CPF: " + getCPF());
+        joiner.add("Genero: " + getGenero());
 
 		String dataLicencaString = getDataLicenca().format(dtf);
-        joiner.add("Data Licenca:" + dataLicencaString);
+        joiner.add("Data Licenca: " + dataLicencaString);
 
-        joiner.add("Educacao:" + getEducacao());
+        joiner.add("Educacao: " + getEducacao());
 
         String dataNascimentoString = getDataNascimento().format(dtf);
-        joiner.add("Data Nascimento:" + dataNascimentoString);
+        joiner.add("Data Nascimento: " + dataNascimentoString);
 
-        joiner.add("Classe Economica:" + getClasseEconomica());
+        joiner.add("Classe Economica: " + getClasseEconomica());
 
-        joiner.add("Veiculos:");
-        for (Veiculo veiculo : getListaVeiculos()) {
-            joiner.add(veiculo.toString());
+        joiner.add("Veiculos: ");
+        if (getListaVeiculos().isEmpty()) {
+            joiner.add("Sem veiculos cadastrados.");
+        } else {
+            for (Veiculo veiculo : getListaVeiculos()) {
+                joiner.add(veiculo.toString());
+            }
         }
 
         return joiner.toString();
@@ -103,5 +107,5 @@ public class ClientePF extends Cliente {
 
     public void setClasseEconomica(String classeEconomica) {
         this.classeEconomica = classeEconomica;
-    }    
+    }
 }

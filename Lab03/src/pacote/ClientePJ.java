@@ -8,8 +8,8 @@ public class ClientePJ extends Cliente {
     private final String CNPJ;
     private LocalDate dataFundacao;
 
-    public ClientePJ(String nome, String endereco, String CNPJ, String dataFundacao) {
-        super(nome, endereco);
+    public ClientePJ(String nome, String endereco, String tipo, String CNPJ, String dataFundacao) {
+        super(nome, endereco, tipo);
         this.CNPJ = CNPJ;
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -19,17 +19,21 @@ public class ClientePJ extends Cliente {
     @Override
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
-        joiner.add("Nome:" + getNome());
-        joiner.add("Endereco:" + getEndereco());
-        joiner.add("CNPJ:" + getCNPJ());
+        joiner.add("Nome: " + getNome());
+        joiner.add("Endereco: " + getEndereco());
+        joiner.add("CNPJ: " + getCNPJ());
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		String dataFundacaoString = getDataFundacao().format(dtf);
-        joiner.add("Data Fundacao:" + dataFundacaoString);
+        joiner.add("Data Fundacao: " + dataFundacaoString);
 
-        joiner.add("Veiculos:");
-        for (Veiculo veiculo : getListaVeiculos()) {
-            joiner.add(veiculo.toString());
+        joiner.add("Veiculos: ");
+        if (getListaVeiculos().isEmpty()) {
+            joiner.add("Sem veiculos cadastrados.");
+        } else {
+            for (Veiculo veiculo : getListaVeiculos()) {
+                joiner.add(veiculo.toString());
+            }
         }
 
         return joiner.toString();
@@ -50,5 +54,4 @@ public class ClientePJ extends Cliente {
     public void setDataFundacao(LocalDate dataFundacao) {
         this.dataFundacao = dataFundacao;
     }
-    
 }

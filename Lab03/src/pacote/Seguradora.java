@@ -27,6 +27,27 @@ public class Seguradora {
         return true;
     }
 
+    public boolean removerCliente(String nome) {
+        int i = 0;
+        for (Cliente cliente: listaClientes){
+            if (cliente.getNome().equals(nome)) {
+                listaClientes.remove(i);
+                return true;
+            }
+            i++;
+        }
+
+        return false;
+    }
+
+    public void listarClientes(String tipoCliente) {
+        for (Cliente cliente: listaClientes){
+            if (tipoCliente.equals(cliente.getTipo())){
+                System.out.println(cliente.toString());
+            }
+        }
+    }
+
     public String getNome() {
         return this.nome;
     }

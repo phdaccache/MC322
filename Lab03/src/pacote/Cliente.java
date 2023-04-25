@@ -7,19 +7,21 @@ public class Cliente {
     private String nome;    
     private String endereco;
     private ArrayList<Veiculo> listaVeiculos;
+    private String tipo;
 
-    public Cliente(String nome, String endereco) {
+    public Cliente(String nome, String endereco, String tipo) {
         this.nome = nome;
         this.endereco = endereco;
         this.listaVeiculos = new ArrayList<>();
+        this.tipo = tipo;
     }
 
     @Override
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
-        joiner.add("Nome:" + getNome());
-        joiner.add("Endereco:" + getEndereco());
-        joiner.add("Veiculos:");
+        joiner.add("Nome: " + getNome());
+        joiner.add("Endereco: " + getEndereco());
+        joiner.add("Veiculos: ");
         for (Veiculo veiculo : listaVeiculos) {
             joiner.add(veiculo.toString());
         }
@@ -126,5 +128,12 @@ public class Cliente {
 
     public void setListaVeiculos(ArrayList<Veiculo> listaVeiculos) {
         this.listaVeiculos = listaVeiculos;
+    }
+    public String getTipo() {
+        return this.tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }
