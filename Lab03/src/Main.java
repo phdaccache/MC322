@@ -214,7 +214,7 @@ public class Main {
                 String nome = input.nextLine();
 
                 if (!seguradora.visualizarSinistro(nome)) {
-                    System.out.printf("\nO cliente %s nao tem nenhum sinistro", nome);
+                    System.out.printf("\nO cliente %s nao tem nenhum sinistro.\n", nome);
                 }
 
                 showMenuSeguradora();
@@ -349,7 +349,12 @@ public class Main {
 
                 for (Cliente cliente: seguradora.getListaClientes()) {
                     if (cliente.getNome().equals(nome)) {
-                        System.out.println(cliente.getListaVeiculos().toString());
+                        int num_veiculos = 1;
+                        for (Veiculo veiculo: cliente.getListaVeiculos()) {
+                            System.out.printf("VEICULO %d:\n", num_veiculos);
+                            System.out.println(veiculo.toString());
+                            num_veiculos++;
+                        }
                     }
                 }
 
@@ -379,9 +384,12 @@ public class Main {
                 System.out.print("Digite o nome do cliente: ");
                 String nome = input.nextLine();
 
+                int num_sinistros = 1;
                 for (Sinistro sinistro: seguradora.getListaSinistros()) {
                     if (sinistro.getCliente().getNome().equals(nome)) {
-                        System.out.println(seguradora.getListaSinistros().toString());
+                        System.out.printf("SINISTRO %d:\n", num_sinistros);
+                        System.out.println(sinistro.toString());
+                        num_sinistros++;
                     }
                 }
 

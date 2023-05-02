@@ -40,7 +40,6 @@ public class Sinistro {
         joiner.add("Seguradora: \n" + getSeguradora().toString());
         joiner.add("Veiculo: \n" + getVeiculo().toString());
         joiner.add("\nCliente: " + getCliente().toString());
-        joiner.add("---------------------------------");
 
         return joiner.toString();
     }
