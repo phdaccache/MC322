@@ -22,9 +22,9 @@ public class ClientePF extends Cliente {
         
         this.CPF = CPF;
         this.genero = genero;
-        this.dataLicenca = LocalDate.parse(dataLicenca, dtf);
+        this.dataLicenca = LocalDate.parse(dataLicenca, dtf); /* Tranformando String em LocalDate */
         this.educacao = educacao;
-        this.dataNascimento = LocalDate.parse(dataNascimento, dtf);
+        this.dataNascimento = LocalDate.parse(dataNascimento, dtf); /* Tranformando String em LocalDate */
         this.classeEconomica = classeEconomica;
     }
 
@@ -39,12 +39,12 @@ public class ClientePF extends Cliente {
         joiner.add("CPF: " + getCPF());
         joiner.add("Genero: " + getGenero());
 
-		String dataLicencaString = getDataLicenca().format(dtf);
+		String dataLicencaString = getDataLicenca().format(dtf); /* Tranformando LocalDate em String */
         joiner.add("Data Licenca: " + dataLicencaString);
 
         joiner.add("Educacao: " + getEducacao());
 
-        String dataNascimentoString = getDataNascimento().format(dtf);
+        String dataNascimentoString = getDataNascimento().format(dtf); /* Tranformando LocalDate em String */
         joiner.add("Data Nascimento: " + dataNascimentoString);
 
         joiner.add("Classe Economica: " + getClasseEconomica());

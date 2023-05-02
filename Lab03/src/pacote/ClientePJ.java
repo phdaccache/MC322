@@ -13,7 +13,7 @@ public class ClientePJ extends Cliente {
         this.CNPJ = CNPJ;
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        this.dataFundacao = LocalDate.parse(dataFundacao, dtf);
+        this.dataFundacao = LocalDate.parse(dataFundacao, dtf); /* Tranformando String em LocalDate */
     }
 
     @Override
@@ -25,7 +25,7 @@ public class ClientePJ extends Cliente {
         joiner.add("CNPJ: " + getCNPJ());
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		String dataFundacaoString = getDataFundacao().format(dtf);
+		String dataFundacaoString = getDataFundacao().format(dtf); /* Tranformando LocalDate em String */
         joiner.add("Data Fundacao: " + dataFundacaoString);
 
         joiner.add("Veiculos: ");

@@ -46,6 +46,10 @@ public class Main {
         input.close();
     }
 
+    /*
+     * Funcao que pede determinados inputs para o usuario para cadastrar
+     * uma seguradora na main.
+     */
     private static Seguradora cadastrarSeguradora() {
         System.out.println("Para comecar, cadastre uma seguradora.");
         // Lendo os dados da entrada padrão
@@ -113,6 +117,9 @@ public class Main {
         System.out.println("|-------------------------------|\n");
     }
 
+    /*
+     * Funcao que roda o menu Seguradora para o usuario.
+     */
     private static void menuSeguradora(Seguradora seguradora) {
         showMenuSeguradora();
 
@@ -121,9 +128,11 @@ public class Main {
             int opcao = input.nextInt();
             input.nextLine();
 
+            /* Voltar */
             if (opcao == 0) {
                 break;
             }
+            /* Listar Clientes */
             else if (opcao == 1){
                 System.out.println("\nPESSOAS JURIDICAS:");
                 seguradora.listarClientes("PJ");
@@ -132,12 +141,14 @@ public class Main {
 
                 showMenuSeguradora();
             }
+            /* Listar Sinistros */
             else if (opcao == 2){
                 System.out.println("\nSINISTROS:");
                 seguradora.listarSinistros();
 
                 showMenuSeguradora();
             }
+            /* Cadastrar Cliente */
             else if (opcao == 3){
                 System.out.println("\n######## Tipo de Cliente ########");
                 System.out.println("|-------------------------------|");
@@ -150,6 +161,7 @@ public class Main {
 
                 Cliente cliente;
 
+                /* Cadastar Pessoa Juridica */
                 if (tipo == 1) {
                     System.out.print("Insira o nome: ");
                     String nome = input.nextLine();
@@ -168,6 +180,7 @@ public class Main {
                         System.out.println("\nNao foi possivel cadastrar o cliente.");
                     }
 
+                /* Cadastrar Pessoa Fisica */
                 } else if (tipo == 2) {
                     System.out.print("Insira o nome: ");
                     String nome = input.nextLine();
@@ -198,6 +211,7 @@ public class Main {
 
                 showMenuSeguradora();
             }
+            /* Remover Cliente */
             else if (opcao == 4){
                 System.out.print("Insira o nome do cliente que deseja remover: ");
                 String nome = input.nextLine();
@@ -209,6 +223,7 @@ public class Main {
 
                 showMenuSeguradora();
             }
+            /* Visualizar Sinistro dado o nome do cliente */
             else if (opcao == 5){
                 System.out.print("Digite o nome do cliente: ");
                 String nome = input.nextLine();
@@ -219,6 +234,7 @@ public class Main {
 
                 showMenuSeguradora();
             }
+            /* Gerar Sinistro */
             else if (opcao == 6){
                 System.out.print("Insira a data que ocorreu o sinistro (dd/MM/yyyy): ");
                 String data = input.nextLine();
@@ -247,6 +263,9 @@ public class Main {
         }
     }
 
+    /*
+     * Funcao que roda o menu Cliente para o usuario.
+     */
     private static void menuCliente(Seguradora seguradora) {
         showMenuCliente();
 
@@ -255,9 +274,11 @@ public class Main {
             int opcao = input.nextInt();
             input.nextLine();
 
+            /* Voltar */
             if (opcao == 0) {
                 break;
             }
+            /* Checar dados (toString do cliente) */
             else if (opcao == 1){
                 System.out.print("Digite o nome do cliente: ");
                 String nome = input.nextLine();
@@ -271,6 +292,7 @@ public class Main {
 
                 showMenuCliente();
             }
+            /* Validar documento dado o nome do cliente */
             else if (opcao == 2) {
                 System.out.print("Digite o nome do cliente: ");
                 String nome = input.nextLine();
@@ -299,6 +321,7 @@ public class Main {
 
                 showMenuCliente();
             }
+            /* Adicionar veiculo dado o nome do cliente */
             else if (opcao == 3) {
                 System.out.print("Digite o nome do cliente: ");
                 String nome = input.nextLine();
@@ -329,7 +352,7 @@ public class Main {
         }
     }
 
-    /**
+    /*
      * Esse menu é apenas para instanciar o método toString() do Veiculo na main.
      */
     private static void menuVeiculo(Seguradora seguradora) {
@@ -343,6 +366,7 @@ public class Main {
             if (opcao == 0) {
                 break;
             }
+            /* Checar veiculos dado o nome do cliente */
             else if (opcao == 1){
                 System.out.print("Digite o nome do cliente: ");
                 String nome = input.nextLine();
@@ -366,7 +390,7 @@ public class Main {
         }
     }
 
-    /**
+    /*
      * Esse menu é apenas para instanciar o método toString() do Sinistro na main.
      */
     private static void menuSinistro(Seguradora seguradora) {
@@ -380,6 +404,7 @@ public class Main {
             if (opcao == 0) {
                 break;
             }
+            /* Checar sinistros dado o nome do cliente */
             else if (opcao == 1){
                 System.out.print("Digite o nome do cliente: ");
                 String nome = input.nextLine();

@@ -33,6 +33,11 @@ public class Seguradora {
         return joiner.toString();
     }
 
+    /*
+     * Funcao que cadastra o cliente caso nao tenha algum
+     * objeto cliente identico em listaClientes.
+     * Retorna true se o cliente for novo.
+     */
     public boolean cadastrarCliente(Cliente cliente) {
         if (listaClientes.contains(cliente)){
             return false;
@@ -41,8 +46,12 @@ public class Seguradora {
         return true;
     }
 
+    /*
+     * Funcao que remove o cliente.
+     * Caso nao tenha nenhum cliente com o nome passado, retorna false.
+     */
     public boolean removerCliente(String nome) {
-        int i = 0;
+        int i = 0; /* Index do cliente na listaClientes */
         for (Cliente cliente: listaClientes){
             if (cliente.getNome().equals(nome)) {
                 listaClientes.remove(i);
@@ -54,6 +63,9 @@ public class Seguradora {
         return false;
     }
 
+    /* 
+     * Funcao que lista todos os clientes do tipo (PF ou PJ) passado.
+     */
     public void listarClientes(String tipoCliente) {
         for (Cliente cliente: listaClientes){
             if (tipoCliente.equals(cliente.getTipo())){
@@ -62,6 +74,9 @@ public class Seguradora {
         }
     }
 
+    /*
+     * Funcao que lista tidis os sinistros gerados
+     */
     public void listarSinistros() {
         if (listaSinistros.isEmpty()) {
             System.out.println("Nao ha sinistros gerados.");
@@ -72,6 +87,11 @@ public class Seguradora {
         }
     }
 
+    /*
+     * Funcao que gera um novo sinistro.
+     * Retorna true se o nome do cliente esta na lista de clientes e
+     * se a placa do veiculo passada esta na lista de veiculos do cliente.
+     */
     public boolean gerarSinistro(String data, String nomeCliente, String endereco, String placaVeiculo) {
         for (Cliente cliente: listaClientes){
             if (cliente.getNome().equals(nomeCliente)) {
@@ -91,13 +111,22 @@ public class Seguradora {
         return false;
     }
 
+    /*
+     * Funcao que printa os sinistros dado o nome do cliente.
+     * Retorna true caso o cliente tenha pelo menos 1 sinistro cadastrado.
+     */
     public boolean visualizarSinistro(String nomeCliente) {
+        boolean tem_sinistros = false;
         for (Sinistro sinistro: listaSinistros) {
             if (nomeCliente.equals(sinistro.getCliente().getNome())) {
                 System.out.println("\nSinistro:");
-                System.out.println(sinistro);
-                return true;
+                System.out.println(sinistro.toString());
+                tem_sinistros = true;
             }
+        }
+
+        if (tem_sinistros) {
+            return true;
         }
 
         return false;

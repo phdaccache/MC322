@@ -16,8 +16,8 @@ public class Sinistro {
     public Sinistro(String data, String endereco, Seguradora seguradora, Veiculo veiculo, Cliente cliente) {
         this.ID = gerarId();
 
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        this.data = LocalDate.parse(data, dtf);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy"); 
+        this.data = LocalDate.parse(data, dtf); /* Tranformando String em LocalDate */
         
         this.endereco = endereco;
         this.seguradora = seguradora;
@@ -33,7 +33,7 @@ public class Sinistro {
         joiner.add("---------------------------------");
         joiner.add(String.format("ID: %03d", getID()));
 
-		String dataString = getData().format(dtf);
+		String dataString = getData().format(dtf); /* Tranformando LocalDate em String */
         joiner.add("Data: " + dataString);
 
         joiner.add("Endereco: " + getEndereco());
