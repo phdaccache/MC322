@@ -4,6 +4,8 @@ import menu.MenuOperacoes;
 import menu.SubmenuOperacoes;
 
 public class Main {
+    static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
         MenuOperacoes option;
         do {
@@ -11,6 +13,8 @@ public class Main {
             option = readOptionMenu();
             runMenuOption(option);
         } while (option != MenuOperacoes.SAIR);
+
+        scanner.close();
     }
 
     /* Imprime o Menu no terminal
@@ -30,7 +34,6 @@ public class Main {
     }
 
     private static MenuOperacoes readOptionMenu() {
-        Scanner scanner = new Scanner(System.in);
         int option;
         MenuOperacoes menu[] = MenuOperacoes.values();
 
@@ -91,7 +94,6 @@ public class Main {
     }
 
     private static SubmenuOperacoes readOptionSubmenu(MenuOperacoes option) {
-        Scanner scanner = new Scanner(System.in);
         int subOption;
         SubmenuOperacoes submenu[] = option.getSubOptions();
 
