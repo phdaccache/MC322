@@ -4,28 +4,34 @@ package menu;
  * Cada constante e uma opcao do menu, que tem um nome e uma lista de submenus
  */
 public enum MenuOperacoes {
-    CADASTROS("Cadastros", new SubmenuOperacoes[] {
-            SubmenuOperacoes.CADASTRAR_CLIENTE,
-            SubmenuOperacoes.CADASTRAR_VEICULO,
+    ADMIN("Admin", new SubmenuOperacoes[] {
             SubmenuOperacoes.CADASTRAR_SEGURADORA,
+            SubmenuOperacoes.EXCLUIR_SEGURADORA,
+            SubmenuOperacoes.LISTAR_CLIENTES_SEGURADORA,
+            SubmenuOperacoes.LISTAR_SINISTROS_SEGURADORA,
+            SubmenuOperacoes.LISTAR_VEICULOS_SEGURADORA,
             SubmenuOperacoes.VOLTAR}
     ),
-    LISTAR("Listar", new SubmenuOperacoes[] {
+    SEGURADORA("Seguradora", new SubmenuOperacoes[] {
+            SubmenuOperacoes.VISUALIZAR_DADOS_SEGURADORA,
             SubmenuOperacoes.LISTAR_CLIENTES,
-            SubmenuOperacoes.LISTAR_SINISTROS_SEGURADORA,
+            SubmenuOperacoes.CADASTRAR_CLIENTE,
+            SubmenuOperacoes.EXCLUIR_CLIENTE,
             SubmenuOperacoes.LISTAR_SINISTROS_CLIENTE,
-            SubmenuOperacoes.LISTAR_VEICULOS_SEGURADORA,
+            SubmenuOperacoes.GERAR_SINISTRO,
+            SubmenuOperacoes.EXCLUIR_SINISTRO,
             SubmenuOperacoes.LISTAR_VEICULOS_CLIENTE,
+            SubmenuOperacoes.TRANSFERIR_SEGURO,
+            SubmenuOperacoes.CALCULAR_RECEITA_SEGURADORA,
             SubmenuOperacoes.VOLTAR
     }),
-    EXCLUIR("Excluir", new SubmenuOperacoes[] {
-            SubmenuOperacoes.EXCLUIR_CLIENTE,
+    CLIENTE("Cliente", new SubmenuOperacoes[] {
+            SubmenuOperacoes.VISUALIZAR_DADOS_CLIENTE,
+            SubmenuOperacoes.LISTAR_VEICULOS,
+            SubmenuOperacoes.CADASTRAR_VEICULO,
             SubmenuOperacoes.EXCLUIR_VEICULO,
-            SubmenuOperacoes.EXCLUIR_SINISTRO,
+            SubmenuOperacoes.LISTAR_SINISTROS,
             SubmenuOperacoes.VOLTAR}),
-    GERAR_SINISTRO("Gerar Sinistro"),
-    TRANSFERIR_SEGURO("Transferir Seguro"),
-    CALCULAR_RECEITA_SEGURADORA("Calcular Receita Seguradora"),
     SAIR("Sair");
 
     // Atributos

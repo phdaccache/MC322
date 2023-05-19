@@ -51,19 +51,10 @@ public class Menu {
     // Executa a opcao do menu passada
     public void runMenuOption(MenuOperacoes option) {
         switch (option) {
-            case CADASTROS:
-            case LISTAR:
-            case EXCLUIR:
+            case ADMIN:
+            case SEGURADORA:
+            case CLIENTE:
                 runSubmenu(option);
-                break;
-            case GERAR_SINISTRO:
-                System.out.println("Executar metodo gerar Sinistro");
-                break;
-            case TRANSFERIR_SEGURO:
-                System.out.println("Executar metodo tranferir seguro");
-                break;
-            case CALCULAR_RECEITA_SEGURADORA:
-                System.out.println("Executar metodo calcular receita");
                 break;
             case SAIR:
                 System.out.println("Programa encerrado.");
@@ -121,38 +112,70 @@ public class Menu {
     // Executa a opcao do submenu passada
     private void runSubmenuOption(SubmenuOperacoes subOption) {
         switch(subOption) {
-            case CADASTRAR_CLIENTE:
-                System.out.println("Chamar metodo cadastrar cliente");
-                break;
-            case CADASTRAR_VEICULO:
-                System.out.println("Chamar metodo cadastrar veiculo");
-                break;
+            // Admin
             case CADASTRAR_SEGURADORA:
-                System.out.println("Chamar metodo cadastrar seguradora");
+                System.out.println("Chamar metodo CADASTRAR_SEGURADORA");
                 break;
-            case LISTAR_CLIENTES:
-                System.out.println("Chamar metodo listar clientes");
+            case EXCLUIR_SEGURADORA:
+                System.out.println("Chamar metodo EXCLUIR_SEGURADORA");
+                break;
+            case LISTAR_CLIENTES_SEGURADORA:
+                System.out.println("Chamar metodo LISTAR_CLIENTES_SEGURADORA");
                 break;
             case LISTAR_SINISTROS_SEGURADORA:
-                System.out.println("Chamar metodo listar sinistros seguradora");
-                break;
-            case LISTAR_SINISTROS_CLIENTE:
-                System.out.println("Chamar metodo listar sinistros cliente");
+                System.out.println("Chamar metodo LISTAR_SINISTROS_SEGURADORA");
                 break;
             case LISTAR_VEICULOS_SEGURADORA:
-                System.out.println("Chamar metodo listar veiculos seguradora");
+                System.out.println("Chamar metodo LISTAR_VEICULOS_SEGURADORA");
                 break;
-            case LISTAR_VEICULOS_CLIENTE:
-                System.out.println("Chamar metodo listar veiculos cliente");
+
+            // Seguradora
+            case VISUALIZAR_DADOS_SEGURADORA:
+                System.out.println("Chamar metodo VISUALIZAR_DADOS_SEGURADORA");
+                break;
+            case LISTAR_CLIENTES:
+                System.out.println("Chamar metodo LISTAR_CLIENTES");
+                break;
+            case CADASTRAR_CLIENTE:
+                System.out.println("Chamar metodo CADASTRAR_CLIENTE");
                 break;
             case EXCLUIR_CLIENTE:
-                System.out.println("Chamar metodo excluir cliente");
+                System.out.println("Chamar metodo EXCLUIR_CLIENTE");
                 break;
-            case EXCLUIR_VEICULO:
-                System.out.println("Chamar metodo excluir veiculo");
+            case LISTAR_SINISTROS_CLIENTE:
+                System.out.println("Chamar metodo LISTAR_SINISTROS_CLIENTE");
+                break;
+            case GERAR_SINISTRO:
+                System.out.println("Chamar metodo GERAR_SINISTRO");
                 break;
             case EXCLUIR_SINISTRO:
-                System.out.println("Chamar metodo excluir sinistro");
+                System.out.println("Chamar metodo EXCLUIR_SINISTRO");
+                break;
+            case LISTAR_VEICULOS_CLIENTE:
+                System.out.println("Chamar metodo LISTAR_VEICULOS_CLIENTE");
+                break;
+            case TRANSFERIR_SEGURO:
+                System.out.println("Chamar metodo TRANSFERIR_SEGURO");
+                break;
+            case CALCULAR_RECEITA_SEGURADORA:
+                System.out.println("Chamar metodo CALCULAR_RECEITA_SEGURADORA");
+                break;
+
+            // Cliente
+            case VISUALIZAR_DADOS_CLIENTE:
+                System.out.println("Chamar metodo VISUALIZAR_DADOS_CLIENTE");
+                break;
+            case LISTAR_VEICULOS:
+                System.out.println("Chamar metodo LISTAR_VEICULOS");
+                break;
+            case CADASTRAR_VEICULO:
+                System.out.println("Chamar metodo CADASTRAR_VEICULO");
+                break;
+            case EXCLUIR_VEICULO:
+                System.out.println("Chamar metodo EXCLUIR_VEICULO");
+                break;
+            case LISTAR_SINISTROS:
+                System.out.println("Chamar metodo LISTAR_SINISTROS");
                 break;
             case VOLTAR:
             	break;
