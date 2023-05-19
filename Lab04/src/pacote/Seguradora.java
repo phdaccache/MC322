@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.StringJoiner;
 
 public class Seguradora {
+    // Atributos
     private String nome;
     private String telefone;
     private String email;
@@ -11,6 +12,7 @@ public class Seguradora {
     private ArrayList<Sinistro> listaSinistros;
     private ArrayList<Cliente> listaClientes;
 
+    // Construtor
     public Seguradora(String nome, String telefone, String email, String endereco) {
         this.nome = nome;
         this.telefone = telefone;
@@ -85,7 +87,7 @@ public class Seguradora {
         return;
     }
 
-    
+
     // Getters e Setters
     public String getNome() {
         return this.nome;
