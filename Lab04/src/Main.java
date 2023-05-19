@@ -9,6 +9,7 @@ public class Main {
         Menu menu = new Menu(scanner);
         MenuOperacoes option;
 
+        // Executa menu (imprime, recebe a opcao e executa a opcao) de acordo com a opcao passada
         do {
             menu.showMenu();
             option = menu.readOptionMenu();

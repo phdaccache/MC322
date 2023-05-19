@@ -10,39 +10,45 @@ public class Menu {
         this.scanner = scanner;
     }
 
-    /* Imprime o Menu no terminal
-     * A variável 'numOption' pega o índice da constante + 1.
-     * Caso 'numOption' seja a última constante da lista (ou seja, 'SAIR'), recebe 0.
-     */
+    // Imprime Menu no terminal
     public void showMenu() {
         MenuOperacoes menu[] = MenuOperacoes.values();
+        String title = getFormattedTitle("Menu");
 
-        System.out.println("\n#################### Menu ###################");
+        System.out.println(title);
         System.out.println("|-------------------------------------------|");
         for (MenuOperacoes option : menu) {
-            int numOption = Math.min(option.ordinal() + 1, (menu.length - option.ordinal() - 1) * menu.length);
+            int numOption;
+            if (option.ordinal() == menu.length - 1) { // Se a opcao for a ultima (i.e. "SAIR"), recebe 0
+                numOption = 0;
+            } else {
+                numOption = option.ordinal() + 1;
+            }
             System.out.printf("| Opcao %d - %-31s |\n", numOption, option.getName());
         }
         System.out.println("|-------------------------------------------|");
     }
 
+    // Le a opcao escolhida no menu com o scanner e a retorna
     public MenuOperacoes readOptionMenu() {
         int option;
         MenuOperacoes menu[] = MenuOperacoes.values();
 
+        // Enquanto a opcao nao for valida, fica pedindo a opcao novamente
         while (true) {
             System.out.print("Digite uma opcao: ");
             option = scanner.nextInt();
             if (option < 0 || option > menu.length - 1) {
                 System.out.println("Opcao Invalida.");
-            } else if (option == 0) {
-                return MenuOperacoes.values()[menu.length - 1];
+            } else if (option == 0) { 
+                return MenuOperacoes.values()[menu.length - 1]; // opcao 0 = "SAIR", i.e. ultima opcao do menu
             } else {
                 return MenuOperacoes.values()[option - 1];
             }
         }
     }
 
+    // Executa a opcao do menu passada
     public void runMenuOption(MenuOperacoes option) {
         switch (option) {
             case CADASTROS:
@@ -64,6 +70,7 @@ public class Menu {
         }
     }
 
+    // Executa submenu (imprime, recebe a opcao e executa a opcao) de acordo com a opcao passada
     private void runSubmenu(MenuOperacoes option) {
         SubmenuOperacoes subOption;
         do {
@@ -73,36 +80,45 @@ public class Menu {
         } while (subOption != SubmenuOperacoes.VOLTAR);
     }
 
+    // Imprime o Submenu de "option" no terminal.
     private void showSubmenu(MenuOperacoes option) {
         SubmenuOperacoes submenu[] = option.getSubOptions();
-        String title = getFormattedTitle(option);
+        String title = getFormattedTitle(option.getName());
 
         System.out.println(title);
         System.out.println("|-------------------------------------------|");
         for (int i = 0; i < submenu.length; i++) {
-            int numSuboption = Math.min(i + 1, (submenu.length - i - 1) * submenu.length);
+            int numSuboption;
+            if (i == submenu.length - 1) { // Se a opcao for a ultima (i.e. "VOLTAR"), recebe 0
+                numSuboption = 0;
+            } else {
+                numSuboption = i + 1;
+            }
             System.out.printf("| Opcao %d - %-31s |\n", numSuboption, submenu[i].getName());
         }
         System.out.println("|-------------------------------------------|");
     }
-
+    
+    // Le a opcao escolhida no submenu com o scanner e a retorna
     private SubmenuOperacoes readOptionSubmenu(MenuOperacoes option) {
         int subOption;
         SubmenuOperacoes submenu[] = option.getSubOptions();
 
+        // Enquanto a opcao nao for valida, fica pedindo a opcao novamente
         while (true) {
             System.out.print("Digite uma opcao: ");
             subOption = scanner.nextInt();
             if (subOption < 0 || subOption > submenu.length - 1) {
                 System.out.println("Opcao Invalida.");
             } else if (subOption == 0) {
-                return submenu[submenu.length - 1];
+                return submenu[submenu.length - 1]; // opcao 0 = "VOLTAR", i.e. ultima opcao do submenu
             } else {
                 return submenu[subOption - 1];
             }
         }
     }
 
+    // Executa a opcao do submenu passada
     private void runSubmenuOption(SubmenuOperacoes subOption) {
         switch(subOption) {
             case CADASTRAR_CLIENTE:
@@ -143,19 +159,19 @@ public class Menu {
         }
     }
 
-    private String getFormattedTitle(MenuOperacoes title) {
-        int width = 43;
-        int padding = width - title.getName().length();
+    // Retorna o titulo do menu (ou submenu) no formato '#################### Menu ###################'
+    private String getFormattedTitle(String title) {
+        int width = 43; // Tamanho total do titulo
+        int padding = width - title.length();
 
-        if (padding <= 0) {
-            return title.getName();
+        if (padding <= 0) { // padding <= 0 indica que o titulo e maior ou igual ao tamanho total
+            return title; // Se esse for o caso, nao tem espaco para colocar o #. Logo, retorna o titulo
         } else {
             int right = padding / 2;
-            int left = padding - right;
+            int left = padding - right; // O esquerdo e sempre igual ao direito ou igual ao direito + 1
             String leftPadding = "#".repeat(left);
             String rightPadding = "#".repeat(right);
-            return String.format("\n" + leftPadding + " " + title.getName() + " " + rightPadding);
+            return String.format("\n%s %s %s", leftPadding, title, rightPadding);
         }
     }
-    
 }

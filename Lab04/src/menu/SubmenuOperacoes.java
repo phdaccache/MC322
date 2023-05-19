@@ -1,5 +1,8 @@
 package menu;
 
+/* enum para os Submenus
+ * Cada constante e uma opcao de todos os submenus
+ */
 public enum SubmenuOperacoes {
     CADASTRAR_CLIENTE("Cadastrar cliente"),
 	CADASTRAR_VEICULO("Cadastrar veiculo"),
@@ -14,12 +17,15 @@ public enum SubmenuOperacoes {
 	EXCLUIR_SINISTRO("Excluir sininstro"),
 	VOLTAR("Voltar");
 	
+    // Atributo
 	private final String name;
 	
+    // Construtor
 	SubmenuOperacoes(String name){
 		this.name = name;
 	}
 	
+    // Getter
 	public String getName() {
 		return name;
 	}
