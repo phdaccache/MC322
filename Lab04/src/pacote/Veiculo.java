@@ -3,11 +3,13 @@ package pacote;
 import java.util.StringJoiner;
 
 public class Veiculo {
+    // Atributos
     private String placa;
     private String marca;
     private String modelo;
     private int anoFabricacao;
 
+    // Construtor
     public Veiculo(String placa, String marca, String modelo, int anoFabricacao) {
         this.placa = placa;
         this.marca = marca;
@@ -25,6 +27,8 @@ public class Veiculo {
         return joiner.toString();
     }
 
+
+    // Getters e Setters
     public String getPlaca() {
         return this.placa;
     }
