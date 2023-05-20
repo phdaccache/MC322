@@ -6,43 +6,28 @@ public class Admin {
     // Atributo
     private ArrayList<Seguradora> listaSeguradoras;
 
-    // Construtor
-    public Admin(ArrayList<Seguradora> listaSeguradoras) {
-        this.listaSeguradoras = listaSeguradoras;
-    }
-
     // Cadastrar nova seguradora
-    public void cadastrarSeguradora() {
+    public static void cadastrarSeguradora() {
         return;
     }
 
     // Excluir seguradora
-    public void excluirSeguradora() {
+    public static void excluirSeguradora() {
         return;
     }
 
     // Listar clientes por seguradora
-    public void listarClientes() {
+    public static void listarClientes() {
         return;
     }
 
     // Listar sinistros por seguradora
-    public void listarSinistros() {
+    public static void listarSinistros() {
         return;
     }
 
     // Listar veiculos por seguradora
-    public void listarVeiculos() {
+    public static void listarVeiculos() {
         return;
-    }
-
-
-    // Getter e Setter
-    public ArrayList<Seguradora> getListaSeguradoras() {
-        return this.listaSeguradoras;
-    }
-
-    public void setListaSeguradoras(ArrayList<Seguradora> listaSeguradoras) {
-        this.listaSeguradoras = listaSeguradoras;
     }
 }
