@@ -51,7 +51,25 @@ public class Cliente {
 
     // Cadastrar novo veiculo automatico
     public void cadastrarVeiculo(Veiculo veiculo) {
+        Seguradora seguradora = null;
+
+        if (!Validacao.validarPlaca()) {
+            System.out.println("Placa invalida. Nao foi possivel cadastrar o veiculo");
+            return;
+        }
+
         listaVeiculos.add(veiculo);
+        // 'Gambiarra' para pegar a seguradora que o cliente esta sem ter que armazenar a seguradora no objeto Cliente:
+        for (Seguradora seg : Admin.listaSeguradoras) {
+            if (seg.getListaClientes().contains(this)) {
+                seguradora = seg;
+            }
+        }
+        if (seguradora != null) {
+            double valorSeguro = seguradora.calcularPrecoSeguroCliente(this);
+            setValorSeguro(valorSeguro);
+        }
+        System.out.println("Veiculo cadastrado!");
     }
 
     // Cadastrar novo veiculo com scanner

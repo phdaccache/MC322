@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import menu.Menu;
 import menu.MenuOperacoes;
+import pacote.Admin;
 import pacote.ClientePF;
 import pacote.ClientePJ;
 import pacote.Seguradora;
@@ -15,7 +16,8 @@ public class Main {
 
         // Instanciacao dos objetos
         Seguradora seguradora = new Seguradora("Pedro Seguros", "(11) 1234-5678", "pedroseguros@gmail.com", "Rua das Seguradoras");
-        
+        Admin.listaSeguradoras.add(seguradora);
+
         ClientePJ clientePJ1 = new ClientePJ("Google", "Rua 1", "06.990.590/0001-23", "04/09/1998", 50);
         ClientePF clientePF = new ClientePF("Pedro", "Rua 2", "101.255.787-17", "Masculino", "10/12/2022", "Ensino Superior", "25/01/2003", "Média");
         ClientePJ clientePJ2 = new ClientePJ("Facebook", "Rua 3", "1234", "25/01/2003", 8);
@@ -29,10 +31,14 @@ public class Main {
         clientePJ1.cadastrarVeiculo(veiculo2);
         clientePJ1.cadastrarVeiculo(veiculo3);
 
+        System.out.println("");
+
         // Cadastro dos clientes na seguradora
         seguradora.cadastrarCliente(clientePF);
         seguradora.cadastrarCliente(clientePJ1);
         seguradora.cadastrarCliente(clientePJ2);
+
+        System.out.println("");
 
         // Sinistros gerados
         seguradora.gerarSinistro("10/04/2023", "Google", "Rua 1", "abc-4321");
@@ -46,6 +52,7 @@ public class Main {
         System.out.println("");
         seguradora.listarSinistros();
         System.out.println("");
+        System.out.println("Receita da seguradora:");
         seguradora.calcularReceita();
         System.out.println("");
 
@@ -55,11 +62,16 @@ public class Main {
         clientePF.setDataNascimento(novaData);
         double valorSeguro = seguradora.calcularPrecoSeguroCliente(clientePF);
         clientePF.setValorSeguro(valorSeguro);
+
+        System.out.println("Cliente com novos dados:");
+        System.out.println("---------------------------------------------");
         System.out.println(clientePF);
+        System.out.println("---------------------------------------------");
 
         System.out.println("");
 
         // Nova receita da seguradora
+        System.out.println("Nova receita da seguradora:");
         seguradora.calcularReceita();
 
 

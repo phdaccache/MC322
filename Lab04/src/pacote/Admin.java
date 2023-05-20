@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Admin {
     // Atributo
-    public static ArrayList<Seguradora> listaSeguradoras = null;
+    public static ArrayList<Seguradora> listaSeguradoras = new ArrayList<>();
 
     // Cadastrar nova seguradora
     public static void cadastrarSeguradora(Scanner scanner) {

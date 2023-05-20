@@ -1,5 +1,6 @@
 package pacote;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringJoiner;
@@ -84,7 +85,7 @@ public class Seguradora {
                 return;
             }
         }
-        if (!Validacao.validarNome(cliente.getNome())) {
+        if (!Validacao.validarNome(cliente.getNome()) || listaClientes.contains(cliente)) {
             System.out.println("Nome invalido. Nao foi possivel cadastrar o cliente");
             return;
         }
@@ -92,6 +93,7 @@ public class Seguradora {
         listaClientes.add(cliente);
         double valorSeguro = calcularPrecoSeguroCliente(cliente);
         cliente.setValorSeguro(valorSeguro);
+        System.out.println("Cliente cadastrado!");
     }
 
     // Cadastrar novo cliente com scanner
@@ -117,6 +119,11 @@ public class Seguradora {
             System.out.println(sinistro);
         }
         System.out.println("---------------------------------------------");
+
+        System.out.println("");
+
+        int indexSinistro = 0; // No menu interativo, esse indice e escolhido pelo usuario
+        visualizarSinistro(listaSinistros.get(indexSinistro));
     }
 
     // Gerar novo sinistro automatico
@@ -180,9 +187,28 @@ public class Seguradora {
         return score * (1 + qtdSinistros);
     }
 
-    // Visualizar unico sinistro
+    // Visualizar unico sinistro (com mais detalhes do que a listagem normal)
     private void visualizarSinistro(Sinistro sinistro) {
-        return;
+        StringJoiner joiner = new StringJoiner("\n");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String dataString = sinistro.getData().format(dtf); // Tranformando LocalDate em String
+
+        System.out.println(String.format("Sinistro de ID %03d:", sinistro.getID()));
+        joiner.add("---------------------------------------------");
+        joiner.add("Data: " + dataString);
+        joiner.add("Endereco: " + sinistro.getEndereco());
+        joiner.add("---------------------------------------------");
+        joiner.add("Seguradora:");
+        joiner.add(sinistro.getSeguradora().toString());
+        joiner.add("---------------------------------------------");
+        joiner.add("Veiculo:");
+        joiner.add(sinistro.getVeiculo().toString());
+        joiner.add("---------------------------------------------");
+        joiner.add("Cliente:");
+        joiner.add(sinistro.getCliente().toString());
+        joiner.add("---------------------------------------------");
+
+        System.out.println(joiner.toString());
     }
 
 

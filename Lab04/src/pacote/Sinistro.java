@@ -28,14 +28,11 @@ public class Sinistro {
     }
     
     public String toString() {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
         StringJoiner joiner = new StringJoiner("\n");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String dataString = getData().format(dtf); // Tranformando LocalDate em String
         joiner.add(String.format("ID: %03d", getID()));
-
-		String dataString = getData().format(dtf); // Tranformando LocalDate em String
         joiner.add("Data: " + dataString);
-
         joiner.add("Endereco: " + getEndereco());
         joiner.add("Seguradora: " + getSeguradora().getNome());
         joiner.add(String.format("Veiculo: %s - %s",
