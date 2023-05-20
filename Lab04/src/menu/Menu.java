@@ -42,6 +42,7 @@ public class Menu {
         while (true) {
             System.out.print("Digite uma opcao: ");
             option = scanner.nextInt();
+            scanner.nextLine();
             if (option < 0 || option > menu.length - 1) {
                 System.out.println("Opcao Invalida.");
             } else if (option == 0) { 
@@ -120,6 +121,7 @@ public class Menu {
         while (true) {
             System.out.print("Digite uma opcao: ");
             subOption = scanner.nextInt();
+            scanner.nextLine();
             if (subOption < 0 || subOption > submenu.length - 1) {
                 System.out.println("Opcao Invalida.");
             } else if (subOption == 0) {
