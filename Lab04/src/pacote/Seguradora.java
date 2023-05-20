@@ -40,10 +40,61 @@ public class Seguradora {
 
     // Listar todos os clientes
     public void listarClientes() {
-        return;
+        if (listaClientes.isEmpty()) {
+            System.out.println("Sem clientes cadastrados");
+            return;
+        }
+
+        System.out.println("Pessoas Juridicas:");
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getClass().getSimpleName().equals("ClientePJ")) {
+                System.out.println("---------------------------------------------");
+                System.out.println(cliente);
+            }
+        }
+        System.out.println("---------------------------------------------");
+
+        System.out.println("");
+
+        System.out.println("Pessoas Fisicas:");
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getClass().getSimpleName().equals("ClientePF")) {
+                System.out.println("---------------------------------------------");
+                System.out.println(cliente);
+            }
+        }
+        System.out.println("---------------------------------------------");
     }
 
-    // Cadastrar novo cliente
+    // Cadastrar novo cliente automatico
+    public void cadastrarCliente(Cliente cliente) {
+        ClientePJ clientePJ;
+        ClientePF clientePF;
+        
+        if (cliente.getClass().getSimpleName().equals("ClientePJ")) {
+            clientePJ = (ClientePJ)cliente;
+            if (!Validacao.validarCNPJ(clientePJ.getCNPJ())) {
+                System.out.println("CNPJ invalido. Nao foi possivel cadastrar o cliente");
+                return;
+            }
+        } else if (cliente.getClass().getSimpleName().equals("ClientePF")) {
+            clientePF = (ClientePF)cliente;
+            if (!Validacao.validarCPF(clientePF.getCPF())) {
+                System.out.println("CPF invalido. Nao foi possivel cadastrar o cliente");
+                return;
+            }
+        }
+        if (!Validacao.validarNome(cliente.getNome())) {
+            System.out.println("Nome invalido. Nao foi possivel cadastrar o cliente");
+            return;
+        }
+
+        listaClientes.add(cliente);
+        double valorSeguro = calcularPrecoSeguroCliente(cliente);
+        cliente.setValorSeguro(valorSeguro);
+    }
+
+    // Cadastrar novo cliente com scanner
     public void cadastrarCliente(Scanner scanner) {
         return;
     }
@@ -55,10 +106,44 @@ public class Seguradora {
 
     // Listar todos os sinistros da seguradora por cliente
     public void listarSinistros() {
-        return;
+        if (listaSinistros.isEmpty()) {
+            System.out.println("Nao ha sinistros gerados");
+            return;
+        }
+
+        System.out.println("Sinistros:");
+        for (Sinistro sinistro : listaSinistros) {
+            System.out.println("---------------------------------------------");
+            System.out.println(sinistro);
+        }
+        System.out.println("---------------------------------------------");
     }
 
-    // Gerar novo sinistro
+    // Gerar novo sinistro automatico
+    public void gerarSinistro(String data, String nomeCliente, String endereco, String placaVeiculo) {
+        for (Cliente cliente: listaClientes){
+            if (cliente.getNome().equals(nomeCliente)) {
+                for (Veiculo veiculo: cliente.getListaVeiculos()) {
+                    if (veiculo.getPlaca().equals(placaVeiculo)) {
+                        Sinistro sinistro = new Sinistro(data, endereco, this, veiculo, cliente);
+                        if (listaSinistros.contains(sinistro)) {
+                            System.out.println("Sinistro ja adicionado.");
+                            return;
+                        }
+                        listaSinistros.add(sinistro);
+                        cliente.getListaSinistros().add(sinistro);
+                        cliente.setValorSeguro(calcularPrecoSeguroCliente(cliente));
+                        System.out.println("Sinistro adicionado!");
+                        return;
+                    }
+                }
+            }
+        }
+
+        System.out.println("Nao foi possivel gerar o sinistro.");
+    }
+
+    // Gerar novo sinistro com scanner
     public void gerarSinistro(Scanner scanner) {
         return;
     }
@@ -81,7 +166,18 @@ public class Seguradora {
 
     // Calcular receita
     public void calcularReceita() {
-        return;
+        double receita = 0;
+        for (Cliente cliente : listaClientes) {
+            receita += cliente.getValorSeguro();
+        }
+        System.out.printf("Receita: R$ %.2f\n", receita);
+    }
+
+    // Calcular preco do seguro do cliente
+    public double calcularPrecoSeguroCliente(Cliente cliente) {
+        double score = cliente.calcularScore();
+        int qtdSinistros = cliente.getListaSinistros().size();
+        return score * (1 + qtdSinistros);
     }
 
     // Visualizar unico sinistro

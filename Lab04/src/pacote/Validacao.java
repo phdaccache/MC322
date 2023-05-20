@@ -16,8 +16,8 @@ public class Validacao {
         return true;
     }
 
-    // Validar data
-    public static boolean validarData() {
+    // Validar placa
+    public static boolean validarPlaca() {
         return true;
     }
 }

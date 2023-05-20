@@ -9,6 +9,7 @@ public class Cliente {
     private String nome;    
     private String endereco;
     private ArrayList<Veiculo> listaVeiculos;
+    private ArrayList<Sinistro> listaSinistros;
     private double valorSeguro;
 
     // Construtor
@@ -16,6 +17,7 @@ public class Cliente {
         this.nome = nome;
         this.endereco = endereco;
         this.listaVeiculos = new ArrayList<>();
+        this.listaSinistros = new ArrayList<>();
     }
 
     public String toString() {
@@ -23,12 +25,16 @@ public class Cliente {
         joiner.add("Nome: " + getNome());
         joiner.add("Endereco: " + getEndereco());
         joiner.add("Veiculos: ");
-        for (int i = 0; i < listaVeiculos.size(); i++) {
-            Veiculo veiculo = listaVeiculos.get(i);
-            joiner.add(String.format("    Carro %d - %s - %s.",
-                                    i+1, veiculo.getModelo(), veiculo.getPlaca()));
+        if (listaVeiculos.isEmpty()) {
+            joiner.add("    Sem veiculos cadastrados");
+        } else {
+            for (int i = 0; i < listaVeiculos.size(); i++) {
+                Veiculo veiculo = listaVeiculos.get(i);
+                joiner.add(String.format("    Carro %d: %s - %s",
+                                        i+1, veiculo.getModelo(), veiculo.getPlaca()));
+            }
         }
-        joiner.add("Valor do seguro: " + getValorSeguro());
+        joiner.add(String.format("Valor do seguro: R$ %.2f", getValorSeguro()));
 
         return joiner.toString();
     }
@@ -43,7 +49,12 @@ public class Cliente {
         return;
     }
 
-    // Cadastrar novo veiculo
+    // Cadastrar novo veiculo automatico
+    public void cadastrarVeiculo(Veiculo veiculo) {
+        listaVeiculos.add(veiculo);
+    }
+
+    // Cadastrar novo veiculo com scanner
     public void cadastrarVeiculo(Scanner scanner) {
         return;
     }
@@ -59,7 +70,7 @@ public class Cliente {
     }
 
     // Calcula score
-    public double calculaScore() {
+    public double calcularScore() {
         return CalcSeguro.VALOR_BASE.getValor();
     }
 
@@ -87,6 +98,14 @@ public class Cliente {
 
     public void setListaVeiculos(ArrayList<Veiculo> listaVeiculos) {
         this.listaVeiculos = listaVeiculos;
+    }
+
+    public ArrayList<Sinistro> getListaSinistros() {
+        return this.listaSinistros;
+    }
+
+    public void setListaSinistros(ArrayList<Sinistro> listaSinistros) {
+        this.listaSinistros = listaSinistros;
     }
 
     public double getValorSeguro() {

@@ -22,22 +22,19 @@ public class ClientePJ extends Cliente {
     }
 
     public String toString() {
-        super.toString();
-
         StringJoiner joiner = new StringJoiner("\n");
-        joiner.add("CNPJ: " + getCNPJ());
-
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		String dataFundacaoString = getDataFundacao().format(dtf); // Tranformando LocalDate em String
+        joiner.add(super.toString());
+        joiner.add("CNPJ: " + getCNPJ());
         joiner.add("Data Fundacao: " + dataFundacaoString);
-
         joiner.add("Quantidade de funcionarios: " + qtdFuncionarios);
 
         return joiner.toString();
     }
 
     // Calcula score
-    public double calculaScore() {
+    public double calcularScore() {
         double valorBase = CalcSeguro.VALOR_BASE.getValor();
         int qtdCarros = getListaVeiculos().size();
         return valorBase * (1 + (qtdFuncionarios/100)) * qtdCarros;
