@@ -26,7 +26,7 @@ public class Cliente {
         joiner.add("Endereco: " + getEndereco());
         joiner.add("Veiculos: ");
         if (listaVeiculos.isEmpty()) {
-            joiner.add("    Sem veiculos cadastrados");
+            joiner.add("    Sem veiculos cadastrados.");
         } else {
             for (int i = 0; i < listaVeiculos.size(); i++) {
                 Veiculo veiculo = listaVeiculos.get(i);
@@ -54,7 +54,7 @@ public class Cliente {
         Seguradora seguradora = null;
 
         if (!Validacao.validarPlaca()) {
-            System.out.println("Placa invalida. Nao foi possivel cadastrar o veiculo");
+            System.out.println("Placa invalida. Nao foi possivel cadastrar o veiculo.");
             return;
         }
 

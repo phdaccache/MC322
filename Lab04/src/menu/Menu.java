@@ -143,13 +143,13 @@ public class Menu {
                 Admin.excluirSeguradora(scanner);
                 break;
             case LISTAR_CLIENTES_SEGURADORA:
-                Admin.listarClientes();
+                Admin.listarClientes(scanner);
                 break;
             case LISTAR_SINISTROS_SEGURADORA:
-                Admin.listarSinistros();
+                Admin.listarSinistros(scanner);
                 break;
             case LISTAR_VEICULOS_SEGURADORA:
-                Admin.listarVeiculos();
+                Admin.listarVeiculos(scanner);
                 break;
 
             // Seguradora

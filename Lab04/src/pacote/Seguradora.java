@@ -75,18 +75,18 @@ public class Seguradora {
         if (cliente.getClass().getSimpleName().equals("ClientePJ")) {
             clientePJ = (ClientePJ)cliente;
             if (!Validacao.validarCNPJ(clientePJ.getCNPJ())) {
-                System.out.println("CNPJ invalido. Nao foi possivel cadastrar o cliente");
+                System.out.println("CNPJ invalido. Nao foi possivel cadastrar o cliente.");
                 return;
             }
         } else if (cliente.getClass().getSimpleName().equals("ClientePF")) {
             clientePF = (ClientePF)cliente;
             if (!Validacao.validarCPF(clientePF.getCPF())) {
-                System.out.println("CPF invalido. Nao foi possivel cadastrar o cliente");
+                System.out.println("CPF invalido. Nao foi possivel cadastrar o cliente.");
                 return;
             }
         }
         if (!Validacao.validarNome(cliente.getNome()) || listaClientes.contains(cliente)) {
-            System.out.println("Nome invalido. Nao foi possivel cadastrar o cliente");
+            System.out.println("Nome invalido. Nao foi possivel cadastrar o cliente.");
             return;
         }
 
@@ -109,7 +109,7 @@ public class Seguradora {
     // Listar todos os sinistros da seguradora por cliente
     public void listarSinistros() {
         if (listaSinistros.isEmpty()) {
-            System.out.println("Nao ha sinistros gerados");
+            System.out.println("Nao ha sinistros gerados.");
             return;
         }
 
@@ -134,13 +134,13 @@ public class Seguradora {
                     if (veiculo.getPlaca().equals(placaVeiculo)) {
                         Sinistro sinistro = new Sinistro(data, endereco, this, veiculo, cliente);
                         if (listaSinistros.contains(sinistro)) {
-                            System.out.println("Sinistro ja adicionado.");
+                            System.out.println("Sinistro ja foi gerado.");
                             return;
                         }
                         listaSinistros.add(sinistro);
                         cliente.getListaSinistros().add(sinistro);
                         cliente.setValorSeguro(calcularPrecoSeguroCliente(cliente));
-                        System.out.println("Sinistro adicionado!");
+                        System.out.println("Sinistro gerado!");
                         return;
                     }
                 }
@@ -188,7 +188,7 @@ public class Seguradora {
     }
 
     // Visualizar unico sinistro (com mais detalhes do que a listagem normal)
-    private void visualizarSinistro(Sinistro sinistro) {
+    public void visualizarSinistro(Sinistro sinistro) {
         StringJoiner joiner = new StringJoiner("\n");
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String dataString = sinistro.getData().format(dtf); // Tranformando LocalDate em String

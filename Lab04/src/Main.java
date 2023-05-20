@@ -15,14 +15,16 @@ public class Main {
         /* TESTE AUTOMATICO */
 
         // Instanciacao dos objetos
-        Seguradora seguradora = new Seguradora("Pedro Seguros", "(11) 1234-5678", "pedroseguros@gmail.com", "Rua das Seguradoras");
-        Admin.cadastrarSeguradora(seguradora);
+        Seguradora seguradora1 = new Seguradora("Pedro Seguros", "(11) 1234-5678", "pedroseguros@gmail.com", "Rua das Seguradoras");
+        Seguradora seguradora2 = new Seguradora("Seguros Magicos", "(11) 9876-5432", "porto@gmail.com", "Rua Magica");
+        Admin.cadastrarSeguradora(seguradora1);
+        Admin.cadastrarSeguradora(seguradora2);
 
         System.out.println("");
 
         ClientePJ clientePJ1 = new ClientePJ("Google", "Rua 1", "06.990.590/0001-23", "04/09/1998", 50);
         ClientePF clientePF = new ClientePF("Pedro", "Rua 2", "101.255.787-17", "Masculino", "10/12/2022", "Ensino Superior", "25/01/2003", "Média");
-        ClientePJ clientePJ2 = new ClientePJ("Facebook", "Rua 3", "1234", "25/01/2003", 8);
+        ClientePJ clientePJ2 = new ClientePJ("Facebook", "Rua 3", "13.347.016/0001-17", "25/01/2003", 8);
         
         Veiculo veiculo1 = new Veiculo("bmw-1234", "Chevrolet", "Onix", 2022);
         Veiculo veiculo2 = new Veiculo("abc-4321", "Hyundai", "HB20", 2018);
@@ -36,33 +38,33 @@ public class Main {
         System.out.println("");
 
         // Cadastro dos clientes na seguradora
-        seguradora.cadastrarCliente(clientePF);
-        seguradora.cadastrarCliente(clientePJ1);
-        seguradora.cadastrarCliente(clientePJ2);
+        seguradora1.cadastrarCliente(clientePF);
+        seguradora1.cadastrarCliente(clientePJ1);
+        seguradora1.cadastrarCliente(clientePJ2);
 
         System.out.println("");
 
         // Sinistros gerados
-        seguradora.gerarSinistro("10/04/2023", "Google", "Rua 1", "abc-4321");
-        seguradora.gerarSinistro("21/04/2023", "Google", "Rua 1", "top-1984");
-        seguradora.gerarSinistro("14/05/2023", "Pedro", "Rua 2", "bmw-1234");
+        seguradora1.gerarSinistro("10/04/2023", "Google", "Rua 1", "abc-4321");
+        seguradora1.gerarSinistro("21/04/2023", "Google", "Rua 1", "top-1984");
+        seguradora1.gerarSinistro("14/05/2023", "Pedro", "Rua 2", "bmw-1234");
 
         System.out.println("");
 
         // Listagens
-        seguradora.listarClientes();
+        seguradora1.listarClientes();
         System.out.println("");
-        seguradora.listarSinistros();
+        seguradora1.listarSinistros();
         System.out.println("");
         System.out.println("Receita da seguradora:");
-        seguradora.calcularReceita();
+        seguradora1.calcularReceita();
         System.out.println("");
 
         // Atualizacao do valor do seguro
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate novaData = LocalDate.parse("25/01/1980", dtf); // Tranformando String em LocalDate
         clientePF.setDataNascimento(novaData);
-        double valorSeguro = seguradora.calcularPrecoSeguroCliente(clientePF);
+        double valorSeguro = seguradora1.calcularPrecoSeguroCliente(clientePF);
         clientePF.setValorSeguro(valorSeguro);
 
         System.out.println("Cliente com novos dados:");
@@ -74,7 +76,7 @@ public class Main {
 
         // Nova receita da seguradora
         System.out.println("Nova receita da seguradora:");
-        seguradora.calcularReceita();
+        seguradora1.calcularReceita();
 
 
         /* MENU INTERATIVO */
