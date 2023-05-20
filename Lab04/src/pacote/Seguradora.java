@@ -162,7 +162,6 @@ public class Seguradora {
 
     // Listar veiculos por cliente
     public void listarVeiculos() {
-        visualizarSinistro(null);
         return;
     }
 

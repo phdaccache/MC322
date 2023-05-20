@@ -177,8 +177,8 @@ public class Admin {
             // Iterando sobre os clientes
             for (Cliente cliente: seguradora.getListaClientes()) {
                 // Iterando sobre os veiculos
-                for (int j = inicio; j < cliente.getListaVeiculos().size(); j++) {
-                    System.out.printf("Veiculo %d:\n", j+1);
+                for (int j = 0; j < cliente.getListaVeiculos().size(); j++) {
+                    System.out.printf("Veiculo %d:\n", inicio+1);
                     System.out.println(cliente.getListaVeiculos().get(j));
                     System.out.println("---------------------------------------------");
                     inicio++;
