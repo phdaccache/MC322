@@ -16,7 +16,9 @@ public class Main {
 
         // Instanciacao dos objetos
         Seguradora seguradora = new Seguradora("Pedro Seguros", "(11) 1234-5678", "pedroseguros@gmail.com", "Rua das Seguradoras");
-        Admin.listaSeguradoras.add(seguradora);
+        Admin.cadastrarSeguradora(seguradora);
+
+        System.out.println("");
 
         ClientePJ clientePJ1 = new ClientePJ("Google", "Rua 1", "06.990.590/0001-23", "04/09/1998", 50);
         ClientePF clientePF = new ClientePF("Pedro", "Rua 2", "101.255.787-17", "Masculino", "10/12/2022", "Ensino Superior", "25/01/2003", "Média");

@@ -7,12 +7,23 @@ public class Admin {
     // Atributo
     public static ArrayList<Seguradora> listaSeguradoras = new ArrayList<>();
 
-    // Cadastrar nova seguradora
+    // Cadastrar nova seguradora automatico
+    public static void cadastrarSeguradora(Seguradora seguradora) {
+        if (!Validacao.validarNome(seguradora.getNome()) || listaSeguradoras.contains(seguradora)) {
+            System.out.println("Nome invalido. Nao foi possivel cadastrar a seguradora");
+            return;
+        }
+
+        listaSeguradoras.add(seguradora);
+        System.out.println("Seguradora cadastrada!");
+    }
+
+    // Cadastrar nova seguradora com scanner
     public static void cadastrarSeguradora(Scanner scanner) {
         return;
     }
 
-    // Excluir seguradora
+    // Excluir seguradora com scanner
     public static void excluirSeguradora(Scanner scanner) {
         return;
     }
