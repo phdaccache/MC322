@@ -43,12 +43,12 @@ public class Seguradora {
     }
 
     // Cadastrar novo cliente
-    public void cadastrarCliente(Cliente cliente) {
+    public void cadastrarCliente() {
         return;
     }
 
     // Excluir cliente
-    public void excluirCliente(String nome) {
+    public void excluirCliente() {
         return;
     }
 

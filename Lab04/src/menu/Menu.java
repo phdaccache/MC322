@@ -2,6 +2,10 @@ package menu;
 
 import java.util.Scanner;
 
+import pacote.Admin;
+import pacote.Cliente;
+import pacote.Seguradora;
+
 public class Menu {
     private Scanner scanner;
 
@@ -50,11 +54,22 @@ public class Menu {
 
     // Executa a opcao do menu passada
     public void runMenuOption(MenuOperacoes option) {
+        Seguradora seguradora;
+        Cliente cliente;
+
         switch (option) {
             case ADMIN:
+                runSubmenu(option, null, null);
+                break;
             case SEGURADORA:
+                seguradora = loginSeguradora();
+                if (seguradora == null) {break;}
+                runSubmenu(option, seguradora, null);
+                break;
             case CLIENTE:
-                runSubmenu(option);
+                cliente = loginCliente();
+                if (cliente == null) {break;}
+                runSubmenu(option, null, cliente);
                 break;
             case SAIR:
                 System.out.println("Programa encerrado.");
@@ -62,12 +77,18 @@ public class Menu {
     }
 
     // Executa submenu (imprime, recebe a opcao e executa a opcao) de acordo com a opcao passada
-    private void runSubmenu(MenuOperacoes option) {
+    private void runSubmenu(MenuOperacoes option, Seguradora seguradora, Cliente cliente) {
         SubmenuOperacoes subOption;
         do {
             showSubmenu(option);
             subOption = readOptionSubmenu(option);
-            runSubmenuOption(subOption);
+            if (seguradora != null) {
+                runSubmenuOption(subOption, seguradora, null);
+            } else if (cliente != null) {
+                runSubmenuOption(subOption, null, cliente);
+            } else {
+                runSubmenuOption(subOption, null, null);
+            }
         } while (subOption != SubmenuOperacoes.VOLTAR);
     }
 
@@ -110,72 +131,72 @@ public class Menu {
     }
 
     // Executa a opcao do submenu passada
-    private void runSubmenuOption(SubmenuOperacoes subOption) {
+    private void runSubmenuOption(SubmenuOperacoes subOption, Seguradora seguradora, Cliente cliente) {
         switch(subOption) {
             // Admin
             case CADASTRAR_SEGURADORA:
-                System.out.println("Chamar metodo CADASTRAR_SEGURADORA");
+                Admin.cadastrarSeguradora();
                 break;
             case EXCLUIR_SEGURADORA:
-                System.out.println("Chamar metodo EXCLUIR_SEGURADORA");
+                Admin.excluirSeguradora();
                 break;
             case LISTAR_CLIENTES_SEGURADORA:
-                System.out.println("Chamar metodo LISTAR_CLIENTES_SEGURADORA");
+                Admin.listarClientes();
                 break;
             case LISTAR_SINISTROS_SEGURADORA:
-                System.out.println("Chamar metodo LISTAR_SINISTROS_SEGURADORA");
+                Admin.listarSinistros();
                 break;
             case LISTAR_VEICULOS_SEGURADORA:
-                System.out.println("Chamar metodo LISTAR_VEICULOS_SEGURADORA");
+                Admin.listarVeiculos();
                 break;
 
             // Seguradora
             case VISUALIZAR_DADOS_SEGURADORA:
-                System.out.println("Chamar metodo VISUALIZAR_DADOS_SEGURADORA");
+                seguradora.visualizarDados();
                 break;
             case LISTAR_CLIENTES:
-                System.out.println("Chamar metodo LISTAR_CLIENTES");
+                seguradora.listarClientes();
                 break;
             case CADASTRAR_CLIENTE:
-                System.out.println("Chamar metodo CADASTRAR_CLIENTE");
+                seguradora.cadastrarCliente();
                 break;
             case EXCLUIR_CLIENTE:
-                System.out.println("Chamar metodo EXCLUIR_CLIENTE");
+                seguradora.excluirCliente();
                 break;
             case LISTAR_SINISTROS_CLIENTE:
-                System.out.println("Chamar metodo LISTAR_SINISTROS_CLIENTE");
+                seguradora.listarSinistros();
                 break;
             case GERAR_SINISTRO:
-                System.out.println("Chamar metodo GERAR_SINISTRO");
+                seguradora.gerarSinistro();
                 break;
             case EXCLUIR_SINISTRO:
-                System.out.println("Chamar metodo EXCLUIR_SINISTRO");
+                seguradora.excluirSinistro();
                 break;
             case LISTAR_VEICULOS_CLIENTE:
-                System.out.println("Chamar metodo LISTAR_VEICULOS_CLIENTE");
+                seguradora.listarVeiculos();
                 break;
             case TRANSFERIR_SEGURO:
-                System.out.println("Chamar metodo TRANSFERIR_SEGURO");
+                seguradora.transferirSeguro();
                 break;
             case CALCULAR_RECEITA_SEGURADORA:
-                System.out.println("Chamar metodo CALCULAR_RECEITA_SEGURADORA");
+                seguradora.calcularReceita();
                 break;
 
             // Cliente
             case VISUALIZAR_DADOS_CLIENTE:
-                System.out.println("Chamar metodo VISUALIZAR_DADOS_CLIENTE");
+                cliente.visualizarDados();
                 break;
             case LISTAR_VEICULOS:
-                System.out.println("Chamar metodo LISTAR_VEICULOS");
+                cliente.listarVeiculos();
                 break;
             case CADASTRAR_VEICULO:
-                System.out.println("Chamar metodo CADASTRAR_VEICULO");
+                cliente.cadastrarVeiculo();
                 break;
             case EXCLUIR_VEICULO:
-                System.out.println("Chamar metodo EXCLUIR_VEICULO");
+                cliente.excluirVeiculo();
                 break;
             case LISTAR_SINISTROS:
-                System.out.println("Chamar metodo LISTAR_SINISTROS");
+                cliente.listarSinistros();
                 break;
             case VOLTAR:
             	break;
@@ -195,6 +216,60 @@ public class Menu {
             String leftPadding = "#".repeat(left);
             String rightPadding = "#".repeat(right);
             return String.format("\n%s %s %s", leftPadding, title, rightPadding);
+        }
+    }
+
+    // Realiza login da seguradora
+    private Seguradora loginSeguradora() {
+        while (true) {
+            if (Admin.listaSeguradoras == null) {
+                System.out.println("Sem seguradoras cadastradas.");
+                return null;
+            }
+
+            System.out.print("Digite o nome da seguradora: ");
+            String nome = scanner.nextLine();
+
+            for (Seguradora seguradora : Admin.listaSeguradoras) {
+                if (seguradora.getNome().equals(nome)) {
+                    return seguradora;
+                }
+            }
+
+            System.out.println("Nome invalido.");
+        }
+    }
+
+    // Realiza login do cliente
+    private Cliente loginCliente() {
+        boolean clientesIsEmpty = true;
+
+        while (true) {
+            if (Admin.listaSeguradoras == null) {
+                System.out.println("Sem seguradoras cadastradas.");
+                return null;
+            }
+
+            System.out.print("Digite o nome do cliente: ");
+            String nome = scanner.nextLine();
+
+            for (Seguradora seguradora : Admin.listaSeguradoras) {
+                if (!seguradora.getListaClientes().isEmpty()) {
+                    clientesIsEmpty = false;
+                }
+                for (Cliente cliente : seguradora.getListaClientes()) {
+                    if (cliente.getNome().equals(nome)) {
+                        return cliente;
+                    }
+                }
+            }
+
+            if (clientesIsEmpty) {
+                System.out.println("Sem clientes cadastrados.");
+                return null;
+            }
+
+            System.out.println("Nome invalido.");
         }
     }
 }
