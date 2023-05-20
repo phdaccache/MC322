@@ -135,10 +135,10 @@ public class Menu {
         switch(subOption) {
             // Admin
             case CADASTRAR_SEGURADORA:
-                Admin.cadastrarSeguradora();
+                Admin.cadastrarSeguradora(scanner);
                 break;
             case EXCLUIR_SEGURADORA:
-                Admin.excluirSeguradora();
+                Admin.excluirSeguradora(scanner);
                 break;
             case LISTAR_CLIENTES_SEGURADORA:
                 Admin.listarClientes();
@@ -158,25 +158,25 @@ public class Menu {
                 seguradora.listarClientes();
                 break;
             case CADASTRAR_CLIENTE:
-                seguradora.cadastrarCliente();
+                seguradora.cadastrarCliente(scanner);
                 break;
             case EXCLUIR_CLIENTE:
-                seguradora.excluirCliente();
+                seguradora.excluirCliente(scanner);
                 break;
             case LISTAR_SINISTROS_CLIENTE:
                 seguradora.listarSinistros();
                 break;
             case GERAR_SINISTRO:
-                seguradora.gerarSinistro();
+                seguradora.gerarSinistro(scanner);
                 break;
             case EXCLUIR_SINISTRO:
-                seguradora.excluirSinistro();
+                seguradora.excluirSinistro(scanner);
                 break;
             case LISTAR_VEICULOS_CLIENTE:
                 seguradora.listarVeiculos();
                 break;
             case TRANSFERIR_SEGURO:
-                seguradora.transferirSeguro();
+                seguradora.transferirSeguro(scanner);
                 break;
             case CALCULAR_RECEITA_SEGURADORA:
                 seguradora.calcularReceita();
@@ -190,10 +190,10 @@ public class Menu {
                 cliente.listarVeiculos();
                 break;
             case CADASTRAR_VEICULO:
-                cliente.cadastrarVeiculo();
+                cliente.cadastrarVeiculo(scanner);
                 break;
             case EXCLUIR_VEICULO:
-                cliente.excluirVeiculo();
+                cliente.excluirVeiculo(scanner);
                 break;
             case LISTAR_SINISTROS:
                 cliente.listarSinistros();

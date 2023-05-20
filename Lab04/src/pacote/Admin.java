@@ -1,5 +1,6 @@
 package pacote;
 
+import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Admin {
@@ -7,12 +8,12 @@ public class Admin {
     public static ArrayList<Seguradora> listaSeguradoras = null;
 
     // Cadastrar nova seguradora
-    public static void cadastrarSeguradora() {
+    public static void cadastrarSeguradora(Scanner scanner) {
         return;
     }
 
     // Excluir seguradora
-    public static void excluirSeguradora() {
+    public static void excluirSeguradora(Scanner scanner) {
         return;
     }
 

@@ -1,6 +1,7 @@
 package pacote;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.StringJoiner;
 
 public class Cliente {
@@ -27,6 +28,7 @@ public class Cliente {
             joiner.add(String.format("    Carro %d - %s - %s.",
                                     i+1, veiculo.getModelo(), veiculo.getPlaca()));
         }
+        joiner.add("Valor do seguro: " + getValorSeguro());
 
         return joiner.toString();
     }
@@ -42,18 +44,23 @@ public class Cliente {
     }
 
     // Cadastrar novo veiculo
-    public void cadastrarVeiculo() {
+    public void cadastrarVeiculo(Scanner scanner) {
         return;
     }
 
     // Excluir veiculo
-    public void excluirVeiculo() {
+    public void excluirVeiculo(Scanner scanner) {
         return;
     }
 
     // Listar todos os sinistros do cliente
     public void listarSinistros() {
         return;
+    }
+
+    // Calcula score
+    public double calculaScore() {
+        return CalcSeguro.VALOR_BASE.getValor();
     }
 
 

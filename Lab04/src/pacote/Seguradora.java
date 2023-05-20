@@ -1,6 +1,7 @@
 package pacote;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.StringJoiner;
 
 public class Seguradora {
@@ -43,12 +44,12 @@ public class Seguradora {
     }
 
     // Cadastrar novo cliente
-    public void cadastrarCliente() {
+    public void cadastrarCliente(Scanner scanner) {
         return;
     }
 
     // Excluir cliente
-    public void excluirCliente() {
+    public void excluirCliente(Scanner scanner) {
         return;
     }
 
@@ -58,12 +59,12 @@ public class Seguradora {
     }
 
     // Gerar novo sinistro
-    public void gerarSinistro() {
+    public void gerarSinistro(Scanner scanner) {
         return;
     }
 
     // Excluir sinistro
-    public void excluirSinistro() {
+    public void excluirSinistro(Scanner scanner) {
         return;
     }
 
@@ -74,7 +75,7 @@ public class Seguradora {
     }
 
     // Trasnferir seguro
-    public void transferirSeguro() {
+    public void transferirSeguro(Scanner scanner) {
         return;
     }
 
