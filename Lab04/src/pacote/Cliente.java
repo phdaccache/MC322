@@ -140,7 +140,9 @@ public class Cliente {
         // Caso em que nao ha sinistros
         if (listaSinistros.isEmpty()) {
             System.out.println("Nao ha sinistros cadastrados.");
+            return;
         }
+        System.out.println("Sinistros:");
         // Iterando sobre os sinistros
         for (Sinistro sinistro: listaSinistros) {
             System.out.println("---------------------------------------------");

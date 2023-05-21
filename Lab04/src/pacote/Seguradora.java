@@ -208,9 +208,8 @@ public class Seguradora {
                 System.out.println(sinistro);
             }
             System.out.println("---------------------------------------------");
+            System.out.println("");
         }
-
-        System.out.println("");
 
         int indexSinistro = 0; // No menu interativo, esse indice e escolhido pelo usuario
         visualizarSinistro(listaSinistros.get(indexSinistro));
@@ -238,6 +237,7 @@ public class Seguradora {
                 System.out.println(sinistro);
             }
             System.out.println("---------------------------------------------");
+            System.out.println("");
         }
 
         System.out.print("Insira o numero do sinistro que deseja visualizar: ");
@@ -333,6 +333,7 @@ public class Seguradora {
                 System.out.println(veiculo);
             }
             System.out.println("---------------------------------------------");
+            System.out.println("");
         }
     }
 
