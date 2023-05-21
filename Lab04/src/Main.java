@@ -45,9 +45,9 @@ public class Main {
         System.out.println("");
 
         // Sinistros gerados
-        seguradora1.gerarSinistro("10/04/2023", "Google", "Rua 1", "abc-4321");
-        seguradora1.gerarSinistro("21/04/2023", "Google", "Rua 1", "top-1984");
-        seguradora1.gerarSinistro("14/05/2023", "Pedro", "Rua 2", "bmw-1234");
+        seguradora1.gerarSinistro("10/04/2023", "Google", "Rua 1", "ABC-4321");
+        seguradora1.gerarSinistro("21/04/2023", "Google", "Rua 1", "TOP-1984");
+        seguradora1.gerarSinistro("14/05/2023", "Pedro", "Rua 2", "BMW-1234");
 
         System.out.println("");
 
