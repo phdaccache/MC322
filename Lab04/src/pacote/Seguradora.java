@@ -42,12 +42,14 @@ public class Seguradora {
 
     // Listar todos os clientes
     public void listarClientes() {
+        // Caso em que nao ha clientes cadastrados
         if (listaClientes.isEmpty()) {
             System.out.println("Sem clientes cadastrados");
             return;
         }
 
         System.out.println("Pessoas Juridicas:");
+        // Iterando sobre os clientes PJ
         for (Cliente cliente : listaClientes) {
             if (cliente.getClass().getSimpleName().equals("ClientePJ")) {
                 System.out.println("---------------------------------------------");
@@ -59,6 +61,7 @@ public class Seguradora {
         System.out.println("");
 
         System.out.println("Pessoas Fisicas:");
+        // Iterando sobre os clientes PF
         for (Cliente cliente : listaClientes) {
             if (cliente.getClass().getSimpleName().equals("ClientePF")) {
                 System.out.println("---------------------------------------------");
@@ -73,12 +76,14 @@ public class Seguradora {
         ClientePJ clientePJ;
         ClientePF clientePF;
         
+        // Caso em que o CNPJ e invalido
         if (cliente.getClass().getSimpleName().equals("ClientePJ")) {
             clientePJ = (ClientePJ)cliente;
             if (!Validacao.validarCNPJ(clientePJ.getCNPJ())) {
                 System.out.println("CNPJ invalido. Nao foi possivel cadastrar o cliente.");
                 return;
             }
+        // Caso em que o CPF e invalido
         } else if (cliente.getClass().getSimpleName().equals("ClientePF")) {
             clientePF = (ClientePF)cliente;
             if (!Validacao.validarCPF(clientePF.getCPF())) {
@@ -86,6 +91,7 @@ public class Seguradora {
                 return;
             }
         }
+        // Caso em que o nome e invalido
         if (!Validacao.validarNome(cliente.getNome()) || listaClientes.contains(cliente)) {
             System.out.println("Nome invalido. Nao foi possivel cadastrar o cliente.");
             return;
@@ -152,6 +158,7 @@ public class Seguradora {
             return;
         }
 
+        // Caso em que ja tem um cliente com o mesmo nome
         for (Cliente cl : listaClientes) {
             if (cl.getNome().equals(cliente.getNome())) {
                 System.out.printf("Cliente %s ja existe.\n", cliente.getNome());
@@ -162,16 +169,16 @@ public class Seguradora {
         cadastrarCliente(cliente);
     }
 
-    // Excluir cliente
+    // Excluir cliente com scanner
     public void excluirCliente(Scanner scanner) {
         System.out.print("Insira o nome do cliente que deseja excluir: ");
         String nome = scanner.nextLine();
 
+        // Iterando sobre os clientes
         for (Cliente cliente : listaClientes) {
             if (cliente.getNome().equals(nome)) {
                 listaClientes.remove(cliente);
                 System.out.printf("Cliente %s removido!\n", nome);
-                
                 return;
             }
         }
@@ -179,14 +186,16 @@ public class Seguradora {
         System.out.printf("Nome invalido. Nao foi possivel remover o cliente %s.\n", nome);
     }
 
-    // Listar todos os sinistros da seguradora por cliente
+    // Listar todos os sinistros da seguradora por cliente automatico
     public void listarSinistros() {
+        // Caso em que nao ha sinistros gerados
         if (listaSinistros.isEmpty()) {
             System.out.println("Nao ha sinistros gerados.");
             return;
         }
 
         System.out.println("Sinistros:");
+        // Iterando sobre os sinistros
         for (Sinistro sinistro : listaSinistros) {
             System.out.println("---------------------------------------------");
             System.out.println(sinistro);
@@ -197,6 +206,35 @@ public class Seguradora {
 
         int indexSinistro = 0; // No menu interativo, esse indice e escolhido pelo usuario
         visualizarSinistro(listaSinistros.get(indexSinistro));
+    }
+
+    // Listar todos os sinistros da seguradora por cliente com scanner
+    public void listarSinistros(Scanner scanner) {
+        // Caso em que nao ha sinistros gerados
+        if (listaSinistros.isEmpty()) {
+            System.out.println("Nao ha sinistros gerados.");
+            return;
+        }
+
+        System.out.println("Sinistros:");
+        // Iterando sobre os sinistros
+        for (Sinistro sinistro : listaSinistros) {
+            System.out.println("---------------------------------------------");
+            System.out.println(sinistro);
+        }
+        System.out.println("---------------------------------------------");
+
+        System.out.print("Insira o numero do sinistro que deseja visualizar: ");
+        int num = scanner.nextInt();
+        scanner.nextLine();
+
+        // Caso em que o sinistro nao existe
+        if (num < 1 || num > listaSinistros.size()) {
+            System.out.printf("Numero invalido. Nao foi possivel visualizar o sinistro %d.\n", num);
+            return;
+        }
+
+        visualizarSinistro(listaSinistros.get(num - 1));
     }
 
     // Gerar novo sinistro automatico
@@ -225,22 +263,103 @@ public class Seguradora {
 
     // Gerar novo sinistro com scanner
     public void gerarSinistro(Scanner scanner) {
-        return;
+        System.out.print("Insira a data que ocorreu o sinistro (dd/MM/yyyy): ");
+        String data = scanner.nextLine();
+        System.out.print("Insira o nome do cliente: ");
+        String nome = scanner.nextLine();
+        System.out.print("Insira o endereco: ");
+        String endereco = scanner.nextLine();
+        System.out.print("Insira a placa do veiculo: ");
+        String placa = scanner.nextLine();
+
+        gerarSinistro(data, nome, endereco, placa);
     }
 
-    // Excluir sinistro
+    // Excluir sinistro com scanner
     public void excluirSinistro(Scanner scanner) {
-        return;
+        System.out.print("Insira o ID do sinistro que deseja excluir: ");
+        int ID = scanner.nextInt();
+        scanner.nextLine();
+
+        for (Sinistro sinistro: listaSinistros) {
+            if (sinistro.getID() == ID) {
+                listaSinistros.remove(sinistro);
+                System.out.printf("Sinistro %d removido!\n", ID);
+                return;
+            }
+        }
+
+        System.out.printf("ID invalido. Nao foi possivel remover o sinistro %d.\n", ID);
     }
 
     // Listar veiculos por cliente
     public void listarVeiculos() {
-        return;
+        if (listaClientes.isEmpty()) {
+            System.out.println("Nao ha clientes cadastrados.");
+            return;
+        }
+        for (Cliente cliente : listaClientes) {
+            System.out.printf("Cliente %s:\n", cliente.getNome());
+            // Caso em que nao ha veiculos
+            if (cliente.getListaVeiculos().isEmpty()) {
+                System.out.println("---------------------------------------------");
+                System.out.println("Nao ha veiculos cadastrados.");
+            }
+            // Iterando sobre os sinistros
+            for (Veiculo veiculo: cliente.getListaVeiculos()) {
+                System.out.println("---------------------------------------------");
+                System.out.println(veiculo);
+            }
+            System.out.println("---------------------------------------------");
+        }
     }
 
-    // Trasnferir seguro
+    // Transferir seguro
     public void transferirSeguro(Scanner scanner) {
-        return;
+        Cliente cliente1 = null;
+        Cliente cliente2 = null;
+
+        System.out.print("Insira o nome do cliente que ira receber o seguro: ");
+        String nome1 = scanner.nextLine();
+        System.out.print("Insira o nome do cliente que ira transferir o seguro: ");
+        String nome2 = scanner.nextLine();
+
+        // Iterando sobre os clientes
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getNome().equals(nome1)) {
+                cliente1 = cliente;
+            }
+            if (cliente.getNome().equals(nome2)) {
+                cliente2 = cliente;
+            }
+        }
+
+        // Caso em que um ou ambos os clientes passados nao existem
+        if (cliente1 == null || cliente2 == null) {
+            System.out.println("Nomes invalidos. Nao foi possivel transferir o seguro.");
+            return;
+        }
+
+        // Caso em que o cliente que ira transferir o seguro tem sinistros em andamento
+        if (!cliente2.getListaSinistros().isEmpty()) {
+            System.out.println("Nao e possivel transferir um seguro com sinistro(s) em andamento.");
+            return;
+        }
+
+        for (Veiculo veiculo : cliente2.getListaVeiculos()) {
+            cliente1.cadastrarVeiculo(veiculo);
+        }
+
+        cliente2.setListaVeiculos(new ArrayList<>());
+
+        double valorSeguro1 = calcularPrecoSeguroCliente(cliente1);
+        cliente1.setValorSeguro(valorSeguro1);
+        double valorSeguro2 = calcularPrecoSeguroCliente(cliente2);
+        cliente2.setValorSeguro(valorSeguro2);
+        
+        System.out.printf("Seguro transferido de %s para %s!\n", nome2, nome1);
+        System.out.printf("Novo valor do seguro de %s: R$ %.2f.\n", nome1, valorSeguro1);
+        System.out.printf("Novo valor do seguro de %s: R$ %.2f.\n", nome2, valorSeguro2);
     }
 
     // Calcular receita

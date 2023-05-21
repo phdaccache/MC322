@@ -174,7 +174,7 @@ public class Menu {
                 seguradora.excluirCliente(scanner);
                 break;
             case LISTAR_SINISTROS_CLIENTE:
-                seguradora.listarSinistros();
+                seguradora.listarSinistros(scanner);
                 break;
             case GERAR_SINISTRO:
                 seguradora.gerarSinistro(scanner);
