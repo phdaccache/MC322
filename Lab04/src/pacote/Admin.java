@@ -92,6 +92,7 @@ public class Admin {
         int i = scanner.nextInt();
         System.out.print("Insira o numero do cliente que deseja visualizar: ");
         int j = scanner.nextInt();
+        scanner.nextLine();
 
         // Caso em que a seguradora nao existe e/ou o cliente nao existe
         if (i < 1 || i > listaSeguradoras.size() ||
@@ -138,6 +139,7 @@ public class Admin {
         int i = scanner.nextInt();
         System.out.print("Insira o numero do sinistro que deseja visualizar: ");
         int j = scanner.nextInt();
+        scanner.nextLine();
 
         // Caso em que a seguradora nao existe e/ou o sinistro nao existe
         if (i < 1 || i > listaSeguradoras.size() ||
@@ -173,12 +175,12 @@ public class Admin {
             }
             
             boolean semVeiculos = true;
-            int inicio = 0; // Para enumerar os veiculos de forma corrida (i.e. nao resetar para 0 a cada cliente)
+            int inicio = 1; // Para enumerar os veiculos de forma corrida (i.e. nao resetar para 0 a cada cliente)
             // Iterando sobre os clientes
             for (Cliente cliente: seguradora.getListaClientes()) {
                 // Iterando sobre os veiculos
                 for (int j = 0; j < cliente.getListaVeiculos().size(); j++) {
-                    System.out.printf("Veiculo %d:\n", inicio+1);
+                    System.out.printf("Veiculo %d:\n", inicio);
                     System.out.println(cliente.getListaVeiculos().get(j));
                     System.out.println("---------------------------------------------");
                     inicio++;

@@ -19,7 +19,7 @@ public enum SubmenuOperacoes {
     GERAR_SINISTRO("Gerar sinistro"),
 	EXCLUIR_SINISTRO("Excluir sininstro"),
 	LISTAR_VEICULOS_CLIENTE("Listar veiculos por cliente"),
-    TRANSFERIR_SEGURO("Trasnferir seguro"),
+    TRANSFERIR_SEGURO("Transferir seguro"),
     CALCULAR_RECEITA_SEGURADORA("Calcular receita"),
     // Cliente
     VISUALIZAR_DADOS_CLIENTE("Visualizar dados"),

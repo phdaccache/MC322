@@ -28,7 +28,11 @@ public class Menu {
             } else {
                 numOption = option.ordinal() + 1;
             }
+        if (numOption < 10) {
             System.out.printf("| Opcao %d - %-31s |\n", numOption, option.getName());
+        } else {
+            System.out.printf("| Opcao %d - %-30s |\n", numOption, option.getName());
+        }
         }
         System.out.println("|-------------------------------------------|");
     }
@@ -64,12 +68,12 @@ public class Menu {
                 break;
             case SEGURADORA:
                 seguradora = loginSeguradora();
-                if (seguradora == null) {break;}
+                if (seguradora == null) {return;}
                 runSubmenu(option, seguradora, null);
                 break;
             case CLIENTE:
                 cliente = loginCliente();
-                if (cliente == null) {break;}
+                if (cliente == null) {return;}
                 runSubmenu(option, null, cliente);
                 break;
             case SAIR:
@@ -107,7 +111,11 @@ public class Menu {
             } else {
                 numSuboption = i + 1;
             }
-            System.out.printf("| Opcao %d - %-31s |\n", numSuboption, submenu[i].getName());
+            if (numSuboption < 10) {
+                System.out.printf("| Opcao %d - %-31s |\n", numSuboption, submenu[i].getName());
+            } else {
+                System.out.printf("| Opcao %d - %-30s |\n", numSuboption, submenu[i].getName());
+            }
         }
         System.out.println("|-------------------------------------------|");
     }
@@ -239,6 +247,7 @@ public class Menu {
             }
 
             System.out.println("Nome invalido.");
+            return null;
         }
     }
 
@@ -272,6 +281,7 @@ public class Menu {
             }
 
             System.out.println("Nome invalido.");
+            return null;
         }
     }
 }

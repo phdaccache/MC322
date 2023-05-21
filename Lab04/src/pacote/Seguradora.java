@@ -36,7 +36,8 @@ public class Seguradora {
 
     // Imprime os dados da seguradora pelo toString()
     public void visualizarDados() {
-        return;
+        System.out.println("Dados seguradora:");
+        System.out.println(toString());
     }
 
     // Listar todos os clientes
@@ -98,12 +99,84 @@ public class Seguradora {
 
     // Cadastrar novo cliente com scanner
     public void cadastrarCliente(Scanner scanner) {
-        return;
+        System.out.println("\n############## Tipo de Cliente ##############");
+        System.out.println("|-------------------------------------------|");
+        System.out.println("| Opcao 1 - Pessoa Juridica                 |");
+        System.out.println("| Opcao 2 - Pessoa Fisica                   |");
+        System.out.println("|-------------------------------------------|\n");
+        System.out.print("Digite uma opcao: ");
+        int tipo = scanner.nextInt();
+        scanner.nextLine();
+
+        Cliente cliente;
+
+        /* Cadastar Pessoa Juridica */
+        if (tipo == 1) {
+            System.out.print("Insira o nome: ");
+            String nome = scanner.nextLine();
+            System.out.print("Insira o endereco: ");
+            String endereco = scanner.nextLine();
+            System.out.print("Insira o cnpj: ");
+            String cnpj = scanner.nextLine();
+            System.out.print("Insira a data de fundacao (dd/MM/yyyy): ");
+            String data = scanner.nextLine();
+            System.out.print("Insira a quantidade de funcionarios: ");
+            int qtdFuncionarios = scanner.nextInt();
+            scanner.nextLine();
+
+            cliente = new ClientePJ(nome, endereco, cnpj, data, qtdFuncionarios);
+
+        /* Cadastrar Pessoa Fisica */
+        } else if (tipo == 2) {
+            System.out.print("Insira o nome: ");
+            String nome = scanner.nextLine();
+            System.out.print("Insira o endereco: ");
+            String endereco = scanner.nextLine();
+            System.out.print("Insira o cpf: ");
+            String cpf = scanner.nextLine();
+            System.out.print("Insira o genero: ");
+            String genero = scanner.nextLine();
+            System.out.print("Insira a data de licenca (dd/MM/yyyy): ");
+            String dataLicenca = scanner.nextLine();
+            System.out.print("Insira o nivel de educacao: ");
+            String educacao = scanner.nextLine();
+            System.out.print("Insira a data de nascimento (dd/MM/yyyy): ");
+            String dataNascimento = scanner.nextLine();
+            System.out.print("Insira a classe economica: ");
+            String classe = scanner.nextLine();
+
+            cliente = new ClientePF(nome, endereco, cpf, genero, dataLicenca,
+                                    educacao, dataNascimento, classe);
+        } else {
+            System.out.println("Opcao invalida");
+            return;
+        }
+
+        for (Cliente cl : listaClientes) {
+            if (cl.getNome().equals(cliente.getNome())) {
+                System.out.printf("Cliente %s ja existe.\n", cliente.getNome());
+                return;
+            }
+        }
+
+        cadastrarCliente(cliente);
     }
 
     // Excluir cliente
     public void excluirCliente(Scanner scanner) {
-        return;
+        System.out.print("Insira o nome do cliente que deseja excluir: ");
+        String nome = scanner.nextLine();
+
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getNome().equals(nome)) {
+                listaClientes.remove(cliente);
+                System.out.printf("Cliente %s removido!\n", nome);
+                
+                return;
+            }
+        }
+
+        System.out.printf("Nome invalido. Nao foi possivel remover o cliente %s.\n", nome);
     }
 
     // Listar todos os sinistros da seguradora por cliente
