@@ -194,13 +194,21 @@ public class Seguradora {
             return;
         }
 
-        System.out.println("Sinistros:");
-        // Iterando sobre os sinistros
-        for (Sinistro sinistro : listaSinistros) {
+        // Iterando sobre os clientes
+        for (Cliente cliente : listaClientes) {
+            System.out.printf("Cliente %s:\n", cliente.getNome());
+            // Caso em que nao ha sinistros
+            if (cliente.getListaSinistros().isEmpty()) {
+                System.out.println("---------------------------------------------");
+                System.out.println("Nao ha sinistros gerados.");
+            }
+            // Iterando sobre os sinistros
+            for (Sinistro sinistro: cliente.getListaSinistros()) {
+                System.out.println("---------------------------------------------");
+                System.out.println(sinistro);
+            }
             System.out.println("---------------------------------------------");
-            System.out.println(sinistro);
         }
-        System.out.println("---------------------------------------------");
 
         System.out.println("");
 
@@ -216,13 +224,21 @@ public class Seguradora {
             return;
         }
 
-        System.out.println("Sinistros:");
-        // Iterando sobre os sinistros
-        for (Sinistro sinistro : listaSinistros) {
+        // Iterando sobre os clientes
+        for (Cliente cliente : listaClientes) {
+            System.out.printf("Cliente %s:\n", cliente.getNome());
+            // Caso em que nao ha sinistros
+            if (cliente.getListaSinistros().isEmpty()) {
+                System.out.println("---------------------------------------------");
+                System.out.println("Nao ha sinistros gerados.");
+            }
+            // Iterando sobre os sinistros
+            for (Sinistro sinistro: cliente.getListaSinistros()) {
+                System.out.println("---------------------------------------------");
+                System.out.println(sinistro);
+            }
             System.out.println("---------------------------------------------");
-            System.out.println(sinistro);
         }
-        System.out.println("---------------------------------------------");
 
         System.out.print("Insira o numero do sinistro que deseja visualizar: ");
         int num = scanner.nextInt();
@@ -311,7 +327,7 @@ public class Seguradora {
                 System.out.println("---------------------------------------------");
                 System.out.println("Nao ha veiculos cadastrados.");
             }
-            // Iterando sobre os sinistros
+            // Iterando sobre os veiculos
             for (Veiculo veiculo: cliente.getListaVeiculos()) {
                 System.out.println("---------------------------------------------");
                 System.out.println(veiculo);
