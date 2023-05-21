@@ -13,7 +13,7 @@ public enum SubmenuOperacoes {
 	LISTAR_VEICULOS_SEGURADORA("Listar veiculos por seguradora"),
     // Seguradora
     VISUALIZAR_DADOS_SEGURADORA("Visualizar dados"),
-	LISTAR_CLIENTES("Listar cliente"),
+	LISTAR_CLIENTES("Listar clientes"),
     CADASTRAR_CLIENTE("Cadastrar cliente"),
 	EXCLUIR_CLIENTE("Excluir cliente"),
 	LISTAR_SINISTROS_CLIENTE("Listar sinistros por cliente"),
