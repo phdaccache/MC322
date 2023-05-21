@@ -67,7 +67,7 @@ public class Cliente {
         Seguradora seguradora = null;
 
         // Caso em que a placa passada e invalida
-        if (!Validacao.validarPlaca()) {
+        if (!Validacao.validarPlaca(veiculo.getPlaca())) {
             System.out.println("Placa invalida. Nao foi possivel cadastrar o veiculo.");
             return;
         }

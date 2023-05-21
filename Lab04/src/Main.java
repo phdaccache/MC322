@@ -26,9 +26,9 @@ public class Main {
         ClientePF clientePF = new ClientePF("Pedro", "Rua 2", "101.255.787-17", "Masculino", "10/12/2022", "Ensino Superior", "25/01/2003", "Média");
         ClientePJ clientePJ2 = new ClientePJ("Facebook", "Rua 3", "13.347.016/0001-17", "25/01/2003", 8);
         
-        Veiculo veiculo1 = new Veiculo("bmw-1234", "Chevrolet", "Onix", 2022);
-        Veiculo veiculo2 = new Veiculo("abc-4321", "Hyundai", "HB20", 2018);
-        Veiculo veiculo3 = new Veiculo("top-1984", "Fiat", "Cronos", 2020);
+        Veiculo veiculo1 = new Veiculo("BMW-1234", "Chevrolet", "Onix", 2022);
+        Veiculo veiculo2 = new Veiculo("ABC-4321", "Hyundai", "HB20", 2018);
+        Veiculo veiculo3 = new Veiculo("TOP-1984", "Fiat", "Cronos", 2020);
         
         // Veiculos adicionados em cada cliente
         clientePF.cadastrarVeiculo(veiculo1);
