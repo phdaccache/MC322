@@ -7,6 +7,20 @@ public class Admin {
     // Atributo
     public static ArrayList<Seguradora> listaSeguradoras = new ArrayList<>();
 
+    // Listar todas as seguradoras
+    public static void listarSeguradoras() {
+        // Caso em que nao ha seguradoras
+        if (listaSeguradoras.isEmpty()) {
+            System.out.println("Nao ha seguradoras cadastradas.");
+        }
+        // Iterando sobre as seguradoras
+        for (Seguradora seguradora: listaSeguradoras) {
+            System.out.println("---------------------------------------------");
+            System.out.println(seguradora);
+        }
+        System.out.println("---------------------------------------------");
+    }
+
     // Cadastrar nova seguradora automatico
     public static void cadastrarSeguradora(Seguradora seguradora) {
         // Caso em que o nome e invalido

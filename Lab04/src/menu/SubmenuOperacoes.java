@@ -5,6 +5,7 @@ package menu;
  */
 public enum SubmenuOperacoes {
     // Admin
+    LISTAR_SEGURADORAS("Listar seguradoras"),
     CADASTRAR_SEGURADORA("Cadastrar seguradora"),
     EXCLUIR_SEGURADORA("Excluir seguradora"),
     LISTAR_CLIENTES_SEGURADORA("Listar cliente por seguradora"),

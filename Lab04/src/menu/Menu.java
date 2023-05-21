@@ -144,6 +144,9 @@ public class Menu {
     private void runSubmenuOption(SubmenuOperacoes subOption, Seguradora seguradora, Cliente cliente) {
         switch(subOption) {
             // Admin
+            case LISTAR_SEGURADORAS:
+                Admin.listarSeguradoras();
+                break;
             case CADASTRAR_SEGURADORA:
                 Admin.cadastrarSeguradora(scanner);
                 break;

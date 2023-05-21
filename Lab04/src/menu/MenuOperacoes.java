@@ -5,6 +5,7 @@ package menu;
  */
 public enum MenuOperacoes {
     ADMIN("Admin", new SubmenuOperacoes[] {
+            SubmenuOperacoes.LISTAR_SEGURADORAS,
             SubmenuOperacoes.CADASTRAR_SEGURADORA,
             SubmenuOperacoes.EXCLUIR_SEGURADORA,
             SubmenuOperacoes.LISTAR_CLIENTES_SEGURADORA,
