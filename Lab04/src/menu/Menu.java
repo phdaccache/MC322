@@ -232,6 +232,7 @@ public class Menu {
     // Realiza login da seguradora
     private Seguradora loginSeguradora() {
         while (true) {
+            // Caso em que nao ha seguradoras cadastradas
             if (Admin.listaSeguradoras == null) {
                 System.out.println("Sem seguradoras cadastradas.");
                 return null;
@@ -240,6 +241,7 @@ public class Menu {
             System.out.print("Digite o nome da seguradora: ");
             String nome = scanner.nextLine();
 
+            // Iterando sobre as seguradoras
             for (Seguradora seguradora : Admin.listaSeguradoras) {
                 if (seguradora.getNome().equals(nome)) {
                     return seguradora;
@@ -256,6 +258,7 @@ public class Menu {
         boolean clientesIsEmpty = true;
 
         while (true) {
+            // Caso em que nao ha seguradoras cadastradas
             if (Admin.listaSeguradoras == null) {
                 System.out.println("Sem seguradoras cadastradas.");
                 return null;
@@ -264,10 +267,13 @@ public class Menu {
             System.out.print("Digite o nome do cliente: ");
             String nome = scanner.nextLine();
 
+            // Iterando sobre as seguradoras
             for (Seguradora seguradora : Admin.listaSeguradoras) {
+                // Caso em que nao ha clientes cadastrados
                 if (!seguradora.getListaClientes().isEmpty()) {
                     clientesIsEmpty = false;
                 }
+                // Iterando sobre os clientes
                 for (Cliente cliente : seguradora.getListaClientes()) {
                     if (cliente.getNome().equals(nome)) {
                         return cliente;

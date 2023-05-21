@@ -239,11 +239,14 @@ public class Seguradora {
 
     // Gerar novo sinistro automatico
     public void gerarSinistro(String data, String nomeCliente, String endereco, String placaVeiculo) {
+        // Iterando sobre os clientes
         for (Cliente cliente: listaClientes){
             if (cliente.getNome().equals(nomeCliente)) {
+                // Iterando sobre os veiculos
                 for (Veiculo veiculo: cliente.getListaVeiculos()) {
                     if (veiculo.getPlaca().equals(placaVeiculo)) {
                         Sinistro sinistro = new Sinistro(data, endereco, this, veiculo, cliente);
+                        // Checando se ja existe um sinistro igual
                         if (listaSinistros.contains(sinistro)) {
                             System.out.println("Sinistro ja foi gerado.");
                             return;
@@ -281,6 +284,7 @@ public class Seguradora {
         int ID = scanner.nextInt();
         scanner.nextLine();
 
+        // Iterando sobre os sinistros
         for (Sinistro sinistro: listaSinistros) {
             if (sinistro.getID() == ID) {
                 listaSinistros.remove(sinistro);
@@ -294,10 +298,12 @@ public class Seguradora {
 
     // Listar veiculos por cliente
     public void listarVeiculos() {
+        // Caso em que nao ha clientes cadastrados
         if (listaClientes.isEmpty()) {
             System.out.println("Nao ha clientes cadastrados.");
             return;
         }
+        // Iterando sobre os clientes
         for (Cliente cliente : listaClientes) {
             System.out.printf("Cliente %s:\n", cliente.getNome());
             // Caso em que nao ha veiculos
@@ -314,7 +320,7 @@ public class Seguradora {
         }
     }
 
-    // Transferir seguro
+    // Transferir seguro (transferir apenas os veiculos e alterar o valor do seguro)
     public void transferirSeguro(Scanner scanner) {
         Cliente cliente1 = null;
         Cliente cliente2 = null;
@@ -346,6 +352,9 @@ public class Seguradora {
             return;
         }
 
+        // Transferencia do seguro:
+        // (nao precisa se preocupar com os sinistros pois nao tem como transferir um seguro com sinistros em andamento)
+
         for (Veiculo veiculo : cliente2.getListaVeiculos()) {
             cliente1.cadastrarVeiculo(veiculo);
         }
@@ -365,6 +374,7 @@ public class Seguradora {
     // Calcular receita
     public void calcularReceita() {
         double receita = 0;
+        // Iterando sobre os clientes
         for (Cliente cliente : listaClientes) {
             receita += cliente.getValorSeguro();
         }

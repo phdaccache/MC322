@@ -67,6 +67,7 @@ public class ClientePF extends Cliente{
         return valorBase * fatorIdade * qtdCarros;
     }
 
+    // Calcula idade baseado na data de nascimento do cliente
     public int getIdade() {
         LocalDate then = dataNascimento;
         LocalDate now = LocalDate.now();

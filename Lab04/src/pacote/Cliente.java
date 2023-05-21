@@ -72,13 +72,15 @@ public class Cliente {
             return;
         }
 
-        listaVeiculos.add(veiculo);
+        listaVeiculos.add(veiculo); // Veiculo adicionado
+
         // 'Gambiarra' para pegar a seguradora que o cliente esta sem ter que armazenar a seguradora no objeto Cliente:
         for (Seguradora seg : Admin.listaSeguradoras) {
             if (seg.getListaClientes().contains(this)) {
                 seguradora = seg;
             }
         }
+        // Mudanca do valor do seguro
         if (seguradora != null) {
             double valorSeguro = seguradora.calcularPrecoSeguroCliente(this);
             setValorSeguro(valorSeguro);
@@ -107,6 +109,7 @@ public class Cliente {
     public void excluirVeiculo(Veiculo veiculo) {
         String placa = veiculo.getPlaca();
 
+        // Checar se o veiculo existe antes de excluir
         if (listaVeiculos.contains(veiculo)) {
             listaVeiculos.remove(veiculo);
             System.out.printf("Veiculo de placa %s removido!\n", placa);
@@ -146,7 +149,7 @@ public class Cliente {
         System.out.println("---------------------------------------------");
     }
 
-    // Calcula score
+    // Calcula score (sera sobrescrito por PF e PJ)
     public double calcularScore() {
         return CalcSeguro.VALOR_BASE.getValor();
     }

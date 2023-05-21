@@ -9,9 +9,18 @@ public class Admin {
 
     // Cadastrar nova seguradora automatico
     public static void cadastrarSeguradora(Seguradora seguradora) {
+        // Caso em que o nome e invalido
         if (!Validacao.validarNome(seguradora.getNome()) || listaSeguradoras.contains(seguradora)) {
             System.out.println("Nome invalido. Nao foi possivel cadastrar a seguradora.");
             return;
+        }
+
+        // Caso em que ja existe uma seguradora com o mesmo nome
+        for (Seguradora seg : listaSeguradoras) {
+            if (seg.getNome().equals(seguradora.getNome())) {
+                System.out.printf("Ja existe a seguradora %s. Nao foi possivel cadastrar a seguradora.\n", seg.getNome());
+            return;
+            }
         }
 
         listaSeguradoras.add(seguradora);
@@ -37,6 +46,7 @@ public class Admin {
     // Excluir seguradora automatico
     public static void excluirSeguradora(Seguradora seguradora) {
         String nome = seguradora.getNome();
+        // Checar se a seguradora existe antes de excluir
         if (listaSeguradoras.contains(seguradora)) {
             listaSeguradoras.remove(seguradora);
             System.out.printf("Seguradora '%s' removida!\n", nome);
