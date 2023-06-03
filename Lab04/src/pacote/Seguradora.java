@@ -51,7 +51,7 @@ public class Seguradora {
         System.out.println("Pessoas Juridicas:");
         // Iterando sobre os clientes PJ
         for (Cliente cliente : listaClientes) {
-            if (cliente.getClass().getSimpleName().equals("ClientePJ")) {
+            if (cliente instanceof ClientePJ) {
                 System.out.println("---------------------------------------------");
                 System.out.println(cliente);
             }
@@ -63,7 +63,7 @@ public class Seguradora {
         System.out.println("Pessoas Fisicas:");
         // Iterando sobre os clientes PF
         for (Cliente cliente : listaClientes) {
-            if (cliente.getClass().getSimpleName().equals("ClientePF")) {
+            if (cliente instanceof ClientePF) {
                 System.out.println("---------------------------------------------");
                 System.out.println(cliente);
             }
@@ -77,14 +77,14 @@ public class Seguradora {
         ClientePF clientePF;
         
         // Caso em que o CNPJ e invalido
-        if (cliente.getClass().getSimpleName().equals("ClientePJ")) {
+        if (cliente instanceof ClientePJ) {
             clientePJ = (ClientePJ)cliente;
             if (!Validacao.validarCNPJ(clientePJ.getCNPJ())) {
                 System.out.println("CNPJ invalido. Nao foi possivel cadastrar o cliente.");
                 return;
             }
         // Caso em que o CPF e invalido
-        } else if (cliente.getClass().getSimpleName().equals("ClientePF")) {
+        } else if (cliente instanceof ClientePF) {
             clientePF = (ClientePF)cliente;
             if (!Validacao.validarCPF(clientePF.getCPF())) {
                 System.out.println("CPF invalido. Nao foi possivel cadastrar o cliente.");
