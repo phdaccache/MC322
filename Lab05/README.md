@@ -10,6 +10,7 @@ Diagrama de classe sem a especificação dos atributos e dos métodos para melho
 
 ## Diagrama de Classe Completo
 Diagrama de classe com todos os atributos e métodos de cada objeto.
+
 Dica: Abrir a imagem em uma nova guia para poder dar zoom.
 
 ![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Diagrama_Completo.png)
