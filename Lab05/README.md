@@ -7,6 +7,7 @@
 ![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Diagrama_Resumido.png)
 
 ## Diagrama de Classe Completo
+Dica: Abrir a imagem em uma nova guia para poder aumentar o zoom
 
 ![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Diagrama_Completo.png)
 
