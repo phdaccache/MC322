@@ -1,14 +1,14 @@
 ## Esquema Menu Interativo
 
-![](https://github.com/phdaccache/MC322/blob/main/Lab04/images/Menu_Interativo.png)
+![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Menu_Interativo.png)
 
 ## Diagrama de Classe Resumido
 
-![](https://github.com/phdaccache/MC322/blob/main/Lab04/images/Diagrama_Resumido.png)
+![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Diagrama_Resumido.png)
 
 ## Diagrama de Classe Completo
 
-![](https://github.com/phdaccache/MC322/blob/main/Lab04/images/Diagrama_Completo.png)
+![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Diagrama_Completo.png)
 
 ## Link de visualização: Menu Interativo e Diagrama de Classe
 
