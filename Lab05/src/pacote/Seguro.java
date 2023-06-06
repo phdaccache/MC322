@@ -1,5 +1,164 @@
 package pacote;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.StringJoiner;
+
 public abstract class Seguro {
-    
+    // Atributos
+    private final int id;
+    private LocalDate dataInicio;
+    private LocalDate dataFim;
+    private Seguradora seguradora;
+    private double valorMensal;
+    private ArrayList<Sinistro> listaSinistros;
+    private ArrayList<Condutor> listaCondutores;
+
+    // Construtor
+    public Seguro(int id, String dataInicio, String dataFim, Seguradora seguradora) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        
+        this.id = id;
+        this.dataInicio = LocalDate.parse(dataInicio, dtf); // Transformando String em LocalDate
+        this.dataFim = LocalDate.parse(dataFim, dtf); // Transformando String em LocalDate
+        this.seguradora = seguradora;
+        this.valorMensal = 0;
+        this.listaSinistros = new ArrayList<>();
+        this.listaCondutores = new ArrayList<>();
+    }
+
+    public String toString() {
+        StringJoiner joiner = new StringJoiner("\n");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String dataInicioString = getDataInicio().format(dtf); // Transformando LocalDate em String
+        String dataFimString = getDataFim().format(dtf); // Transformando LocalDate em String
+        joiner.add(String.format("ID: %03d", getId()));
+        joiner.add("Data Inicio: " + dataInicioString);
+        joiner.add("Data Fim: " + dataFimString);
+        joiner.add(String.format("Seguradora: %s (CNPJ: %s)",
+                                getSeguradora().getNome(), getSeguradora().getCNPJ()));
+        joiner.add(String.format("Valor Mensal: R$%.2f", getValorMensal()));
+        joiner.add("Sinistros: ");
+        if (listaSinistros.isEmpty()) {
+            joiner.add("    Sem sinistros cadastrados.");
+        } else {
+            for (Sinistro sinistro : listaSinistros) {
+                joiner.add("    " + sinistro);
+            }
+        }
+        joiner.add("Condutores: ");
+        if (listaCondutores.isEmpty()) {
+            joiner.add("    Sem condutores cadastrados.");
+        } else {
+            for (Condutor condutor : listaCondutores) {
+                joiner.add("    " + condutor);
+            }
+        }
+
+        return joiner.toString();
+    }
+
+    // Autorizar novo condutor automatico
+    public void autorizarCondutor(Condutor condutor) {
+        return;
+    }
+
+    // Autorizar novo condutor com scanner
+    public void autorizarCondutor(Scanner scanner) {
+        return;
+    }
+
+    // Desautorizar condutor automatico
+    public void desautorizarCondutor(String cpf) {
+        return;
+    }
+
+    // Desautorizar condutor com scanner
+    public void desautorizarCondutor(Scanner scanner) {
+        return;
+    }
+
+    // Listar todos os sinistros
+    public void listarSinistros() {
+        return;
+    }
+
+    // Gerar novo sinistro automatico
+    public void gerarSinistro(String data, String endereco, Condutor condutor, Seguro seguro) {
+        return;
+    }
+
+    // Gerar novo sinistro com scanner
+    public void gerarSinistro(Scanner scanner) {
+        return;
+    }
+
+    // Excluir sinistro automatico
+    public void excluirSinistro(int id) {
+        return;
+    }
+
+    // Excluir sinistro com scanner
+    public void excluirSinistro(Scanner scanner) {
+        return;
+    }
+
+    // Calcular valor mensal
+    public abstract void calcularValorMensal();
+
+
+    // Getters e Setters
+    public int getId() {
+        return this.id;
+    }
+
+    public LocalDate getDataInicio() {
+        return this.dataInicio;
+    }
+
+    public void setDataInicio(LocalDate dataInicio) {
+        this.dataInicio = dataInicio;
+    }
+
+    public LocalDate getDataFim() {
+        return this.dataFim;
+    }
+
+    public void setDataFim(LocalDate dataFim) {
+        this.dataFim = dataFim;
+    }
+
+    public Seguradora getSeguradora() {
+        return this.seguradora;
+    }
+
+    public void setSeguradora(Seguradora seguradora) {
+        this.seguradora = seguradora;
+    }
+
+    public double getValorMensal() {
+        return this.valorMensal;
+    }
+
+    public void setValorMensal(double valorMensal) {
+        this.valorMensal = valorMensal;
+    }
+
+    public ArrayList<Sinistro> getListaSinistros() {
+        return this.listaSinistros;
+    }
+
+    public void setListaSinistros(ArrayList<Sinistro> listaSinistros) {
+        this.listaSinistros = listaSinistros;
+    }
+
+    public ArrayList<Condutor> getListaCondutores() {
+        return this.listaCondutores;
+    }
+
+    public void setListaCondutores(ArrayList<Condutor> listaCondutores) {
+        this.listaCondutores = listaCondutores;
+    }
 }

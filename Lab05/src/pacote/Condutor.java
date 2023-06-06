@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.StringJoiner;
 
 public class Condutor {
+    // Atributos
     private final String CPF;
     private String nome;
     private String telefone;
@@ -13,6 +14,7 @@ public class Condutor {
     private ArrayList<Sinistro> listaSinistros;
 
 
+    // Construtor
     public Condutor(String CPF, String nome, String telefone,
                     String endereco, String email, String dataNascimento) {
 

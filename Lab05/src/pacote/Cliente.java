@@ -1,7 +1,6 @@
 package pacote;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.StringJoiner;
 
 public abstract class Cliente {
@@ -39,8 +38,8 @@ public abstract class Cliente {
             joiner.add("    Nao ha seguros.");
         } else {
             for (Seguro seguro: listaSeguros) {
-                joiner.add(String.format("Seguro %03d: %s - %s", seguro.getID(),
-                                        seguro.getInicio(), seguro.getFim()));
+                joiner.add(String.format("Seguro %03d: %s - %s", seguro.getId(),
+                                        seguro.getDataInicio(), seguro.getDataFim()));
             }
         }
 

@@ -7,7 +7,7 @@ import java.util.StringJoiner;
 public class Sinistro {
     // Atributos
     private static int contador_id = 1;
-    private final int ID;
+    private final int id;
     private LocalDate data;
     private String endereco;
     private Condutor condutor;
@@ -16,7 +16,7 @@ public class Sinistro {
     // Construtor
     public Sinistro(String data, String endereco, Condutor condutor, Seguro seguro) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        this.ID = contador_id++;
+        this.id = contador_id++;
         this.data = LocalDate.parse(data, dtf); // Transformando String em LocalDate
         this.endereco = endereco;
         this.condutor = condutor;
@@ -27,20 +27,20 @@ public class Sinistro {
         StringJoiner joiner = new StringJoiner("\n");
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String dataString = getData().format(dtf); // Transformando LocalDate em String
-        joiner.add(String.format("ID: %03d", getID()));
+        joiner.add(String.format("ID: %03d", getId()));
         joiner.add("Data: " + dataString);
         joiner.add("Endereco: " + getEndereco());
         joiner.add("Condutor: " + getCondutor().getNome());
-        joiner.add(String.format("Seguro %03d: %s - %s", getSeguro().getID(),
-                                getSeguro().getInicio(), getSeguro().getFim()));
+        joiner.add(String.format("Seguro %03d: %s - %s", getSeguro().getId(),
+                                getSeguro().getDataInicio(), getSeguro().getDataFim()));
 
         return joiner.toString();
     }
 
 
     // Getters e Setters
-    public int getID() {
-        return this.ID;
+    public int getId() {
+        return this.id;
     }
 
     public LocalDate getData() {
