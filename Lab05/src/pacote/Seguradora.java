@@ -1,14 +1,13 @@
 package pacote;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringJoiner;
 
 public class Seguradora {
     // Atributos
-    private final String cnpj;
+    private final String CNPJ;
     private String nome;
     private String telefone;
     private String endereco;
@@ -17,8 +16,8 @@ public class Seguradora {
     private ArrayList<Seguro> listaSeguros;
 
     // Construtor
-    public Seguradora(String cnpj, String nome, String telefone, String endereco, String email) {
-        this.cnpj = cnpj;
+    public Seguradora(String CNPJ, String nome, String telefone, String endereco, String email) {
+        this.CNPJ = CNPJ;
         this.nome = nome;
         this.telefone = telefone;
         this.endereco = endereco;
@@ -245,12 +244,12 @@ public class Seguradora {
         return;
     }
 
-    // Pegar todos os seguros de um cliente
+    // Retorna todos os seguros de um cliente
     public ArrayList<Seguro> getSegurosPorCliente(String documento) {
         return null;
     }
 
-    // Pegar todos os sinistros de um cliente
+    // Retorna todos os sinistros de um cliente
     public ArrayList<Sinistro> getSinistrosPorCliente(String documento) {
         return null;
     }
@@ -258,7 +257,7 @@ public class Seguradora {
 
     // Getters e Setters
     public String getCNPJ() {
-        return this.cnpj;
+        return this.CNPJ;
     }
 
     public String getNome() {

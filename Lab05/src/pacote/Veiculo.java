@@ -11,12 +11,12 @@ public class Veiculo {
     private Seguro seguro;
 
     // Construtor
-    public Veiculo(String placa, String marca, String modelo, int anoFabricacao, Seguro seguro) {
+    public Veiculo(String placa, String marca, String modelo, int anoFabricacao) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
         this.anoFabricacao = anoFabricacao;
-        this.seguro = seguro;
+        this.seguro = null;
     }
 
     public String toString() {
