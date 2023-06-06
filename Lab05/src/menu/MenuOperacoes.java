@@ -48,8 +48,8 @@ public enum MenuOperacoes {
     SAIR("Sair");
 
     // Atributos
-    private String name;
-    private SubmenuOperacoes[] subOptions;
+    private final String name;
+    private final SubmenuOperacoes[] subOptions;
 
     // Construtor
     MenuOperacoes(String name, SubmenuOperacoes ... subOptions) {
