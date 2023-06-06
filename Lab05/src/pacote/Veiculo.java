@@ -8,13 +8,15 @@ public class Veiculo {
     private String marca;
     private String modelo;
     private int anoFabricacao;
+    private Seguro seguro;
 
     // Construtor
-    public Veiculo(String placa, String marca, String modelo, int anoFabricacao) {
+    public Veiculo(String placa, String marca, String modelo, int anoFabricacao, Seguro seguro) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
         this.anoFabricacao = anoFabricacao;
+        this.seguro = seguro;
     }
 
     public String toString() {
@@ -23,6 +25,8 @@ public class Veiculo {
         joiner.add("Marca: " + getMarca());
         joiner.add("Modelo: " + getModelo());
         joiner.add("Ano de Fabricacao: " + getAnoFabricacao());
+        joiner.add(String.format("Seguro %03d: %s - %s", getSeguro().getID(),
+                                getSeguro().getInicio(), getSeguro().getFim()));
 
         return joiner.toString();
     }
@@ -59,5 +63,13 @@ public class Veiculo {
 
     public void setAnoFabricacao(int anoFabricacao) {
         this.anoFabricacao = anoFabricacao;
+    }
+
+    public Seguro getSeguro() {
+        return this.seguro;
+    }
+
+    public void setSeguro(Seguro seguro) {
+        this.seguro = seguro;
     }
 }

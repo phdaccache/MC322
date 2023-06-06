@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringJoiner;
 
-public class Cliente {
+public abstract class Cliente {
     // Atributos
     private String nome;    
     private String endereco;

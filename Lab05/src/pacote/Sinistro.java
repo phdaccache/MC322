@@ -10,34 +10,29 @@ public class Sinistro {
     private final int ID;
     private LocalDate data;
     private String endereco;
-    private Seguradora seguradora;
-    private Veiculo veiculo;
-    private Cliente cliente;
+    private Condutor condutor;
+    private Seguro seguro;
 
     // Construtor
-    public Sinistro(String data, String endereco, Seguradora seguradora, Veiculo veiculo, Cliente cliente) {
+    public Sinistro(String data, String endereco, Condutor condutor, Seguro seguro) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         this.ID = contador_id++;
-
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy"); 
-        this.data = LocalDate.parse(data, dtf); // Tranformando String em LocalDate
-        
+        this.data = LocalDate.parse(data, dtf); // Transformando String em LocalDate
         this.endereco = endereco;
-        this.seguradora = seguradora;
-        this.veiculo = veiculo;
-        this.cliente = cliente;
+        this.condutor = condutor;
+        this.seguro = seguro;
     }
     
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        String dataString = getData().format(dtf); // Tranformando LocalDate em String
+        String dataString = getData().format(dtf); // Transformando LocalDate em String
         joiner.add(String.format("ID: %03d", getID()));
         joiner.add("Data: " + dataString);
         joiner.add("Endereco: " + getEndereco());
-        joiner.add("Seguradora: " + getSeguradora().getNome());
-        joiner.add(String.format("Veiculo: %s - %s",
-                                getVeiculo().getModelo(), getVeiculo().getPlaca()));
-        joiner.add("Cliente: " + getCliente().getNome());
+        joiner.add("Condutor: " + getCondutor().getNome());
+        joiner.add(String.format("Seguro %03d: %s - %s", getSeguro().getID(),
+                                getSeguro().getInicio(), getSeguro().getFim()));
 
         return joiner.toString();
     }
@@ -64,27 +59,19 @@ public class Sinistro {
         this.endereco = endereco;
     }
 
-    public Seguradora getSeguradora() {
-        return this.seguradora;
+    public Condutor getCondutor() {
+        return this.condutor;
     }
 
-    public void setSeguradora(Seguradora seguradora) {
-        this.seguradora = seguradora;
+    public void setCondutor(Condutor condutor) {
+        this.condutor = condutor;
     }
 
-    public Veiculo getVeiculo() {
-        return this.veiculo;
+    public Seguro getSeguro() {
+        return this.seguro;
     }
 
-    public void setVeiculo(Veiculo veiculo) {
-        this.veiculo = veiculo;
-    }
-
-    public Cliente getCliente() {
-        return this.cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setSeguro(Seguro seguro) {
+        this.seguro = seguro;
     }
 }

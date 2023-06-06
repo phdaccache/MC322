@@ -1,40 +1,15 @@
 package pacote;
 
 public class Validacao {
-    // Validar CPF
-    public static boolean validarCPF(String cpf) {
-        String cpfNum = cpf.replaceAll("[^0-9]", ""); // Retira todos os caracteres não numericos
-        int tam = cpfNum.length();
-
-        if (tam != 11) {
-            return false;
+    // Validar Documento
+    public static boolean validarDocumento(String documento, String tipo) {
+        if (tipo.equals("CNPJ")) {
+            return validarCNPJ(documento);
         }
-        if (digitosIguais(cpfNum)) {
-            return false;
+        else if (tipo.equals("CPF")) {
+            return validarCPF(documento);
         }
-        if (!digitosVerificadoresCPF(cpfNum)) {
-            return false;
-        }
-
-        return true;
-    }
-
-    // Validar CNPJ
-    public static boolean validarCNPJ(String cnpj) {
-        String cnpjNum = cnpj.replaceAll("[^0-9]", ""); // Retira todos os caracteres não numericos
-        int tam = cnpjNum.length();
-
-        if (tam != 14) {
-            return false;
-        }
-        if (digitosIguais(cnpjNum)) {
-            return false;
-        }
-        if (!digitosVerificadoresCNPJ(cnpjNum)) {
-            return false;
-        }
-
-        return true;
+        return false;
     }
 
     // Validar nome
@@ -57,6 +32,42 @@ public class Validacao {
         return false;
     }
 
+
+    // Validar CPF
+    private static boolean validarCPF(String cpf) {
+        String cpfNum = cpf.replaceAll("[^0-9]", ""); // Retira todos os caracteres não numericos
+        int tam = cpfNum.length();
+
+        if (tam != 11) {
+            return false;
+        }
+        if (digitosIguais(cpfNum)) {
+            return false;
+        }
+        if (!digitosVerificadoresCPF(cpfNum)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    // Validar CNPJ
+    private static boolean validarCNPJ(String cnpj) {
+        String cnpjNum = cnpj.replaceAll("[^0-9]", ""); // Retira todos os caracteres não numericos
+        int tam = cnpjNum.length();
+
+        if (tam != 14) {
+            return false;
+        }
+        if (digitosIguais(cnpjNum)) {
+            return false;
+        }
+        if (!digitosVerificadoresCNPJ(cnpjNum)) {
+            return false;
+        }
+
+        return true;
+    }
 
     // Verificar se os digitos sao iguais
     private static boolean digitosIguais(String id){

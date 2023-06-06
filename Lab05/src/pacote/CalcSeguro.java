@@ -5,9 +5,9 @@ package pacote;
  * As proximas constantes sao fatores que variam com a idade
  */
 public enum CalcSeguro {
-    VALOR_BASE(100),
+    VALOR_BASE(10),
     // Idade entre 18 e 30
-    FATOR_18_30(1.2),
+    FATOR_18_30(1.25),
     // Idade entre 30 e 60
     FATOR_30_60(1.0),
     // Idade entre 60 e 90

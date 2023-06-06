@@ -169,7 +169,7 @@ public class Menu {
                 seguradora.excluirCliente(scanner);
                 break;
             case LISTAR_SEGUROS_SEGURADORA:
-                seguradora.listarSegurosPorCliente();
+                seguradora.listarSegurosPorCliente(scanner);
                 break;
             case GERAR_SEGURO:
                 seguradora.gerarSeguro(scanner);
