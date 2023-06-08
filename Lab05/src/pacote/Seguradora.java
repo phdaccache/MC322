@@ -254,17 +254,17 @@ public class Seguradora {
 
     // Gerar novo seguro automatico
     public void gerarSeguro(String documento, String identificador,
-                            String inicio, String fim, ArrayList<Condutor> condutores) {
+                            String inicio, String fim, ArrayList<String> condutoresCPF) {
         // Encontrar cliente pelo documento
         for (Cliente cliente : listaClientes) {
             // Cliente PJ
             if (cliente.getDocumento()[1].equals(documento) && cliente instanceof ClientePJ){
-                gerarSeguroPJ((ClientePJ)cliente, identificador, inicio, fim, condutores);
+                gerarSeguroPJ((ClientePJ)cliente, identificador, inicio, fim, condutoresCPF);
                 return;
             }
             // Cliente PF
             else if (cliente.getDocumento()[1].equals(documento) && cliente instanceof ClientePF){
-                gerarSeguroPF((ClientePF)cliente, identificador, inicio, fim, condutores);
+                gerarSeguroPF((ClientePF)cliente, identificador, inicio, fim, condutoresCPF);
                 return;
             }
         }
@@ -275,7 +275,7 @@ public class Seguradora {
 
     // Gerar novo seguro PJ automatico
     public void gerarSeguroPJ(ClientePJ cliente, String idFrota, String inicio,
-                            String fim, ArrayList<Condutor> condutores) {
+                            String fim, ArrayList<String> condutoresCPF) {
 
         // Encontrar frota do cliente pelo identificador
         for (Frota frota : cliente.getListaFrotas()) {
@@ -283,9 +283,13 @@ public class Seguradora {
             if (frota.getId() == Integer.parseInt(idFrota)) {
                 // Criar objeto do tipo Seguro PJ
                 SeguroPJ seguro = new SeguroPJ(frota, cliente, inicio, fim, this);
-                // Adicionar condutores no seguro
-                for (Condutor condutor : condutores) {
-                    seguro.autorizarCondutor(condutor);
+                // Autorizar condutores no seguro
+                for (String cpf: condutoresCPF) {
+                    for (Condutor condutor: cliente.getListaCondutores()) {
+                        if (condutor.getCPF().equals(cpf)) {
+                            seguro.autorizarCondutor(condutor);
+                        }
+                    }
                 }
                 // Calcular e setar valor mensal do seguro
                 seguro.setValorMensal(seguro.calcularValorMensal());
@@ -307,16 +311,20 @@ public class Seguradora {
 
     // Gerar novo seguro PF automatico
     public void gerarSeguroPF(ClientePF cliente, String placa, String inicio,
-                            String fim, ArrayList<Condutor> condutores) {
+                            String fim, ArrayList<String> condutoresCPF) {
         // Encontrar veiculo do cliente pelo identificador
         for (Veiculo veiculo : cliente.getListaVeiculos()) {
             // Checar se algum veiculo do cliente tem a placa passada
             if (veiculo.getPlaca().equals(placa)) {
                 // Criar objeto do tipo Seguro PF
                 SeguroPF seguro = new SeguroPF(veiculo, cliente, inicio, fim, this);
-                // Adicionar condutores no seguro
-                for (Condutor condutor : condutores) {
-                    seguro.autorizarCondutor(condutor);
+                // Autorizar condutores no seguro
+                for (String cpf: condutoresCPF) {
+                    for (Condutor condutor: cliente.getListaCondutores()) {
+                        if (condutor.getCPF().equals(cpf)) {
+                            seguro.autorizarCondutor(condutor);
+                        }
+                    }
                 }
                 // Calcular e setar valor mensal do seguro
                 seguro.setValorMensal(seguro.calcularValorMensal());
@@ -335,7 +343,60 @@ public class Seguradora {
 
     // Gerar novo seguro com scanner
     public void gerarSeguro(Scanner scanner) {
-        return;
+        System.out.println("\n############## Tipo de Cliente ##############");
+        System.out.println("|-------------------------------------------|");
+        System.out.println("| Opcao 1 - Pessoa Juridica                 |");
+        System.out.println("| Opcao 2 - Pessoa Fisica                   |");
+        System.out.println("|-------------------------------------------|\n");
+        System.out.print("Digite uma opcao: ");
+        int tipo = scanner.nextInt();
+        scanner.nextLine();
+
+        String documento, identificador;
+
+        /* Cadastar Seguro de Pessoa Juridica */
+        if (tipo == 1) {
+            System.out.print("Insira o documento do cliente: ");
+            documento = scanner.nextLine();
+            System.out.print("Insira o ID da frota: ");
+            identificador = scanner.nextLine();
+
+        /* Cadastrar Seguro de Pessoa Fisica */
+        } else if (tipo == 2) {
+            System.out.print("Insira o documento do cliente: ");
+            documento = scanner.nextLine();
+            System.out.print("Insira a placa do veiculo: ");
+            identificador = scanner.nextLine();
+            
+        } else {
+            System.out.println("Opcao invalida");
+            return;
+        }
+
+        System.out.print("Insira a data de inicio do seguro: ");
+        String inicio = scanner.nextLine();
+        System.out.print("Insira a data de fim do seguro: ");
+        String fim = scanner.nextLine();
+        ArrayList<String> condutoresCPF = new ArrayList<>();
+        System.out.println("|-------------------------------------------|");
+        System.out.println("| Opcao 1 - Cadastrar Condutor              |");
+        System.out.println("| Opcao 0 - Sair                            |");
+        System.out.println("|-------------------------------------------|\n");
+        int op;
+        do {
+            op = scanner.nextInt();
+            scanner.nextLine();
+            if (op == 1) {
+                System.out.print("Insira o documento do condutor que deseja autorizar para esse seguro: ");
+                String documentoCondutor = scanner.nextLine();
+                condutoresCPF.add(documentoCondutor);
+            } else if (op != 0 && op != 1) {
+                System.out.println("Opcao invalida");
+                return;
+            }
+        } while (op != 0);
+
+        gerarSeguro(documento, identificador, inicio, fim, condutoresCPF);
     }
 
     // Cancelar seguro automatico

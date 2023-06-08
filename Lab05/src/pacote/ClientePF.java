@@ -130,31 +130,6 @@ public class ClientePF extends Cliente{
         System.out.printf("Veiculo invalido. Nao foi possivel remover o veiculo de placa %s.\n", placa);
     }
 
-    // Listar todos os condutores
-    public void listarCondutores() {
-        return;
-    }
-
-    // Cadastrar novo condutor automatico
-    public void cadastrarCondutor(Condutor condutor) {
-        return;
-    }
-
-    // Cadastrar novo condutor com scanner
-    public void cadastrarCondutor(Scanner scanner) {
-        return;
-    }
-
-    // Excluir condutor automatico
-    public void excluirCondutor(String cpf) {
-        return;
-    }
-
-    // Excluir condutor com scanner
-    public void excluirCondutor(Scanner scanner) {
-        return;
-    }
-
     // Retorna o documento do cliente
     public String[] getDocumento() {
         return new String [] {"CPF", this.CPF};
