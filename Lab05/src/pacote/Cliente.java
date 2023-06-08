@@ -1,6 +1,7 @@
 package pacote;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.StringJoiner;
 
 public abstract class Cliente {
@@ -57,8 +58,13 @@ public abstract class Cliente {
         return;
     }
 
-    // Visualizar unico seguro (com mais detalhes do que a listagem normal)
+    // Visualizar unico seguro (com mais detalhes do que a listagem normal) automatico
     public void visualizarSeguro(int id) {
+        return;
+    }
+
+    // Visualizar unico seguro (com mais detalhes do que a listagem normal) com scanner
+    public void visualizarSeguro(Scanner scanner) {
         return;
     }
 

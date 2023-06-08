@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import pacote.Admin;
 import pacote.Cliente;
+import pacote.ClientePF;
+import pacote.ClientePJ;
 import pacote.Seguradora;
 
 public class Menu {
@@ -195,25 +197,25 @@ public class Menu {
                 cliente.listarSeguros();
                 break;
             case VISUALIZAR_SEGURO_CLIENTE_PF:
-                cliente.visualizarSeguro();
+                cliente.visualizarSeguro(scanner);
                 break;
             case LISTAR_VEICULOS:
-                cliente.listarVeiculos();
+                ((ClientePF)cliente).listarVeiculos();
                 break;
             case CADASTRAR_VEICULO:
-                cliente.cadastrarVeiculo(scanner);
+                ((ClientePF)cliente).cadastrarVeiculo(scanner);
                 break;
             case EXCLUIR_VEICULO:
-                cliente.excluirVeiculo(scanner);
+                ((ClientePF)cliente).excluirVeiculo(scanner);
                 break;
             case LISTAR_CONDUTORES:
-                cliente.listarCondutores();
+                ((ClientePF)cliente).listarCondutores();
                 break;
             case CADASTRAR_CONDUTOR:
-                cliente.cadastrarCondutor(scanner);
+                ((ClientePF)cliente).cadastrarCondutor(scanner);
                 break;
             case EXCLUIR_CONDUTOR:
-                cliente.excluirCondutor(scanner);
+                ((ClientePF)cliente).excluirCondutor(scanner);
                 break;
 
             // Cliente PJ
@@ -224,19 +226,19 @@ public class Menu {
                 cliente.listarSeguros();
                 break;
             case VISUALIZAR_SEGURO_CLIENTE_PJ:
-                cliente.visualizarSeguro();
+                cliente.visualizarSeguro(scanner);
                 break;
             case LISTAR_FROTAS:
-                cliente.listarFrotas();
+                ((ClientePJ)cliente).listarFrotas();
                 break;
             case VISUALIZAR_FROTA:
-                cliente.visualizarFrota(scanner);
+                ((ClientePJ)cliente).visualizarFrota(scanner);
                 break;
             case CADASTRAR_FROTA:
-                cliente.cadastrarFrota(scanner);
+                ((ClientePJ)cliente).cadastrarFrota(scanner);
                 break;
             case ATUALIZAR_FROTA:
-                cliente.atualizarFrota(scanner);
+                ((ClientePJ)cliente).atualizarFrota(scanner);
                 break;
 
             // Comum
