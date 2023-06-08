@@ -7,11 +7,13 @@ import java.util.StringJoiner;
 public class Frota {
     // Atributos
     private final int id;
+    private Seguro seguro;
     private ArrayList<Veiculo> listaVeiculos;
 
     // Construtor
     public Frota(int id) {
         this.id = id;
+        this.seguro = null;
         this.listaVeiculos = new ArrayList<>();
     }
 
@@ -111,6 +113,14 @@ public class Frota {
     // Getters e Setters
     public int getId() {
         return this.id;
+    }
+
+    public Seguro getSeguro() {
+        return this.seguro;
+    }
+
+    public void setSeguro(Seguro seguro) {
+        this.seguro = seguro;
     }
 
     public ArrayList<Veiculo> getListaVeiculos() {

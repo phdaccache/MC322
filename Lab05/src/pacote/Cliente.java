@@ -68,6 +68,16 @@ public abstract class Cliente {
         return;
     }
 
+    // Adicionar seguro
+    public void adicionarSeguro(Seguro seguro) {
+        listaSeguros.add(seguro);
+    }
+
+    // Excluir seguro
+    public void excluirSeguro(Seguro seguro) {
+        listaSeguros.remove(seguro);
+    }
+
     // Retorna o documento do cliente
     public abstract String[] getDocumento();
 

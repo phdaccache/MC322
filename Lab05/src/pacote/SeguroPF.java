@@ -5,16 +5,14 @@ import java.util.StringJoiner;
 public class SeguroPF extends Seguro {
     // Atributos
     private Veiculo veiculo;
-    private ClientePF cliente;
 
     // Construtor
-    public SeguroPF(Veiculo veiculo, ClientePF cliente,
-                    int id, String dataInicio, String dataFim, Seguradora seguradora) {
+    public SeguroPF(Veiculo veiculo, ClientePF cliente, String dataInicio,
+                    String dataFim, Seguradora seguradora) {
 
-        super(id, dataInicio, dataFim, seguradora);
+        super(dataInicio, dataFim, seguradora, cliente);
 
         this.veiculo = veiculo;
-        this.cliente = cliente;
     }
 
     public String toString() {
@@ -25,14 +23,14 @@ public class SeguroPF extends Seguro {
         joiner.add("    " + getVeiculo());
         joiner.add("Cliente: ");
         joiner.add(String.format("    %s (CPF: %s)",
-                                 getCliente().getNome(), getCliente().getCPF()));
+                                 getCliente().getNome(), getCliente().getDocumento()[1]));
 
         return joiner.toString();
     }
 
     // Calcular valor mensal
-    public void calcularValorMensal() {
-        return;
+    public double calcularValorMensal() {
+        return 0;
     }
 
 
@@ -43,13 +41,5 @@ public class SeguroPF extends Seguro {
 
     public void setVeiculo(Veiculo veiculo) {
         this.veiculo = veiculo;
-    }
-
-    public ClientePF getCliente() {
-        return this.cliente;
-    }
-
-    public void setCliente(ClientePF cliente) {
-        this.cliente = cliente;
     }
 }

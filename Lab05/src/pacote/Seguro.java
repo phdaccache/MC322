@@ -8,7 +8,9 @@ import java.util.StringJoiner;
 
 public abstract class Seguro {
     // Atributos
+    private static int contador_id = 1;
     private final int id;
+    private Cliente cliente;
     private LocalDate dataInicio;
     private LocalDate dataFim;
     private Seguradora seguradora;
@@ -17,13 +19,14 @@ public abstract class Seguro {
     private ArrayList<Condutor> listaCondutores;
 
     // Construtor
-    public Seguro(int id, String dataInicio, String dataFim, Seguradora seguradora) {
+    public Seguro(String dataInicio, String dataFim, Seguradora seguradora, Cliente cliente) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         
-        this.id = id;
+        this.id = contador_id++;
         this.dataInicio = LocalDate.parse(dataInicio, dtf); // Transformando String em LocalDate
         this.dataFim = LocalDate.parse(dataFim, dtf); // Transformando String em LocalDate
         this.seguradora = seguradora;
+        this.cliente = cliente;
         this.valorMensal = 0;
         this.listaSinistros = new ArrayList<>();
         this.listaCondutores = new ArrayList<>();
@@ -106,12 +109,20 @@ public abstract class Seguro {
     }
 
     // Calcular valor mensal
-    public abstract void calcularValorMensal();
+    public abstract double calcularValorMensal();
 
 
     // Getters e Setters
     public int getId() {
         return this.id;
+    }
+
+    public Cliente getCliente() {
+        return this.cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public LocalDate getDataInicio() {
