@@ -170,6 +170,11 @@ public class Seguradora {
         for (Cliente cliente : listaClientes) {
             if (cliente.getDocumento()[1].equals(documento)) {
                 String nome = cliente.getNome();
+                // Remove todos os seguros do cliente
+                for (Seguro seguro: getSegurosPorCliente(documento)) {
+                    cancelarSeguro(documento, seguro.getId());
+                }
+                // Remove o cliente
                 listaClientes.remove(cliente);
                 System.out.printf("Cliente %s de documento %s removido!\n", nome, documento);
                 return;
@@ -400,7 +405,7 @@ public class Seguradora {
     }
 
     // Cancelar seguro automatico
-    public void cancelarSeguro(String docoumento, int id) {
+    public void cancelarSeguro(String documento, int id) {
         return;
     }
 
