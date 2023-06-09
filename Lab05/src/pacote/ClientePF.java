@@ -135,6 +135,16 @@ public class ClientePF extends Cliente{
         return new String [] {"CPF", this.CPF};
     }
 
+    // Retorna o veiculo do cliente pela placa
+    public Veiculo getVeiculo(String placa) {
+        for (Veiculo veiculo : listaVeiculos) {
+            if (veiculo.getPlaca().equals(placa)) {
+                return veiculo;
+            }
+        }
+        return null;
+    }
+
     // Calcula idade baseado na data de nascimento do cliente
     public int getIdade() {
         LocalDate then = dataNascimento;

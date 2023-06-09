@@ -13,7 +13,6 @@ public abstract class Cliente {
     private Seguradora seguradora;
     private double valorMensalTotal;
     private ArrayList<Seguro> listaSeguros;
-    private ArrayList<Condutor> listaCondutores;
 
     // Construtor
     public Cliente(String nome, String telefone, String endereco, String email) {
@@ -24,7 +23,6 @@ public abstract class Cliente {
         this.seguradora = null;
         this.valorMensalTotal = 0;
         this.listaSeguros = new ArrayList<>();
-        this.listaCondutores = new ArrayList<>();
     }
 
     public String toString() {
@@ -91,8 +89,8 @@ public abstract class Cliente {
     }
 
     // Cadastrar novo condutor com scanner
-    public void cadastrarCondutor(Scanner scanner) {
-        return;
+    public Condutor cadastrarCondutor(Scanner scanner) {
+        return null;
     }
 
     // Excluir condutor automatico
@@ -164,13 +162,5 @@ public abstract class Cliente {
 
     public void setListaSeguros(ArrayList<Seguro> listaSeguros) {
         this.listaSeguros = listaSeguros;
-    }
-
-    public ArrayList<Condutor> getListaCondutores() {
-        return this.listaCondutores;
-    }
-
-    public void setListaCondutores(ArrayList<Condutor> listaCondutores) {
-        this.listaCondutores = listaCondutores;
     }
 }

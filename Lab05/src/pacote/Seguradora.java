@@ -49,7 +49,6 @@ public class Seguradora {
             System.out.println("Sem clientes cadastrados");
             return;
         }
-
         System.out.println("Pessoas Juridicas:");
         // Iterando sobre os clientes PJ
         for (Cliente cliente : listaClientes) {
@@ -59,9 +58,8 @@ public class Seguradora {
             }
         }
         System.out.println("---------------------------------------------");
-
         System.out.println("");
-
+        
         System.out.println("Pessoas Fisicas:");
         // Iterando sobre os clientes PF
         for (Cliente cliente : listaClientes) {
@@ -166,23 +164,21 @@ public class Seguradora {
 
     // Excluir cliente automatico
     public void excluirCliente(String documento) {
-        // Iterando sobre os clientes
-        for (Cliente cliente : listaClientes) {
-            if (cliente.getDocumento()[1].equals(documento)) {
-                String nome = cliente.getNome();
-                // Remove todos os seguros do cliente
-                for (Seguro seguro: getSegurosPorCliente(documento)) {
-                    cancelarSeguro(documento, seguro.getId());
-                }
-                // Remove o cliente
-                listaClientes.remove(cliente);
-                System.out.printf("Cliente %s de documento %s removido!\n", nome, documento);
-                return;
-            }
-        }
+        Cliente cliente = getCliente(documento);
 
-        System.out.printf("Documento invalido. Nao foi possivel remover o cliente %s de documento %s.\n",
-                        nome, documento);
+        if (cliente != null) {
+            String nome = cliente.getNome();
+            // Remove todos os seguros do cliente
+            for (Seguro seguro: getSegurosPorCliente(documento)) {
+                cancelarSeguro(documento, seguro.getId());
+            }
+            // Remove o cliente
+            listaClientes.remove(cliente);
+            System.out.printf("Cliente %s de documento %s removido!\n", nome, documento);
+        } else {
+            System.out.printf("Documento invalido. Nao foi possivel remover o cliente de documento %s.\n",
+                            documento);
+        }
     }
 
     // Excluir cliente com scanner
@@ -257,93 +253,30 @@ public class Seguradora {
         listarSegurosPorCliente(documento);
     }
 
-    // Gerar novo seguro automatico
-    public void gerarSeguro(String documento, String identificador,
-                            String inicio, String fim, ArrayList<String> condutoresCPF) {
-        // Encontrar cliente pelo documento
-        for (Cliente cliente : listaClientes) {
-            // Cliente PJ
-            if (cliente.getDocumento()[1].equals(documento) && cliente instanceof ClientePJ){
-                gerarSeguroPJ((ClientePJ)cliente, identificador, inicio, fim, condutoresCPF);
-                return;
-            }
-            // Cliente PF
-            else if (cliente.getDocumento()[1].equals(documento) && cliente instanceof ClientePF){
-                gerarSeguroPF((ClientePF)cliente, identificador, inicio, fim, condutoresCPF);
-                return;
-            }
-        }
-
-        System.out.printf("Documento invalido. Nao foi possivel gerar o seguro para o cliente de documento %s.\n",
-                        documento);
-    }
-
     // Gerar novo seguro PJ automatico
-    public void gerarSeguroPJ(ClientePJ cliente, String idFrota, String inicio,
-                            String fim, ArrayList<String> condutoresCPF) {
+    public void gerarSeguroPJ(ClientePJ cliente, Frota frota, String inicio,
+                            String fim, Condutor condutor) {
+        SeguroPJ seguro = new SeguroPJ(frota, cliente, inicio, fim, this);
+        seguro.autorizarCondutor(condutor); // Autorizar condutor no seguro
+        seguro.setValorMensal(seguro.calcularValorMensal()); // Calcular e setar valor mensal do seguro
+        frota.setSeguro(seguro); // Adicionar seguro na frota do cliente
+        listaSeguros.add(seguro); // Adicionar seguro na seguradora
+        cliente.adicionarSeguro(seguro); // Adicionar seguro no cliente
 
-        // Encontrar frota do cliente pelo identificador
-        for (Frota frota : cliente.getListaFrotas()) {
-            // Checar se alguma frota do cliente tem o id passado
-            if (frota.getId() == Integer.parseInt(idFrota)) {
-                // Criar objeto do tipo Seguro PJ
-                SeguroPJ seguro = new SeguroPJ(frota, cliente, inicio, fim, this);
-                // Autorizar condutores no seguro
-                for (String cpf: condutoresCPF) {
-                    for (Condutor condutor: cliente.getListaCondutores()) {
-                        if (condutor.getCPF().equals(cpf)) {
-                            seguro.autorizarCondutor(condutor);
-                        }
-                    }
-                }
-                // Calcular e setar valor mensal do seguro
-                seguro.setValorMensal(seguro.calcularValorMensal());
-                // Adicionar seguro na frota do cliente
-                frota.setSeguro(seguro);
-                // Adicionar seguro na seguradora
-                listaSeguros.add(seguro);
-                // Adicionar seguro no cliente
-                cliente.adicionarSeguro(seguro);
-
-                System.out.println("Seguro gerado com sucesso.");
-                return;
-            }
-        }
-
-        System.out.printf("ID invalido. Nao foi possivel gerar o seguro para a frota de ID %s.\n", idFrota);
-        return;
+        System.out.println("Seguro gerado com sucesso.");
     }
 
     // Gerar novo seguro PF automatico
-    public void gerarSeguroPF(ClientePF cliente, String placa, String inicio,
-                            String fim, ArrayList<String> condutoresCPF) {
-        // Encontrar veiculo do cliente pelo identificador
-        for (Veiculo veiculo : cliente.getListaVeiculos()) {
-            // Checar se algum veiculo do cliente tem a placa passada
-            if (veiculo.getPlaca().equals(placa)) {
-                // Criar objeto do tipo Seguro PF
-                SeguroPF seguro = new SeguroPF(veiculo, cliente, inicio, fim, this);
-                // Autorizar condutores no seguro
-                for (String cpf: condutoresCPF) {
-                    for (Condutor condutor: cliente.getListaCondutores()) {
-                        if (condutor.getCPF().equals(cpf)) {
-                            seguro.autorizarCondutor(condutor);
-                        }
-                    }
-                }
-                // Calcular e setar valor mensal do seguro
-                seguro.setValorMensal(seguro.calcularValorMensal());
-                // Adicionar seguro no veiculo do cliente
-                veiculo.setSeguro(seguro);
-                // Adicionar seguro na seguradora
-                listaSeguros.add(seguro);
-                // Adicionar seguro no cliente
-                cliente.adicionarSeguro(seguro);
+    public void gerarSeguroPF(ClientePF cliente, Veiculo veiculo, String inicio,
+                            String fim, Condutor condutor) {
+        SeguroPF seguro = new SeguroPF(veiculo, cliente, inicio, fim, this);
+        seguro.autorizarCondutor(condutor); // Autorizar condutor no seguro
+        seguro.setValorMensal(seguro.calcularValorMensal()); // Calcular e setar valor mensal do seguro
+        veiculo.setSeguro(seguro); // Adicionar seguro no veiculo do cliente
+        listaSeguros.add(seguro); // Adicionar seguro na seguradora
+        cliente.adicionarSeguro(seguro); // Adicionar seguro no cliente
 
-                System.out.println("Seguro gerado com sucesso.");
-                return;
-            }
-        }
+        System.out.println("Seguro gerado com sucesso.");
     }
 
     // Gerar novo seguro com scanner
@@ -357,51 +290,73 @@ public class Seguradora {
         int tipo = scanner.nextInt();
         scanner.nextLine();
 
-        String documento, identificador;
+        Cliente cliente = null;
+        Frota frota = null;
+        Veiculo veiculo = null;
 
         /* Cadastar Seguro de Pessoa Juridica */
         if (tipo == 1) {
-            System.out.print("Insira o documento do cliente: ");
-            documento = scanner.nextLine();
+            // Encontra cliente
+            System.out.print("Insira o CNPJ do cliente: ");
+            String cnpj = scanner.nextLine();
+            cliente = getCliente(cnpj);
+            if (cliente == null) {
+                System.out.printf("Cliente de CNPJ %s nao encontrado. Nao foi possivel gerar o seguro.\n", cnpj);
+                return;
+            }
+            // Encontrar frota
             System.out.print("Insira o ID da frota: ");
-            identificador = scanner.nextLine();
+            int id = scanner.nextInt();
+            scanner.nextLine();
+            frota = ((ClientePJ)cliente).getFrota(id);
+            if (frota == null) {
+                System.out.printf("Frota de ID %s nao encontrada. Nao foi possivel gerar o seguro.\n", id);
+                return;
+            }
+            // Pegar informacoes do seguro
+            System.out.print("Insira a data de inicio do seguro: ");
+            String inicio = scanner.nextLine();
+            System.out.print("Insira a data de fim do seguro: ");
+            String fim = scanner.nextLine();
+            System.out.println("E necessario cadastrar pelo menos um condutor para gerar o seguro.");
+            Condutor condutor = cliente.cadastrarCondutor(scanner);
+            System.out.println("Para cadastrar mais condutores, acesse a area do cliente.");
+
+            gerarSeguroPJ((ClientePJ)cliente, frota, inicio, fim, condutor);
 
         /* Cadastrar Seguro de Pessoa Fisica */
         } else if (tipo == 2) {
-            System.out.print("Insira o documento do cliente: ");
-            documento = scanner.nextLine();
+            // Encontrar cliente
+            System.out.print("Insira o CPF do cliente: ");
+            String cpf = scanner.nextLine();
+            cliente = getCliente(cpf);
+            if (cliente == null) {
+                System.out.printf("Cliente de CPF %s nao encontrado. Nao foi possivel gerar o seguro.\n", cpf);
+                return;
+            }
+            // Encontrar veiculo
             System.out.print("Insira a placa do veiculo: ");
-            identificador = scanner.nextLine();
+            String placa = scanner.nextLine();
+            veiculo = ((ClientePF)cliente).getVeiculo(placa);
+            if (veiculo == null) {
+                System.out.printf("Veiculo de placa %s nao encontrado. Nao foi possivel gerar o seguro.\n", placa);
+                return;
+            }
+            // Pegar informacoes do seguro
+            System.out.print("Insira a data de inicio do seguro: ");
+            String inicio = scanner.nextLine();
+            System.out.print("Insira a data de fim do seguro: ");
+            String fim = scanner.nextLine();
+            System.out.println("E necessario cadastrar pelo menos um condutor para gerar o seguro.");
+            Condutor condutor = cliente.cadastrarCondutor(scanner);
+            System.out.println("Para cadastrar mais condutores, acesse a area do cliente.");
+
+            gerarSeguroPF((ClientePF)cliente, veiculo, inicio, fim, condutor);
             
         } else {
             System.out.println("Opcao invalida");
             return;
         }
-
-        System.out.print("Insira a data de inicio do seguro: ");
-        String inicio = scanner.nextLine();
-        System.out.print("Insira a data de fim do seguro: ");
-        String fim = scanner.nextLine();
-        ArrayList<String> condutoresCPF = new ArrayList<>();
-        System.out.println("|-------------------------------------------|");
-        System.out.println("| Opcao 1 - Cadastrar Condutor              |");
-        System.out.println("| Opcao 0 - Sair                            |");
-        System.out.println("|-------------------------------------------|\n");
-        int op;
-        do {
-            op = scanner.nextInt();
-            scanner.nextLine();
-            if (op == 1) {
-                System.out.print("Insira o documento do condutor que deseja autorizar para esse seguro: ");
-                String documentoCondutor = scanner.nextLine();
-                condutoresCPF.add(documentoCondutor);
-            } else if (op != 0 && op != 1) {
-                System.out.println("Opcao invalida");
-                return;
-            }
-        } while (op != 0);
-
-        gerarSeguro(documento, identificador, inicio, fim, condutoresCPF);
     }
 
     // Cancelar seguro automatico
@@ -446,6 +401,16 @@ public class Seguradora {
 
     // Retorna todos os sinistros de um cliente
     public ArrayList<Sinistro> getSinistrosPorCliente(String documento) {
+        return null;
+    }
+
+    // Retorna o cliente atraves do documento
+    public Cliente getCliente(String documento) {
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getDocumento()[1].equals(documento)) {
+                return cliente;
+            }
+        }
         return null;
     }
 

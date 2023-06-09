@@ -90,6 +90,16 @@ public class ClientePJ extends Cliente {
         return new String [] {"CNPJ", this.CNPJ};
     }
 
+    // Retorna a frota do cliente pelo id
+    public Frota getFrota(int id) {
+        for (Frota frota : listaFrotas) {
+            if (frota.getId() == id) {
+                return frota;
+            }
+        }
+        return null;
+    }
+
     // Retorna a quantidade de anos pos fundacao
     public int getAnosPosFundacao() {
         LocalDate then = dataFundacao;
