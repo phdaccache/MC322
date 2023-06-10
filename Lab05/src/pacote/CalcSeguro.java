@@ -10,8 +10,8 @@ public enum CalcSeguro {
     FATOR_18_30(1.25),
     // Idade entre 30 e 60
     FATOR_30_60(1.0),
-    // Idade entre 60 e 90
-    FATOR_60_90(1.5);
+    // Idade maior que 60
+    FATOR_60(1.5);
 
     // Atributo
     private double valor;

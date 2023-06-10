@@ -22,7 +22,7 @@ public class SeguroPJ extends Seguro {
         joiner.add("Frota: ");
         joiner.add("    " + getFrota());
         joiner.add("Cliente: ");
-        joiner.add(String.format("    %s (CNPJ: %s)",
+        joiner.add(String.format("    * %s (CNPJ: %s)",
                                  getCliente().getNome(), getCliente().getDocumento()[1]));
 
         return joiner.toString();
@@ -30,7 +30,22 @@ public class SeguroPJ extends Seguro {
 
     // Calcular valor mensal
     public double calcularValorMensal() {
-        return 0;
+        double valorBase = CalcSeguro.VALOR_BASE.getValor();
+        int qtdFuncionarios = ((ClientePJ)getCliente()).getQtdFuncionarios();
+        int qtdVeiculos = ((ClientePF)getCliente()).getListaVeiculos().size();
+        int anosPosFundacao = ((ClientePJ)getCliente()).getAnosPosFundacao();
+        int qtdSinistrosSeguro = getListaSinistros().size();
+        int qtdSinistrosCliente = 0;
+
+        for (Seguro seguro : getCliente().getListaSeguros()) {
+            qtdSinistrosCliente += seguro.getListaSinistros().size();
+        }
+
+        double valor = (valorBase * (10 + (qtdFuncionarios/10)) *
+                        (1 + (1/(qtdVeiculos + 2))) * (1 + (1/(anosPosFundacao + 2))) * 
+                        (2 + (qtdSinistrosCliente/10)) * (5 + (qtdSinistrosSeguro/10)));
+        
+        return valor;
     }
 
 

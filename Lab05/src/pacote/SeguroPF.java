@@ -22,7 +22,7 @@ public class SeguroPF extends Seguro {
         joiner.add("Veiculo: ");
         joiner.add("    " + getVeiculo());
         joiner.add("Cliente: ");
-        joiner.add(String.format("    %s (CPF: %s)",
+        joiner.add(String.format("    * %s (CPF: %s)",
                                  getCliente().getNome(), getCliente().getDocumento()[1]));
 
         return joiner.toString();
@@ -30,7 +30,31 @@ public class SeguroPF extends Seguro {
 
     // Calcular valor mensal
     public double calcularValorMensal() {
-        return 0;
+        double valorBase = CalcSeguro.VALOR_BASE.getValor();
+        int qtdVeiculos = ((ClientePF)getCliente()).getListaVeiculos().size();
+        int qtdSinistrosSeguro = getListaSinistros().size();
+        int idade = ((ClientePF)getCliente()).getIdade();
+        int qtdSinistrosCliente = 0;
+        double fatorIdade;
+
+        for (Seguro seguro : getCliente().getListaSeguros()) {
+            qtdSinistrosCliente += seguro.getListaSinistros().size();
+        }
+
+        if (idade >= 18 && idade < 30) {
+            fatorIdade = CalcSeguro.FATOR_18_30.getValor();
+        } else if (idade >= 30 && idade < 60) {
+            fatorIdade = CalcSeguro.FATOR_30_60.getValor();
+        } else if (idade >= 60) {
+            fatorIdade = CalcSeguro.FATOR_60.getValor();
+        } else {
+            fatorIdade = 0;
+        }
+
+        double valor = (valorBase * fatorIdade * (1 + (1/(qtdVeiculos + 2))) * 
+                        (2 + (qtdSinistrosCliente/10)) * (5 + (qtdSinistrosSeguro/10)));
+        
+        return valor;
     }
 
 
