@@ -16,8 +16,8 @@ public class Main {
         /* MENU INTERATIVO */
 
         // Scanner scanner = new Scanner(System.in);
-        removerLinhasComentadas("Teste_Input.txt", "input.txt");
-        Scanner scanner = new Scanner(new File("input.txt"));
+        removerLinhasComentadas("inputs/Teste_Input.txt", "inputs/input.txt");
+        Scanner scanner = new Scanner(new File("inputs/input.txt"));
         Menu menu = new Menu(scanner);
         MenuOperacoes option;
 
@@ -31,7 +31,8 @@ public class Main {
         scanner.close();
     }
 
-    // Funcao que, dado o arquivo
+    // Funcao que remove as linhas que comecam com "//" ou sao espacos em branco
+    // de um arquivo de entrada e salva o resultado em um arquivo de saida
     public static void removerLinhasComentadas(String arquivoEntrada, String arquivoSaida) {
         try {
             // Abre o arquivo de entrada para leitura
