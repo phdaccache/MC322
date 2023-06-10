@@ -10,7 +10,7 @@ public enum MenuOperacoes {
             SubmenuOperacoes.EXCLUIR_SEGURADORA,
             SubmenuOperacoes.VOLTAR}
     ),
-    SEGURADORA("Seguradora", new SubmenuOperacoes[] {
+    SEGURADORA("Area Seguradora", new SubmenuOperacoes[] {
             SubmenuOperacoes.VISUALIZAR_DADOS_SEGURADORA,
             SubmenuOperacoes.LISTAR_CLIENTES,
             SubmenuOperacoes.CADASTRAR_CLIENTE,
@@ -23,7 +23,7 @@ public enum MenuOperacoes {
             SubmenuOperacoes.CALCULAR_RECEITA_SEGURADORA,
             SubmenuOperacoes.VOLTAR
     }),
-    CLIENTE_PF("Cliente PF", new SubmenuOperacoes[] {
+    CLIENTE_PF("Area Cliente - Pessoa Fisica", new SubmenuOperacoes[] {
             SubmenuOperacoes.VISUALIZAR_DADOS_CLIENTE_PF,
             SubmenuOperacoes.LISTAR_SEGUROS_CLIENTE_PF,
             SubmenuOperacoes.VISUALIZAR_SEGURO_CLIENTE_PF,
@@ -35,7 +35,7 @@ public enum MenuOperacoes {
             SubmenuOperacoes.EXCLUIR_CONDUTOR,
             SubmenuOperacoes.VOLTAR
     }),
-    CLIENTE_PJ("Cliente PJ", new SubmenuOperacoes[] {
+    CLIENTE_PJ("Area Cliente - Pessoa Juridica", new SubmenuOperacoes[] {
             SubmenuOperacoes.VISUALIZAR_DADOS_CLIENTE_PJ,
             SubmenuOperacoes.LISTAR_SEGUROS_CLIENTE_PJ,
             SubmenuOperacoes.VISUALIZAR_SEGURO_CLIENTE_PJ,

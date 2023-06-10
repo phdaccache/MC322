@@ -59,7 +59,7 @@ public class Seguradora {
         }
         System.out.println("---------------------------------------------");
         System.out.println("");
-        
+
         System.out.println("Pessoas Fisicas:");
         // Iterando sobre os clientes PF
         for (Cliente cliente : listaClientes) {
@@ -96,8 +96,11 @@ public class Seguradora {
             }
         }
 
+        cliente.setSeguradora(this);
+        cliente.setValorMensalTotal(cliente.calcularValorMensalTotal());
         listaClientes.add(cliente);
         System.out.println("Cliente cadastrado!");
+        System.out.printf("Valor mensal total: R$%.2f\n", cliente.getValorMensalTotal());
     }
 
     // Cadastrar novo cliente com scanner
@@ -396,12 +399,14 @@ public class Seguradora {
 
     // Retorna todos os seguros de um cliente
     public ArrayList<Seguro> getSegurosPorCliente(String documento) {
-        return null;
+        ArrayList<Seguro> seguros = new ArrayList<>();
+        return seguros;
     }
 
     // Retorna todos os sinistros de um cliente
     public ArrayList<Sinistro> getSinistrosPorCliente(String documento) {
-        return null;
+        ArrayList<Sinistro> sinistros = new ArrayList<>();
+        return sinistros;
     }
 
     // Retorna o cliente atraves do documento

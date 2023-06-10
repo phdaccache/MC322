@@ -1,0 +1,53 @@
+1
+1
+2
+61.198.164/0001-60
+Pedro Seguros
+(11) 91234-5678
+Rua dos Pedros
+pedroseguros@gmail.com
+2
+51.990.695/0001-37
+Seguros Magicos
+(11) 98765-4321
+Rua da Magia
+segurosmagicos@gmail.com
+1
+0
+2
+61.198.164/0001-60
+1
+2
+3
+1
+Google
+0800 724 8149
+Mountain View, Califórnia, EUA
+google@gmail.com
+06.947.283/0001-60
+04/09/1998
+50
+Facebook
++1 650-543-4800
+R Leopoldo Couto De Magalhaes Junior, 700
+facebook@gmail.com
+13.347.016/0001-17
+01/02/2004
+15
+Pedro
+(11) 99999-9999
+Rua Pitagoras, Barao Geraldo
+pedro@gmail.com
+101.255.787-17
+Masculino
+Ensino Superior
+25/01/2003
+Marcelo
+(11) 91234-1234
+Rua do Marcelo, 1454
+marcelo@gmail.com
+522.444.883-22
+Masculino
+Ensino Superior
+25/03/2001
+2

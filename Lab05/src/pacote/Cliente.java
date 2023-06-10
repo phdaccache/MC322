@@ -103,6 +103,17 @@ public abstract class Cliente {
         return;
     }
 
+    // Calcular valor total mensal
+    public double calcularValorMensalTotal() {
+        double valorMensalTotal = 0;
+        // Iterando sobre os seguros
+        for (Seguro seguro: listaSeguros) {
+            // Somando o valor mensal de cada seguro
+            valorMensalTotal += seguro.getValorMensal();
+        }
+        return valorMensalTotal;
+    }
+
     // Retorna o documento do cliente
     public abstract String[] getDocumento();
 
