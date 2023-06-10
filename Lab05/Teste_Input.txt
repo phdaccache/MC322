@@ -39,13 +39,15 @@ segurosmagicos@gmail.com
 1
 Google
 0800 724 8149
-Mountain View, Califórnia, EUA
+Mountain View, California, EUA
 google@gmail.com
 06.947.283/0001-60
 04/09/1998
 50
 
 // Cadastrar cliente PJ
+3
+1
 Facebook
 +1 650-543-4800
 R Leopoldo Couto De Magalhaes Junior, 700
@@ -55,6 +57,8 @@ facebook@gmail.com
 15
 
 // Cadastrar cliente PF
+3
+2
 Pedro
 (11) 99999-9999
 Rua Pitagoras, Barao Geraldo
@@ -65,6 +69,8 @@ Ensino Superior
 25/01/2003
 
 // Cadastrar cliente PF
+3
+2
 Marcelo
 (11) 91234-1234
 Rua do Marcelo, 1454
@@ -76,3 +82,8 @@ Ensino Superior
 
 // Listar clientes
 2
+
+// Voltar
+0
+// Sair
+0

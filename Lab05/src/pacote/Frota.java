@@ -22,11 +22,11 @@ public class Frota {
         joiner.add(String.format("ID: %03d", getId()));
         joiner.add("Veiculos: ");
         if (listaVeiculos.isEmpty()) {
-            joiner.add("    Sem veiculos cadastrados.");
+            joiner.add("    * Sem veiculos cadastrados.");
         } else {
             for (int i = 0; i < listaVeiculos.size(); i++) {
                 Veiculo veiculo = listaVeiculos.get(i);
-                joiner.add(String.format("    Carro %d: %s - %s",
+                joiner.add(String.format("    * Carro %d: %s - %s",
                                         i+1, veiculo.getModelo(), veiculo.getPlaca()));
             }
         }

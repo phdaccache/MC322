@@ -34,15 +34,6 @@ public abstract class Cliente {
         joiner.add(String.format("Seguradora: %s (CNPJ: %s)",
                                 getSeguradora().getNome(), getSeguradora().getCNPJ()));
         joiner.add(String.format("Valor mensal total: R$%.2f", getValorMensalTotal()));
-        joiner.add("Seguros: ");
-        if (listaSeguros.isEmpty()) {
-            joiner.add("    Nao ha seguros.");
-        } else {
-            for (Seguro seguro: listaSeguros) {
-                joiner.add(String.format("Seguro %03d: %s - %s", seguro.getId(),
-                                        seguro.getDataInicio(), seguro.getDataFim()));
-            }
-        }
 
         return joiner.toString();
     }

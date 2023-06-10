@@ -39,11 +39,20 @@ public class ClientePJ extends Cliente {
         joiner.add("Quantidade de funcionarios: " + qtdFuncionarios);
         joiner.add("Frotas: ");
         if (listaFrotas.isEmpty()) {
-            joiner.add("    Sem frotas cadastradas.");
+            joiner.add("    * Sem frotas cadastradas.");
         } else {
             for (Frota frota : listaFrotas) {
-                joiner.add(String.format("    Frota %03d: %d veiculos",
+                joiner.add(String.format("    * Frota %03d: %d veiculos",
                                         frota.getId(), frota.getListaVeiculos().size()));
+            }
+        }
+        joiner.add("Seguros: ");
+        if (getListaSeguros().isEmpty()) {
+            joiner.add("    * Nao ha seguros.");
+        } else {
+            for (Seguro seguro: getListaSeguros()) {
+                joiner.add(String.format("    * Seguro %03d: %s - %s", seguro.getId(),
+                                        seguro.getDataInicio(), seguro.getDataFim()));
             }
         }
 

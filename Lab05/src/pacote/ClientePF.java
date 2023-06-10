@@ -40,15 +40,23 @@ public class ClientePF extends Cliente{
         joiner.add("Genero: " + getGenero());
         joiner.add("Educacao: " + getEducacao());
         joiner.add("Data Nascimento: " + dataNascimentoString);
-        joiner.add("Valor Mensal Total: " + getValorMensalTotal());
         joiner.add("Veiculos: ");
         if (listaVeiculos.isEmpty()) {
-            joiner.add("    Sem veiculos cadastrados.");
+            joiner.add("    * Sem veiculos cadastrados.");
         } else {
             for (int i = 0; i < listaVeiculos.size(); i++) {
                 Veiculo veiculo = listaVeiculos.get(i);
-                joiner.add(String.format("    Carro %d: %s - %s",
+                joiner.add(String.format("    * Carro %d: %s - %s",
                                         i+1, veiculo.getModelo(), veiculo.getPlaca()));
+            }
+        }
+        joiner.add("Seguros: ");
+        if (getListaSeguros().isEmpty()) {
+            joiner.add("    * Nao ha seguros.");
+        } else {
+            for (Seguro seguro: getListaSeguros()) {
+                joiner.add(String.format("    * Seguro %03d: %s - %s", seguro.getId(),
+                                        seguro.getDataInicio(), seguro.getDataFim()));
             }
         }
 

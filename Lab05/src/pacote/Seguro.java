@@ -45,7 +45,7 @@ public abstract class Seguro {
         joiner.add(String.format("Valor Mensal: R$%.2f", getValorMensal()));
         joiner.add("Sinistros: ");
         if (listaSinistros.isEmpty()) {
-            joiner.add("    Sem sinistros cadastrados.");
+            joiner.add("    * Sem sinistros cadastrados.");
         } else {
             for (Sinistro sinistro : listaSinistros) {
                 joiner.add("    " + sinistro);
