@@ -16,7 +16,7 @@ public class Main {
         /* MENU INTERATIVO */
 
         // Scanner scanner = new Scanner(System.in);
-        removeCommentedLines("Teste_Input.txt", "input.txt");
+        removerLinhasComentadas("Teste_Input.txt", "input.txt");
         Scanner scanner = new Scanner(new File("input.txt"));
         Menu menu = new Menu(scanner);
         MenuOperacoes option;
@@ -31,32 +31,31 @@ public class Main {
         scanner.close();
     }
 
-    public static void removeCommentedLines(String filePath, String fileTarget) {
+    // Funcao que, dado o arquivo
+    public static void removerLinhasComentadas(String arquivoEntrada, String arquivoSaida) {
         try {
-            // Open the input file for reading
-            BufferedReader reader = new BufferedReader(new FileReader(filePath));
+            // Abre o arquivo de entrada para leitura
+            BufferedReader reader = new BufferedReader(new FileReader(arquivoEntrada));
 
-            // Create a temporary file for storing the modified content
-            String tempFilePath = fileTarget;
-            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFilePath));
+            // Abre o arquivo de saida para armazenar o conteudo sem comentarios
+            BufferedWriter writer = new BufferedWriter(new FileWriter(arquivoSaida));
 
-            // Read each line from the input file
+            // Leitura de cada linha do arquivo de entrada
             String line;
             while ((line = reader.readLine()) != null) {
-                // Check if the line starts with "//"
+                // Checa se a linha comeca com "//" ou e um espaco em branco
                 if (!line.trim().startsWith("//") && !line.trim().isEmpty()) {
-                    // Write the line to the temporary file
+                    // Escreve a linha no arquivo de saida
                     writer.write(line);
                     writer.newLine();
                 }
             }
 
-            // Close the input and output files
             reader.close();
             writer.close();
 
         } catch (IOException e) {
-            System.err.println("An error occurred: " + e.getMessage());
+            System.err.println("Erro: " + e.getMessage());
         }
     }
 }
