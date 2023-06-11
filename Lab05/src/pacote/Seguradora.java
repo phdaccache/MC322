@@ -223,7 +223,7 @@ public class Seguradora {
 
         System.out.printf("Cliente de documento %s:\n", documento);
         // Caso em que nao ha seguros gerados
-        if (segurosCliente.isEmpty()) {
+        if (segurosCliente == null || segurosCliente.isEmpty()) {
             System.out.println("---------------------------------------------");
             System.out.println("Nao ha seguros gerados.");
             return;
@@ -398,19 +398,37 @@ public class Seguradora {
     }
 
     // Calcular receita
-    public void calcularReceita() {
-        return;
+    public double calcularReceita() {
+        double receita = 0;
+        // Iterando sobre os clientes
+        for (Cliente cliente : listaClientes) {
+            receita += cliente.getValorMensalTotal();
+        }
+        return receita;
     }
 
     // Retorna todos os seguros de um cliente
     public ArrayList<Seguro> getSegurosPorCliente(String documento) {
-        ArrayList<Seguro> seguros = new ArrayList<>();
-        return seguros;
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getDocumento()[1].equals(documento)) {
+                return cliente.getListaSeguros();
+            }
+        }
+        return null;
     }
 
     // Retorna todos os sinistros de um cliente
     public ArrayList<Sinistro> getSinistrosPorCliente(String documento) {
         ArrayList<Sinistro> sinistros = new ArrayList<>();
+        // Iterando sobre todos os clientes
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getDocumento()[1].equals(documento)) {
+                // Iterando sobre todos os seguros do cliente
+                for (Seguro seguro : cliente.getListaSeguros()) {
+                    sinistros.addAll(seguro.getListaSinistros());
+                }
+            }
+        }
         return sinistros;
     }
 
