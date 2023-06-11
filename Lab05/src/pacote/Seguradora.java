@@ -262,9 +262,9 @@ public class Seguradora {
         SeguroPJ seguro = new SeguroPJ(frota, cliente, inicio, fim, this);
         seguro.autorizarCondutor(condutor); // Autorizar condutor no seguro
         seguro.setValorMensal(seguro.calcularValorMensal()); // Calcular e setar valor mensal do seguro
-        frota.setSeguro(seguro); // Adicionar seguro na frota do cliente
+        seguro.getFrota().setSeguro(seguro); // Adicionar seguro na frota do cliente
         listaSeguros.add(seguro); // Adicionar seguro na seguradora
-        cliente.adicionarSeguro(seguro); // Adicionar seguro no cliente
+        seguro.getCliente().adicionarSeguro(seguro); // Adicionar seguro no cliente
 
         System.out.println("Seguro gerado com sucesso.");
     }
@@ -275,9 +275,9 @@ public class Seguradora {
         SeguroPF seguro = new SeguroPF(veiculo, cliente, inicio, fim, this);
         seguro.autorizarCondutor(condutor); // Autorizar condutor no seguro
         seguro.setValorMensal(seguro.calcularValorMensal()); // Calcular e setar valor mensal do seguro
-        veiculo.setSeguro(seguro); // Adicionar seguro no veiculo do cliente
+        seguro.getVeiculo().setSeguro(seguro); // Adicionar seguro no veiculo do cliente
         listaSeguros.add(seguro); // Adicionar seguro na seguradora
-        cliente.adicionarSeguro(seguro); // Adicionar seguro no cliente
+        seguro.getCliente().adicionarSeguro(seguro); // Adicionar seguro no cliente
 
         System.out.println("Seguro gerado com sucesso.");
     }
@@ -311,11 +311,11 @@ public class Seguradora {
             System.out.print("Insira o ID da frota: ");
             int id = scanner.nextInt();
             scanner.nextLine();
-            frota = ((ClientePJ)cliente).getFrota(id);
-            if (frota == null) {
+            if (id > ((ClientePJ)cliente).getListaFrotas().size() || id < 1) {
                 System.out.printf("Frota de ID %s nao encontrada. Nao foi possivel gerar o seguro.\n", id);
                 return;
             }
+            frota = ((ClientePJ)cliente).getListaFrotas().get(id - 1);
             // Pegar informacoes do seguro
             System.out.print("Insira a data de inicio do seguro: ");
             String inicio = scanner.nextLine();

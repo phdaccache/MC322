@@ -123,21 +123,22 @@ public abstract class Cliente {
 
     // Cadastrar novo condutor automatico
     public void cadastrarCondutor(Condutor condutor, int idSeguro) {
-        Seguro seguro = getSeguro(idSeguro);
-
         // Caso em que o cliente nao tem seguros
         if (listaSeguros.isEmpty()) {
             System.out.println("O cliente nao tem seguros.");
             return;
         }
 
-        // Caso em que o seguro nao foi encontrado
-        if (seguro == null) {
-            System.out.printf("Seguro de ID %03d nao encontrado.\n", idSeguro);
-            return;
+        // Iterando sobre os seguros 
+        for (int i = 0; i < listaSeguros.size(); i++) {
+            if (listaSeguros.get(i).getId() == idSeguro) {
+                listaSeguros.get(i).autorizarCondutor(condutor);
+                return;
+            }
         }
 
-        seguro.autorizarCondutor(condutor);
+        // Caso em que o seguro nao foi encontrado
+        System.out.printf("Seguro de ID %03d nao encontrado.\n", idSeguro);
     }
 
     // Cadastrar novo condutor com scanner
@@ -175,23 +176,23 @@ public abstract class Cliente {
 
     // Excluir condutor automatico
     public void excluirCondutor(String cpf, int idSeguro) {
-        Seguro seguro = getSeguro(idSeguro);
-
-        // Caso em que o ID do seguro nao foi encontrado
-        if (seguro == null) {
-            System.out.printf("Seguro de ID %03d nao encontrado.\n", idSeguro);
-            return;
-        }
-
-        // Iterando sobre os condutores
-        for (Condutor condutor : seguro.getListaCondutores()) {
-            // Caso em que o condutor foi encontrado
-            if (condutor.getCPF().equals(cpf)) {
-                seguro.desautorizarCondutor(condutor);
+        // Iterando sobre os seguros
+        for (int i = 0; i < listaSeguros.size(); i++) {
+            if (listaSeguros.get(i).getId() == idSeguro) {
+                // Iterando sobre os condutores
+                for (Condutor condutor : listaSeguros.get(i).getListaCondutores()) {
+                    if (condutor.getCPF().equals(cpf)) {
+                        listaSeguros.get(i).desautorizarCondutor(condutor);
+                        return;
+                    }
+                }
+                // Caso em que o condutor nao foi encontrado
+                System.out.printf("Condutor de CPF %s nao encontrado.\n", cpf);
                 return;
             }
         }
-        System.out.printf("Condutor de CPF %s nao encontrado.\n", cpf);
+        // Caso em que o ID do seguro nao foi encontrado
+        System.out.printf("Seguro de ID %03d nao encontrado.\n", idSeguro);
     }
 
     // Excluir condutor com scanner

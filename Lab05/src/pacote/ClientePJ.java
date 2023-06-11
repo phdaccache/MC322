@@ -59,15 +59,14 @@ public class ClientePJ extends Cliente {
 
     // Visualizar unica frota (com mais detalhes do que a listagem normal) automatico
     public void visualizarFrota(int id) {
-        Frota frota = getFrota(id);
-
         // Caso em que a frota nao existe
-        if (frota == null) {
+        if (id > listaFrotas.size() || id < 1) {
             System.out.println("---------------------------------------------");
             System.out.printf("Frota de ID %03d nao encontrada.\n", id);
             System.out.println("---------------------------------------------");
             return;
         }
+        Frota frota = listaFrotas.get(id - 1);
         System.out.println("---------------------------------------------");
         System.out.println(frota);
         System.out.println("---------------------------------------------");
@@ -93,35 +92,30 @@ public class ClientePJ extends Cliente {
         Frota frota = new Frota(id);
         System.out.println("Para cadastrar uma frota, e necessario cadastrar pelo menos um veiculo:");
         frota.cadastrarVeiculo(scanner);
+        cadastrarFrota(frota);
     }
 
     // Atualizar frota automatico
     public void atualizarFrota(int id, ArrayList<Veiculo> veiculos) {
-        Frota frota = getFrota(id);
-
         // Caso em que a frota nao existe
-        if (frota == null) {
+        if (id > listaFrotas.size() || id < 1) {
+            System.out.println("---------------------------------------------");
             System.out.printf("Frota de ID %03d nao encontrada.\n", id);
+            System.out.println("---------------------------------------------");
             return;
         }
-
+        Frota frota = listaFrotas.get(id - 1);
         // Caso em que os veiculos sao nulos (remover frota inteira)
         if (veiculos.isEmpty()) {
             removerFrota(frota);
+            return;
         }
-
-        ArrayList<Veiculo> veiculosFrota = frota.getListaVeiculos();
-        veiculosFrota.addAll(veiculos);
-        for (Frota frota2 : listaFrotas) {
-            if (frota2.getId() == id) {
-                frota2.setListaVeiculos(veiculosFrota);
-            }
-        }
+        frota.setListaVeiculos(veiculos);
     }
 
     // Atualizar frota com scanner
     public void atualizarFrota(Scanner scanner) {
-        // Adicionar veiculo?
+        // Adicionar veiculos?
         // Remover veiculos?
         // Remover frota?
     }
@@ -147,16 +141,6 @@ public class ClientePJ extends Cliente {
     // Retorna o documento do cliente
     public String[] getDocumento() {
         return new String [] {"CNPJ", this.CNPJ};
-    }
-
-    // Retorna a frota do cliente pelo id
-    public Frota getFrota(int id) {
-        for (Frota frota : listaFrotas) {
-            if (frota.getId() == id) {
-                return frota;
-            }
-        }
-        return null;
     }
 
     // Retorna a quantidade de anos pos fundacao
