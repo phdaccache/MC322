@@ -52,8 +52,7 @@ public class ClientePJ extends Cliente {
         }
         System.out.println("Frotas: ");
         for (Frota frota : listaFrotas) {
-            System.out.printf("    * Frota %03d: %d veiculo(s)\n",
-                                frota.getId(), frota.getListaVeiculos().size());
+            System.out.println(frota);
         }
     }
 
@@ -69,6 +68,17 @@ public class ClientePJ extends Cliente {
         Frota frota = listaFrotas.get(id - 1);
         System.out.println("---------------------------------------------");
         System.out.println(frota);
+        // Listando veiculos
+        System.out.println("Veiculos: ");
+        if (frota.getListaVeiculos().isEmpty()) {
+            System.out.println("    * Sem veiculos cadastrados.");
+        } else {
+            for (int i = 0; i < frota.getListaVeiculos().size(); i++) {
+                Veiculo veiculo = frota.getListaVeiculos().get(i);
+                System.out.println(String.format("    * Carro %d: %s - %s",
+                                        i+1, veiculo.getModelo(), veiculo.getPlaca()));
+            }
+        }
         System.out.println("---------------------------------------------");
     }
 

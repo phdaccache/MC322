@@ -20,10 +20,9 @@ public class SeguroPJ extends Seguro {
 
         joiner.add(super.toString());
         joiner.add("Frota: ");
-        joiner.add("    " + getFrota());
+        joiner.add(String.format("    * Frota %03d: %d veiculo(s)\n", frota.getId(), frota.getListaVeiculos().size()));
         joiner.add("Cliente: ");
-        joiner.add(String.format("    * %s (CNPJ: %s)",
-                                 getCliente().getNome(), getCliente().getDocumento()[1]));
+        joiner.add(String.format("    * %s (CNPJ: %s)", getCliente().getNome(), getCliente().getDocumento()[1]));
 
         return joiner.toString();
     }

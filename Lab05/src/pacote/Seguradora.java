@@ -210,13 +210,7 @@ public class Seguradora {
             }
             // Iterando sobre os seguros de cada cliente
             for (Seguro seguro: cliente.getListaSeguros()) {
-                System.out.println("---------------------------------------------");
-                System.out.printf("Seguro de ID: %03d:\n", seguro.getId());
-                System.out.printf("Data inicio: %s\n", seguro.getDataInicio());
-                System.out.printf("Data fim: %s\n", seguro.getDataFim());
-                System.out.printf("Valor Mensal: R$%.2f\n", seguro.getValorMensal());
-                System.out.printf("Quantidade de sinistros: %d\n", seguro.getListaSinistros().size());
-                System.out.printf("Quantidade de condutores: %d\n", seguro.getListaCondutores().size());    
+                System.out.println(seguro);    
             }
             System.out.println("---------------------------------------------");
             System.out.println("");
@@ -238,12 +232,7 @@ public class Seguradora {
         // Iterando sobre os seguros do cliente
         for (Seguro seguro : segurosCliente) {
             System.out.println("---------------------------------------------");
-            System.out.printf("Seguro de ID: %03d:\n", seguro.getId());
-            System.out.printf("Data inicio: %s\n", seguro.getDataInicio());
-            System.out.printf("Data fim: %s\n", seguro.getDataFim());
-            System.out.printf("Valor Mensal: R$%.2f\n", seguro.getValorMensal());
-            System.out.printf("Quantidade de sinistros: %d\n", seguro.getListaSinistros().size());
-            System.out.printf("Quantidade de condutores: %d\n", seguro.getListaCondutores().size());
+            System.out.println(seguro);
         }
         System.out.println("---------------------------------------------");
         System.out.println("");  

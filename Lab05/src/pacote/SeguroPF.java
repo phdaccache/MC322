@@ -20,10 +20,9 @@ public class SeguroPF extends Seguro {
 
         joiner.add(super.toString());
         joiner.add("Veiculo: ");
-        joiner.add("    " + getVeiculo());
+        joiner.add(String.format("    * %s - %s", getVeiculo().getModelo(), getVeiculo().getPlaca()));
         joiner.add("Cliente: ");
-        joiner.add(String.format("    * %s (CPF: %s)",
-                                 getCliente().getNome(), getCliente().getDocumento()[1]));
+        joiner.add(String.format("    * %s (CPF: %s)", getCliente().getNome(), getCliente().getDocumento()[1]));
 
         return joiner.toString();
     }

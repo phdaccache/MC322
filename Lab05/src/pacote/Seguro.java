@@ -40,27 +40,10 @@ public abstract class Seguro {
         joiner.add(String.format("ID: %03d", getId()));
         joiner.add("Data Inicio: " + dataInicioString);
         joiner.add("Data Fim: " + dataFimString);
-        joiner.add(String.format("Seguradora: %s (CNPJ: %s)",
-                                getSeguradora().getNome(), getSeguradora().getCNPJ()));
+        joiner.add(String.format("Seguradora: %s (CNPJ: %s)", getSeguradora().getNome(), getSeguradora().getCNPJ()));
         joiner.add(String.format("Valor Mensal: R$%.2f", getValorMensal()));
-        // Listando sinistros
-        joiner.add("Sinistros: ");
-        if (listaSinistros.isEmpty()) {
-            joiner.add("    * Sem sinistros cadastrados.");
-        } else {
-            for (Sinistro sinistro : listaSinistros) {
-                joiner.add("    " + sinistro);
-            }
-        }
-        // Listando condutores
-        joiner.add("Condutores: ");
-        if (listaCondutores.isEmpty()) {
-            joiner.add("    Sem condutores cadastrados.");
-        } else {
-            for (Condutor condutor : listaCondutores) {
-                joiner.add("    " + condutor);
-            }
-        }
+        joiner.add("Quantidade de sinistros: " + getListaSinistros().size());
+        joiner.add("Quantidade de condutores: " + getListaCondutores().size());
 
         return joiner.toString();
     }

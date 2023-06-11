@@ -20,16 +20,7 @@ public class Frota {
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
         joiner.add(String.format("ID: %03d", getId()));
-        joiner.add("Veiculos: ");
-        if (listaVeiculos.isEmpty()) {
-            joiner.add("    * Sem veiculos cadastrados.");
-        } else {
-            for (int i = 0; i < listaVeiculos.size(); i++) {
-                Veiculo veiculo = listaVeiculos.get(i);
-                joiner.add(String.format("    * Carro %d: %s - %s",
-                                        i+1, veiculo.getModelo(), veiculo.getPlaca()));
-            }
-        }
+        joiner.add("Quantidade de veiculos: " + getListaVeiculos().size());
 
         return joiner.toString();
     }

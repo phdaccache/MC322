@@ -31,8 +31,7 @@ public abstract class Cliente {
         joiner.add("Telefone: " + getTelefone());
         joiner.add("Endereco: " + getEndereco());
         joiner.add("Email: " + getEmail());
-        joiner.add(String.format("Seguradora: %s (CNPJ: %s)",
-                                getSeguradora().getNome(), getSeguradora().getCNPJ()));
+        joiner.add(String.format("Seguradora: %s (CNPJ: %s)", getSeguradora().getNome(), getSeguradora().getCNPJ()));
         joiner.add(String.format("Valor mensal total: R$%.2f", getValorMensalTotal()));
 
         return joiner.toString();
@@ -57,12 +56,7 @@ public abstract class Cliente {
         // Iterando sobre os seguros
         for (Seguro seguro : listaSeguros) {
             System.out.println("---------------------------------------------");
-            System.out.printf("Seguro de ID: %03d:\n", seguro.getId());
-            System.out.printf("Data inicio: %s\n", seguro.getDataInicio());
-            System.out.printf("Data fim: %s\n", seguro.getDataFim());
-            System.out.printf("Valor Mensal: R$%.2f\n", seguro.getValorMensal());
-            System.out.printf("Quantidade de sinistros: %d\n", seguro.getListaSinistros().size());
-            System.out.printf("Quantidade de condutores: %d\n", seguro.getListaCondutores().size()); 
+            System.out.println(seguro); 
         }
         System.out.println("---------------------------------------------");
     }
@@ -80,6 +74,24 @@ public abstract class Cliente {
         }
         System.out.println("---------------------------------------------");
         System.out.println(seguro);
+        // Listando sinistros
+        System.out.println("Sinistros: ");
+        if (seguro.getListaSinistros().isEmpty()) {
+            System.out.println("    * Sem sinistros cadastrados.");
+        } else {
+            for (Sinistro sinistro : seguro.getListaSinistros()) {
+                System.out.println("    " + sinistro);
+            }
+        }
+        // Listando condutores
+        System.out.println("Condutores: ");
+        if (seguro.getListaCondutores().isEmpty()) {
+            System.out.println("    * Sem condutores cadastrados.");
+        } else {
+            for (Condutor condutor : seguro.getListaCondutores()) {
+                System.out.println("    " + condutor);
+            }
+        }
         System.out.println("---------------------------------------------");
     }
 
