@@ -40,25 +40,8 @@ public class ClientePF extends Cliente{
         joiner.add("Genero: " + getGenero());
         joiner.add("Educacao: " + getEducacao());
         joiner.add("Data Nascimento: " + dataNascimentoString);
-        joiner.add("Veiculos: ");
-        if (listaVeiculos.isEmpty()) {
-            joiner.add("    * Sem veiculos cadastrados.");
-        } else {
-            for (int i = 0; i < listaVeiculos.size(); i++) {
-                Veiculo veiculo = listaVeiculos.get(i);
-                joiner.add(String.format("    * Carro %d: %s - %s",
-                                        i+1, veiculo.getModelo(), veiculo.getPlaca()));
-            }
-        }
-        joiner.add("Seguros: ");
-        if (getListaSeguros().isEmpty()) {
-            joiner.add("    * Nao ha seguros.");
-        } else {
-            for (Seguro seguro: getListaSeguros()) {
-                joiner.add(String.format("    * Seguro %03d: %s - %s", seguro.getId(),
-                                        seguro.getDataInicio(), seguro.getDataFim()));
-            }
-        }
+        joiner.add("Quantidade de veiculos: " + listaVeiculos.size());
+        joiner.add("Quantidade de seguros: " + getListaSeguros().size());
 
         return joiner.toString();
     }
@@ -112,14 +95,21 @@ public class ClientePF extends Cliente{
     public void excluirVeiculo(Veiculo veiculo) {
         String placa = veiculo.getPlaca();
 
-        // Checar se o veiculo existe antes de excluir
-        if (listaVeiculos.contains(veiculo)) {
-            listaVeiculos.remove(veiculo);
-            System.out.printf("Veiculo de placa %s removido!\n", placa);
-            return;
+        // Excluir seguro associado ao veiculo no cliente
+        for (Seguro seguro : getListaSeguros()) {
+            if (((SeguroPF)seguro).getVeiculo().equals(veiculo)) {
+                getListaSeguros().remove(seguro);
+            }
         }
-
-        System.out.printf("Veiculo invalido. Nao foi possivel remover o veiculo de placa %s.\n", placa);
+        // Excluir seguro associado ao veiculo na seguradora
+        for (Seguro seguro : getSeguradora().getListaSeguros()) {
+            if (((SeguroPF)seguro).getVeiculo().equals(veiculo)) {
+                getSeguradora().getListaSeguros().remove(seguro);
+            }
+        }
+        // Excluir veiculo no cliente
+        listaVeiculos.remove(veiculo);
+        System.out.printf("Veiculo de placa %s removido!\n", placa);
     }
 
     // Excluir veiculo com scanner

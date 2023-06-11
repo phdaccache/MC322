@@ -306,7 +306,7 @@ public class Menu {
             }
             // Iterando sobre os clientes
             for (Cliente cliente : seguradora.getListaClientes()) {
-                if (cliente.getDocumento().equals(documento)) {
+                if (cliente.getDocumento()[1].equals(documento)) {
                     return cliente;
                 }
             }

@@ -46,17 +46,49 @@ public abstract class Cliente {
 
     // Lista todos os seguros do cliente
     public void listarSeguros() {
-        return;
+        System.out.println("Seguros:");
+        // Caso em que nao ha seguros gerados
+        if (listaSeguros.isEmpty()) {
+            System.out.println("---------------------------------------------");
+            System.out.println("Nao ha seguros gerados.");
+            System.out.println("---------------------------------------------");
+            return;
+        }
+        // Iterando sobre os seguros
+        for (Seguro seguro : listaSeguros) {
+            System.out.println("---------------------------------------------");
+            System.out.printf("Seguro de ID: %03d:\n", seguro.getId());
+            System.out.printf("Data inicio: %s\n", seguro.getDataInicio());
+            System.out.printf("Data fim: %s\n", seguro.getDataFim());
+            System.out.printf("Valor Mensal: R$%.2f\n", seguro.getValorMensal());
+            System.out.printf("Quantidade de sinistros: %d\n", seguro.getListaSinistros().size());
+            System.out.printf("Quantidade de condutores: %d\n", seguro.getListaCondutores().size()); 
+        }
+        System.out.println("---------------------------------------------");
     }
 
     // Visualizar unico seguro (com mais detalhes do que a listagem normal) automatico
     public void visualizarSeguro(int id) {
-        return;
+        Seguro seguro = getSeguro(id);
+
+        // Caso em que o seguro nao foi encontrado
+        if (seguro == null) {
+            System.out.println("---------------------------------------------");
+            System.out.println("Seguro nao encontrado.");
+            System.out.println("---------------------------------------------");
+            return;
+        }
+        System.out.println("---------------------------------------------");
+        System.out.println(seguro);
+        System.out.println("---------------------------------------------");
     }
 
     // Visualizar unico seguro (com mais detalhes do que a listagem normal) com scanner
     public void visualizarSeguro(Scanner scanner) {
-        return;
+        System.out.print("Insira o ID do seguro que deseja visualizar: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        visualizarSeguro(id);
     }
 
     // Adicionar seguro
@@ -71,27 +103,106 @@ public abstract class Cliente {
 
     // Listar todos os condutores
     public void listarCondutores() {
-        return;
+        // Caso em que nao ha seguros gerados
+        if (listaSeguros.isEmpty()) {
+            System.out.println("Nao ha seguros gerados.");
+            return;
+        }
+
+        // Iterando sobre os seguros
+        for (Seguro seguro : listaSeguros) {
+            System.out.printf("Seguro %d:\n", seguro.getId());
+            // Iterando sobre os condutores
+            for (Condutor condutor : seguro.getListaCondutores()) {
+                System.out.println("---------------------------------------------");
+                System.out.println(condutor);
+            }
+            System.out.println("---------------------------------------------");
+        }
     }
 
     // Cadastrar novo condutor automatico
-    public void cadastrarCondutor(Condutor condutor) {
-        return;
+    public void cadastrarCondutor(Condutor condutor, int idSeguro) {
+        Seguro seguro = getSeguro(idSeguro);
+
+        // Caso em que o cliente nao tem seguros
+        if (listaSeguros.isEmpty()) {
+            System.out.println("O cliente nao tem seguros.");
+            return;
+        }
+
+        // Caso em que o seguro nao foi encontrado
+        if (seguro == null) {
+            System.out.printf("Seguro de ID %03d nao encontrado.\n", idSeguro);
+            return;
+        }
+
+        seguro.autorizarCondutor(condutor);
     }
 
     // Cadastrar novo condutor com scanner
-    public Condutor cadastrarCondutor(Scanner scanner) {
-        return null;
+    public void cadastrarCondutor(Scanner scanner) {
+        System.out.print("Insira o ID do seguro que deseja adicionar o condutor: ");
+        int idSeguro = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Insira o CPF do condutor: ");
+        String cpf = scanner.nextLine();
+        System.out.print("Insira o nome do condutor: ");
+        String nome = scanner.nextLine();
+        System.out.print("Insira o telefone do condutor: ");
+        String telefone = scanner.nextLine();
+        System.out.print("Insira o endereco do condutor: ");
+        String endereco = scanner.nextLine();
+        System.out.print("Insira o email do condutor: ");
+        String email = scanner.nextLine();
+        System.out.print("Insira a data de nascimento do condutor: ");
+        String nascimento = scanner.nextLine();
+
+        // Caso em que o documento e invalido
+        if (!Validacao.validarDocumento(cpf, "CPF")) {
+            System.out.println("CPF invalido. Nao foi possivel cadastrar o condutor.");
+            return;
+        }
+
+        // Caso em que o nome e invalido
+        if (!Validacao.validarNome(nome)) {
+            System.out.println("Nome invalido. Nao foi possivel cadastrar o condutor.");
+            return;
+        }
+
+        cadastrarCondutor(new Condutor(cpf, nome, telefone, endereco, email, nascimento), idSeguro);
     }
 
     // Excluir condutor automatico
-    public void excluirCondutor(String cpf) {
-        return;
+    public void excluirCondutor(String cpf, int idSeguro) {
+        Seguro seguro = getSeguro(idSeguro);
+
+        // Caso em que o ID do seguro nao foi encontrado
+        if (seguro == null) {
+            System.out.printf("Seguro de ID %03d nao encontrado.\n", idSeguro);
+            return;
+        }
+
+        // Iterando sobre os condutores
+        for (Condutor condutor : seguro.getListaCondutores()) {
+            // Caso em que o condutor foi encontrado
+            if (condutor.getCPF().equals(cpf)) {
+                seguro.desautorizarCondutor(condutor);
+                return;
+            }
+        }
+        System.out.printf("Condutor de CPF %s nao encontrado.\n", cpf);
     }
 
     // Excluir condutor com scanner
     public void excluirCondutor(Scanner scanner) {
-        return;
+        System.out.print("Insira o ID do seguro que deseja excluir o condutor: ");
+        int idSeguro = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Insira o CPF do condutor: ");
+        String cpf = scanner.nextLine();
+
+        excluirCondutor(cpf, idSeguro);
     }
 
     // Calcular valor total mensal
@@ -103,6 +214,16 @@ public abstract class Cliente {
             valorMensalTotal += seguro.getValorMensal();
         }
         return valorMensalTotal;
+    }
+
+    // Retorna o seguro atraves do ID
+    public Seguro getSeguro(int id) {
+        for (Seguro seguro : listaSeguros) {
+            if (seguro.getId() == id) {
+                return seguro;
+            }
+        }
+        return null;
     }
 
     // Retorna o documento do cliente

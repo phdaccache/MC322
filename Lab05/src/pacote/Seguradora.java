@@ -322,7 +322,8 @@ public class Seguradora {
             System.out.print("Insira a data de fim do seguro: ");
             String fim = scanner.nextLine();
             System.out.println("E necessario cadastrar pelo menos um condutor para gerar o seguro.");
-            Condutor condutor = cliente.cadastrarCondutor(scanner);
+            Condutor condutor = novoCondutor(scanner);
+            if (condutor == null) { return;}
             System.out.println("Para cadastrar mais condutores, acesse a area do cliente.");
 
             gerarSeguroPJ((ClientePJ)cliente, frota, inicio, fim, condutor);
@@ -351,7 +352,7 @@ public class Seguradora {
             System.out.print("Insira a data de fim do seguro: ");
             String fim = scanner.nextLine();
             System.out.println("E necessario cadastrar pelo menos um condutor para gerar o seguro.");
-            Condutor condutor = cliente.cadastrarCondutor(scanner);
+            Condutor condutor = novoCondutor(scanner);
             System.out.println("Para cadastrar mais condutores, acesse a area do cliente.");
 
             gerarSeguroPF((ClientePF)cliente, veiculo, inicio, fim, condutor);
@@ -369,6 +370,21 @@ public class Seguradora {
 
     // Cancelar seguro com scanner
     public void cancelarSeguro(Scanner scanner) {
+        return;
+    }
+
+    // Listar todos os sinistros
+    public void listarSinistros() {
+        return;
+    }
+
+    // Listar sinistros por cliente automatico
+    public void listarSinistros(String documento) {
+        return;
+    }
+
+    // Listar sinistros por cliente com scanner
+    public void listarSinistros(Scanner scanner) {
         return;
     }
 
@@ -417,6 +433,35 @@ public class Seguradora {
             }
         }
         return null;
+    }
+
+    private Condutor novoCondutor(Scanner scanner) {
+        System.out.print("Insira o CPF do condutor: ");
+        String cpf = scanner.nextLine();
+        System.out.print("Insira o nome do condutor: ");
+        String nome = scanner.nextLine();
+        System.out.print("Insira o telefone do condutor: ");
+        String telefone = scanner.nextLine();
+        System.out.print("Insira o endereco do condutor: ");
+        String endereco = scanner.nextLine();
+        System.out.print("Insira o email do condutor: ");
+        String email = scanner.nextLine();
+        System.out.print("Insira a data de nascimento do condutor: ");
+        String nascimento = scanner.nextLine();
+
+        // Caso em que o documento e invalido
+        if (!Validacao.validarDocumento(cpf, "CPF")) {
+            System.out.println("CPF invalido. Nao foi possivel cadastrar o condutor.");
+            return null;
+        }
+
+        // Caso em que o nome e invalido
+        if (!Validacao.validarNome(nome)) {
+            System.out.println("Nome invalido. Nao foi possivel cadastrar o condutor.");
+            return null;
+        }
+
+        return new Condutor(cpf, nome, telefone, endereco, email, nascimento);
     }
 
 

@@ -24,7 +24,7 @@ segurosmagicos@gmail.com
 // Voltar
 0
 
-// Accesar Area Seguradora
+// Acessar Area Seguradora
 2
 // Login
 61.198.164/0001-60
@@ -34,7 +34,7 @@ segurosmagicos@gmail.com
 // Listar clientes
 2
 
-// Cadastrar cliente PJ
+// Cadastrar cliente PJ 1 
 3
 1
 Google
@@ -45,7 +45,7 @@ google@gmail.com
 04/09/1998
 50
 
-// Cadastrar cliente PJ
+// Cadastrar cliente PJ 2
 3
 1
 Facebook
@@ -56,7 +56,7 @@ facebook@gmail.com
 01/02/2004
 15
 
-// Cadastrar cliente PF
+// Cadastrar cliente PF 1
 3
 2
 Pedro
@@ -68,7 +68,7 @@ Masculino
 Ensino Superior
 25/01/2003
 
-// Cadastrar cliente PF
+// Cadastrar cliente PF 2
 3
 2
 Marcelo
@@ -81,6 +81,16 @@ Ensino Superior
 25/03/2001
 
 // Listar clientes
+2
+
+// Voltar
+0
+// Acessar Area Cliente
+3
+// Login
+101.255.787-17
+
+// Listar Seguros
 2
 
 // Voltar

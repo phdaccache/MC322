@@ -37,61 +37,111 @@ public class ClientePJ extends Cliente {
         joiner.add("CNPJ: " + getCNPJ());
         joiner.add("Data Fundacao: " + dataFundacaoString);
         joiner.add("Quantidade de funcionarios: " + qtdFuncionarios);
-        joiner.add("Frotas: ");
-        if (listaFrotas.isEmpty()) {
-            joiner.add("    * Sem frotas cadastradas.");
-        } else {
-            for (Frota frota : listaFrotas) {
-                joiner.add(String.format("    * Frota %03d: %d veiculos",
-                                        frota.getId(), frota.getListaVeiculos().size()));
-            }
-        }
-        joiner.add("Seguros: ");
-        if (getListaSeguros().isEmpty()) {
-            joiner.add("    * Nao ha seguros.");
-        } else {
-            for (Seguro seguro: getListaSeguros()) {
-                joiner.add(String.format("    * Seguro %03d: %s - %s", seguro.getId(),
-                                        seguro.getDataInicio(), seguro.getDataFim()));
-            }
-        }
+        joiner.add("Quantidade de frotas: " + getListaFrotas().size());
+        joiner.add("Quantidade de seguros: " + getListaSeguros().size());
 
         return joiner.toString();
     }
 
     // Listar todas as frotas
     public void listarFrotas() {
-        return;
+        // Caso em que nao ha frotas cadastradas
+        if (listaFrotas.isEmpty()) {
+            System.out.println("Nao ha frotas cadastradas.");
+            return;
+        }
+        System.out.println("Frotas: ");
+        for (Frota frota : listaFrotas) {
+            System.out.printf("    * Frota %03d: %d veiculo(s)\n",
+                                frota.getId(), frota.getListaVeiculos().size());
+        }
     }
 
     // Visualizar unica frota (com mais detalhes do que a listagem normal) automatico
     public void visualizarFrota(int id) {
-        return;
+        Frota frota = getFrota(id);
+
+        // Caso em que a frota nao existe
+        if (frota == null) {
+            System.out.println("---------------------------------------------");
+            System.out.printf("Frota de ID %03d nao encontrada.\n", id);
+            System.out.println("---------------------------------------------");
+            return;
+        }
+        System.out.println("---------------------------------------------");
+        System.out.println(frota);
+        System.out.println("---------------------------------------------");
     }
 
     // Visualizar unica frota (com mais detalhes do que a listagem normal) com scanner
     public void visualizarFrota(Scanner scanner) {
-        return;
+        System.out.print("Digite o ID da frota que deseja visualizar: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        visualizarFrota(id);
     }
 
     // Cadastrar frota automatico
     public void cadastrarFrota(Frota frota) {
-        return;
+        listaFrotas.add(frota);
+        System.out.println("Frota cadastrada!");
     }
 
     // Cadastrar frota com scanner
     public void cadastrarFrota(Scanner scanner) {
-        return;
+        int id = listaFrotas.size() + 1;
+        Frota frota = new Frota(id);
+        System.out.println("Para cadastrar uma frota, e necessario cadastrar pelo menos um veiculo:");
+        frota.cadastrarVeiculo(scanner);
     }
 
     // Atualizar frota automatico
     public void atualizarFrota(int id, ArrayList<Veiculo> veiculos) {
-        return;
+        Frota frota = getFrota(id);
+
+        // Caso em que a frota nao existe
+        if (frota == null) {
+            System.out.printf("Frota de ID %03d nao encontrada.\n", id);
+            return;
+        }
+
+        // Caso em que os veiculos sao nulos (remover frota inteira)
+        if (veiculos.isEmpty()) {
+            removerFrota(frota);
+        }
+
+        ArrayList<Veiculo> veiculosFrota = frota.getListaVeiculos();
+        veiculosFrota.addAll(veiculos);
+        for (Frota frota2 : listaFrotas) {
+            if (frota2.getId() == id) {
+                frota2.setListaVeiculos(veiculosFrota);
+            }
+        }
     }
 
     // Atualizar frota com scanner
     public void atualizarFrota(Scanner scanner) {
-        return;
+        // Adicionar veiculo?
+        // Remover veiculos?
+        // Remover frota?
+    }
+
+    // Remover frota
+    public void removerFrota(Frota frota) {
+        // Excluir seguro associado à frota no cliente
+        for (Seguro seguro : getListaSeguros()) {
+            if (((SeguroPJ)seguro).getFrota().equals(frota)) {
+                getListaSeguros().remove(seguro);
+            }
+        }
+        // Excluir seguro associado à frota na seguradora
+        for (Seguro seguro : getSeguradora().getListaSeguros()) {
+            if (((SeguroPJ)seguro).getFrota().equals(frota)) {
+                getSeguradora().getListaSeguros().remove(seguro);
+            }
+        }
+        // Excluir frota no cliente
+        listaFrotas.remove(frota);
     }
 
     // Retorna o documento do cliente
