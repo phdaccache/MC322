@@ -65,6 +65,12 @@ public class Frota {
         System.out.print("Digite o ano de fabricacao: ");
         int ano = scanner.nextInt();
 
+        // Caso em que a placa passada e invalida
+        if (!Validacao.validarPlaca(placa)) {
+            System.out.println("Placa invalida. Nao foi possivel cadastrar o veiculo.");
+            return;
+        }
+
         Veiculo veiculo = new Veiculo(placa, marca, modelo, ano);
 
         cadastrarVeiculo(veiculo);

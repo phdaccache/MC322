@@ -50,22 +50,12 @@ public abstract class Seguro {
 
     // Autorizar novo condutor automatico
     public void autorizarCondutor(Condutor condutor) {
-        return;
-    }
-
-    // Autorizar novo condutor com scanner
-    public void autorizarCondutor(Scanner scanner) {
-        return;
+        listaCondutores.add(condutor);
     }
 
     // Desautorizar condutor automatico
     public void desautorizarCondutor(Condutor condutor) {
-        return;
-    }
-
-    // Desautorizar condutor com scanner
-    public void desautorizarCondutor(Scanner scanner) {
-        return;
+        listaCondutores.remove(condutor);
     }
 
     // Listar todos os sinistros

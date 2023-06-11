@@ -286,69 +286,70 @@ public class Seguradora {
         Frota frota = null;
         Veiculo veiculo = null;
 
-        /* Cadastar Seguro de Pessoa Juridica */
-        if (tipo == 1) {
-            // Encontra cliente
-            System.out.print("Insira o CNPJ do cliente: ");
-            String cnpj = scanner.nextLine();
-            cliente = getCliente(cnpj);
-            if (cliente == null) {
-                System.out.printf("Cliente de CNPJ %s nao encontrado. Nao foi possivel gerar o seguro.\n", cnpj);
-                return;
-            }
-            // Encontrar frota
-            System.out.print("Insira o ID da frota: ");
-            int id = scanner.nextInt();
-            scanner.nextLine();
-            if (id > ((ClientePJ)cliente).getListaFrotas().size() || id < 1) {
-                System.out.printf("Frota de ID %s nao encontrada. Nao foi possivel gerar o seguro.\n", id);
-                return;
-            }
-            frota = ((ClientePJ)cliente).getListaFrotas().get(id - 1);
-            // Pegar informacoes do seguro
-            System.out.print("Insira a data de inicio do seguro: ");
-            String inicio = scanner.nextLine();
-            System.out.print("Insira a data de fim do seguro: ");
-            String fim = scanner.nextLine();
-            System.out.println("E necessario cadastrar pelo menos um condutor para gerar o seguro.");
-            Condutor condutor = novoCondutor(scanner);
-            if (condutor == null) { return;}
-            System.out.println("Para cadastrar mais condutores, acesse a area do cliente.");
+        switch (tipo) {
+            /* Cadastar Seguro de Pessoa Juridica */
+            case 1:
+                // Encontra cliente
+                System.out.print("Insira o CNPJ do cliente: ");
+                String cnpj = scanner.nextLine();
+                cliente = getCliente(cnpj);
+                if (cliente == null) {
+                    System.out.printf("Cliente de CNPJ %s nao encontrado. Nao foi possivel gerar o seguro.\n", cnpj);
+                    return;
+                }
+                // Encontrar frota
+                System.out.print("Insira o ID da frota: ");
+                int id = scanner.nextInt();
+                scanner.nextLine();
+                if (id > ((ClientePJ)cliente).getListaFrotas().size() || id < 1) {
+                    System.out.printf("Frota de ID %s nao encontrada. Nao foi possivel gerar o seguro.\n", id);
+                    return;
+                }
+                frota = ((ClientePJ)cliente).getListaFrotas().get(id - 1);
+                // Pegar informacoes do seguro
+                System.out.print("Insira a data de inicio do seguro: ");
+                String inicio = scanner.nextLine();
+                System.out.print("Insira a data de fim do seguro: ");
+                String fim = scanner.nextLine();
+                System.out.println("E necessario cadastrar pelo menos um condutor para gerar o seguro.");
+                Condutor condutor = novoCondutor(scanner);
+                if (condutor == null) { return;}
+                System.out.println("Para cadastrar mais condutores, acesse a area do cliente.");
 
-            gerarSeguroPJ((ClientePJ)cliente, frota, inicio, fim, condutor);
+                gerarSeguroPJ((ClientePJ)cliente, frota, inicio, fim, condutor);
+                break;
+            /* Cadastrar Seguro de Pessoa Fisica */
+            case 2:
+                // Encontrar cliente
+                System.out.print("Insira o CPF do cliente: ");
+                String cpf = scanner.nextLine();
+                cliente = getCliente(cpf);
+                if (cliente == null) {
+                    System.out.printf("Cliente de CPF %s nao encontrado. Nao foi possivel gerar o seguro.\n", cpf);
+                    return;
+                }
+                // Encontrar veiculo
+                System.out.print("Insira a placa do veiculo: ");
+                String placa = scanner.nextLine();
+                veiculo = ((ClientePF)cliente).getVeiculo(placa);
+                if (veiculo == null) {
+                    System.out.printf("Veiculo de placa %s nao encontrado. Nao foi possivel gerar o seguro.\n", placa);
+                    return;
+                }
+                // Pegar informacoes do seguro
+                System.out.print("Insira a data de inicio do seguro: ");
+                String inicio2 = scanner.nextLine();
+                System.out.print("Insira a data de fim do seguro: ");
+                String fim2 = scanner.nextLine();
+                System.out.println("E necessario cadastrar pelo menos um condutor para gerar o seguro.");
+                Condutor condutor2 = novoCondutor(scanner);
+                System.out.println("Para cadastrar mais condutores, acesse a area do cliente.");
 
-        /* Cadastrar Seguro de Pessoa Fisica */
-        } else if (tipo == 2) {
-            // Encontrar cliente
-            System.out.print("Insira o CPF do cliente: ");
-            String cpf = scanner.nextLine();
-            cliente = getCliente(cpf);
-            if (cliente == null) {
-                System.out.printf("Cliente de CPF %s nao encontrado. Nao foi possivel gerar o seguro.\n", cpf);
-                return;
-            }
-            // Encontrar veiculo
-            System.out.print("Insira a placa do veiculo: ");
-            String placa = scanner.nextLine();
-            veiculo = ((ClientePF)cliente).getVeiculo(placa);
-            if (veiculo == null) {
-                System.out.printf("Veiculo de placa %s nao encontrado. Nao foi possivel gerar o seguro.\n", placa);
-                return;
-            }
-            // Pegar informacoes do seguro
-            System.out.print("Insira a data de inicio do seguro: ");
-            String inicio = scanner.nextLine();
-            System.out.print("Insira a data de fim do seguro: ");
-            String fim = scanner.nextLine();
-            System.out.println("E necessario cadastrar pelo menos um condutor para gerar o seguro.");
-            Condutor condutor = novoCondutor(scanner);
-            System.out.println("Para cadastrar mais condutores, acesse a area do cliente.");
-
-            gerarSeguroPF((ClientePF)cliente, veiculo, inicio, fim, condutor);
-            
-        } else {
-            System.out.println("Opcao invalida");
-            return;
+                gerarSeguroPF((ClientePF)cliente, veiculo, inicio2, fim2, condutor2);
+                break;
+            default:
+                System.out.println("Opcao invalida.");
+                break;
         }
     }
 

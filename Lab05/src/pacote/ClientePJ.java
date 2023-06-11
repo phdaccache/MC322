@@ -106,7 +106,7 @@ public class ClientePJ extends Cliente {
     }
 
     // Atualizar frota automatico
-    public void atualizarFrota(int id, ArrayList<Veiculo> veiculos) {
+    public void atualizarFrota(int id, ArrayList<Veiculo> veiculosAdicionar, ArrayList<Veiculo> veiculosRemover) {
         // Caso em que a frota nao existe
         if (id > listaFrotas.size() || id < 1) {
             System.out.println("---------------------------------------------");
@@ -115,37 +115,64 @@ public class ClientePJ extends Cliente {
             return;
         }
         Frota frota = listaFrotas.get(id - 1);
+        // Adicionar veiculos
+        for (Veiculo veiculo : veiculosAdicionar) {
+            frota.cadastrarVeiculo(veiculo);
+        }
+        // Remover veiculos
+        for (Veiculo veiculo : veiculosRemover) {
+            frota.excluirVeiculo(veiculo);
+        }
         // Caso em que os veiculos sao nulos (remover frota inteira)
-        if (veiculos.isEmpty()) {
+        if (frota.getListaVeiculos().isEmpty()) {
             removerFrota(frota);
             return;
         }
-        frota.setListaVeiculos(veiculos);
     }
 
     // Atualizar frota com scanner
     public void atualizarFrota(Scanner scanner) {
-        // Adicionar veiculos?
-        // Remover veiculos?
-        // Remover frota?
-    }
+        System.out.print("Digite o ID da frota que deseja atualizar: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
 
-    // Remover frota
-    public void removerFrota(Frota frota) {
-        // Excluir seguro associado à frota no cliente
-        for (Seguro seguro : getListaSeguros()) {
-            if (((SeguroPJ)seguro).getFrota().equals(frota)) {
-                getListaSeguros().remove(seguro);
-            }
+        // Caso em que a frota nao existe
+        if (id > listaFrotas.size() || id < 1) {
+            System.out.println("---------------------------------------------");
+            System.out.printf("Frota de ID %03d nao encontrada.\n", id);
+            System.out.println("---------------------------------------------");
+            return;
         }
-        // Excluir seguro associado à frota na seguradora
-        for (Seguro seguro : getSeguradora().getListaSeguros()) {
-            if (((SeguroPJ)seguro).getFrota().equals(frota)) {
-                getSeguradora().getListaSeguros().remove(seguro);
-            }
+
+        Frota frota = listaFrotas.get(id - 1);
+
+        System.out.println("\n################### Opcoes ##################");
+        System.out.println("|-------------------------------------------|");
+        System.out.println("| Opcao 1 - Cadastrar Veiculo               |");
+        System.out.println("| Opcao 2 - Remover Veiculo                 |");
+        System.out.println("| Opcao 2 - Remover Frota                   |");
+        System.out.println("|-------------------------------------------|\n");
+        System.out.print("Digite uma opcao: ");
+        int op = scanner.nextInt();
+        scanner.nextLine();
+        
+        switch (op) {
+            case 1:
+                frota.cadastrarVeiculo(scanner);
+                break;
+            case 2:
+                frota.excluirVeiculo(scanner);
+                if (frota.getListaVeiculos().isEmpty()) {
+                    removerFrota(frota);
+                }
+                break;
+            case 3:
+                removerFrota(frota);
+                break;
+            default:
+                System.out.println("Opcao invalida.");
+                break;
         }
-        // Excluir frota no cliente
-        listaFrotas.remove(frota);
     }
 
     // Retorna o documento do cliente
@@ -163,6 +190,24 @@ public class ClientePJ extends Cliente {
     // Retorna todos os veiculos de uma frota
     public ArrayList<Veiculo> getVeiculosPorFrota(int id) {
         return listaFrotas.get(id - 1).getListaVeiculos();
+    }
+
+    // Remover frota
+    private void removerFrota(Frota frota) {
+        // Excluir seguro associado à frota no cliente
+        for (Seguro seguro : getListaSeguros()) {
+            if (((SeguroPJ)seguro).getFrota().equals(frota)) {
+                getListaSeguros().remove(seguro);
+            }
+        }
+        // Excluir seguro associado à frota na seguradora
+        for (Seguro seguro : getSeguradora().getListaSeguros()) {
+            if (((SeguroPJ)seguro).getFrota().equals(frota)) {
+                getSeguradora().getListaSeguros().remove(seguro);
+            }
+        }
+        // Excluir frota no cliente
+        listaFrotas.remove(frota);
     }
     
 
