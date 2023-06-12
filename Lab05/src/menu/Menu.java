@@ -69,12 +69,14 @@ public class Menu {
                 runSubmenu(option, null, null);
                 break;
             case SEGURADORA:
+                System.out.println("Login de Seguradora:");
                 seguradora = loginSeguradora();
                 if (seguradora == null) {return;}
                 runSubmenu(option, seguradora, null);
                 break;
             case CLIENTE_PF:
             case CLIENTE_PJ:
+                System.out.println("Login de Cliente:");
                 cliente = loginCliente();
                 if (cliente == null) {return;}
                 runSubmenu(option, null, cliente);
