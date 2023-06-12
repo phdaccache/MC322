@@ -128,6 +128,16 @@ public class ClientePF extends Cliente{
         System.out.printf("Veiculo invalido. Nao foi possivel remover o veiculo de placa %s.\n", placa);
     }
 
+    // Excluir seguro
+    public void excluirSeguro(Seguro seguro) {
+        super.excluirSeguro(seguro);
+        for (int i = 0; i < listaVeiculos.size(); i++) {
+            if (((SeguroPF)seguro).getVeiculo().equals(listaVeiculos.get(i))) {
+                listaVeiculos.get(i).setSeguro(null);
+            }
+        }
+    }
+
     // Retorna o documento do cliente
     public String[] getDocumento() {
         return new String [] {"CPF", this.CPF};

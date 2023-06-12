@@ -175,6 +175,16 @@ public class ClientePJ extends Cliente {
         }
     }
 
+    // Excluir seguro
+    public void excluirSeguro(Seguro seguro) {
+        super.excluirSeguro(seguro);
+        for (int i = 0; i < listaFrotas.size(); i++) {
+            if (((SeguroPJ)seguro).getFrota().equals(listaFrotas.get(i))) {
+                listaFrotas.get(i).setSeguro(null);
+            }
+        }
+    }
+
     // Retorna o documento do cliente
     public String[] getDocumento() {
         return new String [] {"CNPJ", this.CNPJ};

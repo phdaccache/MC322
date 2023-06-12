@@ -355,12 +355,26 @@ public class Seguradora {
 
     // Cancelar seguro automatico
     public void cancelarSeguro(String documento, int id) {
-        return;
+        for (Seguro seguro : listaSeguros) {
+            if (seguro.getCliente().getDocumento()[1].equals(documento) && seguro.getId() == id) {
+                // Cancelar seguro na seguradora
+                listaSeguros.remove(seguro);
+                // Cancelar seguro no cliente (tambem remove o seguro do veiculo ou frota)
+                seguro.getCliente().excluirSeguro(seguro);
+                System.out.println("Seguro cancelado com sucesso.");
+            }
+        }
+        System.out.printf("Documento %s ou ID %d invalido. Nao foi possivel cancelar o seguro.", documento, id);
     }
 
     // Cancelar seguro com scanner
     public void cancelarSeguro(Scanner scanner) {
-        return;
+        System.out.print("Insira o documento do cliente que deseja cancelar o seguro: ");
+        String documento = scanner.nextLine();
+        System.out.print("Insira o ID do seguro que deseja cancelar: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        cancelarSeguro(documento, id);
     }
 
     // Listar todos os sinistros
