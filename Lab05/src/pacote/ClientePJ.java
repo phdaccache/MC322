@@ -60,9 +60,7 @@ public class ClientePJ extends Cliente {
     public void visualizarFrota(int id) {
         // Caso em que a frota nao existe
         if (id > listaFrotas.size() || id < 1) {
-            System.out.println("---------------------------------------------");
             System.out.printf("Frota de ID %03d nao encontrada.\n", id);
-            System.out.println("---------------------------------------------");
             return;
         }
         Frota frota = listaFrotas.get(id - 1);
@@ -109,9 +107,7 @@ public class ClientePJ extends Cliente {
     public void atualizarFrota(int id, ArrayList<Veiculo> veiculosAdicionar, ArrayList<Veiculo> veiculosRemover) {
         // Caso em que a frota nao existe
         if (id > listaFrotas.size() || id < 1) {
-            System.out.println("---------------------------------------------");
             System.out.printf("Frota de ID %03d nao encontrada.\n", id);
-            System.out.println("---------------------------------------------");
             return;
         }
         Frota frota = listaFrotas.get(id - 1);
@@ -138,9 +134,7 @@ public class ClientePJ extends Cliente {
 
         // Caso em que a frota nao existe
         if (id > listaFrotas.size() || id < 1) {
-            System.out.println("---------------------------------------------");
             System.out.printf("Frota de ID %03d nao encontrada.\n", id);
-            System.out.println("---------------------------------------------");
             return;
         }
 

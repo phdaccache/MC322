@@ -48,9 +48,7 @@ public abstract class Cliente {
         System.out.println("Seguros:");
         // Caso em que nao ha seguros gerados
         if (listaSeguros.isEmpty()) {
-            System.out.println("---------------------------------------------");
             System.out.println("Nao ha seguros gerados.");
-            System.out.println("---------------------------------------------");
             return;
         }
         // Iterando sobre os seguros
@@ -67,9 +65,7 @@ public abstract class Cliente {
 
         // Caso em que o seguro nao foi encontrado
         if (seguro == null) {
-            System.out.println("---------------------------------------------");
             System.out.println("Seguro nao encontrado.");
-            System.out.println("---------------------------------------------");
             return;
         }
         System.out.println("---------------------------------------------");
