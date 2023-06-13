@@ -22,9 +22,6 @@ public class Veiculo {
 
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        String dataInicioString = getSeguro().getDataInicio().format(dtf); // Transformando LocalDate em String
-        String dataFimString = getSeguro().getDataFim().format(dtf); // Transformando LocalDate em String
         joiner.add("Placa: " + getPlaca());
         joiner.add("Marca: " + getMarca());
         joiner.add("Modelo: " + getModelo());
@@ -32,7 +29,10 @@ public class Veiculo {
         if (getSeguro() == null)
             joiner.add("Seguro: Nao possui.");
         else {
-        joiner.add(String.format("Seguro %03d: %s - %s", getSeguro().getId(),
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            String dataInicioString = getSeguro().getDataInicio().format(dtf); // Transformando LocalDate em String
+            String dataFimString = getSeguro().getDataFim().format(dtf); // Transformando LocalDate em String
+            joiner.add(String.format("Seguro %03d: %s - %s", getSeguro().getId(),
                                 dataInicioString, dataFimString));
         }
         return joiner.toString();
