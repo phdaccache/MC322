@@ -1,6 +1,3 @@
-## Proposta do Laboratório
-
-
 ## Esquema Menu Interativo
 O menu interativo é disponibilizado ao usuário pelo terminal, e a saída do programa é direcionada para 'output/output.txt'.
 
