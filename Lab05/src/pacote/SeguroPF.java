@@ -29,10 +29,10 @@ public class SeguroPF extends Seguro {
     // Calcular valor mensal
     public double calcularValorMensal() {
         double valorBase = CalcSeguro.VALOR_BASE.getValor();
-        int qtdVeiculos = ((ClientePF)getCliente()).getListaVeiculos().size();
-        int qtdSinistrosSeguro = getListaSinistros().size();
-        int idade = ((ClientePF)getCliente()).getIdade();
-        int qtdSinistrosCliente = 0;
+        double qtdVeiculos = ((ClientePF)getCliente()).getListaVeiculos().size();
+        double qtdSinistrosSeguro = getListaSinistros().size();
+        double idade = ((ClientePF)getCliente()).getIdade();
+        double qtdSinistrosCliente = 0;
         double fatorIdade;
 
         for (Seguro seguro : getCliente().getListaSeguros()) {
