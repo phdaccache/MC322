@@ -140,33 +140,39 @@ public class ClientePJ extends Cliente {
 
         Frota frota = listaFrotas.get(id - 1);
 
-        System.out.println("\n################### Opcoes ##################");
-        System.out.println("|-------------------------------------------|");
-        System.out.println("| Opcao 1 - Cadastrar Veiculo               |");
-        System.out.println("| Opcao 2 - Remover Veiculo                 |");
-        System.out.println("| Opcao 2 - Remover Frota                   |");
-        System.out.println("|-------------------------------------------|\n");
-        System.out.print("Digite uma opcao: ");
-        int op = scanner.nextInt();
-        scanner.nextLine();
-        
-        switch (op) {
-            case 1:
-                frota.cadastrarVeiculo(scanner);
-                break;
-            case 2:
-                frota.excluirVeiculo(scanner);
-                if (frota.getListaVeiculos().isEmpty()) {
+        int op;
+        do {
+            System.out.println("\n################### Opcoes ##################");
+            System.out.println("|-------------------------------------------|");
+            System.out.println("| Opcao 1 - Cadastrar Veiculo               |");
+            System.out.println("| Opcao 2 - Remover Veiculo                 |");
+            System.out.println("| Opcao 3 - Remover Frota                   |");
+            System.out.println("| Opcao 0 - Voltar                          |");
+            System.out.println("|-------------------------------------------|\n");
+            System.out.print("Digite uma opcao: ");
+            op = scanner.nextInt();
+            scanner.nextLine();
+            
+            switch (op) {
+                case 1:
+                    frota.cadastrarVeiculo(scanner);
+                    break;
+                case 2:
+                    frota.excluirVeiculo(scanner);
+                    if (frota.getListaVeiculos().isEmpty()) {
+                        removerFrota(frota);
+                    }
+                    break;
+                case 3:
                     removerFrota(frota);
-                }
-                break;
-            case 3:
-                removerFrota(frota);
-                break;
-            default:
-                System.out.println("Opcao invalida.");
-                break;
-        }
+                    break;
+                case 0:
+                    break;
+                default:
+                    System.out.println("Opcao invalida.");
+                    break;
+            }
+        } while (op != 0);
     }
 
     // Excluir seguro

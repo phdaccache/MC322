@@ -94,8 +94,65 @@ Ensino Superior
 1
 // Listar Seguros
 2
-// Listar Frotas
+// Listar Condutores
 4
+// Listar Frotas
+7
+
+// Cadastrar Frota 1
+9
+ABC-1234
+Chevrolet
+Camaro
+2023
+
+// Atualizar Frota 1
+10
+// ID da frota
+1
+// Cadastrar veiculo
+1
+ABC-4321
+Chevrolet
+Onix
+2018
+// Cadastrar veiculo
+1
+CBA-1234
+Chevrolet
+Equinox
+2019
+// Voltar
+0
+
+// Cadastrar frota 2
+9
+MSN-1234
+Hyundai
+Tucson
+2014
+
+// Atualizar Frota 2
+10
+// ID da frota
+2
+// Cadastrar veiculo
+1
+MSN-4321
+Hyundai
+HB20
+2017
+// Voltar
+0
+
+// Listar Frotas
+7
+// Visualizar Frota
+8
+1
+// Visualizar Frota
+8
+2
 
 // Voltar
 0
