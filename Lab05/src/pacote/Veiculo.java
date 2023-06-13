@@ -1,5 +1,6 @@
 package pacote;
 
+import java.time.format.DateTimeFormatter;
 import java.util.StringJoiner;
 
 public class Veiculo {
@@ -21,6 +22,9 @@ public class Veiculo {
 
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String dataInicioString = getSeguro().getDataInicio().format(dtf); // Transformando LocalDate em String
+        String dataFimString = getSeguro().getDataFim().format(dtf); // Transformando LocalDate em String
         joiner.add("Placa: " + getPlaca());
         joiner.add("Marca: " + getMarca());
         joiner.add("Modelo: " + getModelo());
@@ -29,7 +33,7 @@ public class Veiculo {
             joiner.add("Seguro: Nao possui.");
         else {
         joiner.add(String.format("Seguro %03d: %s - %s", getSeguro().getId(),
-                                getSeguro().getDataInicio(), getSeguro().getDataFim()));
+                                dataInicioString, dataFimString));
         }
         return joiner.toString();
     }

@@ -213,7 +213,9 @@ public class Main {
         Condutor condutor3 = new Condutor("453.455.012-03", "Tom Jobim", "(11) 91234-1234", "Rua da Bossa Nova, 420", "tomjobim@gmail.com", "25/01/1927");
         Condutor condutor4 = new Condutor("654.711.351-56", "Jonas Madureira", "(11) 94444-3333", "Rua do Condutor Jonas, 160", "jonas@gmail.com", "30/07/1976");
         Condutor condutor5 = new Condutor("953.344.933-01", "Joaozinho", "(11) 99999-9999", "Rua do Condutor Joaozinho, 123", "joazinho@gmail.com", "01/10/1999");
-
+        Condutor condutor6 = new Condutor("484.258.684-24", "Mariazinha", "(11) 98888-8888", "Rua da Condutora Mariazinha, 456", "mariazinha@gmail.com", "02/11/2002");
+        Condutor condutor7 = new Condutor("454.565.219-03", "John Piper", "(11) 91212-2121", "Rua do Condutor Piper, 901", "piper@gmail.com", "11/01/1946");
+        
         // Gerar Seguros
         seguradora1.gerarSeguroPJ(cliente1, frota1, "12/06/2023", "12/06/2026", condutor1);
         seguradora1.gerarSeguroPJ(cliente1, frota2, "12/06/2023", "12/06/2028", condutor1);
@@ -236,20 +238,70 @@ public class Main {
         System.out.println("");
 
         // Listagens Cliente PJ
+        cliente1.visualizarDados();
+        System.out.println("");
+        cliente1.listarSeguros();
+        System.out.println("");
+        cliente1.visualizarSeguro(1);
+        System.out.println("");
+        cliente1.listarCondutores();
+        System.out.println("");
+        cliente1.listarFrotas();
+        System.out.println("");
 
         // Atualizar Frota
-
+        ArrayList<Veiculo> veiculosF2Add = new ArrayList<Veiculo>();
+        Veiculo veiculo16 = new Veiculo("NSM-1234", "Hyundai", "ix35", 2020);
+        veiculosF2Add.add(veiculo16);
+        cliente1.atualizarFrota(2, veiculosF2Add, new ArrayList<Veiculo>());
+        System.out.println("");
         // Cadastrar Condutor Cliente PJ
+        cliente1.cadastrarCondutor(condutor6, 1);
+        System.out.println("");
 
         // Listagens Cliente PJ
-
+        cliente1.visualizarDados();
+        System.out.println("");
+        cliente1.listarSeguros();
+        System.out.println("");
+        cliente1.visualizarSeguro(1);
+        System.out.println("");
+        cliente1.listarCondutores();
+        System.out.println("");
+        cliente1.listarFrotas();
+        System.out.println("");
         
         // Listagens Cliente PF
+        cliente3.visualizarDados();
+        System.out.println("");
+        cliente3.listarSeguros();
+        System.out.println("");
+        cliente3.visualizarSeguro(4);
+        System.out.println("");
+        cliente3.listarCondutores();
+        System.out.println("");
+        cliente3.listarVeiculos();
+        System.out.println("");
 
+        // Adicionar Veiculos Cliente PF
+        Veiculo veiculo17 = new Veiculo("CAD-4321", "Ferrari", "SF90", 2022);
+        cliente3.cadastrarVeiculo(veiculo17);
+        System.out.println("");
         // Cadastrar Condutor Cliente PF
+        cliente3.cadastrarCondutor(condutor7, 4);
+        System.out.println("");
 
         // Listagens Cliente PF
-
+        cliente3.visualizarDados();
+        System.out.println("");
+        cliente3.listarSeguros();
+        System.out.println("");
+        cliente3.visualizarSeguro(4);
+        System.out.println("");
+        cliente3.listarCondutores();
+        System.out.println("");
+        cliente3.listarVeiculos();
+        System.out.println("");
 
         //////////////////// REMOCOES ////////////////////
 
