@@ -23,6 +23,7 @@ public class Main {
         System.out.println("");
 
         System.out.println("Ao rodar o programa pelo scanner manual, o usuario podera digitar os dados de entrada e a saida sera impressa no console.");
+        System.out.println("Alem disso, sao instanciados alguns objetos para testar o programa antes de rodar o menu.");
         System.out.println("");
 
         System.out.print("Deseja rodar o programa pelo scanner automatico ou manual? (1 - Automatico, 2 - Manual): ");
