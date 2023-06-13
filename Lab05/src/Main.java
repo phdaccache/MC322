@@ -23,12 +23,12 @@ public class Main {
         removerLinhasComentadas("input/Teste_Input.txt", "input/input.txt");
         Scanner scanner = new Scanner(new File("input/input.txt"));
 
-        Menu menu = new Menu(scanner);
-        MenuOperacoes option;
-
         PrintStream stdout = System.out;
         PrintStream fileOut = new PrintStream(new FileOutputStream("output/output.txt"));
         System.setOut(fileOut);
+        
+        Menu menu = new Menu(scanner);
+        MenuOperacoes option;
 
         // Executa menu (imprime, recebe a opcao e executa a opcao) de acordo com a opcao passada
         do {
