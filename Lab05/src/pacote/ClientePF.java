@@ -48,13 +48,14 @@ public class ClientePF extends Cliente{
 
     // Listar todos os veiculos
     public void listarVeiculos() {
+        System.out.println("Veiculos:");
+
         // Caso em que nao ha veiculos cadastrados
         if (listaVeiculos.isEmpty()) {
-            System.out.println("Nao ha veiculos cadastrados.");
+            System.out.println("    * Nao ha veiculos cadastrados.");
             return;
         }
 
-        System.out.println("Veiculos:");
         // Iterando sobre os veiculos
         for (Veiculo veiculo : listaVeiculos) {
             System.out.println("---------------------------------------------");

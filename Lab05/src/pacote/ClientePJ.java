@@ -45,12 +45,14 @@ public class ClientePJ extends Cliente {
 
     // Listar todas as frotas
     public void listarFrotas() {
+        System.out.println("Frotas: ");
+
         // Caso em que nao ha frotas cadastradas
         if (listaFrotas.isEmpty()) {
-            System.out.println("Nao ha frotas cadastradas.");
+            System.out.println("    * Nao ha frotas cadastradas.");
             return;
         }
-        System.out.println("Frotas: ");
+        // Iterando sobre as frotas
         for (Frota frota : listaFrotas) {
             System.out.println("---------------------------------------------");
             System.out.println(frota);

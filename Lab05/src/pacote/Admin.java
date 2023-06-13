@@ -12,6 +12,7 @@ public class Admin {
         // Caso em que nao ha seguradoras
         if (listaSeguradoras.isEmpty()) {
             System.out.println("Nao ha seguradoras cadastradas.");
+            return;
         }
         // Iterando sobre as seguradoras
         for (Seguradora seguradora: listaSeguradoras) {

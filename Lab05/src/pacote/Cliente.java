@@ -48,7 +48,7 @@ public abstract class Cliente {
         System.out.println("Seguros:");
         // Caso em que nao ha seguros gerados
         if (listaSeguros.isEmpty()) {
-            System.out.println("Nao ha seguros gerados.");
+            System.out.println("    * Nao ha seguros gerados.");
             return;
         }
         // Iterando sobre os seguros
@@ -76,8 +76,10 @@ public abstract class Cliente {
             System.out.println("    * Sem sinistros cadastrados.");
         } else {
             for (Sinistro sinistro : seguro.getListaSinistros()) {
-                System.out.println("    " + sinistro);
+                System.out.println("---------------------------------------------");
+                System.out.println(sinistro);
             }
+            System.out.println("---------------------------------------------");
         }
         // Listando condutores
         System.out.println("Condutores: ");
@@ -85,8 +87,10 @@ public abstract class Cliente {
             System.out.println("    * Sem condutores cadastrados.");
         } else {
             for (Condutor condutor : seguro.getListaCondutores()) {
-                System.out.println("    " + condutor);
+                System.out.println("---------------------------------------------");
+                System.out.println(condutor);
             }
+            System.out.println("---------------------------------------------");
         }
         System.out.println("---------------------------------------------");
     }
@@ -113,7 +117,8 @@ public abstract class Cliente {
     public void listarCondutores() {
         // Caso em que nao ha seguros gerados
         if (listaSeguros.isEmpty()) {
-            System.out.println("Nao ha seguros gerados.");
+            System.out.println("Condutores:");
+            System.out.println("    * Nao ha seguros gerados.");
             return;
         }
 
