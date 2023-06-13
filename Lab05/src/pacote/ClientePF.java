@@ -73,6 +73,12 @@ public class ClientePF extends Cliente{
         }
 
         listaVeiculos.add(veiculo); // Veiculo adicionado
+        // Atualizar valor dos seguros
+        for (int i = 0; i < getListaSeguros().size(); i++) {
+            getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
+        }
+        // Atualizar valor mensal total
+        setValorMensalTotal(calcularValorMensalTotal());
         System.out.println("Veiculo cadastrado!");
     }
 
@@ -110,6 +116,12 @@ public class ClientePF extends Cliente{
         }
         // Excluir veiculo no cliente
         listaVeiculos.remove(veiculo);
+        // Atualizar valor dos seguros
+        for (int i = 0; i < getListaSeguros().size(); i++) {
+            getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
+        }
+        // Atualizar valor mensal total
+        setValorMensalTotal(calcularValorMensalTotal());
         System.out.printf("Veiculo de placa %s removido!\n", placa);
     }
 
@@ -122,6 +134,13 @@ public class ClientePF extends Cliente{
             if (veiculo.getPlaca().equals(placa)) {
                 listaVeiculos.remove(veiculo);
                 System.out.printf("Veiculo de placa %s removido!\n", placa);
+                // Atualizar valor dos seguros
+                for (int i = 0; i < getListaSeguros().size(); i++) {
+                    getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
+                }
+                // Atualizar valor mensal total
+                setValorMensalTotal(calcularValorMensalTotal());
+                System.out.println(calcularValorMensalTotal());
                 return;
             }
         }

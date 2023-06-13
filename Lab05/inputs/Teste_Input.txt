@@ -223,6 +223,22 @@ andrezinho@gmail.com
 // Visualizar Dados
 1
 
+// Atualizar Frota 2
+10
+// ID da frota
+2
+// Cadastrar veiculo
+1
+NSM-1234
+Hyundai
+ix35
+2020
+// Voltar
+0
+
+// Visualizar Dados
+1
+
 // Voltar
 0
 // Sair

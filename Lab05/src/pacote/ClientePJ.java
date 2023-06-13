@@ -95,6 +95,12 @@ public class ClientePJ extends Cliente {
     // Cadastrar frota automatico
     public void cadastrarFrota(Frota frota) {
         listaFrotas.add(frota);
+        // Atualizar valor dos seguros
+        for (int i = 0; i < getListaSeguros().size(); i++) {
+            getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
+        }
+        // Atualizar valor mensal total
+        setValorMensalTotal(calcularValorMensalTotal());
         System.out.println("Frota cadastrada!");
     }
 
@@ -126,8 +132,14 @@ public class ClientePJ extends Cliente {
         // Caso em que os veiculos sao nulos (remover frota inteira)
         if (frota.getListaVeiculos().isEmpty()) {
             removerFrota(frota);
-            return;
         }
+        // Atualizar valor dos seguros
+        for (int i = 0; i < getListaSeguros().size(); i++) {
+            getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
+        }
+        // Atualizar valor mensal total
+        setValorMensalTotal(calcularValorMensalTotal());
+        System.out.println(calcularValorMensalTotal());
     }
 
     // Atualizar frota com scanner
@@ -177,6 +189,14 @@ public class ClientePJ extends Cliente {
                     break;
             }
         } while (op != 0);
+
+        // Atualizar valor dos seguros
+        for (int i = 0; i < getListaSeguros().size(); i++) {
+            getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
+        }
+        // Atualizar valor mensal total
+        setValorMensalTotal(calcularValorMensalTotal());
+        System.out.println(calcularValorMensalTotal());
     }
 
     // Excluir seguro

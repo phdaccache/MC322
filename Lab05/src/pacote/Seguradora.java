@@ -255,6 +255,8 @@ public class Seguradora {
         seguro.getFrota().setSeguro(seguro); // Adicionar seguro na frota do cliente
         listaSeguros.add(seguro); // Adicionar seguro na seguradora
         seguro.getCliente().adicionarSeguro(seguro); // Adicionar seguro no cliente
+        // Atualizar valor mensal total do cliente
+        seguro.getCliente().setValorMensalTotal(seguro.getCliente().calcularValorMensalTotal());
 
         System.out.println("Seguro gerado com sucesso!");
     }
@@ -265,9 +267,12 @@ public class Seguradora {
         SeguroPF seguro = new SeguroPF(veiculo, cliente, inicio, fim, this);
         seguro.autorizarCondutor(condutor); // Autorizar condutor no seguro
         seguro.setValorMensal(seguro.calcularValorMensal()); // Calcular e setar valor mensal do seguro
+        
         seguro.getVeiculo().setSeguro(seguro); // Adicionar seguro no veiculo do cliente
         listaSeguros.add(seguro); // Adicionar seguro na seguradora
         seguro.getCliente().adicionarSeguro(seguro); // Adicionar seguro no cliente
+        // Atualizar valor mensal total do cliente
+        seguro.getCliente().setValorMensalTotal(seguro.getCliente().calcularValorMensalTotal());
 
         System.out.println("Seguro gerado com sucesso!");
     }
