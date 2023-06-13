@@ -2,13 +2,11 @@
 
 
 ## Esquema Menu Interativo
-O menu interativo é disponibilizado ao usuário pelo terminal.
+O menu interativo é disponibilizado ao usuário pelo terminal, e a saída do programa é direcionada para 'output/output.txt'.
 
 Há dois métodos de testar o menu:
 1. Inserir as informações manualmente.
 2. Passar o arquivo 'Teste_Input.txt' para o programa.
-
-A saída do programa é direcionada para 'output/output.txt'.
 
 ![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Menu_Interativo.png)
 
