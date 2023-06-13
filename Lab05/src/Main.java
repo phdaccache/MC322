@@ -30,14 +30,18 @@ public class Main {
         int op = scanner1.nextInt();
         scanner1.nextLine();
 
-        if (op == 1) {
-            System.out.print("Digite o caminho do arquivo de entrada (ou deixe em branco para usar o arquivo 'input/Teste_Input.txt'): ");
-            String entrada = scanner1.nextLine();
-            rodarComScannerAutomatico(entrada);
-        } else if (op == 2) {
-            rodarComScannerManual();
-        } else {
+        switch (op) {
+            case 1:
+                System.out.print("Digite o caminho do arquivo de entrada (ou deixe em branco para usar o arquivo 'input/Teste_Input.txt'): ");
+                String entrada = scanner1.nextLine();
+                rodarComScannerAutomatico(entrada);
+                break;
+            case 2:
+                rodarComScannerManual();
+                break;
+            default:
             System.out.println("Opcao invalida.");
+                break;
         }
         scanner1.close();
     }
