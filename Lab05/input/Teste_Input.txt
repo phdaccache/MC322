@@ -309,6 +309,57 @@ Rua do Condutor Andrezinho, 356
 andrezinho@gmail.com
 17/09/1998
 
+// Gerar Seguro 3
+7
+// Opcao Pessoa Juridica
+1
+// Gerando
+13.347.016/0001-17
+1
+13/06/2023
+13/06/2024
+// Cadastrando condutor obrigatorio
+522.342.883-80
+Cleide
+(11) 91111-1111
+Rua da Condutora Cleide
+cleide@gmail.com
+21/04/2001
+
+// Gerar Seguro 4
+7
+// Opcao Pessoa Fisica
+2
+// Gerando
+101.255.787-17
+DAC-1234
+13/06/2023
+13/06/2025
+// Cadastrando condutor obrigatorio
+453.455.012-03
+Tom Jobim
+(11) 91234-1234
+Rua da Bossa Nova, 420
+tomjobim@gmail.com
+25/01/1927
+
+// Gerar Seguro 5
+7
+// Opcao Pessoa Fisica
+2
+// Gerando
+522.444.883-22
+COR-1234
+13/06/2023
+13/06/2028
+// Cadastrando condutor obrigatorio
+654.711.351-56
+Jonas Madureira
+(11) 94444-3333
+Rua do Condutor Jonas, 160
+jonas@gmail.com
+30/07/1976
+
 // Listar Todos os Seguros
 5
 // Listar Seguros por Cliente
@@ -350,6 +401,29 @@ ix35
 
 // Visualizar Dados
 1
+// Voltar
+0
+
+// Acessar Area Cliente PF1
+4
+// Login
+101.255.787-17
+
+// Cadastrar Condutor
+5
+4
+454.565.219-03
+John Piper
+(11) 91212-2121
+Rua do Condutor Piper, 901
+piper@gmail.com
+11/01/1946
+
+// Listar Condutores
+4
+// Visualizar Seguro
+3
+4
 
 // Voltar
 0

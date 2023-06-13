@@ -192,6 +192,42 @@ Andrezinho
 Rua do Condutor Andrezinho, 356
 andrezinho@gmail.com
 17/09/1998
+7
+1
+13.347.016/0001-17
+1
+13/06/2023
+13/06/2024
+522.342.883-80
+Cleide
+(11) 91111-1111
+Rua da Condutora Cleide
+cleide@gmail.com
+21/04/2001
+7
+2
+101.255.787-17
+DAC-1234
+13/06/2023
+13/06/2025
+453.455.012-03
+Tom Jobim
+(11) 91234-1234
+Rua da Bossa Nova, 420
+tomjobim@gmail.com
+25/01/1927
+7
+2
+522.444.883-22
+COR-1234
+13/06/2023
+13/06/2028
+654.711.351-56
+Jonas Madureira
+(11) 94444-3333
+Rua do Condutor Jonas, 160
+jonas@gmail.com
+30/07/1976
 5
 6
 06.947.283/0001-60
@@ -214,5 +250,19 @@ ix35
 2020
 0
 1
+0
+4
+101.255.787-17
+5
+4
+454.565.219-03
+John Piper
+(11) 91212-2121
+Rua do Condutor Piper, 901
+piper@gmail.com
+11/01/1946
+4
+3
+4
 0
 0

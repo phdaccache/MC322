@@ -145,6 +145,7 @@ public abstract class Cliente {
         for (int i = 0; i < listaSeguros.size(); i++) {
             if (listaSeguros.get(i).getId() == idSeguro) {
                 listaSeguros.get(i).autorizarCondutor(condutor);
+                System.out.println("Condutor cadastrado com sucesso!");
                 return;
             }
         }
@@ -195,6 +196,7 @@ public abstract class Cliente {
                 for (Condutor condutor : listaSeguros.get(i).getListaCondutores()) {
                     if (condutor.getCPF().equals(cpf)) {
                         listaSeguros.get(i).desautorizarCondutor(condutor);
+                        System.out.println("Condutor excluido com sucesso!");
                         return;
                     }
                 }
