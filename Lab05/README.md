@@ -1,3 +1,6 @@
+# Laboratório 5
+Sistema de Seguradora
+
 ## Funcionamento do Programa
 ### 1. Scanner Automático
 * Ao rodar o programa pelo scanner automático, forneça um arquivo de entrada como input.
