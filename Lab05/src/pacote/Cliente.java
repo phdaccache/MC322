@@ -90,7 +90,6 @@ public abstract class Cliente {
                 System.out.println("---------------------------------------------");
                 System.out.println(condutor);
             }
-            System.out.println("---------------------------------------------");
         }
         System.out.println("---------------------------------------------");
     }
