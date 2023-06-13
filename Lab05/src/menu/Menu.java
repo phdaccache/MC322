@@ -178,6 +178,9 @@ public class Menu {
                 seguradora.excluirCliente(scanner);
                 break;
             case LISTAR_SEGUROS_SEGURADORA:
+                seguradora.listarSeguros();
+                break;
+            case LISTAR_SEGUROS_SEGURADORA_CLIENTE:
                 seguradora.listarSegurosPorCliente(scanner);
                 break;
             case GERAR_SEGURO:
@@ -185,6 +188,12 @@ public class Menu {
                 break;
             case CANCELAR_SEGURO:
                 seguradora.cancelarSeguro(scanner);
+                break;
+            case LISTAR_SINISTROS_SEGURADORA:
+                seguradora.listarSinistros();
+                break;
+            case LISTAR_SINISTROS_SEGURADORA_CLIENTE:
+                seguradora.listarSinistrosPorCliente(scanner);
                 break;
             case GERAR_SINISTRO:
                 seguradora.gerarSinistro(scanner);

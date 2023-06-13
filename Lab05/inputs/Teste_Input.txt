@@ -83,7 +83,7 @@ Ensino Superior
 // Listar clientes
 2
 // Calcular Receita
-10
+13
 
 // Voltar
 0
@@ -163,8 +163,8 @@ HB20
 // Login
 61.198.164/0001-60
 
-// Gerar Seguro
-6
+// Gerar Seguro 1
+7
 // Opcao Pessoa Juridica
 1
 // Gerando
@@ -179,6 +179,29 @@ Andrezinho
 Rua do Condutor Andrezinho, 356
 andrezinho@gmail.com
 17/09/1998
+
+// Gerar Seguro 2
+7
+// Opcao Pessoa Juridica
+1
+// Gerando
+06.947.283/0001-60
+2
+12/06/2023
+12/06/2028
+// Cadastrando condutor obrigatorio
+752.792.913-82
+Andrezinho
+(19) 98787-7878
+Rua do Condutor Andrezinho, 356
+andrezinho@gmail.com
+17/09/1998
+
+// Listar Todos os Seguros
+5
+// Listar Seguros por Cliente
+6
+06.947.283/0001-60
 
 // Voltar
 0

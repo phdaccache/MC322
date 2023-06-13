@@ -57,7 +57,7 @@ Masculino
 Ensino Superior
 25/03/2001
 2
-10
+13
 0
 3
 06.947.283/0001-60
@@ -104,7 +104,7 @@ HB20
 0
 2
 61.198.164/0001-60
-6
+7
 1
 06.947.283/0001-60
 1
@@ -116,5 +116,20 @@ Andrezinho
 Rua do Condutor Andrezinho, 356
 andrezinho@gmail.com
 17/09/1998
+7
+1
+06.947.283/0001-60
+2
+12/06/2023
+12/06/2028
+752.792.913-82
+Andrezinho
+(19) 98787-7878
+Rua do Condutor Andrezinho, 356
+andrezinho@gmail.com
+17/09/1998
+5
+6
+06.947.283/0001-60
 0
 0

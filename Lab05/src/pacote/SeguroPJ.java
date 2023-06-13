@@ -19,10 +19,8 @@ public class SeguroPJ extends Seguro {
         StringJoiner joiner = new StringJoiner("\n");
 
         joiner.add(super.toString());
-        joiner.add("Frota: ");
-        joiner.add(String.format("    * Frota %03d: %d veiculo(s)\n", frota.getId(), frota.getListaVeiculos().size()));
-        joiner.add("Cliente: ");
-        joiner.add(String.format("    * %s (CNPJ: %s)", getCliente().getNome(), getCliente().getDocumento()[1]));
+        joiner.add(String.format("Frota %03d: %d veiculo(s)", frota.getId(), frota.getListaVeiculos().size()));
+        joiner.add(String.format("Cliente: %s (CNPJ: %s)", getCliente().getNome(), getCliente().getDocumento()[1]));
 
         return joiner.toString();
     }

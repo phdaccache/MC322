@@ -210,6 +210,7 @@ public class Seguradora {
             }
             // Iterando sobre os seguros de cada cliente
             for (Seguro seguro: cliente.getListaSeguros()) {
+                System.out.println("---------------------------------------------");
                 System.out.println(seguro);    
             }
             System.out.println("---------------------------------------------");
@@ -388,7 +389,7 @@ public class Seguradora {
     }
 
     // Listar sinistros por cliente com scanner
-    public void listarSinistros(Scanner scanner) {
+    public void listarSinistrosPorCliente(Scanner scanner) {
         return;
     }
 
@@ -413,13 +414,13 @@ public class Seguradora {
     }
 
     // Calcular receita
-    public double calcularReceita() {
+    public void calcularReceita() {
         double receita = 0;
         // Iterando sobre os clientes
         for (Cliente cliente : listaClientes) {
             receita += cliente.getValorMensalTotal();
         }
-        return receita;
+        System.out.printf("Receita total: R$%.2f\n", receita);
     }
 
     // Retorna todos os seguros de um cliente

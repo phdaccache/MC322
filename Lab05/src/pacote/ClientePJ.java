@@ -52,8 +52,10 @@ public class ClientePJ extends Cliente {
         }
         System.out.println("Frotas: ");
         for (Frota frota : listaFrotas) {
+            System.out.println("---------------------------------------------");
             System.out.println(frota);
         }
+        System.out.println("---------------------------------------------");
     }
 
     // Visualizar unica frota (com mais detalhes do que a listagem normal) automatico
