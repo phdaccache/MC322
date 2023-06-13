@@ -255,7 +255,7 @@ public class Seguradora {
         listaSeguros.add(seguro); // Adicionar seguro na seguradora
         seguro.getCliente().adicionarSeguro(seguro); // Adicionar seguro no cliente
 
-        System.out.println("Seguro gerado com sucesso.");
+        System.out.println("Seguro gerado com sucesso!");
     }
 
     // Gerar novo seguro PF automatico
@@ -268,7 +268,7 @@ public class Seguradora {
         listaSeguros.add(seguro); // Adicionar seguro na seguradora
         seguro.getCliente().adicionarSeguro(seguro); // Adicionar seguro no cliente
 
-        System.out.println("Seguro gerado com sucesso.");
+        System.out.println("Seguro gerado com sucesso!");
     }
 
     // Gerar novo seguro com scanner

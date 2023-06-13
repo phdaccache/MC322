@@ -31,10 +31,14 @@ public class SeguroPJ extends Seguro {
     public double calcularValorMensal() {
         double valorBase = CalcSeguro.VALOR_BASE.getValor();
         int qtdFuncionarios = ((ClientePJ)getCliente()).getQtdFuncionarios();
-        int qtdVeiculos = ((ClientePF)getCliente()).getListaVeiculos().size();
         int anosPosFundacao = ((ClientePJ)getCliente()).getAnosPosFundacao();
         int qtdSinistrosSeguro = getListaSinistros().size();
+        int qtdVeiculos = 0;
         int qtdSinistrosCliente = 0;
+
+        for (Frota frota: ((ClientePJ)getCliente()).getListaFrotas()) {
+            qtdVeiculos += frota.getListaVeiculos().size();
+        }
 
         for (Seguro seguro : getCliente().getListaSeguros()) {
             qtdSinistrosCliente += seguro.getListaSinistros().size();
