@@ -139,6 +139,8 @@ public class ClientePJ extends Cliente {
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
+
+        System.out.printf("Frota de ID %03d atualizada!\n", id);
     }
 
     // Atualizar frota com scanner
@@ -198,6 +200,8 @@ public class ClientePJ extends Cliente {
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
+
+        System.out.printf("Frota de ID %03d atualizada!\n", id);
     }
 
     // Excluir seguro

@@ -203,7 +203,7 @@ public class Seguradora {
 
         // Iterando sobre os clientes
         for (Cliente cliente : listaClientes) {
-            System.out.printf("Cliente %s:\n", cliente.getNome());
+            System.out.printf("Seguros Cliente %s:\n", cliente.getNome());
             // Caso em que nao ha seguros
             if (cliente.getListaSeguros().isEmpty()) {
                 System.out.println("---------------------------------------------");
@@ -229,7 +229,7 @@ public class Seguradora {
         }
         ArrayList<Seguro> segurosCliente = getSegurosPorCliente(documento);
 
-        System.out.printf("Cliente de documento %s:\n", documento);
+        System.out.printf("Seguros Cliente de documento %s:\n", documento);
         // Caso em que nao ha seguros gerados
         if (segurosCliente == null || segurosCliente.isEmpty()) {
             System.out.println("---------------------------------------------");

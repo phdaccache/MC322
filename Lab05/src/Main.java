@@ -72,6 +72,8 @@ public class Main {
     public static void rodarComScannerManual() {
         /******************** TESTE AUTOMATICO ********************/
 
+        //////////////////// CADASTROS E LISTAGENS ////////////////////
+
         // Criar e cadastrar seguradoras
         Seguradora seguradora1 = new Seguradora("61.198.164/0001-60", "Pedro Seguros", "(11) 91234-5678", "Rua dos Pedros", "pedroseguros@gmail.com");
         Seguradora seguradora2 = new Seguradora("51.990.695/0001-37", "Seguros Magicos", "(11) 98765-4321", "Rua da Magia", "segurosmagicos@gmail.com");
@@ -92,39 +94,193 @@ public class Main {
         seguradora1.cadastrarCliente(cliente4);
         seguradora2.cadastrarCliente(cliente5);
         seguradora2.cadastrarCliente(cliente6);
+        System.out.println("");
 
-        // Criar frotas e veiculos, cadastrar veiculos nas frotas e cadastrar frotas nos clientes
+        // Criar frotas
         Frota frota1 = new Frota(1);
         Frota frota2 = new Frota(2);
         Frota frota3 = new Frota(3);
         Frota frota4 = new Frota(4);
+        // Criar veiculos
         Veiculo veiculo1 = new Veiculo("ABC-1234", "Chevrolet", "Camaro", 2023);
         Veiculo veiculo2 = new Veiculo("ABC-4321", "Chevrolet", "Onix", 2018);        
-        cliente1.cadastrarFrota(frota1);
         Veiculo veiculo3 = new Veiculo("CBA-1234", "Chevrolet", "Equinox", 2019);
         Veiculo veiculo4 = new Veiculo("MSN-1234", "Hyundai", "Tucson", 2014);
         Veiculo veiculo5 = new Veiculo("MSN-4321", "Hyundai", "HB20", 2017);
         Veiculo veiculo6 = new Veiculo("PAD-1234", "Toyota", "Corolla", 2014);
         Veiculo veiculo7 = new Veiculo("PAD-4321", "Toyota", "Yaris", 2022);
-        Veiculo veiculo8 = new Veiculo("TOP-1234", "Toyota", "Etios", 2018);        
+        Veiculo veiculo8 = new Veiculo("TOP-1234", "Toyota", "Etios", 2018);  
+        // Cadastrar veiculos nas frotas      
         frota1.cadastrarVeiculo(veiculo1);
         frota2.cadastrarVeiculo(veiculo4);
         frota3.cadastrarVeiculo(veiculo6);
         frota4.cadastrarVeiculo(veiculo8);
+        System.out.println("");
+        // Cadastrar frotas nos clientes
         cliente1.cadastrarFrota(frota1);
         cliente1.cadastrarFrota(frota2);
         cliente2.cadastrarFrota(frota3);
         cliente5.cadastrarFrota(frota4);
+        System.out.println("");
+        // Atualizar frotas
         ArrayList<Veiculo> veiculosF1 = new ArrayList<Veiculo>();
         veiculosF1.add(veiculo2);
         veiculosF1.add(veiculo3);
-        cliente1.atualizarFrota(1, veiculosF1, null);
+        cliente1.atualizarFrota(1, veiculosF1, new ArrayList<Veiculo>());
+        System.out.println("");
         ArrayList<Veiculo> veiculosF2 = new ArrayList<Veiculo>();
         veiculosF2.add(veiculo5);
-        cliente1.atualizarFrota(12, veiculosF2, null);
+        cliente1.atualizarFrota(2, veiculosF2, new ArrayList<Veiculo>());
+        System.out.println("");
         ArrayList<Veiculo> veiculosF3 = new ArrayList<Veiculo>();
         veiculosF3.add(veiculo7);
-        cliente2.atualizarFrota(1, veiculosF3, null);
+        cliente2.atualizarFrota(1, veiculosF3, new ArrayList<Veiculo>());
+        System.out.println("");
+
+        // Listagens
+        Admin.listarSeguradoras();
+        System.out.println("");
+
+        seguradora1.visualizarDados();
+        System.out.println("");
+        seguradora1.listarClientes();
+        System.out.println("");
+        seguradora1.calcularReceita();
+        System.out.println("");
+        seguradora1.listarSeguros();
+        System.out.println("");
+        seguradora2.visualizarDados();
+        System.out.println("");
+        seguradora2.listarClientes();
+        System.out.println("");
+        seguradora2.calcularReceita();
+        System.out.println("");
+
+        cliente1.visualizarDados();
+        System.out.println("");
+        cliente1.listarFrotas();
+        System.out.println("");
+        cliente1.visualizarFrota(1);
+        System.out.println("");
+        cliente1.listarSeguros();
+        System.out.println("");
+        cliente1.listarCondutores();
+        System.out.println("");
+        cliente2.listarFrotas();
+        System.out.println("");
+        cliente2.visualizarFrota(1);
+        System.out.println("");
+
+        // Criar veiculos
+        Veiculo veiculo9 = new Veiculo("DAC-1234", "BMW", "Serie 3", 2023);
+        Veiculo veiculo10 = new Veiculo("DAC-4321", "BMW", "Serie 5", 2022);   
+        Veiculo veiculo11 = new Veiculo("CAD-1234", "Ferrari", "Roma", 2021);
+        Veiculo veiculo12 = new Veiculo("COR-1234", "Ferrari", "Portofino", 2020);   
+        Veiculo veiculo13 = new Veiculo("COR-4321", "Tesla", "Model S", 2022);
+        Veiculo veiculo14 = new Veiculo("TES-1234", "Tesla", "Model 3", 2021);
+        Veiculo veiculo15 = new Veiculo("TES-4321", "Tesla", "Model X", 2020);
+        // Cadastrar veiculos no cliente
+        cliente3.cadastrarVeiculo(veiculo9);
+        cliente3.cadastrarVeiculo(veiculo10);
+        cliente3.cadastrarVeiculo(veiculo11);
+        cliente4.cadastrarVeiculo(veiculo12);
+        cliente4.cadastrarVeiculo(veiculo13);
+        cliente6.cadastrarVeiculo(veiculo14);
+        cliente6.cadastrarVeiculo(veiculo15);
+        System.out.println("");
+
+        // Listagens cliente PF
+        cliente3.visualizarDados();
+        System.out.println("");
+        cliente3.listarVeiculos();
+        System.out.println("");
+        cliente3.listarSeguros();
+        System.out.println("");
+        cliente3.listarCondutores();
+        System.out.println("");
+        cliente4.visualizarDados();
+        System.out.println("");
+        cliente4.listarVeiculos();
+        System.out.println("");
+        cliente6.visualizarDados();
+        System.out.println("");
+        cliente6.listarVeiculos();
+        System.out.println("");
+
+        // Criando Condutores
+        Condutor condutor1 = new Condutor("752.792.913-82", "Andrezinho", "(19) 98787-7878", "Rua do Condutor Andrezinho, 356", "andrezinho@gmail.com", "17/09/1998");
+        Condutor condutor2 = new Condutor("522.342.883-80", "Cleide", "(11) 91111-1111", "Rua da Condutora Cleide", "cleide@gmail.com", "21/04/2001");
+        Condutor condutor3 = new Condutor("453.455.012-03", "Tom Jobim", "(11) 91234-1234", "Rua da Bossa Nova, 420", "tomjobim@gmail.com", "25/01/1927");
+        Condutor condutor4 = new Condutor("654.711.351-56", "Jonas Madureira", "(11) 94444-3333", "Rua do Condutor Jonas, 160", "jonas@gmail.com", "30/07/1976");
+        Condutor condutor5 = new Condutor("953.344.933-01", "Joaozinho", "(11) 99999-9999", "Rua do Condutor Joaozinho, 123", "joazinho@gmail.com", "01/10/1999");
+
+        // Gerar Seguros
+        seguradora1.gerarSeguroPJ(cliente1, frota1, "12/06/2023", "12/06/2026", condutor1);
+        seguradora1.gerarSeguroPJ(cliente1, frota2, "12/06/2023", "12/06/2028", condutor1);
+        seguradora1.gerarSeguroPJ(cliente2, frota3, "13/06/2023", "13/06/2024", condutor2);
+        seguradora1.gerarSeguroPF(cliente3, veiculo9, "13/06/2023", "13/06/2025", condutor3);
+        seguradora1.gerarSeguroPF(cliente4, veiculo12, "13/06/2023", "13/06/2028", condutor4);
+        seguradora2.gerarSeguroPF(cliente6, veiculo14, "13/06/2023", "13/06/2029", condutor5);
+        System.out.println("");
+
+        // Listagens Seguradora
+        seguradora1.listarSeguros();
+        seguradora1.listarSegurosPorCliente("06.947.283/0001-60");
+        seguradora1.listarSegurosPorCliente("101.255.787-17");
+        seguradora1.calcularReceita();
+        System.out.println("");
+        seguradora2.listarSeguros();
+        seguradora2.listarSegurosPorCliente("04.712.500/0001-07");
+        seguradora2.listarSegurosPorCliente("381.854.732-77");
+        seguradora2.calcularReceita();
+        System.out.println("");
+
+        // Listagens Cliente PJ
+
+        // Atualizar Frota
+
+        // Cadastrar Condutor Cliente PJ
+
+        // Listagens Cliente PJ
+
+        
+        // Listagens Cliente PF
+
+        // Cadastrar Condutor Cliente PF
+
+        // Listagens Cliente PF
+
+
+        //////////////////// REMOCOES ////////////////////
+
+        // Excluir Condutor Cliente PJ
+
+        // Listagens Cliente PJ
+
+        // Excluir Veiculos e Frota Inteira Cliente PJ
+
+        // Listagens Cliente PJ
+
+
+        // Excluir Condutor Cliente PF
+
+        // Listagens Cliente PF
+
+        // Excluir Veiculos Cliente PF
+
+        // Listagens Cliente PF
+
+
+        // Excluir Cliente PJ
+
+        // Excluir Cliente PF
+
+        // Cancelar Seguro PJ
+
+        // Cancelar Seguro PF
+
+        // Listagens Seguradora
+
 
         /******************** MENU INTERATIVO ********************/
 
