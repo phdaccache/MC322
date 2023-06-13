@@ -59,6 +59,32 @@ Ensino Superior
 2
 13
 0
+2
+51.990.695/0001-37
+1
+2
+3
+1
+Microsoft
+0800 888 4081
+Redmond, Washington, EUA
+microsoft@gmail.com
+04.712.500/0001-07
+04/04/1975
+100
+3
+2
+Joao
+(11) 91234-5678
+Rua do Joao, 123
+joao@gmail.com
+381.854.732-77
+Masculino
+Ensino Superior
+01/01/2000
+2
+13
+0
 3
 06.947.283/0001-60
 1
@@ -125,6 +151,21 @@ Yaris
 8
 1
 0
+3
+04.712.500/0001-07
+1
+2
+4
+7
+9
+TOP-1234
+Toyota
+Etios
+2018
+7
+8
+1
+0
 4
 101.255.787-17
 1
@@ -164,6 +205,24 @@ COR-4321
 Tesla
 Model S
 2022
+7
+0
+4
+381.854.732-77
+1
+2
+4
+7
+8
+TES-1234
+Tesla
+Model 3
+2021
+8
+TES-4321
+Tesla
+Model X
+2020
 7
 0
 2

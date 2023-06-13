@@ -357,6 +357,40 @@ Model S
 // Voltar
 0
 
+//////////////// CLIENTE PF3 - JOAO ////////////////
+
+// Acessar Area Cliente PF2
+4
+// Login
+381.854.732-77
+
+// Visualizar Dados
+1
+// Listar Seguros
+2
+// Listar Condutores
+4
+// Listar Veiculos
+7
+
+// Cadastrar Veiculo
+8
+TES-1234
+Tesla
+Model 3
+2021
+// Cadastrar Veiculo
+8
+TES-4321
+Tesla
+Model X
+2020
+
+// Listar Veiculos
+7
+// Voltar
+0
+
 //////////////// SEGURADORA 1 ////////////////
 
 // Acessar Area Seguradora

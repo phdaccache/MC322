@@ -15,7 +15,8 @@ Digite uma opcao:
 | Opcao 3 - Excluir seguradora              |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Nao ha seguradoras cadastradas.
+Digite uma opcao: Seguradoras cadastradas:
+    * Nao ha seguradoras cadastradas.
 
 ################### Admin ###################
 |-------------------------------------------|
@@ -42,7 +43,8 @@ Digite uma opcao: Insira o CNPJ: Insira o nome: Insira o telefone: Insira o ende
 | Opcao 3 - Excluir seguradora              |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: ---------------------------------------------
+Digite uma opcao: Seguradoras cadastradas:
+---------------------------------------------
 CNPJ: 61.198.164/0001-60
 Nome: Pedro Seguros
 Telefone: (11) 91234-5678
@@ -344,6 +346,199 @@ Digite uma opcao:
 | Opcao 4 - Area Cliente - Pessoa Fisica    |
 | Opcao 0 - Sair                            |
 |-------------------------------------------|
+Digite uma opcao: Login da Seguradora:
+Digite o CNPJ da seguradora: Login realizado com sucesso!
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Dados seguradora:
+CNPJ: 51.990.695/0001-37
+Nome: Seguros Magicos
+Telefone: (11) 98765-4321
+Endereco: Rua da Magia
+Email: segurosmagicos@gmail.com
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Sem clientes cadastrados
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+############## Tipo de Cliente ##############
+|-------------------------------------------|
+| Opcao 1 - Pessoa Juridica                 |
+| Opcao 2 - Pessoa Fisica                   |
+|-------------------------------------------|
+
+Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o email: Insira o CNPJ: Insira a data de fundacao (dd/MM/yyyy): Insira a quantidade de funcionarios: Cliente cadastrado!
+Valor mensal total: R$0,00
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+############## Tipo de Cliente ##############
+|-------------------------------------------|
+| Opcao 1 - Pessoa Juridica                 |
+| Opcao 2 - Pessoa Fisica                   |
+|-------------------------------------------|
+
+Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o email: Insira o CPF: Insira o genero: Insira o nivel de educacao: Insira a data de nascimento (dd/MM/yyyy): Cliente cadastrado!
+Valor mensal total: R$0,00
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Pessoas Juridicas:
+---------------------------------------------
+Nome: Microsoft
+Telefone: 0800 888 4081
+Endereco: Redmond, Washington, EUA
+Email: microsoft@gmail.com
+Seguradora: Seguros Magicos (CNPJ: 51.990.695/0001-37)
+Valor mensal total: R$0,00
+CNPJ: 04.712.500/0001-07
+Data Fundacao: 04/04/1975
+Quantidade de funcionarios: 100
+Quantidade de frotas: 0
+Quantidade de seguros: 0
+---------------------------------------------
+
+Pessoas Fisicas:
+---------------------------------------------
+Nome: Joao
+Telefone: (11) 91234-5678
+Endereco: Rua do Joao, 123
+Email: joao@gmail.com
+Seguradora: Seguros Magicos (CNPJ: 51.990.695/0001-37)
+Valor mensal total: R$0,00
+CPF: 381.854.732-77
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 01/01/2000
+Quantidade de veiculos: 0
+Quantidade de seguros: 0
+---------------------------------------------
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Receita total: R$0,00
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+#################### Menu ###################
+|-------------------------------------------|
+| Opcao 1 - Admin                           |
+| Opcao 2 - Area Seguradora                 |
+| Opcao 3 - Area Cliente - Pessoa Juridica  |
+| Opcao 4 - Area Cliente - Pessoa Fisica    |
+| Opcao 0 - Sair                            |
+|-------------------------------------------|
 Digite uma opcao: Login do Cliente:
 Digite o documento do cliente: Login realizado com sucesso!
 
@@ -486,7 +681,8 @@ Digite uma opcao: Digite a placa: Digite a marca: Digite o modelo: Digite o ano 
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
 
-Digite uma opcao: 
+Digite uma opcao: Frota de ID 001 atualizada!
+
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
 | Opcao 1 - Visualizar dados                |
@@ -538,7 +734,8 @@ Digite uma opcao: Digite a placa: Digite a marca: Digite o modelo: Digite o ano 
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
 
-Digite uma opcao: 
+Digite uma opcao: Frota de ID 002 atualizada!
+
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
 | Opcao 1 - Visualizar dados                |
@@ -762,7 +959,8 @@ Digite uma opcao: Digite a placa: Digite a marca: Digite o modelo: Digite o ano 
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
 
-Digite uma opcao: 
+Digite uma opcao: Frota de ID 001 atualizada!
+
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
 | Opcao 1 - Visualizar dados                |
@@ -803,6 +1001,169 @@ Quantidade de veiculos: 2
 Veiculos: 
     * Carro 1: Corolla - PAD-1234
     * Carro 2: Yaris - PAD-4321
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+#################### Menu ###################
+|-------------------------------------------|
+| Opcao 1 - Admin                           |
+| Opcao 2 - Area Seguradora                 |
+| Opcao 3 - Area Cliente - Pessoa Juridica  |
+| Opcao 4 - Area Cliente - Pessoa Fisica    |
+| Opcao 0 - Sair                            |
+|-------------------------------------------|
+Digite uma opcao: Login do Cliente:
+Digite o documento do cliente: Login realizado com sucesso!
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Microsoft
+Telefone: 0800 888 4081
+Endereco: Redmond, Washington, EUA
+Email: microsoft@gmail.com
+Seguradora: Seguros Magicos (CNPJ: 51.990.695/0001-37)
+Valor mensal total: R$0,00
+CNPJ: 04.712.500/0001-07
+Data Fundacao: 04/04/1975
+Quantidade de funcionarios: 100
+Quantidade de frotas: 0
+Quantidade de seguros: 0
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Seguros:
+    * Nao ha seguros gerados.
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Condutores:
+    * Nao ha seguros gerados.
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Frotas: 
+    * Nao ha frotas cadastradas.
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Para cadastrar uma frota, e necessario cadastrar pelo menos um veiculo:
+Digite a placa: Digite a marca: Digite o modelo: Digite o ano de fabricacao: Veiculo cadastrado!
+Frota cadastrada!
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Frotas: 
+---------------------------------------------
+ID: 001
+Quantidade de veiculos: 1
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Digite o ID da frota que deseja visualizar: ---------------------------------------------
+ID: 001
+Quantidade de veiculos: 1
+Veiculos: 
+    * Carro 1: Etios - TOP-1234
 ---------------------------------------------
 
 ####### Area Cliente - Pessoa Juridica ######
@@ -1165,6 +1526,164 @@ Digite uma opcao:
 | Opcao 4 - Area Cliente - Pessoa Fisica    |
 | Opcao 0 - Sair                            |
 |-------------------------------------------|
+Digite uma opcao: Login do Cliente:
+Digite o documento do cliente: Login realizado com sucesso!
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Joao
+Telefone: (11) 91234-5678
+Endereco: Rua do Joao, 123
+Email: joao@gmail.com
+Seguradora: Seguros Magicos (CNPJ: 51.990.695/0001-37)
+Valor mensal total: R$0,00
+CPF: 381.854.732-77
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 01/01/2000
+Quantidade de veiculos: 0
+Quantidade de seguros: 0
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Seguros:
+    * Nao ha seguros gerados.
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Condutores:
+    * Nao ha seguros gerados.
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Veiculos:
+    * Nao ha veiculos cadastrados.
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Digite a placa: Digite a marca: Digite o modelo: Digite o ano de fabricacao: Veiculo cadastrado!
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Digite a placa: Digite a marca: Digite o modelo: Digite o ano de fabricacao: Veiculo cadastrado!
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Veiculos:
+---------------------------------------------
+Placa: TES-1234
+Marca: Tesla
+Modelo: Model 3
+Ano de Fabricacao: 2021
+Seguro: Nao possui.
+---------------------------------------------
+Placa: TES-4321
+Marca: Tesla
+Modelo: Model X
+Ano de Fabricacao: 2020
+Seguro: Nao possui.
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+#################### Menu ###################
+|-------------------------------------------|
+| Opcao 1 - Admin                           |
+| Opcao 2 - Area Seguradora                 |
+| Opcao 3 - Area Cliente - Pessoa Juridica  |
+| Opcao 4 - Area Cliente - Pessoa Fisica    |
+| Opcao 0 - Sair                            |
+|-------------------------------------------|
 Digite uma opcao: Login da Seguradora:
 Digite o CNPJ da seguradora: Login realizado com sucesso!
 
@@ -1325,7 +1844,7 @@ Seguro gerado com sucesso!
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Cliente Google:
+Digite uma opcao: Seguros Cliente Google:
 ---------------------------------------------
 ID: 001
 Data Inicio: 12/06/2023
@@ -1348,7 +1867,7 @@ Frota 002: 2 veiculo(s)
 Cliente: Google (CNPJ: 06.947.283/0001-60)
 ---------------------------------------------
 
-Cliente Facebook:
+Seguros Cliente Facebook:
 ---------------------------------------------
 ID: 003
 Data Inicio: 13/06/2023
@@ -1361,7 +1880,7 @@ Frota 001: 2 veiculo(s)
 Cliente: Facebook (CNPJ: 13.347.016/0001-17)
 ---------------------------------------------
 
-Cliente Pedro:
+Seguros Cliente Pedro:
 ---------------------------------------------
 ID: 004
 Data Inicio: 13/06/2023
@@ -1374,7 +1893,7 @@ Veiculo: Serie 3 - DAC-1234
 Cliente: Pedro (CPF: 101.255.787-17)
 ---------------------------------------------
 
-Cliente Marcelo:
+Seguros Cliente Marcelo:
 ---------------------------------------------
 ID: 005
 Data Inicio: 13/06/2023
@@ -1405,7 +1924,7 @@ Cliente: Marcelo (CPF: 522.444.883-22)
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Cliente de documento 06.947.283/0001-60:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 06.947.283/0001-60:
 ---------------------------------------------
 ID: 001
 Data Inicio: 12/06/2023
@@ -1660,7 +2179,8 @@ Digite uma opcao: Digite a placa: Digite a marca: Digite o modelo: Digite o ano 
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
 
-Digite uma opcao: 
+Digite uma opcao: Frota de ID 002 atualizada!
+
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
 | Opcao 1 - Visualizar dados                |
@@ -1971,7 +2491,7 @@ Placa: DAC-1234
 Marca: BMW
 Modelo: Serie 3
 Ano de Fabricacao: 2023
-Seguro 004: 2023-06-13 - 2025-06-13
+Seguro 004: 13/06/2023 - 13/06/2025
 ---------------------------------------------
 Placa: DAC-4321
 Marca: BMW
@@ -2359,6 +2879,7 @@ Digite uma opcao: Insira a placa do veiculo que deseja excluir: Veiculo de placa
 
 Digite uma opcao: Insira a placa do veiculo que deseja excluir: Veiculo de placa NSM-1234 removido!
 Frota de ID 002 removida!
+Frota de ID 002 atualizada!
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -2456,7 +2977,8 @@ Digite uma opcao: Insira a placa do veiculo que deseja excluir: Veiculo de placa
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
 
-Digite uma opcao: 
+Digite uma opcao: Frota de ID 001 atualizada!
+
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
 | Opcao 1 - Visualizar dados                |
@@ -2656,7 +3178,7 @@ Quantidade de seguros: 1
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Cliente Google:
+Digite uma opcao: Seguros Cliente Google:
 ---------------------------------------------
 ID: 001
 Data Inicio: 12/06/2023
@@ -2669,7 +3191,7 @@ Frota 001: 2 veiculo(s)
 Cliente: Google (CNPJ: 06.947.283/0001-60)
 ---------------------------------------------
 
-Cliente Facebook:
+Seguros Cliente Facebook:
 ---------------------------------------------
 ID: 003
 Data Inicio: 13/06/2023
@@ -2682,12 +3204,12 @@ Frota 001: 2 veiculo(s)
 Cliente: Facebook (CNPJ: 13.347.016/0001-17)
 ---------------------------------------------
 
-Cliente Pedro:
+Seguros Cliente Pedro:
 ---------------------------------------------
 Nao ha seguros gerados.
 ---------------------------------------------
 
-Cliente Marcelo:
+Seguros Cliente Marcelo:
 ---------------------------------------------
 ID: 005
 Data Inicio: 13/06/2023
@@ -2718,7 +3240,7 @@ Cliente: Marcelo (CPF: 522.444.883-22)
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Cliente de documento 06.947.283/0001-60:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 06.947.283/0001-60:
 ---------------------------------------------
 ID: 001
 Data Inicio: 12/06/2023
@@ -2749,7 +3271,7 @@ Cliente: Google (CNPJ: 06.947.283/0001-60)
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Cliente de documento 13.347.016/0001-17:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 13.347.016/0001-17:
 ---------------------------------------------
 ID: 003
 Data Inicio: 13/06/2023
@@ -2880,17 +3402,17 @@ Quantidade de seguros: 1
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Cliente Facebook:
+Digite uma opcao: Seguros Cliente Facebook:
 ---------------------------------------------
 Nao ha seguros gerados.
 ---------------------------------------------
 
-Cliente Pedro:
+Seguros Cliente Pedro:
 ---------------------------------------------
 Nao ha seguros gerados.
 ---------------------------------------------
 
-Cliente Marcelo:
+Seguros Cliente Marcelo:
 ---------------------------------------------
 ID: 005
 Data Inicio: 13/06/2023
@@ -2940,7 +3462,7 @@ Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Do
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Cliente de documento 13.347.016/0001-17:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 13.347.016/0001-17:
 ---------------------------------------------
 Nao ha seguros gerados.
 ---------------------------------------------
