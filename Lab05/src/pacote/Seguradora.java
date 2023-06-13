@@ -172,7 +172,8 @@ public class Seguradora {
         if (cliente != null) {
             String nome = cliente.getNome();
             // Remove todos os seguros do cliente
-            for (Seguro seguro: getSegurosPorCliente(documento)) {
+            ArrayList<Seguro> seguros = new ArrayList<>(getSegurosPorCliente(documento)); // Shallow copy
+            for (Seguro seguro: seguros) {
                 cancelarSeguro(documento, seguro.getId());
             }
             // Remove o cliente
@@ -220,6 +221,12 @@ public class Seguradora {
 
     // Listar seguros por cliente automatico
     public void listarSegurosPorCliente(String documento) {
+        Cliente cliente = getCliente(documento);
+        if (cliente == null) {
+            System.out.printf("Documento invalido. Nao foi possivel listar os seguros do cliente de documento %s.\n",
+                            documento);
+            return;
+        }
         ArrayList<Seguro> segurosCliente = getSegurosPorCliente(documento);
 
         System.out.printf("Cliente de documento %s:\n", documento);
@@ -227,7 +234,6 @@ public class Seguradora {
         if (segurosCliente == null || segurosCliente.isEmpty()) {
             System.out.println("---------------------------------------------");
             System.out.println("Nao ha seguros gerados.");
-            return;
         }
 
         // Iterando sobre os seguros do cliente
@@ -367,7 +373,7 @@ public class Seguradora {
                 listaSeguros.remove(seguro);
                 // Cancelar seguro no cliente (tambem remove o seguro do veiculo ou frota)
                 seguro.getCliente().excluirSeguro(seguro);
-                System.out.println("Seguro cancelado com sucesso.");
+                System.out.printf("Seguro de ID %d cancelado!\n", id);
                 return;
             }
         }

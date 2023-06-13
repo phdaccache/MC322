@@ -194,6 +194,10 @@ public abstract class Cliente {
             if (listaSeguros.get(i).getId() == idSeguro) {
                 // Iterando sobre os condutores
                 for (Condutor condutor : listaSeguros.get(i).getListaCondutores()) {
+                    if (listaSeguros.get(i).getListaCondutores().size() < 2) {
+                        System.out.println("O seguro nao pode ficar sem condutores. Nao foi possivel excluir o condutor.");
+                        return;
+                    }
                     if (condutor.getCPF().equals(cpf)) {
                         listaSeguros.get(i).desautorizarCondutor(condutor);
                         System.out.println("Condutor excluido com sucesso!");

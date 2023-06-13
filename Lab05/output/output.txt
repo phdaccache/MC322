@@ -1999,4 +1999,977 @@ Seguro: Nao possui.
 | Opcao 9 - Excluir veiculo                 |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira a placa do veiculo que deseja excluir: 
+Digite uma opcao: Insira a placa do veiculo que deseja excluir: Veiculo de placa DAC-1234 removido!
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Pedro
+Telefone: (11) 99999-9999
+Endereco: Rua Pitagoras, Barao Geraldo
+Email: pedro@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$0,00
+CPF: 101.255.787-17
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 25/01/2003
+Quantidade de veiculos: 2
+Quantidade de seguros: 0
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Seguros:
+    * Nao ha seguros gerados.
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Veiculos:
+---------------------------------------------
+Placa: DAC-4321
+Marca: BMW
+Modelo: Serie 5
+Ano de Fabricacao: 2022
+Seguro: Nao possui.
+---------------------------------------------
+Placa: CAD-1234
+Marca: Ferrari
+Modelo: Roma
+Ano de Fabricacao: 2021
+Seguro: Nao possui.
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+#################### Menu ###################
+|-------------------------------------------|
+| Opcao 1 - Admin                           |
+| Opcao 2 - Area Seguradora                 |
+| Opcao 3 - Area Cliente - Pessoa Juridica  |
+| Opcao 4 - Area Cliente - Pessoa Fisica    |
+| Opcao 0 - Sair                            |
+|-------------------------------------------|
+Digite uma opcao: Login do Cliente:
+Digite o documento do cliente: Login realizado com sucesso!
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja visualizar: ---------------------------------------------
+ID: 001
+Data Inicio: 12/06/2023
+Data Fim: 12/06/2026
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$1869,23
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Frota 001: 3 veiculo(s)
+Cliente: Google (CNPJ: 06.947.283/0001-60)
+Sinistros: 
+    * Sem sinistros cadastrados.
+Condutores: 
+---------------------------------------------
+CPF: 752.792.913-82
+Nome: Andrezinho
+Telefone: (19) 98787-7878
+Endereco: Rua do Condutor Andrezinho, 356
+Email: andrezinho@gmail.com
+Data Nascimento: 17/09/1998
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Condutores Seguro 1:
+---------------------------------------------
+CPF: 752.792.913-82
+Nome: Andrezinho
+Telefone: (19) 98787-7878
+Endereco: Rua do Condutor Andrezinho, 356
+Email: andrezinho@gmail.com
+Data Nascimento: 17/09/1998
+---------------------------------------------
+Condutores Seguro 2:
+---------------------------------------------
+CPF: 752.792.913-82
+Nome: Andrezinho
+Telefone: (19) 98787-7878
+Endereco: Rua do Condutor Andrezinho, 356
+Email: andrezinho@gmail.com
+Data Nascimento: 17/09/1998
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja excluir o condutor: Insira o CPF do condutor: O seguro nao pode ficar sem condutores. Nao foi possivel excluir o condutor.
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Google
+Telefone: 0800 724 8149
+Endereco: Mountain View, California, EUA
+Email: google@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$3738,46
+CNPJ: 06.947.283/0001-60
+Data Fundacao: 04/09/1998
+Quantidade de funcionarios: 50
+Quantidade de frotas: 2
+Quantidade de seguros: 2
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja visualizar: ---------------------------------------------
+ID: 002
+Data Inicio: 12/06/2023
+Data Fim: 12/06/2028
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$1869,23
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Frota 002: 3 veiculo(s)
+Cliente: Google (CNPJ: 06.947.283/0001-60)
+Sinistros: 
+    * Sem sinistros cadastrados.
+Condutores: 
+---------------------------------------------
+CPF: 752.792.913-82
+Nome: Andrezinho
+Telefone: (19) 98787-7878
+Endereco: Rua do Condutor Andrezinho, 356
+Email: andrezinho@gmail.com
+Data Nascimento: 17/09/1998
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Frotas: 
+---------------------------------------------
+ID: 001
+Quantidade de veiculos: 3
+---------------------------------------------
+ID: 002
+Quantidade de veiculos: 3
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Digite o ID da frota que deseja visualizar: ---------------------------------------------
+ID: 001
+Quantidade de veiculos: 3
+Veiculos: 
+    * Carro 1: Camaro - ABC-1234
+    * Carro 2: Onix - ABC-4321
+    * Carro 3: Equinox - CBA-1234
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Digite o ID da frota que deseja visualizar: ---------------------------------------------
+ID: 002
+Quantidade de veiculos: 3
+Veiculos: 
+    * Carro 1: Tucson - MSN-1234
+    * Carro 2: HB20 - MSN-4321
+    * Carro 3: ix35 - NSM-1234
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Digite o ID da frota que deseja atualizar: 
+################### Opcoes ##################
+|-------------------------------------------|
+| Opcao 1 - Cadastrar Veiculo               |
+| Opcao 2 - Remover Veiculo                 |
+| Opcao 3 - Remover Frota                   |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+
+Digite uma opcao: Insira a placa do veiculo que deseja excluir: Veiculo de placa MSN-1234 removido!
+
+################### Opcoes ##################
+|-------------------------------------------|
+| Opcao 1 - Cadastrar Veiculo               |
+| Opcao 2 - Remover Veiculo                 |
+| Opcao 3 - Remover Frota                   |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+
+Digite uma opcao: Insira a placa do veiculo que deseja excluir: Veiculo de placa MSN-4321 removido!
+
+################### Opcoes ##################
+|-------------------------------------------|
+| Opcao 1 - Cadastrar Veiculo               |
+| Opcao 2 - Remover Veiculo                 |
+| Opcao 3 - Remover Frota                   |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+
+Digite uma opcao: Insira a placa do veiculo que deseja excluir: Veiculo de placa NSM-1234 removido!
+Frota de ID 002 removida!
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Google
+Telefone: 0800 724 8149
+Endereco: Mountain View, California, EUA
+Email: google@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$1869,23
+CNPJ: 06.947.283/0001-60
+Data Fundacao: 04/09/1998
+Quantidade de funcionarios: 50
+Quantidade de frotas: 1
+Quantidade de seguros: 1
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja visualizar: Seguro nao encontrado.
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Frotas: 
+---------------------------------------------
+ID: 001
+Quantidade de veiculos: 3
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Digite o ID da frota que deseja atualizar: 
+################### Opcoes ##################
+|-------------------------------------------|
+| Opcao 1 - Cadastrar Veiculo               |
+| Opcao 2 - Remover Veiculo                 |
+| Opcao 3 - Remover Frota                   |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+
+Digite uma opcao: Insira a placa do veiculo que deseja excluir: Veiculo de placa ABC-4321 removido!
+
+################### Opcoes ##################
+|-------------------------------------------|
+| Opcao 1 - Cadastrar Veiculo               |
+| Opcao 2 - Remover Veiculo                 |
+| Opcao 3 - Remover Frota                   |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+
+Digite uma opcao: 
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Google
+Telefone: 0800 724 8149
+Endereco: Mountain View, California, EUA
+Email: google@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$1947,12
+CNPJ: 06.947.283/0001-60
+Data Fundacao: 04/09/1998
+Quantidade de funcionarios: 50
+Quantidade de frotas: 1
+Quantidade de seguros: 1
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja visualizar: ---------------------------------------------
+ID: 001
+Data Inicio: 12/06/2023
+Data Fim: 12/06/2026
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$1947,12
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Frota 001: 2 veiculo(s)
+Cliente: Google (CNPJ: 06.947.283/0001-60)
+Sinistros: 
+    * Sem sinistros cadastrados.
+Condutores: 
+---------------------------------------------
+CPF: 752.792.913-82
+Nome: Andrezinho
+Telefone: (19) 98787-7878
+Endereco: Rua do Condutor Andrezinho, 356
+Email: andrezinho@gmail.com
+Data Nascimento: 17/09/1998
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Frotas: 
+---------------------------------------------
+ID: 001
+Quantidade de veiculos: 2
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+#################### Menu ###################
+|-------------------------------------------|
+| Opcao 1 - Admin                           |
+| Opcao 2 - Area Seguradora                 |
+| Opcao 3 - Area Cliente - Pessoa Juridica  |
+| Opcao 4 - Area Cliente - Pessoa Fisica    |
+| Opcao 0 - Sair                            |
+|-------------------------------------------|
+Digite uma opcao: Login da Seguradora:
+Digite o CNPJ da seguradora: Login realizado com sucesso!
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Pessoas Juridicas:
+---------------------------------------------
+Nome: Google
+Telefone: 0800 724 8149
+Endereco: Mountain View, California, EUA
+Email: google@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$1947,12
+CNPJ: 06.947.283/0001-60
+Data Fundacao: 04/09/1998
+Quantidade de funcionarios: 50
+Quantidade de frotas: 1
+Quantidade de seguros: 1
+---------------------------------------------
+Nome: Facebook
+Telefone: +1 650-543-4800
+Endereco: R Leopoldo Couto De Magalhaes Junior, 700
+Email: facebook@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$1505,95
+CNPJ: 13.347.016/0001-17
+Data Fundacao: 01/02/2004
+Quantidade de funcionarios: 15
+Quantidade de frotas: 1
+Quantidade de seguros: 1
+---------------------------------------------
+
+Pessoas Fisicas:
+---------------------------------------------
+Nome: Pedro
+Telefone: (11) 99999-9999
+Endereco: Rua Pitagoras, Barao Geraldo
+Email: pedro@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$0,00
+CPF: 101.255.787-17
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 25/01/2003
+Quantidade de veiculos: 2
+Quantidade de seguros: 0
+---------------------------------------------
+Nome: Marcelo
+Telefone: (11) 91234-1234
+Endereco: Rua do Marcelo, 1454
+Email: marcelo@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$156,25
+CPF: 522.444.883-22
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 25/03/2001
+Quantidade de veiculos: 2
+Quantidade de seguros: 1
+---------------------------------------------
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Cliente Google:
+---------------------------------------------
+ID: 001
+Data Inicio: 12/06/2023
+Data Fim: 12/06/2026
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$1947,12
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Frota 001: 2 veiculo(s)
+Cliente: Google (CNPJ: 06.947.283/0001-60)
+---------------------------------------------
+
+Cliente Facebook:
+---------------------------------------------
+ID: 003
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2024
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$1505,95
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Frota 001: 2 veiculo(s)
+Cliente: Facebook (CNPJ: 13.347.016/0001-17)
+---------------------------------------------
+
+Cliente Pedro:
+---------------------------------------------
+Nao ha seguros gerados.
+---------------------------------------------
+
+Cliente Marcelo:
+---------------------------------------------
+ID: 005
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2028
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$156,25
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Veiculo: Portofino - COR-1234
+Cliente: Marcelo (CPF: 522.444.883-22)
+---------------------------------------------
+
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Cliente de documento 06.947.283/0001-60:
+---------------------------------------------
+ID: 001
+Data Inicio: 12/06/2023
+Data Fim: 12/06/2026
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$1947,12
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Frota 001: 2 veiculo(s)
+Cliente: Google (CNPJ: 06.947.283/0001-60)
+---------------------------------------------
+
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Cliente de documento 13.347.016/0001-17:
+---------------------------------------------
+ID: 003
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2024
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$1505,95
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Frota 001: 2 veiculo(s)
+Cliente: Facebook (CNPJ: 13.347.016/0001-17)
+---------------------------------------------
+
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o documento do cliente que deseja excluir: Seguro de ID 1 cancelado!
+Cliente Google de documento 06.947.283/0001-60 removido!
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o documento do cliente que deseja cancelar o seguro: Insira o ID do seguro que deseja cancelar: Seguro de ID 3 cancelado!
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Pessoas Juridicas:
+---------------------------------------------
+Nome: Facebook
+Telefone: +1 650-543-4800
+Endereco: R Leopoldo Couto De Magalhaes Junior, 700
+Email: facebook@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$1505,95
+CNPJ: 13.347.016/0001-17
+Data Fundacao: 01/02/2004
+Quantidade de funcionarios: 15
+Quantidade de frotas: 1
+Quantidade de seguros: 0
+---------------------------------------------
+
+Pessoas Fisicas:
+---------------------------------------------
+Nome: Pedro
+Telefone: (11) 99999-9999
+Endereco: Rua Pitagoras, Barao Geraldo
+Email: pedro@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$0,00
+CPF: 101.255.787-17
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 25/01/2003
+Quantidade de veiculos: 2
+Quantidade de seguros: 0
+---------------------------------------------
+Nome: Marcelo
+Telefone: (11) 91234-1234
+Endereco: Rua do Marcelo, 1454
+Email: marcelo@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$156,25
+CPF: 522.444.883-22
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 25/03/2001
+Quantidade de veiculos: 2
+Quantidade de seguros: 1
+---------------------------------------------
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Cliente Facebook:
+---------------------------------------------
+Nao ha seguros gerados.
+---------------------------------------------
+
+Cliente Pedro:
+---------------------------------------------
+Nao ha seguros gerados.
+---------------------------------------------
+
+Cliente Marcelo:
+---------------------------------------------
+ID: 005
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2028
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$156,25
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Veiculo: Portofino - COR-1234
+Cliente: Marcelo (CPF: 522.444.883-22)
+---------------------------------------------
+
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Documento invalido. Nao foi possivel listar os seguros do cliente de documento 06.947.283/0001-60.
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Cliente de documento 13.347.016/0001-17:
+---------------------------------------------
+Nao ha seguros gerados.
+---------------------------------------------
+
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+#################### Menu ###################
+|-------------------------------------------|
+| Opcao 1 - Admin                           |
+| Opcao 2 - Area Seguradora                 |
+| Opcao 3 - Area Cliente - Pessoa Juridica  |
+| Opcao 4 - Area Cliente - Pessoa Fisica    |
+| Opcao 0 - Sair                            |
+|-------------------------------------------|
+Digite uma opcao: Programa encerrado.

@@ -1,5 +1,7 @@
 /////////////////////////// TESTES CADASTROS E LISTAGENS ///////////////////////////
 
+//////////////// CADASTRO SEGURADORAS ////////////////
+
 // Acessar Admin
 1
 // Listar Seguradoras
@@ -25,6 +27,8 @@ segurosmagicos@gmail.com
 1
 // Voltar
 0
+
+//////////////// SEGURADORA 1 ////////////////
 
 // Acessar Area Seguradora
 2
@@ -86,9 +90,11 @@ Ensino Superior
 2
 // Calcular Receita
 13
-
 // Voltar
 0
+
+//////////////// CLIENTE PJ1 - GOOGLE ////////////////
+
 // Acessar Area Cliente PJ 1
 3
 // Login
@@ -160,6 +166,8 @@ HB20
 // Voltar
 0
 
+//////////////// CLIENTE PJ2 - FACEBOOK ////////////////
+
 // Acessar Area Cliente PJ2
 3
 // Login
@@ -202,6 +210,8 @@ Yaris
 // Voltar
 0
 
+//////////////// CLIENTE PF1 - PEDRO ////////////////
+
 // Acessar Area Cliente PF1
 4
 // Login
@@ -240,6 +250,8 @@ Roma
 // Voltar
 0
 
+//////////////// CLIENTE PF2 - MARCELO ////////////////
+
 // Acessar Area Cliente PF2
 4
 // Login
@@ -271,6 +283,8 @@ Model S
 7
 // Voltar
 0
+
+//////////////// SEGURADORA 1 ////////////////
 
 // Acessar Area Seguradora
 2
@@ -370,7 +384,9 @@ jonas@gmail.com
 // Voltar
 0
 
-// Acessar Area Cliente
+//////////////// CLIENTE PJ1 - GOOGLE ////////////////
+
+// Acessar Area Cliente PJ 1
 3
 // Login
 06.947.283/0001-60
@@ -406,6 +422,8 @@ ix35
 // Voltar
 0
 
+//////////////// CLIENTE PF1 - PEDRO ////////////////
+
 // Acessar Area Cliente PF1
 4
 // Login
@@ -430,6 +448,8 @@ piper@gmail.com
 0
 
 /////////////////////////// TESTES REMOCOES ///////////////////////////
+
+//////////////// REMOCOES CONDUTOR E VEICULO PF1 - PEDRO ////////////////
 
 // Acessar Area Cliente PF1
 4
@@ -461,6 +481,109 @@ DAC-1234
 2
 // Listar Veiculos
 7
+// Voltar
+0
+
+//////////////// REMOCOES CONDUTOR E FROTA PJ1 - GOOGLE ////////////////
+
+// Acessar Area Cliente PJ 1
+3
+// Login
+06.947.283/0001-60
+
+// Visualizar Seguro
+3
+1
+// Listar Condutores
+4
+// Excluir Condutor
+6
+1
+752.792.913-82
+
+// Visualizar Dados
+1
+// Visualizar Seguro
+3
+2
+// Listar Frotas
+7
+// Visualizar Frota
+8
+1
+// Visualizar Frota
+8
+2
+// Atualizar Frota
+10
+2
+2
+MSN-1234
+2
+MSN-4321
+2
+NSM-1234
+// Visualizar Dados
+1
+// Visualizar Seguro
+3
+2
+// Listar Frotas
+7
+
+// Atualizar Frota
+10
+1
+2
+ABC-4321
+// Voltar
+0
+// Visualizar Dados
+1
+// Visualizar Seguro
+3
+1
+// Listar Frotas
+7
+// Voltar
+0
+
+//////////////// REMOCOES CLIENTE E SEGURO SEGURADORA 1 ////////////////
+
+// Acessar Area Seguradora
+2
+// Login
+61.198.164/0001-60
+
+// Listar Clientes
+2
+// Listar Todos os Seguros
+5
+// Listar Seguros por Cliente
+6
+06.947.283/0001-60
+// Listar Seguros por Cliente
+6
+13.347.016/0001-17
+// Excluir Cliente PJ1 - Google
+4
+06.947.283/0001-60
+// Cancelar Seguro PJ2 - Facebook
+8
+13.347.016/0001-17
+3
+// Listar Clientes
+2
+// Listar Todos os Seguros
+5
+// Listar Seguros por Cliente
+6
+06.947.283/0001-60
+// Listar Seguros por Cliente
+6
+13.347.016/0001-17
+
+/////////////////////////// ENCERRAR PROGRAMA ///////////////////////////
 
 // Voltar
 0

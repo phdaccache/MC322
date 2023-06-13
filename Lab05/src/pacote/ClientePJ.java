@@ -176,10 +176,13 @@ public class ClientePJ extends Cliente {
                     frota.excluirVeiculo(scanner);
                     if (frota.getListaVeiculos().isEmpty()) {
                         removerFrota(frota);
+                        op = 0;
+                        break;
                     }
                     break;
                 case 3:
                     removerFrota(frota);
+                    op = 0;
                     break;
                 case 0:
                     break;
@@ -226,6 +229,7 @@ public class ClientePJ extends Cliente {
 
     // Remover frota
     private void removerFrota(Frota frota) {
+        int id = frota.getId();
         // Excluir seguro associado à frota no cliente
         for (Seguro seguro : getListaSeguros()) {
             if (((SeguroPJ)seguro).getFrota().equals(frota)) {
@@ -242,6 +246,7 @@ public class ClientePJ extends Cliente {
         }
         // Excluir frota no cliente
         listaFrotas.remove(frota);
+        System.out.printf("Frota de ID %03d removida!\n", id);
     }
     
 
