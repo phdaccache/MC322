@@ -368,6 +368,7 @@ public class Seguradora {
                 // Cancelar seguro no cliente (tambem remove o seguro do veiculo ou frota)
                 seguro.getCliente().excluirSeguro(seguro);
                 System.out.println("Seguro cancelado com sucesso.");
+                return;
             }
         }
         System.out.printf("Documento %s ou ID %d invalido. Nao foi possivel cancelar o seguro.", documento, id);

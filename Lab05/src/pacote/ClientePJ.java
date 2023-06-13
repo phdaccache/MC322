@@ -230,12 +230,14 @@ public class ClientePJ extends Cliente {
         for (Seguro seguro : getListaSeguros()) {
             if (((SeguroPJ)seguro).getFrota().equals(frota)) {
                 getListaSeguros().remove(seguro);
+                break;
             }
         }
         // Excluir seguro associado à frota na seguradora
         for (Seguro seguro : getSeguradora().getListaSeguros()) {
             if (((SeguroPJ)seguro).getFrota().equals(frota)) {
                 getSeguradora().getListaSeguros().remove(seguro);
+                break;
             }
         }
         // Excluir frota no cliente

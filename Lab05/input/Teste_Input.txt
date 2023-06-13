@@ -1,3 +1,5 @@
+/////////////////////////// TESTES CADASTROS E LISTAGENS ///////////////////////////
+
 // Acessar Admin
 1
 // Listar Seguradoras
@@ -424,6 +426,41 @@ piper@gmail.com
 // Visualizar Seguro
 3
 4
+// Voltar
+0
+
+/////////////////////////// TESTES REMOCOES ///////////////////////////
+
+// Acessar Area Cliente PF1
+4
+// Login
+101.255.787-17
+
+// Excluir Condutor
+6
+4
+453.455.012-03
+// Listar Condutores
+4
+// Visualizar Seguro
+3
+4
+
+// Visualizar Dados
+1
+// Listar Seguros
+2
+// Listar Veiculos
+7
+// Excluir Veiculo
+9
+DAC-1234
+// Visualizar Dados
+1
+// Listar Seguros
+2
+// Listar Veiculos
+7
 
 // Voltar
 0

@@ -106,12 +106,14 @@ public class ClientePF extends Cliente{
         for (Seguro seguro : getListaSeguros()) {
             if (((SeguroPF)seguro).getVeiculo().equals(veiculo)) {
                 getListaSeguros().remove(seguro);
+                break;
             }
         }
         // Excluir seguro associado ao veiculo na seguradora
         for (Seguro seguro : getSeguradora().getListaSeguros()) {
             if (((SeguroPF)seguro).getVeiculo().equals(veiculo)) {
                 getSeguradora().getListaSeguros().remove(seguro);
+                break;
             }
         }
         // Excluir veiculo no cliente
@@ -132,15 +134,7 @@ public class ClientePF extends Cliente{
 
         for (Veiculo veiculo: listaVeiculos) {
             if (veiculo.getPlaca().equals(placa)) {
-                listaVeiculos.remove(veiculo);
-                System.out.printf("Veiculo de placa %s removido!\n", placa);
-                // Atualizar valor dos seguros
-                for (int i = 0; i < getListaSeguros().size(); i++) {
-                    getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
-                }
-                // Atualizar valor mensal total
-                setValorMensalTotal(calcularValorMensalTotal());
-                System.out.println(calcularValorMensalTotal());
+                excluirVeiculo(veiculo);
                 return;
             }
         }
@@ -154,6 +148,7 @@ public class ClientePF extends Cliente{
         for (int i = 0; i < listaVeiculos.size(); i++) {
             if (((SeguroPF)seguro).getVeiculo().equals(listaVeiculos.get(i))) {
                 listaVeiculos.get(i).setSeguro(null);
+                return;
             }
         }
     }

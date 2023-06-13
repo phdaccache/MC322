@@ -1371,7 +1371,6 @@ Valor Mensal: R$150,00
 Quantidade de sinistros: 0
 Quantidade de condutores: 1
 Veiculo: Serie 3 - DAC-1234
-Cliente: 
 Cliente: Pedro (CPF: 101.255.787-17)
 ---------------------------------------------
 
@@ -1385,7 +1384,6 @@ Valor Mensal: R$156,25
 Quantidade de sinistros: 0
 Quantidade de condutores: 1
 Veiculo: Portofino - COR-1234
-Cliente: 
 Cliente: Marcelo (CPF: 522.444.883-22)
 ---------------------------------------------
 
@@ -1783,7 +1781,6 @@ Valor Mensal: R$150,00
 Quantidade de sinistros: 0
 Quantidade de condutores: 2
 Veiculo: Serie 3 - DAC-1234
-Cliente: 
 Cliente: Pedro (CPF: 101.255.787-17)
 Sinistros: 
     * Sem sinistros cadastrados.
@@ -1826,4 +1823,180 @@ Digite uma opcao:
 | Opcao 4 - Area Cliente - Pessoa Fisica    |
 | Opcao 0 - Sair                            |
 |-------------------------------------------|
-Digite uma opcao: Programa encerrado.
+Digite uma opcao: Login do Cliente:
+Digite o documento do cliente: Login realizado com sucesso!
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja excluir o condutor: Insira o CPF do condutor: Condutor excluido com sucesso!
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Condutores Seguro 4:
+---------------------------------------------
+CPF: 454.565.219-03
+Nome: John Piper
+Telefone: (11) 91212-2121
+Endereco: Rua do Condutor Piper, 901
+Email: piper@gmail.com
+Data Nascimento: 11/01/1946
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja visualizar: ---------------------------------------------
+ID: 004
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2025
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$150,00
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Veiculo: Serie 3 - DAC-1234
+Cliente: Pedro (CPF: 101.255.787-17)
+Sinistros: 
+    * Sem sinistros cadastrados.
+Condutores: 
+---------------------------------------------
+CPF: 454.565.219-03
+Nome: John Piper
+Telefone: (11) 91212-2121
+Endereco: Rua do Condutor Piper, 901
+Email: piper@gmail.com
+Data Nascimento: 11/01/1946
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Pedro
+Telefone: (11) 99999-9999
+Endereco: Rua Pitagoras, Barao Geraldo
+Email: pedro@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$150,00
+CPF: 101.255.787-17
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 25/01/2003
+Quantidade de veiculos: 3
+Quantidade de seguros: 1
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Seguros:
+---------------------------------------------
+ID: 004
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2025
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$150,00
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Veiculo: Serie 3 - DAC-1234
+Cliente: Pedro (CPF: 101.255.787-17)
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Veiculos:
+---------------------------------------------
+Placa: DAC-1234
+Marca: BMW
+Modelo: Serie 3
+Ano de Fabricacao: 2023
+Seguro 004: 2023-06-13 - 2025-06-13
+---------------------------------------------
+Placa: DAC-4321
+Marca: BMW
+Modelo: Serie 5
+Ano de Fabricacao: 2022
+Seguro: Nao possui.
+---------------------------------------------
+Placa: CAD-1234
+Marca: Ferrari
+Modelo: Roma
+Ano de Fabricacao: 2021
+Seguro: Nao possui.
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira a placa do veiculo que deseja excluir: 
