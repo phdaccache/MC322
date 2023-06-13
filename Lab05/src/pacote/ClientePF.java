@@ -111,7 +111,7 @@ public class ClientePF extends Cliente{
         }
         // Excluir seguro associado ao veiculo na seguradora
         for (Seguro seguro : getSeguradora().getListaSeguros()) {
-            if (((SeguroPF)seguro).getVeiculo().equals(veiculo)) {
+            if (seguro instanceof SeguroPF && ((SeguroPF)seguro).getVeiculo().equals(veiculo)) {
                 getSeguradora().getListaSeguros().remove(seguro);
                 break;
             }
