@@ -14,17 +14,37 @@ import menu.MenuOperacoes;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        /******************** TESTE AUTOMATICO ********************/
+        Scanner scanner1 = new Scanner(System.in);
 
-        
+        System.out.println("Ao rodar o programa pelo scanner automatico, forneca um arquivo de entrada como input.");
+        System.out.println("O programa ignora comentarios do tipo '//' e linhas em branco.");
+        System.out.println("Caso nao seja passado nenhum arquivo, o programa ira rodar com o arquivo 'input/Teste_Input.txt'.");
+        System.out.println("");
 
-        /******************** MENU INTERATIVO ********************/
+        System.out.println("Ao rodar o programa pelo scanner manual, o usuario podera digitar os dados de entrada e a saida sera impressa no console.");
+        System.out.println("");
 
-        // Scanner Manual
-        // Scanner scanner = new Scanner(System.in);
+        System.out.print("Deseja rodar o programa pelo scanner automatico ou manual? (1 - Automatico, 2 - Manual): ");
+        int op = scanner1.nextInt();
+        scanner1.nextLine();
 
-        // Scanner Arquivo
-        removerLinhasComentadas("input/Teste_Input.txt", "input/input.txt");
+        if (op == 1) {
+            System.out.print("Digite o caminho do arquivo de entrada (ou deixe em branco para usar o arquivo 'input/Teste_Input.txt'): ");
+            String entrada = scanner1.nextLine();
+            rodarComScannerAutomatico(entrada);
+        } else if (op == 2) {
+            rodarComScannerManual();
+        } else {
+            System.out.println("Opcao invalida.");
+        }
+        scanner1.close();
+    }
+
+    public static void rodarComScannerAutomatico(String ... entrada) throws FileNotFoundException {
+        if (entrada[0].equals("")) {
+            entrada = new String[] {"input/Teste_Input.txt"};
+        }
+        removerLinhasComentadas(entrada[0], "input/input.txt");
         Scanner scanner = new Scanner(new File("input/input.txt"));
 
         PrintStream stdout = System.out;
@@ -44,6 +64,29 @@ public class Main {
         scanner.close();
         fileOut.close();
         System.setOut(stdout);
+
+        System.out.println("O programa foi executado com sucesso! A saida foi salva em 'output/output.txt'.");
+    }
+
+    public static void rodarComScannerManual() {
+        /******************** TESTE AUTOMATICO ********************/
+
+
+
+        /******************** MENU INTERATIVO ********************/
+
+        Scanner scanner = new Scanner(System.in);        
+        Menu menu = new Menu(scanner);
+        MenuOperacoes option;
+
+        // Executa menu (imprime, recebe a opcao e executa a opcao) de acordo com a opcao passada
+        do {
+            menu.showMenu();
+            option = menu.readOptionMenu();
+            menu.runMenuOption(option);
+        } while (option != MenuOperacoes.SAIR);
+
+        scanner.close();
     }
 
     // Funcao que remove as linhas que comecam com "//" ou sao espacos em branco
