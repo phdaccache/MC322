@@ -1,5 +1,4 @@
-# Laboratório 5
-Sistema de Seguradora
+# Laboratório 5 - Sistema de Seguradora
 
 ## Funcionamento do Programa
 ### 1. Scanner Automático
