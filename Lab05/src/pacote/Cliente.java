@@ -119,7 +119,7 @@ public abstract class Cliente {
 
         // Iterando sobre os seguros
         for (Seguro seguro : listaSeguros) {
-            System.out.printf("Seguro %d:\n", seguro.getId());
+            System.out.printf("Condutores Seguro %d:\n", seguro.getId());
             // Iterando sobre os condutores
             for (Condutor condutor : seguro.getListaCondutores()) {
                 System.out.println("---------------------------------------------");

@@ -72,18 +72,21 @@ public class Menu {
                 System.out.println("Login da Seguradora:");
                 seguradora = loginSeguradora();
                 if (seguradora == null) {return;}
+                System.out.println("Login realizado com sucesso!");
                 runSubmenu(option, seguradora, null);
                 break;
             case CLIENTE_PJ:
                 System.out.println("Login do Cliente:");
                 cliente = loginClientePJ();
                 if (cliente == null) {return;}
+                System.out.println("Login realizado com sucesso!");
                 runSubmenu(option, null, cliente);
                 break;
             case CLIENTE_PF:
                 System.out.println("Login do Cliente:");
                 cliente = loginClientePF();
                 if (cliente == null) {return;}
+                System.out.println("Login realizado com sucesso!");
                 runSubmenu(option, null, cliente);
                 break;
             case SAIR:

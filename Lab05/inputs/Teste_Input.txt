@@ -202,6 +202,26 @@ andrezinho@gmail.com
 // Listar Seguros por Cliente
 6
 06.947.283/0001-60
+// Voltar
+0
+
+// Acessar Area Cliente
+3
+// Login
+06.947.283/0001-60
+
+// Listar Seguros
+2
+// Visualizar Seguro
+3
+1
+// Visualizar Seguro
+3
+2
+// Listar Condutores
+4
+// Visualizar Dados
+1
 
 // Voltar
 0
