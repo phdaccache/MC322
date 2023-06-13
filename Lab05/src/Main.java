@@ -38,7 +38,6 @@ public class Main {
         } while (option != MenuOperacoes.SAIR);
 
         scanner.close();
-
         fileOut.close();
         System.setOut(stdout);
     }
