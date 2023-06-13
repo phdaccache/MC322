@@ -1,22 +1,18 @@
 ## Funcionamento do Programa
 ### 1. Scanner Automático
-Ao rodar o programa pelo scanner automático, forneça um arquivo de entrada como input.
+* Ao rodar o programa pelo scanner automático, forneça um arquivo de entrada como input.
 
-O programa ignora comentários do tipo '//' e linhas em branco.
+* O programa ignora comentários do tipo '//' e linhas em branco.
 
-Caso não seja passado nenhum arquivo, o programa irá rodar com o arquivo 'input/Teste_Input.txt'.
+* Caso não seja passado nenhum arquivo, o programa irá rodar com o arquivo 'input/Teste_Input.txt'.
 
 ### 2. Scanner Manual
-Ao rodar o programa pelo scanner manual, o usuário poderá digitar os dados de entrada e a saída será impressa no console.
+* Ao rodar o programa pelo scanner manual, o usuário poderá digitar os dados de entrada e a saída será impressa no console.
 
-Além disso, são instanciados alguns objetos para testar o programa antes de rodar o menu.
+* Além disso, são instanciados alguns objetos para testar o programa antes de rodar o menu.
 
 ## Esquema Menu Interativo
-O menu interativo é disponibilizado ao usuário pelo terminal, e a saída do programa é direcionada para 'output/output.txt'.
-
-Há dois métodos de testar o menu:
-1. Inserir as informações manualmente.
-2. Passar o arquivo 'Teste_Input.txt' para o programa.
+O menu interativo é disponibilizado ao usuário pelo terminal, e a saída do programa é direcionada para 'output/output.txt' quando é passado um arquivo de input.
 
 ![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Menu_Interativo.png)
 
