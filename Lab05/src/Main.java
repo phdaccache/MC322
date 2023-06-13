@@ -7,10 +7,11 @@ import java.io.PrintStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.Scanner;
 
-import menu.Menu;
-import menu.MenuOperacoes;
+import menu.*;
+import pacote.*;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
@@ -71,7 +72,59 @@ public class Main {
     public static void rodarComScannerManual() {
         /******************** TESTE AUTOMATICO ********************/
 
+        // Criar e cadastrar seguradoras
+        Seguradora seguradora1 = new Seguradora("61.198.164/0001-60", "Pedro Seguros", "(11) 91234-5678", "Rua dos Pedros", "pedroseguros@gmail.com");
+        Seguradora seguradora2 = new Seguradora("51.990.695/0001-37", "Seguros Magicos", "(11) 98765-4321", "Rua da Magia", "segurosmagicos@gmail.com");
+        Admin.cadastrarSeguradora(seguradora1);
+        Admin.cadastrarSeguradora(seguradora2);
+        System.out.println("");
 
+        // Criar e cadastrar clientes
+        ClientePJ cliente1 = new ClientePJ("Google", "0800 724 8149", "Mountain View, California, EUA", "google@gmail.com", "06.947.283/0001-60", "04/09/1998", 50);
+        ClientePJ cliente2 = new ClientePJ("Facebook", "+1 650-543-4800", "R Leopoldo Couto De Magalhaes Junior, 700", "facebook@gmail.com", "13.347.016/0001-17", "01/02/2004", 15);
+        ClientePF cliente3 = new ClientePF("Pedro", "(11) 99999-9999", "Rua Pitagoras, Barao Geraldo", "pedro@gmail.com", "101.255.787-17", "Masculino", "Ensino Superior", "25/01/2003");        
+        ClientePF cliente4 = new ClientePF("Marcelo", "(11) 91234-1234", "Rua do Marcelo, 1454", "marcelo@gmail.com", "522.444.883-22", "Masculino", "Ensino Superior", "25/03/2001");
+        ClientePJ cliente5 = new ClientePJ("Microsoft", "0800 888 4081", "Redmond, Washington, EUA", "microsoft@gmail.com", "04.712.500/0001-07", "04/04/1975", 100);
+        ClientePF cliente6 = new ClientePF("Joao", "(11) 91234-5678", "Rua do Joao, 123", "joao@gmail.com", "381.854.732-77", "Masculino", "Ensino Superior", "01/01/2000");
+        seguradora1.cadastrarCliente(cliente1);
+        seguradora1.cadastrarCliente(cliente2);
+        seguradora1.cadastrarCliente(cliente3);
+        seguradora1.cadastrarCliente(cliente4);
+        seguradora2.cadastrarCliente(cliente5);
+        seguradora2.cadastrarCliente(cliente6);
+
+        // Criar frotas e veiculos, cadastrar veiculos nas frotas e cadastrar frotas nos clientes
+        Frota frota1 = new Frota(1);
+        Frota frota2 = new Frota(2);
+        Frota frota3 = new Frota(3);
+        Frota frota4 = new Frota(4);
+        Veiculo veiculo1 = new Veiculo("ABC-1234", "Chevrolet", "Camaro", 2023);
+        Veiculo veiculo2 = new Veiculo("ABC-4321", "Chevrolet", "Onix", 2018);        
+        cliente1.cadastrarFrota(frota1);
+        Veiculo veiculo3 = new Veiculo("CBA-1234", "Chevrolet", "Equinox", 2019);
+        Veiculo veiculo4 = new Veiculo("MSN-1234", "Hyundai", "Tucson", 2014);
+        Veiculo veiculo5 = new Veiculo("MSN-4321", "Hyundai", "HB20", 2017);
+        Veiculo veiculo6 = new Veiculo("PAD-1234", "Toyota", "Corolla", 2014);
+        Veiculo veiculo7 = new Veiculo("PAD-4321", "Toyota", "Yaris", 2022);
+        Veiculo veiculo8 = new Veiculo("TOP-1234", "Toyota", "Etios", 2018);        
+        frota1.cadastrarVeiculo(veiculo1);
+        frota2.cadastrarVeiculo(veiculo4);
+        frota3.cadastrarVeiculo(veiculo6);
+        frota4.cadastrarVeiculo(veiculo8);
+        cliente1.cadastrarFrota(frota1);
+        cliente1.cadastrarFrota(frota2);
+        cliente2.cadastrarFrota(frota3);
+        cliente5.cadastrarFrota(frota4);
+        ArrayList<Veiculo> veiculosF1 = new ArrayList<Veiculo>();
+        veiculosF1.add(veiculo2);
+        veiculosF1.add(veiculo3);
+        cliente1.atualizarFrota(1, veiculosF1, null);
+        ArrayList<Veiculo> veiculosF2 = new ArrayList<Veiculo>();
+        veiculosF2.add(veiculo5);
+        cliente1.atualizarFrota(12, veiculosF2, null);
+        ArrayList<Veiculo> veiculosF3 = new ArrayList<Veiculo>();
+        veiculosF3.add(veiculo7);
+        cliente2.atualizarFrota(1, veiculosF3, null);
 
         /******************** MENU INTERATIVO ********************/
 
