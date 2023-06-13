@@ -23,26 +23,29 @@ public enum MenuOperacoes {
             SubmenuOperacoes.CALCULAR_RECEITA_SEGURADORA,
             SubmenuOperacoes.VOLTAR
     }),
-    CLIENTE_PF("Area Cliente - Pessoa Fisica", new SubmenuOperacoes[] {
-            SubmenuOperacoes.VISUALIZAR_DADOS_CLIENTE_PF,
-            SubmenuOperacoes.LISTAR_SEGUROS_CLIENTE_PF,
-            SubmenuOperacoes.VISUALIZAR_SEGURO_CLIENTE_PF,
-            SubmenuOperacoes.LISTAR_VEICULOS,
-            SubmenuOperacoes.CADASTRAR_VEICULO,
-            SubmenuOperacoes.EXCLUIR_VEICULO,
-            SubmenuOperacoes.LISTAR_CONDUTORES,
-            SubmenuOperacoes.CADASTRAR_CONDUTOR,
-            SubmenuOperacoes.EXCLUIR_CONDUTOR,
-            SubmenuOperacoes.VOLTAR
-    }),
     CLIENTE_PJ("Area Cliente - Pessoa Juridica", new SubmenuOperacoes[] {
             SubmenuOperacoes.VISUALIZAR_DADOS_CLIENTE_PJ,
             SubmenuOperacoes.LISTAR_SEGUROS_CLIENTE_PJ,
             SubmenuOperacoes.VISUALIZAR_SEGURO_CLIENTE_PJ,
+            SubmenuOperacoes.LISTAR_CONDUTORES_PJ,
+            SubmenuOperacoes.CADASTRAR_CONDUTOR_PJ,
+            SubmenuOperacoes.EXCLUIR_CONDUTOR_PJ,
             SubmenuOperacoes.LISTAR_FROTAS,
             SubmenuOperacoes.VISUALIZAR_FROTA,
             SubmenuOperacoes.CADASTRAR_FROTA,
             SubmenuOperacoes.ATUALIZAR_FROTA,
+            SubmenuOperacoes.VOLTAR
+    }),
+    CLIENTE_PF("Area Cliente - Pessoa Fisica", new SubmenuOperacoes[] {
+            SubmenuOperacoes.VISUALIZAR_DADOS_CLIENTE_PF,
+            SubmenuOperacoes.LISTAR_SEGUROS_CLIENTE_PF,
+            SubmenuOperacoes.VISUALIZAR_SEGURO_CLIENTE_PF,
+            SubmenuOperacoes.LISTAR_CONDUTORES_PF,
+            SubmenuOperacoes.CADASTRAR_CONDUTOR_PF,
+            SubmenuOperacoes.EXCLUIR_CONDUTOR_PF,
+            SubmenuOperacoes.LISTAR_VEICULOS,
+            SubmenuOperacoes.CADASTRAR_VEICULO,
+            SubmenuOperacoes.EXCLUIR_VEICULO,
             SubmenuOperacoes.VOLTAR
     }),
     SAIR("Sair");

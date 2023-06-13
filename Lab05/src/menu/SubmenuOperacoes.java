@@ -19,24 +19,27 @@ public enum SubmenuOperacoes {
 	GERAR_SINISTRO("Gerar sinistro"),
     EXCLUIR_SINISTRO("Excluir sinistro"),
     CALCULAR_RECEITA_SEGURADORA("Calcular receita"),
-    // Cliente PF
-    VISUALIZAR_DADOS_CLIENTE_PF("Visualizar dados"),
-    LISTAR_SEGUROS_CLIENTE_PF("Listar Seguros"),
-    VISUALIZAR_SEGURO_CLIENTE_PF("Visualizar Seguro"),
-    LISTAR_VEICULOS("Listar veiculos"),
-    CADASTRAR_VEICULO("Cadastrar veiculo"),
-    EXCLUIR_VEICULO("Excluir veiculo"),
-    LISTAR_CONDUTORES("Listar Condutores"),
-    CADASTRAR_CONDUTOR("Cadastrar Condutor"),
-    EXCLUIR_CONDUTOR("Excluir Condutor"),
     // Cliente PJ
     VISUALIZAR_DADOS_CLIENTE_PJ("Visualizar dados"),
     LISTAR_SEGUROS_CLIENTE_PJ("Listar Seguros"),
     VISUALIZAR_SEGURO_CLIENTE_PJ("Visualizar Seguro"),
+    LISTAR_CONDUTORES_PJ("Listar Condutores"),
+    CADASTRAR_CONDUTOR_PJ("Cadastrar Condutor"),
+    EXCLUIR_CONDUTOR_PJ("Excluir Condutor"),
     LISTAR_FROTAS("Listar Frotas"),
     VISUALIZAR_FROTA("Visualizar Frota"),
     CADASTRAR_FROTA("Cadastrar Frota"),
     ATUALIZAR_FROTA("Atualizar Frota"),
+    // Cliente PF
+    VISUALIZAR_DADOS_CLIENTE_PF("Visualizar dados"),
+    LISTAR_SEGUROS_CLIENTE_PF("Listar Seguros"),
+    VISUALIZAR_SEGURO_CLIENTE_PF("Visualizar Seguro"),
+    LISTAR_CONDUTORES_PF("Listar Condutores"),
+    CADASTRAR_CONDUTOR_PF("Cadastrar Condutor"),
+    EXCLUIR_CONDUTOR_PF("Excluir Condutor"),
+    LISTAR_VEICULOS("Listar veiculos"),
+    CADASTRAR_VEICULO("Cadastrar veiculo"),
+    EXCLUIR_VEICULO("Excluir veiculo"),
     // Comum
 	VOLTAR("Voltar");
 	

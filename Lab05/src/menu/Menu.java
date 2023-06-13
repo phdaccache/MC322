@@ -69,15 +69,20 @@ public class Menu {
                 runSubmenu(option, null, null);
                 break;
             case SEGURADORA:
-                System.out.println("Login de Seguradora:");
+                System.out.println("Login da Seguradora:");
                 seguradora = loginSeguradora();
                 if (seguradora == null) {return;}
                 runSubmenu(option, seguradora, null);
                 break;
-            case CLIENTE_PF:
             case CLIENTE_PJ:
-                System.out.println("Login de Cliente:");
-                cliente = loginCliente();
+                System.out.println("Login do Cliente:");
+                cliente = loginClientePJ();
+                if (cliente == null) {return;}
+                runSubmenu(option, null, cliente);
+                break;
+            case CLIENTE_PF:
+                System.out.println("Login do Cliente:");
+                cliente = loginClientePF();
                 if (cliente == null) {return;}
                 runSubmenu(option, null, cliente);
                 break;
@@ -201,6 +206,15 @@ public class Menu {
             case VISUALIZAR_SEGURO_CLIENTE_PF:
                 cliente.visualizarSeguro(scanner);
                 break;
+            case LISTAR_CONDUTORES_PF:
+                cliente.listarCondutores();
+                break;
+            case CADASTRAR_CONDUTOR_PF:
+                cliente.cadastrarCondutor(scanner);
+                break;
+            case EXCLUIR_CONDUTOR_PF:
+                cliente.excluirCondutor(scanner);
+                break;
             case LISTAR_VEICULOS:
                 ((ClientePF)cliente).listarVeiculos();
                 break;
@@ -209,15 +223,6 @@ public class Menu {
                 break;
             case EXCLUIR_VEICULO:
                 ((ClientePF)cliente).excluirVeiculo(scanner);
-                break;
-            case LISTAR_CONDUTORES:
-                ((ClientePF)cliente).listarCondutores();
-                break;
-            case CADASTRAR_CONDUTOR:
-                ((ClientePF)cliente).cadastrarCondutor(scanner);
-                break;
-            case EXCLUIR_CONDUTOR:
-                ((ClientePF)cliente).excluirCondutor(scanner);
                 break;
 
             // Cliente PJ
@@ -229,6 +234,15 @@ public class Menu {
                 break;
             case VISUALIZAR_SEGURO_CLIENTE_PJ:
                 cliente.visualizarSeguro(scanner);
+                break;
+            case LISTAR_CONDUTORES_PJ:
+                cliente.listarCondutores();
+                break;
+            case CADASTRAR_CONDUTOR_PJ:
+                cliente.cadastrarCondutor(scanner);
+                break;
+            case EXCLUIR_CONDUTOR_PJ:
+                cliente.excluirCondutor(scanner);
                 break;
             case LISTAR_FROTAS:
                 ((ClientePJ)cliente).listarFrotas();
@@ -287,8 +301,8 @@ public class Menu {
         return null;
     }
 
-    // Realiza login do cliente
-    private Cliente loginCliente() {
+    // Login do cliente comum
+    private Cliente login() {
         boolean clientesIsEmpty = true;
 
         // Caso em que nao ha seguradoras cadastradas
@@ -321,5 +335,31 @@ public class Menu {
 
         System.out.println("Documento invalido.");
         return null;
+    }
+
+    // Realiza login do cliente PJ
+    private Cliente loginClientePJ() {
+        Cliente cliente = login();
+        if (cliente == null) {
+            return null;
+        } else if (cliente instanceof ClientePJ) {
+            return cliente;
+        } else {
+            System.out.println("Documento invalido.");
+            return null;
+        }
+    }
+
+    // Realiza login do cliente PF
+    private Cliente loginClientePF() {
+        Cliente cliente = login();
+        if (cliente == null) {
+            return null;
+        } else if (cliente instanceof ClientePF) {
+            return cliente;
+        } else {
+            System.out.println("Documento invalido.");
+            return null;
+        }
     }
 }

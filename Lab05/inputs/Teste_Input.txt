@@ -88,10 +88,14 @@ Ensino Superior
 // Acessar Area Cliente
 3
 // Login
-101.255.787-17
+06.947.283/0001-60
 
+// Visualizar Dados
+1
 // Listar Seguros
 2
+// Listar Frotas
+4
 
 // Voltar
 0
