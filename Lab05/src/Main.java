@@ -75,7 +75,7 @@ public class Main {
     }
 
     public static void rodarComScannerManual() {
-        /******************** TESTE AUTOMATICO ********************/
+        /******************************* TESTE AUTOMATICO *******************************/
 
         //////////////////// CADASTROS E LISTAGENS ////////////////////
 
@@ -308,38 +308,143 @@ public class Main {
         cliente3.listarVeiculos();
         System.out.println("");
 
+
+        // Criar 2 sinistro cliente PJ 1, 1 sinistro cliente PJ2, 1 sinistro cliente PJ3 (seguradora2)
+
         //////////////////// REMOCOES ////////////////////
 
-        // Excluir Condutor Cliente PJ
-
         // Listagens Cliente PJ
+        cliente1.visualizarDados();
+        System.out.println("");
+        cliente1.listarSeguros();
+        System.out.println("");
+        cliente1.visualizarSeguro(1);
+        System.out.println("");
+        cliente1.listarCondutores();
+        System.out.println("");
+        cliente1.listarFrotas();
+        System.out.println("");
+
+        // Excluir Condutor Cliente PJ
+        cliente1.excluirCondutor("484.258.684-24", 1);
+        cliente1.excluirCondutor("752.792.913-82", 1); // Nao vai excluir porque o seguro nao pode ficar sem condutor
+        System.out.println("");
 
         // Excluir Veiculos e Frota Inteira Cliente PJ
+        ArrayList<Veiculo> veiculosRemove = new ArrayList<Veiculo>();
+        veiculosRemove.add(veiculo4);
+        veiculosRemove.add(veiculo5);
+        veiculosRemove.add(veiculo16);
+        cliente1.atualizarFrota(2, new ArrayList<Veiculo>(), veiculosRemove);
+        System.out.println("");
 
         // Listagens Cliente PJ
+        cliente1.visualizarDados();
+        System.out.println("");
+        cliente1.listarSeguros();
+        System.out.println("");
+        cliente1.visualizarSeguro(1);
+        System.out.println("");
+        cliente1.listarCondutores();
+        System.out.println("");
+        cliente1.listarFrotas();
+        System.out.println("");
 
+
+        // Listagens Cliente PF
+        cliente3.visualizarDados();
+        System.out.println("");
+        cliente3.listarSeguros();
+        System.out.println("");
+        cliente3.visualizarSeguro(4);
+        System.out.println("");
+        cliente3.listarCondutores();
+        System.out.println("");
+        cliente3.listarVeiculos();
+        System.out.println("");
 
         // Excluir Condutor Cliente PF
+        cliente3.excluirCondutor("453.455.012-03", 4);
+        System.out.println("");
 
         // Listagens Cliente PF
+        cliente3.visualizarDados();
+        System.out.println("");
+        cliente3.listarSeguros();
+        System.out.println("");
+        cliente3.visualizarSeguro(4);
+        System.out.println("");
+        cliente3.listarCondutores();
+        System.out.println("");
+        cliente3.listarVeiculos();
+        System.out.println("");
 
         // Excluir Veiculos Cliente PF
+        cliente3.excluirVeiculo(veiculo9); // Veiculo com seguro
+        cliente3.excluirVeiculo(veiculo11);
+        cliente3.excluirVeiculo(veiculo17);
 
         // Listagens Cliente PF
+        cliente3.visualizarDados();
+        System.out.println("");
+        cliente3.listarSeguros();
+        System.out.println("");
+        cliente3.visualizarSeguro(4);
+        System.out.println("");
+        cliente3.listarCondutores();
+        System.out.println("");
+        cliente3.listarVeiculos();
+        System.out.println("");
 
-
-        // Excluir Cliente PJ
-
-        // Excluir Cliente PF
-
-        // Cancelar Seguro PJ
-
-        // Cancelar Seguro PF
 
         // Listagens Seguradora
+        seguradora1.visualizarDados();
+        System.out.println("");
+        seguradora1.listarClientes();
+        System.out.println("");
+        seguradora1.listarSeguros();
+        seguradora1.calcularReceita();
+        System.out.println("");
+
+        // Excluir Cliente PJ
+        seguradora1.excluirCliente("06.947.283/0001-60");
+        System.out.println("");
+
+        // Excluir Cliente PF
+        seguradora1.excluirCliente("101.255.787-17");
+        System.out.println("");
+
+        // Cancelar Seguro PJ
+        seguradora1.cancelarSeguro("13.347.016/0001-17", 3);
+        System.out.println("");
+
+        // Cancelar Seguro PF
+        seguradora1.cancelarSeguro("522.444.883-22", 5);
+        System.out.println("");
+
+        // Listagens Seguradora
+        seguradora1.visualizarDados();
+        System.out.println("");
+        seguradora1.listarClientes();
+        System.out.println("");
+        seguradora1.listarSeguros();
+        System.out.println("");
+        seguradora1.calcularReceita();
+        System.out.println("");
+
+        // Listar Seguradoras
+        Admin.listarSeguradoras();
+        System.out.println("");
+        // Excluir Seguradoras
+        Admin.excluirSeguradora(seguradora1);
+        Admin.excluirSeguradora(seguradora2);
+        System.out.println("");
+        // Listar Seguradoras
+        Admin.listarSeguradoras();
+        System.out.println("");
 
 
-        /******************** MENU INTERATIVO ********************/
+        /******************************* MENU INTERATIVO *******************************/
 
         Scanner scanner = new Scanner(System.in);        
         Menu menu = new Menu(scanner);
