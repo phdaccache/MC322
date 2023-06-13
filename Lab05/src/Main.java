@@ -3,9 +3,10 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
+import java.io.PrintStream;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.Scanner;
 
 import menu.Menu;
@@ -15,11 +16,19 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         /* MENU INTERATIVO */
 
+        // Scanner Manual
         // Scanner scanner = new Scanner(System.in);
-        removerLinhasComentadas("inputs/Teste_Input.txt", "inputs/input.txt");
-        Scanner scanner = new Scanner(new File("inputs/input.txt"));
+
+        // Scanner Arquivo
+        removerLinhasComentadas("input/Teste_Input.txt", "input/input.txt");
+        Scanner scanner = new Scanner(new File("input/input.txt"));
+
         Menu menu = new Menu(scanner);
         MenuOperacoes option;
+
+        PrintStream stdout = System.out;
+        PrintStream fileOut = new PrintStream(new FileOutputStream("output/output.txt"));
+        System.setOut(fileOut);
 
         // Executa menu (imprime, recebe a opcao e executa a opcao) de acordo com a opcao passada
         do {
@@ -29,6 +38,9 @@ public class Main {
         } while (option != MenuOperacoes.SAIR);
 
         scanner.close();
+
+        fileOut.close();
+        System.setOut(stdout);
     }
 
     // Funcao que remove as linhas que comecam com "//" ou sao espacos em branco

@@ -25,9 +25,12 @@ public class Veiculo {
         joiner.add("Marca: " + getMarca());
         joiner.add("Modelo: " + getModelo());
         joiner.add("Ano de Fabricacao: " + getAnoFabricacao());
+        if (getSeguro() == null)
+            joiner.add("Seguro: Nao possui.");
+        else {
         joiner.add(String.format("Seguro %03d: %s - %s", getSeguro().getId(),
                                 getSeguro().getDataInicio(), getSeguro().getDataFim()));
-
+        }
         return joiner.toString();
     }
 

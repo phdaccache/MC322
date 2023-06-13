@@ -139,7 +139,6 @@ public class ClientePJ extends Cliente {
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
-        System.out.println(calcularValorMensalTotal());
     }
 
     // Atualizar frota com scanner
@@ -196,7 +195,6 @@ public class ClientePJ extends Cliente {
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
-        System.out.println(calcularValorMensalTotal());
     }
 
     // Excluir seguro
