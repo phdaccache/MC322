@@ -14,7 +14,11 @@ import menu.MenuOperacoes;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        /* MENU INTERATIVO */
+        /******************** TESTE AUTOMATICO ********************/
+
+        
+
+        /******************** MENU INTERATIVO ********************/
 
         // Scanner Manual
         // Scanner scanner = new Scanner(System.in);

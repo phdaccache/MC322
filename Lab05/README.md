@@ -1,5 +1,14 @@
+## Proposta do Laboratório
+
+
 ## Esquema Menu Interativo
-O menu interativo é disponibilizado ao usuário pelo terminal. Inserindo o número desejado, é possível acessar a opção escolhida.
+O menu interativo é disponibilizado ao usuário pelo terminal.
+
+Há dois métodos de testar o menu:
+1. Inserir as informações manualmente.
+2. Passar o arquivo 'Teste_Input.txt' para o programa.
+
+A saída do programa é direcionada para 'output/output.txt'.
 
 ![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Menu_Interativo.png)
 
