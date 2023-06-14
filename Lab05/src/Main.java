@@ -17,13 +17,24 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner1 = new Scanner(System.in);
 
-        System.out.println("Ao rodar o programa pelo scanner automatico, forneca um arquivo de entrada como input.");
-        System.out.println("O programa ignora comentarios do tipo '//' e linhas em branco.");
-        System.out.println("Caso nao seja passado nenhum arquivo, o programa ira rodar com o arquivo 'input/Teste_Input.txt'.");
+        System.out.println("LABORATORIO 5 - SISTEMA DE SEGURADORA");
         System.out.println("");
 
-        System.out.println("Ao rodar o programa pelo scanner manual, o usuario podera digitar os dados de entrada e a saida sera impressa no console.");
-        System.out.println("Alem disso, sao instanciados alguns objetos para testar o programa antes de rodar o menu.");
+        System.out.println("FUNCIONAMENTO DO PROGRAMA:");
+        System.out.println("");
+
+        System.out.println("O programa pode ser rodado de duas formas: pelo scanner automatico ou pelo scanner manual.");
+        System.out.println("");
+
+        System.out.println("1. Scanner Automatico:");
+        System.out.println("    * Forneca um arquivo de entrada como input.");
+        System.out.println("    * O programa ignora comentarios do tipo '//' e linhas em branco.");
+        System.out.println("    * Caso nao seja passado nenhum arquivo, o programa ira rodar com o arquivo 'input/Teste_Input.txt'.");
+        System.out.println("");
+
+        System.out.println("2. Scanner Manual:");
+        System.out.println("    * Digite os dados de acordo com o menu interativo e a saida sera impressa no console.");
+        System.out.println("    * Sao instanciados alguns objetos para testar o programa antes de rodar o menu.");
         System.out.println("");
 
         System.out.print("Deseja rodar o programa pelo scanner automatico ou manual? (1 - Automatico, 2 - Manual): ");

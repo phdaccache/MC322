@@ -1,17 +1,20 @@
 # Laboratório 5 - Sistema de Seguradora
 
 ## Funcionamento do Programa
+O programa pode ser rodado de duas formas: pelo scanner automÁtico ou pelo scanner manual.
+
 ### 1. Scanner Automático
-* Ao rodar o programa pelo scanner automático, forneça um arquivo de entrada como input.
+* Forneça um arquivo de entrada como input.
 
 * O programa ignora comentários do tipo '//' e linhas em branco.
 
 * Caso não seja passado nenhum arquivo, o programa irá rodar com o arquivo 'input/Teste_Input.txt'.
 
 ### 2. Scanner Manual
-* Ao rodar o programa pelo scanner manual, o usuário poderá digitar os dados de entrada e a saída será impressa no console.
+* Digite os dados de acordo com o menu interativo e a saída será impressa no console.
 
-* Além disso, são instanciados alguns objetos para testar o programa antes de rodar o menu.
+* São instanciados alguns objetos para testar o programa antes de rodar o menu.
+
 
 ## Esquema Menu Interativo
 O menu interativo é disponibilizado ao usuário pelo terminal, e a saída do programa é direcionada para 'output/output.txt' quando é passado um arquivo de input.
