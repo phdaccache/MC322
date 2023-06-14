@@ -21,15 +21,15 @@ public class Main {
         System.out.println("");
 
         System.out.println("FUNCIONAMENTO DO PROGRAMA:");
-        System.out.println("");
-
         System.out.println("O programa pode ser rodado de duas formas: pelo scanner automatico ou pelo scanner manual.");
         System.out.println("");
 
         System.out.println("1. Scanner Automatico:");
         System.out.println("    * Forneca um arquivo de entrada como input.");
         System.out.println("    * O programa ignora comentarios do tipo '//' e linhas em branco.");
-        System.out.println("    * Caso nao seja passado nenhum arquivo, o programa ira rodar com o arquivo 'input/Teste_Input.txt'.");
+        System.out.println("    * Caso nao seja passado nenhum arquivo, o programa ira rodar com o arquivo 'input/input.txt'.");
+        System.out.println("    * Um novo arquivo sem comentarios ou linhas em branco sera gerado e salvo em 'input/inputNoComments.txt'.");
+        System.out.println("    * A saida sera impressa no arquivo 'output/output.txt'.");
         System.out.println("");
 
         System.out.println("2. Scanner Manual:");
@@ -43,7 +43,7 @@ public class Main {
 
         switch (op) {
             case 1:
-                System.out.print("Digite o caminho do arquivo de entrada (ou deixe em branco para usar o arquivo 'input/Teste_Input.txt'): ");
+                System.out.print("Digite o caminho do arquivo de entrada (ou deixe em branco para usar o arquivo 'input/input.txt'): ");
                 String entrada = scanner1.nextLine();
                 rodarComScannerAutomatico(entrada);
                 break;
@@ -59,10 +59,10 @@ public class Main {
 
     public static void rodarComScannerAutomatico(String ... entrada) throws FileNotFoundException {
         if (entrada[0].equals("")) {
-            entrada = new String[] {"input/Teste_Input.txt"};
+            entrada = new String[] {"input/input.txt"};
         }
-        removerLinhasComentadas(entrada[0], "input/input.txt");
-        Scanner scanner = new Scanner(new File("input/input.txt"));
+        removerLinhasComentadas(entrada[0], "input/inputNoComments.txt");
+        Scanner scanner = new Scanner(new File("input/inputNoComments.txt"));
 
         PrintStream stdout = System.out;
         PrintStream fileOut = new PrintStream(new FileOutputStream("output/output.txt"));

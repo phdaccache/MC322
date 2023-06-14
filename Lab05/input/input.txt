@@ -1,23 +1,46 @@
+/////////////////////////// TESTES CADASTROS E LISTAGENS ///////////////////////////
+
+//////////////// CADASTRO SEGURADORAS ////////////////
+
+// Acessar Admin
 1
+// Listar Seguradoras
 1
+
+// Cadastrar Seguradora 1
 2
 61.198.164/0001-60
 Pedro Seguros
 (11) 91234-5678
 Rua dos Pedros
 pedroseguros@gmail.com
+
+// Cadastrar Seguradora 2
 2
 51.990.695/0001-37
 Seguros Magicos
 (11) 98765-4321
 Rua da Magia
 segurosmagicos@gmail.com
+
+// Listar Seguradoras
 1
+// Voltar
 0
+
+//////////////// SEGURADORA 1 ////////////////
+
+// Acessar Area Seguradora 1
 2
+// Login
 61.198.164/0001-60
+
+// Visualizar dados
 1
+// Listar clientes
 2
+
+// Cadastrar cliente PJ 1 
 3
 1
 Google
@@ -27,6 +50,8 @@ google@gmail.com
 06.947.283/0001-60
 04/09/1998
 50
+
+// Cadastrar cliente PJ 2
 3
 1
 Facebook
@@ -36,6 +61,8 @@ facebook@gmail.com
 13.347.016/0001-17
 01/02/2004
 15
+
+// Cadastrar cliente PF 1
 3
 2
 Pedro
@@ -46,6 +73,8 @@ pedro@gmail.com
 Masculino
 Ensino Superior
 25/01/2003
+
+// Cadastrar cliente PF 2
 3
 2
 Marcelo
@@ -56,13 +85,27 @@ marcelo@gmail.com
 Masculino
 Ensino Superior
 25/03/2001
+
+// Listar clientes
 2
+// Calcular Receita
 13
+// Voltar
 0
+
+//////////////// SEGURADORA 2 ////////////////
+
+// Acessar Area Seguradora 2
 2
+// Login
 51.990.695/0001-37
+
+// Visualizar dados
 1
+// Listar clientes
 2
+
+// Cadastrar cliente PJ 1 
 3
 1
 Microsoft
@@ -72,6 +115,8 @@ microsoft@gmail.com
 04.712.500/0001-07
 04/04/1975
 100
+
+// Cadastrar cliente PF 1
 3
 2
 Joao
@@ -82,261 +127,457 @@ joao@gmail.com
 Masculino
 Ensino Superior
 01/01/2000
+
+// Listar clientes
 2
+// Calcular Receita
 13
+// Voltar
 0
+
+//////////////// CLIENTE PJ1 - GOOGLE ////////////////
+
+// Acessar Area Cliente PJ 1
 3
+// Login
 06.947.283/0001-60
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Listar Condutores
 4
+// Listar Frotas
 7
+
+// Cadastrar Frota 1
 9
 ABC-1234
 Chevrolet
 Camaro
 2023
+
+// Atualizar Frota 1
 10
+// ID da frota
 1
+// Cadastrar veiculo
 1
 ABC-4321
 Chevrolet
 Onix
 2018
+// Cadastrar veiculo
 1
 CBA-1234
 Chevrolet
 Equinox
 2019
+// Voltar
 0
+
+// Cadastrar frota 2
 9
 MSN-1234
 Hyundai
 Tucson
 2014
+
+// Atualizar Frota 2
 10
+// ID da frota
 2
+// Cadastrar veiculo
 1
 MSN-4321
 Hyundai
 HB20
 2017
+// Voltar
 0
+
+// Visualizar Dados
 1
+// Listar Frotas
 7
+// Visualizar Frota
 8
 1
+// Visualizar Frota
 8
 2
+// Voltar
 0
+
+//////////////// CLIENTE PJ2 - FACEBOOK ////////////////
+
+// Acessar Area Cliente PJ2
 3
+// Login
 13.347.016/0001-17
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Listar Condutores
 4
+// Listar Frotas
 7
+
+// Cadastrar Frota 1
 9
 PAD-1234
 Toyota
 Corolla
 2014
+
+// Atualizar Frota 1
 10
+// ID da frota
 1
+// Cadastrar veiculo
 1
 PAD-4321
 Toyota
 Yaris
 2022
+// Voltar
 0
+
+// Visualizar Dados
 1
+// Listar Frotas
 7
+// Visualizar Frota
 8
 1
+// Voltar
 0
+
+//////////////// CLIENTE PJ3 - MICROSOFT ////////////////
+
+// Acessar Area Cliente PJ2
 3
+// Login
 04.712.500/0001-07
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Listar Condutores
 4
+// Listar Frotas
 7
+
+// Cadastrar Frota 1
 9
 TOP-1234
 Toyota
 Etios
 2018
+
+// Visualizar Dados
 1
+// Listar Frotas
 7
+// Visualizar Frota
 8
 1
+// Voltar
 0
+
+//////////////// CLIENTE PF1 - PEDRO ////////////////
+
+// Acessar Area Cliente PF1
 4
+// Login
 101.255.787-17
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Listar Condutores
 4
+// Listar Veiculos
 7
+
+// Cadastrar Veiculo
 8
 DAC-1234
 BMW
 Serie 3
 2023
+// Cadastrar Veiculo
 8
 DAC-4321
 BMW
 Serie 5
 2022
+// Cadastrar Veiculo
 8
 CAD-1234
 Ferrari
 Roma
 2021
+
+// Visualizar Dados
 1
+// Listar Veiculos
 7
+// Voltar
 0
+
+//////////////// CLIENTE PF2 - MARCELO ////////////////
+
+// Acessar Area Cliente PF2
 4
+// Login
 522.444.883-22
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Listar Condutores
 4
+// Listar Veiculos
 7
+
+// Cadastrar Veiculo
 8
 COR-1234
 Ferrari
 Portofino
 2020
+// Cadastrar Veiculo
 8
 COR-4321
 Tesla
 Model S
 2022
+
+// Visualizar Dados
 1
+// Listar Veiculos
 7
+// Voltar
 0
+
+//////////////// CLIENTE PF3 - JOAO ////////////////
+
+// Acessar Area Cliente PF2
 4
+// Login
 381.854.732-77
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Listar Condutores
 4
+// Listar Veiculos
 7
+
+// Cadastrar Veiculo
 8
 TES-1234
 Tesla
 Model 3
 2021
+// Cadastrar Veiculo
 8
 TES-4321
 Tesla
 Model X
 2020
+
+// Visualizar Dados
 1
+// Listar Veiculos
 7
+// Voltar
 0
+
+//////////////// SEGURADORA 1 ////////////////
+
+// Acessar Area Seguradora 2
 2
+// Login
 61.198.164/0001-60
+
+// Gerar Seguro 1
 7
+// Opcao Pessoa Juridica
 1
+// Gerando
 06.947.283/0001-60
 1
 12/06/2023
 12/06/2026
+// Cadastrando condutor obrigatorio
 752.792.913-82
 Andrezinho
 (19) 98787-7878
 Rua do Condutor Andrezinho, 356
 andrezinho@gmail.com
 17/09/1998
+
+// Gerar Seguro 2
 7
+// Opcao Pessoa Juridica
 1
+// Gerando
 06.947.283/0001-60
 2
 12/06/2023
 12/06/2028
+// Cadastrando condutor obrigatorio
 752.792.913-82
 Andrezinho
 (19) 98787-7878
 Rua do Condutor Andrezinho, 356
 andrezinho@gmail.com
 17/09/1998
+
+// Gerar Seguro 3
 7
+// Opcao Pessoa Juridica
 1
+// Gerando
 13.347.016/0001-17
 1
 13/06/2023
 13/06/2024
+// Cadastrando condutor obrigatorio
 522.342.883-80
 Cleide
 (11) 91111-1111
 Rua da Condutora Cleide
 cleide@gmail.com
 21/04/2001
+
+// Gerar Seguro 4
 7
+// Opcao Pessoa Fisica
 2
+// Gerando
 101.255.787-17
 DAC-1234
 13/06/2023
 13/06/2025
+// Cadastrando condutor obrigatorio
 453.455.012-03
 Tom Jobim
 (11) 91234-1234
 Rua da Bossa Nova, 420
 tomjobim@gmail.com
 25/01/1927
+
+// Gerar Seguro 5
 7
+// Opcao Pessoa Fisica
 2
+// Gerando
 522.444.883-22
 COR-1234
 13/06/2023
 13/06/2028
+// Cadastrando condutor obrigatorio
 654.711.351-56
 Jonas Madureira
 (11) 94444-3333
 Rua do Condutor Jonas, 160
 jonas@gmail.com
 30/07/1976
+
+// Listar Todos os Seguros
 5
+// Listar Seguros por Cliente
 6
 06.947.283/0001-60
+// Listar Seguros por Cliente
 6
 101.255.787-17
+// Calcular Receita
 13
+// Voltar
 0
+
+//////////////// SEGURADORA 2 ////////////////
+
+// Acessar Area Seguradora 2
 2
+// Login
 51.990.695/0001-37
+
+// Gerar Seguro 1
 7
+// Opcao Pessoa Fisica
 2
+// Gerando
 381.854.732-77
 TES-1234
 14/06/2023
 14/06/2025
+// Cadastrando condutor obrigatorio
 953.344.933-01
 Joaozinho
 (11) 99999-9999
 Rua do Condutor Joaozinho, 123
 joazinho@gmail.com
 02/11/2002
+
+// Listar Todos os Seguros
 5
+// Listar Seguros por Cliente
 6
 381.854.732-77
+// Calcular Receita
 13
+// Voltar
 0
+
+//////////////// CLIENTE PJ1 - GOOGLE ////////////////
+
+// Acessar Area Cliente PJ 1
 3
+// Login
 06.947.283/0001-60
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Visualizar Seguro
 3
 1
+// Visualizar Seguro
 3
 2
+// Listar Condutores
 4
+// Listar Frotas
 7
+
+// Atualizar Frota 2
 10
+// ID da frota
 2
+// Cadastrar veiculo
 1
 NSM-1234
 Hyundai
 ix35
 2020
+// Voltar
 0
+
+// Cadastrar Condutor
 5
 1
 484.258.684-24
@@ -345,28 +586,51 @@ Mariazinha
 Rua da Condutora Mariazinha, 456
 mariazinha@gmail.com
 02/11/2002
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Visualizar Seguro
 3
 1
+// Visualizar Seguro
 3
 2
+// Listar Condutores
 4
+// Listar Frotas
 7
+// Voltar
 0
+
+//////////////// CLIENTE PF1 - PEDRO ////////////////
+
+// Acessar Area Cliente PF1
 4
+// Login
 101.255.787-17
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Visualizar Seguro
 3
 4
+// Listar Condutores
 4
+// Listar Veiculos
 7
+
+// Cadastrar Veiculo
 8
 CAD-4321
 Ferrari
 SF90
 2022
+
+// Cadastrar Condutor
 5
 4
 454.565.219-03
@@ -375,31 +639,58 @@ John Piper
 Rua do Condutor Piper, 901
 piper@gmail.com
 11/01/1946
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Visualizar Seguro
 3
 4
+// Listar Condutores
 4
+// Listar Veiculos
 7
+// Voltar
 0
+
+/////////////////////////// TESTES REMOCOES ///////////////////////////
+
+//////////////// REMOCOES CONDUTOR, VEICULOS E FROTA PJ1 - GOOGLE ////////////////
+
+// Acessar Area Cliente PJ 1
 3
+// Login
 06.947.283/0001-60
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Visualizar Seguro
 3
 1
+// Visualizar Seguro
 3
 2
+// Listar Condutores
 4
+// Listar Frotas
 7
+// Visualizar Frota
 8
 2
+
+// Excluir Condutor
 6
 1
 484.258.684-24
+// Excluir Condutor
 6
 1
 752.792.913-82
+
+// Atualizar Frota
 10
 2
 2
@@ -408,87 +699,170 @@ MSN-1234
 MSN-4321
 2
 NSM-1234
+// Voltar
 0
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Visualizar Seguro
 3
 1
+// Visualizar Seguro
 3
 2
+// Listar Condutores
 4
+// Listar Frotas
 7
+// Visualizar Frota
 8
 2
+// Voltar
 0
+
+//////////////// REMOCOES CONDUTOR E VEICULO PF1 - PEDRO ////////////////
+
+// Acessar Area Cliente PF1
 4
+// Login
 101.255.787-17
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Visualizar Seguro
 3
 4
+// Listar Condutores
 4
+// Listar Veiculos
 7
+
+// Excluir Condutor
 6
 4
 453.455.012-03
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Visualizar Seguro
 3
 4
+// Listar Condutores
 4
+// Listar Veiculos
 7
+
+// Excluir Veiculos
 9
 DAC-1234
 9
 CAD-1234
 9
 CAD-4321
+
+// Visualizar Dados
 1
+// Listar Seguros
 2
+// Visualizar Seguro
 3
 4
+// Listar Condutores
 4
+// Listar Veiculos
 7
+
+// Voltar
 0
+
+//////////////// REMOCOES CLIENTES E SEGUROS SEGURADORA 1 ////////////////
+
+// Acessar Area Seguradora
 2
+// Login
 61.198.164/0001-60
+
+// Visualizar Dados
 1
+// Listar Clientes
 2
+// Listar Todos os Seguros
 5
+// Listar Seguros por Cliente
 6
 06.947.283/0001-60
+// Listar Seguros por Cliente
 6
 13.347.016/0001-17
+// Listar Seguros por Cliente
 6
 522.444.883-22
+// Calcular Receita
 13
+
+// Excluir Cliente PJ1 - Google
 4
 06.947.283/0001-60
+// Excluir Cliente PF1 - Pedro
 4
 101.255.787-17
+
+// Cancelar Seguro PJ2 - Facebook
 8
 13.347.016/0001-17
 3
+
+// Cancelar Seguro PF2 - Marcelo
 8
 522.444.883-22
 5
+
+// Visualizar Dados
 1
+// Listar Clientes
 2
+// Listar Todos os Seguros
 5
+// Listar Seguros por Cliente
 6
 06.947.283/0001-60
+// Listar Seguros por Cliente
 6
 13.347.016/0001-17
+// Listar Seguros por Cliente
 6
 522.444.883-22
+// Calcular Receita
 13
+// Voltar
 0
+
+//////////////// EXCLUIR SEGURADORAS ////////////////
+
+// Acessar Admin
 1
+// Listar Seguradoras
 1
+
+// Excluir Seguradora 1
 3
 61.198.164/0001-60
+// Excluir Seguradora 2
 3
 51.990.695/0001-37
+
+// Listar Seguradoras
 1
+// Voltar
 0
+
+/////////////////////////// ENCERRAR PROGRAMA ///////////////////////////
+
+// Sair
 0
