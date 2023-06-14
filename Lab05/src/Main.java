@@ -35,16 +35,22 @@ public class Main {
         System.out.println("2. Scanner Manual:");
         System.out.println("    * Digite os dados de acordo com o menu interativo e a saida sera impressa no console.");
         System.out.println("    * Sao instanciados alguns objetos para testar o programa antes de rodar o menu.");
+        System.out.println("    * Dica: caso nao seja possivel visualizar a saida inteira no console, siga esses passos:");
+        System.out.println("        1. Acesse File -> Preferences -> Settings.");
+        System.out.println("        2. Na barra de pesquisa, digite 'scrollback'.");
+        System.out.println("        3. Na opcao 'Terminal > Integrated: Scrollback', altere o valor de 1000 para 2000 ou mais.");
         System.out.println("");
 
         System.out.print("Deseja rodar o programa pelo scanner automatico ou manual? (1 - Automatico, 2 - Manual): ");
         int op = scanner1.nextInt();
         scanner1.nextLine();
+        System.out.println("");
 
         switch (op) {
             case 1:
                 System.out.print("Digite o caminho do arquivo de entrada (ou deixe em branco para usar o arquivo 'input/input.txt'): ");
                 String entrada = scanner1.nextLine();
+                System.out.println("");
                 rodarComScannerAutomatico(entrada);
                 break;
             case 2:

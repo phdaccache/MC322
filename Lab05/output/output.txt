@@ -146,7 +146,6 @@ Digite uma opcao:
 |-------------------------------------------|
 
 Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o email: Insira o CNPJ: Insira a data de fundacao (dd/MM/yyyy): Insira a quantidade de funcionarios: Cliente cadastrado!
-Valor mensal total: R$0,00
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -173,7 +172,6 @@ Digite uma opcao:
 |-------------------------------------------|
 
 Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o email: Insira o CNPJ: Insira a data de fundacao (dd/MM/yyyy): Insira a quantidade de funcionarios: Cliente cadastrado!
-Valor mensal total: R$0,00
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -200,7 +198,6 @@ Digite uma opcao:
 |-------------------------------------------|
 
 Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o email: Insira o CPF: Insira o genero: Insira o nivel de educacao: Insira a data de nascimento (dd/MM/yyyy): Cliente cadastrado!
-Valor mensal total: R$0,00
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -227,7 +224,6 @@ Digite uma opcao:
 |-------------------------------------------|
 
 Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o email: Insira o CPF: Insira o genero: Insira o nivel de educacao: Insira a data de nascimento (dd/MM/yyyy): Cliente cadastrado!
-Valor mensal total: R$0,00
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -419,7 +415,6 @@ Digite uma opcao:
 |-------------------------------------------|
 
 Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o email: Insira o CNPJ: Insira a data de fundacao (dd/MM/yyyy): Insira a quantidade de funcionarios: Cliente cadastrado!
-Valor mensal total: R$0,00
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -446,7 +441,6 @@ Digite uma opcao:
 |-------------------------------------------|
 
 Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o email: Insira o CPF: Insira o genero: Insira o nivel de educacao: Insira a data de nascimento (dd/MM/yyyy): Cliente cadastrado!
-Valor mensal total: R$0,00
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
