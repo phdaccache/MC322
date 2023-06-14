@@ -4758,4 +4758,71 @@ Digite uma opcao:
 | Opcao 4 - Area Cliente - Pessoa Fisica    |
 | Opcao 0 - Sair                            |
 |-------------------------------------------|
+Digite uma opcao: 
+################### Admin ###################
+|-------------------------------------------|
+| Opcao 1 - Listar seguradoras              |
+| Opcao 2 - Cadastrar seguradora            |
+| Opcao 3 - Excluir seguradora              |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Seguradoras cadastradas:
+---------------------------------------------
+CNPJ: 61.198.164/0001-60
+Nome: Pedro Seguros
+Telefone: (11) 91234-5678
+Endereco: Rua dos Pedros
+Email: pedroseguros@gmail.com
+---------------------------------------------
+CNPJ: 51.990.695/0001-37
+Nome: Seguros Magicos
+Telefone: (11) 98765-4321
+Endereco: Rua da Magia
+Email: segurosmagicos@gmail.com
+---------------------------------------------
+
+################### Admin ###################
+|-------------------------------------------|
+| Opcao 1 - Listar seguradoras              |
+| Opcao 2 - Cadastrar seguradora            |
+| Opcao 3 - Excluir seguradora              |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o CNPJ da seguradora que deseja excluir: Seguradora 'Pedro Seguros' de CNPJ 61.198.164/0001-60 removida!
+
+################### Admin ###################
+|-------------------------------------------|
+| Opcao 1 - Listar seguradoras              |
+| Opcao 2 - Cadastrar seguradora            |
+| Opcao 3 - Excluir seguradora              |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o CNPJ da seguradora que deseja excluir: Seguradora 'Seguros Magicos' de CNPJ 51.990.695/0001-37 removida!
+
+################### Admin ###################
+|-------------------------------------------|
+| Opcao 1 - Listar seguradoras              |
+| Opcao 2 - Cadastrar seguradora            |
+| Opcao 3 - Excluir seguradora              |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Seguradoras cadastradas:
+    * Nao ha seguradoras cadastradas.
+
+################### Admin ###################
+|-------------------------------------------|
+| Opcao 1 - Listar seguradoras              |
+| Opcao 2 - Cadastrar seguradora            |
+| Opcao 3 - Excluir seguradora              |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+#################### Menu ###################
+|-------------------------------------------|
+| Opcao 1 - Admin                           |
+| Opcao 2 - Area Seguradora                 |
+| Opcao 3 - Area Cliente - Pessoa Juridica  |
+| Opcao 4 - Area Cliente - Pessoa Fisica    |
+| Opcao 0 - Sair                            |
+|-------------------------------------------|
 Digite uma opcao: Programa encerrado.
