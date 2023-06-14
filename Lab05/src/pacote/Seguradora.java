@@ -100,7 +100,6 @@ public class Seguradora {
         cliente.setValorMensalTotal(cliente.calcularValorMensalTotal());
         listaClientes.add(cliente);
         System.out.println("Cliente cadastrado!");
-        System.out.printf("Valor mensal total: R$%.2f\n", cliente.getValorMensalTotal());
     }
 
     // Cadastrar novo cliente com scanner
