@@ -1,5 +1,6 @@
 package pacote;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringJoiner;
@@ -20,6 +21,15 @@ public class Frota {
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
         joiner.add(String.format("ID: %03d", getId()));
+        if (getSeguro() == null)
+            joiner.add("Seguro: Nao possui");
+        else {
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            String dataInicioString = getSeguro().getDataInicio().format(dtf); // Transformando LocalDate em String
+            String dataFimString = getSeguro().getDataFim().format(dtf); // Transformando LocalDate em String
+            joiner.add(String.format("Seguro %03d: %s - %s", getSeguro().getId(),
+                                dataInicioString, dataFimString));
+        }
         joiner.add("Quantidade de veiculos: " + getListaVeiculos().size());
 
         return joiner.toString();

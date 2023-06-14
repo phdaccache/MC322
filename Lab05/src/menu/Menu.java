@@ -73,6 +73,7 @@ public class Menu {
                 seguradora = loginSeguradora();
                 if (seguradora == null) {return;}
                 System.out.println("Login realizado com sucesso!");
+                System.out.printf("Bem vindo(a) %s!\n", seguradora.getNome());
                 runSubmenu(option, seguradora, null);
                 break;
             case CLIENTE_PJ:
@@ -80,6 +81,7 @@ public class Menu {
                 cliente = loginClientePJ();
                 if (cliente == null) {return;}
                 System.out.println("Login realizado com sucesso!");
+                System.out.printf("Bem vindo(a) %s!\n", cliente.getNome());
                 runSubmenu(option, null, cliente);
                 break;
             case CLIENTE_PF:
@@ -87,6 +89,7 @@ public class Menu {
                 cliente = loginClientePF();
                 if (cliente == null) {return;}
                 System.out.println("Login realizado com sucesso!");
+                System.out.printf("Bem vindo(a) %s!\n", cliente.getNome());
                 runSubmenu(option, null, cliente);
                 break;
             case SAIR:

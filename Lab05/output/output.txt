@@ -76,6 +76,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login da Seguradora:
 Digite o CNPJ da seguradora: Login realizado com sucesso!
+Bem vindo(a) Pedro Seguros!
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -348,6 +349,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login da Seguradora:
 Digite o CNPJ da seguradora: Login realizado com sucesso!
+Bem vindo(a) Seguros Magicos!
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -541,6 +543,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login do Cliente:
 Digite o documento do cliente: Login realizado com sucesso!
+Bem vindo(a) Google!
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -750,12 +753,41 @@ Digite uma opcao: Frota de ID 002 atualizada!
 | Opcao 10 - Atualizar Frota                |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Google
+Telefone: 0800 724 8149
+Endereco: Mountain View, California, EUA
+Email: google@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$0,00
+CNPJ: 06.947.283/0001-60
+Data Fundacao: 04/09/1998
+Quantidade de funcionarios: 50
+Quantidade de frotas: 2
+Quantidade de seguros: 0
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
 Digite uma opcao: Frotas: 
 ---------------------------------------------
 ID: 001
+Seguro: Nao possui
 Quantidade de veiculos: 3
 ---------------------------------------------
 ID: 002
+Seguro: Nao possui
 Quantidade de veiculos: 2
 ---------------------------------------------
 
@@ -775,6 +807,7 @@ Quantidade de veiculos: 2
 |-------------------------------------------|
 Digite uma opcao: Digite o ID da frota que deseja visualizar: ---------------------------------------------
 ID: 001
+Seguro: Nao possui
 Quantidade de veiculos: 3
 Veiculos: 
     * Carro 1: Camaro - ABC-1234
@@ -798,6 +831,7 @@ Veiculos:
 |-------------------------------------------|
 Digite uma opcao: Digite o ID da frota que deseja visualizar: ---------------------------------------------
 ID: 002
+Seguro: Nao possui
 Quantidade de veiculos: 2
 Veiculos: 
     * Carro 1: Tucson - MSN-1234
@@ -829,6 +863,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login do Cliente:
 Digite o documento do cliente: Login realizado com sucesso!
+Bem vindo(a) Facebook!
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -975,9 +1010,37 @@ Digite uma opcao: Frota de ID 001 atualizada!
 | Opcao 10 - Atualizar Frota                |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Facebook
+Telefone: +1 650-543-4800
+Endereco: R Leopoldo Couto De Magalhaes Junior, 700
+Email: facebook@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$0,00
+CNPJ: 13.347.016/0001-17
+Data Fundacao: 01/02/2004
+Quantidade de funcionarios: 15
+Quantidade de frotas: 1
+Quantidade de seguros: 0
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
 Digite uma opcao: Frotas: 
 ---------------------------------------------
 ID: 001
+Seguro: Nao possui
 Quantidade de veiculos: 2
 ---------------------------------------------
 
@@ -997,6 +1060,7 @@ Quantidade de veiculos: 2
 |-------------------------------------------|
 Digite uma opcao: Digite o ID da frota que deseja visualizar: ---------------------------------------------
 ID: 001
+Seguro: Nao possui
 Quantidade de veiculos: 2
 Veiculos: 
     * Carro 1: Corolla - PAD-1234
@@ -1028,6 +1092,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login do Cliente:
 Digite o documento do cliente: Login realizado com sucesso!
+Bem vindo(a) Microsoft!
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -1139,9 +1204,37 @@ Frota cadastrada!
 | Opcao 10 - Atualizar Frota                |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Microsoft
+Telefone: 0800 888 4081
+Endereco: Redmond, Washington, EUA
+Email: microsoft@gmail.com
+Seguradora: Seguros Magicos (CNPJ: 51.990.695/0001-37)
+Valor mensal total: R$0,00
+CNPJ: 04.712.500/0001-07
+Data Fundacao: 04/04/1975
+Quantidade de funcionarios: 100
+Quantidade de frotas: 1
+Quantidade de seguros: 0
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
 Digite uma opcao: Frotas: 
 ---------------------------------------------
 ID: 001
+Seguro: Nao possui
 Quantidade de veiculos: 1
 ---------------------------------------------
 
@@ -1161,6 +1254,7 @@ Quantidade de veiculos: 1
 |-------------------------------------------|
 Digite uma opcao: Digite o ID da frota que deseja visualizar: ---------------------------------------------
 ID: 001
+Seguro: Nao possui
 Quantidade de veiculos: 1
 Veiculos: 
     * Carro 1: Etios - TOP-1234
@@ -1191,6 +1285,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login do Cliente:
 Digite o documento do cliente: Login realizado com sucesso!
+Bem vindo(a) Pedro!
 
 ######## Area Cliente - Pessoa Fisica #######
 |-------------------------------------------|
@@ -1325,25 +1420,52 @@ Digite uma opcao: Digite a placa: Digite a marca: Digite o modelo: Digite o ano 
 | Opcao 9 - Excluir veiculo                 |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Pedro
+Telefone: (11) 99999-9999
+Endereco: Rua Pitagoras, Barao Geraldo
+Email: pedro@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$0,00
+CPF: 101.255.787-17
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 25/01/2003
+Quantidade de veiculos: 3
+Quantidade de seguros: 0
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
 Digite uma opcao: Veiculos:
 ---------------------------------------------
 Placa: DAC-1234
 Marca: BMW
 Modelo: Serie 3
 Ano de Fabricacao: 2023
-Seguro: Nao possui.
+Seguro: Nao possui
 ---------------------------------------------
 Placa: DAC-4321
 Marca: BMW
 Modelo: Serie 5
 Ano de Fabricacao: 2022
-Seguro: Nao possui.
+Seguro: Nao possui
 ---------------------------------------------
 Placa: CAD-1234
 Marca: Ferrari
 Modelo: Roma
 Ano de Fabricacao: 2021
-Seguro: Nao possui.
+Seguro: Nao possui
 ---------------------------------------------
 
 ######## Area Cliente - Pessoa Fisica #######
@@ -1370,6 +1492,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login do Cliente:
 Digite o documento do cliente: Login realizado com sucesso!
+Bem vindo(a) Marcelo!
 
 ######## Area Cliente - Pessoa Fisica #######
 |-------------------------------------------|
@@ -1489,19 +1612,46 @@ Digite uma opcao: Digite a placa: Digite a marca: Digite o modelo: Digite o ano 
 | Opcao 9 - Excluir veiculo                 |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Marcelo
+Telefone: (11) 91234-1234
+Endereco: Rua do Marcelo, 1454
+Email: marcelo@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$0,00
+CPF: 522.444.883-22
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 25/03/2001
+Quantidade de veiculos: 2
+Quantidade de seguros: 0
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
 Digite uma opcao: Veiculos:
 ---------------------------------------------
 Placa: COR-1234
 Marca: Ferrari
 Modelo: Portofino
 Ano de Fabricacao: 2020
-Seguro: Nao possui.
+Seguro: Nao possui
 ---------------------------------------------
 Placa: COR-4321
 Marca: Tesla
 Modelo: Model S
 Ano de Fabricacao: 2022
-Seguro: Nao possui.
+Seguro: Nao possui
 ---------------------------------------------
 
 ######## Area Cliente - Pessoa Fisica #######
@@ -1528,6 +1678,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login do Cliente:
 Digite o documento do cliente: Login realizado com sucesso!
+Bem vindo(a) Joao!
 
 ######## Area Cliente - Pessoa Fisica #######
 |-------------------------------------------|
@@ -1647,19 +1798,46 @@ Digite uma opcao: Digite a placa: Digite a marca: Digite o modelo: Digite o ano 
 | Opcao 9 - Excluir veiculo                 |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Joao
+Telefone: (11) 91234-5678
+Endereco: Rua do Joao, 123
+Email: joao@gmail.com
+Seguradora: Seguros Magicos (CNPJ: 51.990.695/0001-37)
+Valor mensal total: R$0,00
+CPF: 381.854.732-77
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 01/01/2000
+Quantidade de veiculos: 2
+Quantidade de seguros: 0
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
 Digite uma opcao: Veiculos:
 ---------------------------------------------
 Placa: TES-1234
 Marca: Tesla
 Modelo: Model 3
 Ano de Fabricacao: 2021
-Seguro: Nao possui.
+Seguro: Nao possui
 ---------------------------------------------
 Placa: TES-4321
 Marca: Tesla
 Modelo: Model X
 Ano de Fabricacao: 2020
-Seguro: Nao possui.
+Seguro: Nao possui
 ---------------------------------------------
 
 ######## Area Cliente - Pessoa Fisica #######
@@ -1686,6 +1864,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login da Seguradora:
 Digite o CNPJ da seguradora: Login realizado com sucesso!
+Bem vindo(a) Pedro Seguros!
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -1965,6 +2144,200 @@ Cliente: Google (CNPJ: 06.947.283/0001-60)
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 101.255.787-17:
+---------------------------------------------
+ID: 004
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2025
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$150,00
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Veiculo: Serie 3 - DAC-1234
+Cliente: Pedro (CPF: 101.255.787-17)
+---------------------------------------------
+
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Receita total: R$5628,55
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+#################### Menu ###################
+|-------------------------------------------|
+| Opcao 1 - Admin                           |
+| Opcao 2 - Area Seguradora                 |
+| Opcao 3 - Area Cliente - Pessoa Juridica  |
+| Opcao 4 - Area Cliente - Pessoa Fisica    |
+| Opcao 0 - Sair                            |
+|-------------------------------------------|
+Digite uma opcao: Login da Seguradora:
+Digite o CNPJ da seguradora: Login realizado com sucesso!
+Bem vindo(a) Seguros Magicos!
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+############## Tipo de Cliente ##############
+|-------------------------------------------|
+| Opcao 1 - Pessoa Juridica                 |
+| Opcao 2 - Pessoa Fisica                   |
+|-------------------------------------------|
+
+Digite uma opcao: Insira o CPF do cliente: Insira a placa do veiculo: Insira a data de inicio do seguro: Insira a data de fim do seguro: E necessario cadastrar pelo menos um condutor para gerar o seguro.
+Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Para cadastrar mais condutores, acesse a area do cliente.
+Seguro gerado com sucesso!
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Seguros Cliente Microsoft:
+---------------------------------------------
+Nao ha seguros gerados.
+---------------------------------------------
+
+Seguros Cliente Joao:
+---------------------------------------------
+ID: 006
+Data Inicio: 14/06/2023
+Data Fim: 14/06/2025
+Seguradora: Seguros Magicos (CNPJ: 51.990.695/0001-37)
+Valor Mensal: R$156,25
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Veiculo: Model 3 - TES-1234
+Cliente: Joao (CPF: 381.854.732-77)
+---------------------------------------------
+
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 381.854.732-77:
+---------------------------------------------
+ID: 006
+Data Inicio: 14/06/2023
+Data Fim: 14/06/2025
+Seguradora: Seguros Magicos (CNPJ: 51.990.695/0001-37)
+Valor Mensal: R$156,25
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Veiculo: Model 3 - TES-1234
+Cliente: Joao (CPF: 381.854.732-77)
+---------------------------------------------
+
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Receita total: R$156,25
+
+############## Area Seguradora ##############
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar clientes                 |
+| Opcao 3 - Cadastrar cliente               |
+| Opcao 4 - Excluir cliente                 |
+| Opcao 5 - Listar Todos os Seguros         |
+| Opcao 6 - Listar Seguros por Cliente      |
+| Opcao 7 - Gerar Seguro                    |
+| Opcao 8 - Cancelar Seguro                 |
+| Opcao 9 - Listar Sinistros                |
+| Opcao 10 - Listar Sinistros por Cliente   |
+| Opcao 11 - Gerar sinistro                 |
+| Opcao 12 - Excluir sinistro               |
+| Opcao 13 - Calcular receita               |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
 Digite uma opcao: 
 #################### Menu ###################
 |-------------------------------------------|
@@ -1976,6 +2349,34 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login do Cliente:
 Digite o documento do cliente: Login realizado com sucesso!
+Bem vindo(a) Google!
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Google
+Telefone: 0800 724 8149
+Endereco: Mountain View, California, EUA
+Email: google@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$3816,35
+CNPJ: 06.947.283/0001-60
+Data Fundacao: 04/09/1998
+Quantidade de funcionarios: 50
+Quantidade de frotas: 2
+Quantidade de seguros: 2
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -2133,18 +2534,16 @@ Data Nascimento: 17/09/1998
 | Opcao 10 - Atualizar Frota                |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Dados do cliente:
-Nome: Google
-Telefone: 0800 724 8149
-Endereco: Mountain View, California, EUA
-Email: google@gmail.com
-Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
-Valor mensal total: R$3816,35
-CNPJ: 06.947.283/0001-60
-Data Fundacao: 04/09/1998
-Quantidade de funcionarios: 50
-Quantidade de frotas: 2
-Quantidade de seguros: 2
+Digite uma opcao: Frotas: 
+---------------------------------------------
+ID: 001
+Seguro 001: 12/06/2023 - 12/06/2026
+Quantidade de veiculos: 3
+---------------------------------------------
+ID: 002
+Seguro 002: 12/06/2023 - 12/06/2028
+Quantidade de veiculos: 2
+---------------------------------------------
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -2195,6 +2594,22 @@ Digite uma opcao: Frota de ID 002 atualizada!
 | Opcao 10 - Atualizar Frota                |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja adicionar o condutor: Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Condutor cadastrado com sucesso!
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
 Digite uma opcao: Dados do cliente:
 Nome: Google
 Telefone: 0800 724 8149
@@ -2222,106 +2637,30 @@ Quantidade de seguros: 2
 | Opcao 10 - Atualizar Frota                |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: 
-#################### Menu ###################
-|-------------------------------------------|
-| Opcao 1 - Admin                           |
-| Opcao 2 - Area Seguradora                 |
-| Opcao 3 - Area Cliente - Pessoa Juridica  |
-| Opcao 4 - Area Cliente - Pessoa Fisica    |
-| Opcao 0 - Sair                            |
-|-------------------------------------------|
-Digite uma opcao: Login do Cliente:
-Digite o documento do cliente: Login realizado com sucesso!
-
-######## Area Cliente - Pessoa Fisica #######
-|-------------------------------------------|
-| Opcao 1 - Visualizar dados                |
-| Opcao 2 - Listar Seguros                  |
-| Opcao 3 - Visualizar Seguro               |
-| Opcao 4 - Listar Condutores               |
-| Opcao 5 - Cadastrar Condutor              |
-| Opcao 6 - Excluir Condutor                |
-| Opcao 7 - Listar veiculos                 |
-| Opcao 8 - Cadastrar veiculo               |
-| Opcao 9 - Excluir veiculo                 |
-| Opcao 0 - Voltar                          |
-|-------------------------------------------|
-Digite uma opcao: Insira o ID do seguro que deseja adicionar o condutor: Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Condutor cadastrado com sucesso!
-
-######## Area Cliente - Pessoa Fisica #######
-|-------------------------------------------|
-| Opcao 1 - Visualizar dados                |
-| Opcao 2 - Listar Seguros                  |
-| Opcao 3 - Visualizar Seguro               |
-| Opcao 4 - Listar Condutores               |
-| Opcao 5 - Cadastrar Condutor              |
-| Opcao 6 - Excluir Condutor                |
-| Opcao 7 - Listar veiculos                 |
-| Opcao 8 - Cadastrar veiculo               |
-| Opcao 9 - Excluir veiculo                 |
-| Opcao 0 - Voltar                          |
-|-------------------------------------------|
-Digite uma opcao: Condutores Seguro 4:
+Digite uma opcao: Seguros:
 ---------------------------------------------
-CPF: 453.455.012-03
-Nome: Tom Jobim
-Telefone: (11) 91234-1234
-Endereco: Rua da Bossa Nova, 420
-Email: tomjobim@gmail.com
-Data Nascimento: 25/01/1927
----------------------------------------------
-CPF: 454.565.219-03
-Nome: John Piper
-Telefone: (11) 91212-2121
-Endereco: Rua do Condutor Piper, 901
-Email: piper@gmail.com
-Data Nascimento: 11/01/1946
----------------------------------------------
-
-######## Area Cliente - Pessoa Fisica #######
-|-------------------------------------------|
-| Opcao 1 - Visualizar dados                |
-| Opcao 2 - Listar Seguros                  |
-| Opcao 3 - Visualizar Seguro               |
-| Opcao 4 - Listar Condutores               |
-| Opcao 5 - Cadastrar Condutor              |
-| Opcao 6 - Excluir Condutor                |
-| Opcao 7 - Listar veiculos                 |
-| Opcao 8 - Cadastrar veiculo               |
-| Opcao 9 - Excluir veiculo                 |
-| Opcao 0 - Voltar                          |
-|-------------------------------------------|
-Digite uma opcao: Insira o ID do seguro que deseja visualizar: ---------------------------------------------
-ID: 004
-Data Inicio: 13/06/2023
-Data Fim: 13/06/2025
+ID: 001
+Data Inicio: 12/06/2023
+Data Fim: 12/06/2026
 Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
-Valor Mensal: R$150,00
+Valor Mensal: R$1869,23
 Quantidade de sinistros: 0
 Quantidade de condutores: 2
-Veiculo: Serie 3 - DAC-1234
-Cliente: Pedro (CPF: 101.255.787-17)
-Sinistros: 
-    * Sem sinistros cadastrados.
-Condutores: 
+Frota 001: 3 veiculo(s)
+Cliente: Google (CNPJ: 06.947.283/0001-60)
 ---------------------------------------------
-CPF: 453.455.012-03
-Nome: Tom Jobim
-Telefone: (11) 91234-1234
-Endereco: Rua da Bossa Nova, 420
-Email: tomjobim@gmail.com
-Data Nascimento: 25/01/1927
----------------------------------------------
-CPF: 454.565.219-03
-Nome: John Piper
-Telefone: (11) 91212-2121
-Endereco: Rua do Condutor Piper, 901
-Email: piper@gmail.com
-Data Nascimento: 11/01/1946
+ID: 002
+Data Inicio: 12/06/2023
+Data Fim: 12/06/2028
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$1869,23
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Frota 002: 3 veiculo(s)
+Cliente: Google (CNPJ: 06.947.283/0001-60)
 ---------------------------------------------
 
-######## Area Cliente - Pessoa Fisica #######
+####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
 | Opcao 1 - Visualizar dados                |
 | Opcao 2 - Listar Seguros                  |
@@ -2329,9 +2668,154 @@ Data Nascimento: 11/01/1946
 | Opcao 4 - Listar Condutores               |
 | Opcao 5 - Cadastrar Condutor              |
 | Opcao 6 - Excluir Condutor                |
-| Opcao 7 - Listar veiculos                 |
-| Opcao 8 - Cadastrar veiculo               |
-| Opcao 9 - Excluir veiculo                 |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja visualizar: ---------------------------------------------
+ID: 001
+Data Inicio: 12/06/2023
+Data Fim: 12/06/2026
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$1869,23
+Quantidade de sinistros: 0
+Quantidade de condutores: 2
+Frota 001: 3 veiculo(s)
+Cliente: Google (CNPJ: 06.947.283/0001-60)
+Sinistros: 
+    * Sem sinistros cadastrados.
+Condutores: 
+---------------------------------------------
+CPF: 752.792.913-82
+Nome: Andrezinho
+Telefone: (19) 98787-7878
+Endereco: Rua do Condutor Andrezinho, 356
+Email: andrezinho@gmail.com
+Data Nascimento: 17/09/1998
+---------------------------------------------
+CPF: 484.258.684-24
+Nome: Mariazinha
+Telefone: (11) 98888-8888
+Endereco: Rua da Condutora Mariazinha, 456
+Email: mariazinha@gmail.com
+Data Nascimento: 02/11/2002
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja visualizar: ---------------------------------------------
+ID: 002
+Data Inicio: 12/06/2023
+Data Fim: 12/06/2028
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$1869,23
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Frota 002: 3 veiculo(s)
+Cliente: Google (CNPJ: 06.947.283/0001-60)
+Sinistros: 
+    * Sem sinistros cadastrados.
+Condutores: 
+---------------------------------------------
+CPF: 752.792.913-82
+Nome: Andrezinho
+Telefone: (19) 98787-7878
+Endereco: Rua do Condutor Andrezinho, 356
+Email: andrezinho@gmail.com
+Data Nascimento: 17/09/1998
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Condutores Seguro 1:
+---------------------------------------------
+CPF: 752.792.913-82
+Nome: Andrezinho
+Telefone: (19) 98787-7878
+Endereco: Rua do Condutor Andrezinho, 356
+Email: andrezinho@gmail.com
+Data Nascimento: 17/09/1998
+---------------------------------------------
+CPF: 484.258.684-24
+Nome: Mariazinha
+Telefone: (11) 98888-8888
+Endereco: Rua da Condutora Mariazinha, 456
+Email: mariazinha@gmail.com
+Data Nascimento: 02/11/2002
+---------------------------------------------
+Condutores Seguro 2:
+---------------------------------------------
+CPF: 752.792.913-82
+Nome: Andrezinho
+Telefone: (19) 98787-7878
+Endereco: Rua do Condutor Andrezinho, 356
+Email: andrezinho@gmail.com
+Data Nascimento: 17/09/1998
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Frotas: 
+---------------------------------------------
+ID: 001
+Seguro 001: 12/06/2023 - 12/06/2026
+Quantidade de veiculos: 3
+---------------------------------------------
+ID: 002
+Seguro 002: 12/06/2023 - 12/06/2028
+Quantidade de veiculos: 3
+---------------------------------------------
+
+####### Area Cliente - Pessoa Juridica ######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar Frotas                   |
+| Opcao 8 - Visualizar Frota                |
+| Opcao 9 - Cadastrar Frota                 |
+| Opcao 10 - Atualizar Frota                |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
 Digite uma opcao: 
@@ -2345,79 +2829,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login do Cliente:
 Digite o documento do cliente: Login realizado com sucesso!
-
-######## Area Cliente - Pessoa Fisica #######
-|-------------------------------------------|
-| Opcao 1 - Visualizar dados                |
-| Opcao 2 - Listar Seguros                  |
-| Opcao 3 - Visualizar Seguro               |
-| Opcao 4 - Listar Condutores               |
-| Opcao 5 - Cadastrar Condutor              |
-| Opcao 6 - Excluir Condutor                |
-| Opcao 7 - Listar veiculos                 |
-| Opcao 8 - Cadastrar veiculo               |
-| Opcao 9 - Excluir veiculo                 |
-| Opcao 0 - Voltar                          |
-|-------------------------------------------|
-Digite uma opcao: Insira o ID do seguro que deseja excluir o condutor: Insira o CPF do condutor: Condutor excluido com sucesso!
-
-######## Area Cliente - Pessoa Fisica #######
-|-------------------------------------------|
-| Opcao 1 - Visualizar dados                |
-| Opcao 2 - Listar Seguros                  |
-| Opcao 3 - Visualizar Seguro               |
-| Opcao 4 - Listar Condutores               |
-| Opcao 5 - Cadastrar Condutor              |
-| Opcao 6 - Excluir Condutor                |
-| Opcao 7 - Listar veiculos                 |
-| Opcao 8 - Cadastrar veiculo               |
-| Opcao 9 - Excluir veiculo                 |
-| Opcao 0 - Voltar                          |
-|-------------------------------------------|
-Digite uma opcao: Condutores Seguro 4:
----------------------------------------------
-CPF: 454.565.219-03
-Nome: John Piper
-Telefone: (11) 91212-2121
-Endereco: Rua do Condutor Piper, 901
-Email: piper@gmail.com
-Data Nascimento: 11/01/1946
----------------------------------------------
-
-######## Area Cliente - Pessoa Fisica #######
-|-------------------------------------------|
-| Opcao 1 - Visualizar dados                |
-| Opcao 2 - Listar Seguros                  |
-| Opcao 3 - Visualizar Seguro               |
-| Opcao 4 - Listar Condutores               |
-| Opcao 5 - Cadastrar Condutor              |
-| Opcao 6 - Excluir Condutor                |
-| Opcao 7 - Listar veiculos                 |
-| Opcao 8 - Cadastrar veiculo               |
-| Opcao 9 - Excluir veiculo                 |
-| Opcao 0 - Voltar                          |
-|-------------------------------------------|
-Digite uma opcao: Insira o ID do seguro que deseja visualizar: ---------------------------------------------
-ID: 004
-Data Inicio: 13/06/2023
-Data Fim: 13/06/2025
-Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
-Valor Mensal: R$150,00
-Quantidade de sinistros: 0
-Quantidade de condutores: 1
-Veiculo: Serie 3 - DAC-1234
-Cliente: Pedro (CPF: 101.255.787-17)
-Sinistros: 
-    * Sem sinistros cadastrados.
-Condutores: 
----------------------------------------------
-CPF: 454.565.219-03
-Nome: John Piper
-Telefone: (11) 91212-2121
-Endereco: Rua do Condutor Piper, 901
-Email: piper@gmail.com
-Data Nascimento: 11/01/1946
----------------------------------------------
+Bem vindo(a) Pedro!
 
 ######## Area Cliente - Pessoa Fisica #######
 |-------------------------------------------|
@@ -2485,6 +2897,64 @@ Cliente: Pedro (CPF: 101.255.787-17)
 | Opcao 9 - Excluir veiculo                 |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja visualizar: ---------------------------------------------
+ID: 004
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2025
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$150,00
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Veiculo: Serie 3 - DAC-1234
+Cliente: Pedro (CPF: 101.255.787-17)
+Sinistros: 
+    * Sem sinistros cadastrados.
+Condutores: 
+---------------------------------------------
+CPF: 453.455.012-03
+Nome: Tom Jobim
+Telefone: (11) 91234-1234
+Endereco: Rua da Bossa Nova, 420
+Email: tomjobim@gmail.com
+Data Nascimento: 25/01/1927
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Condutores Seguro 4:
+---------------------------------------------
+CPF: 453.455.012-03
+Nome: Tom Jobim
+Telefone: (11) 91234-1234
+Endereco: Rua da Bossa Nova, 420
+Email: tomjobim@gmail.com
+Data Nascimento: 25/01/1927
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
 Digite uma opcao: Veiculos:
 ---------------------------------------------
 Placa: DAC-1234
@@ -2497,13 +2967,400 @@ Placa: DAC-4321
 Marca: BMW
 Modelo: Serie 5
 Ano de Fabricacao: 2022
-Seguro: Nao possui.
+Seguro: Nao possui
 ---------------------------------------------
 Placa: CAD-1234
 Marca: Ferrari
 Modelo: Roma
 Ano de Fabricacao: 2021
-Seguro: Nao possui.
+Seguro: Nao possui
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Digite a placa: Digite a marca: Digite o modelo: Digite o ano de fabricacao: Veiculo cadastrado!
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja adicionar o condutor: Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Condutor cadastrado com sucesso!
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Pedro
+Telefone: (11) 99999-9999
+Endereco: Rua Pitagoras, Barao Geraldo
+Email: pedro@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$145,83
+CPF: 101.255.787-17
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 25/01/2003
+Quantidade de veiculos: 4
+Quantidade de seguros: 1
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Seguros:
+---------------------------------------------
+ID: 004
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2025
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$145,83
+Quantidade de sinistros: 0
+Quantidade de condutores: 2
+Veiculo: Serie 3 - DAC-1234
+Cliente: Pedro (CPF: 101.255.787-17)
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja visualizar: ---------------------------------------------
+ID: 004
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2025
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$145,83
+Quantidade de sinistros: 0
+Quantidade de condutores: 2
+Veiculo: Serie 3 - DAC-1234
+Cliente: Pedro (CPF: 101.255.787-17)
+Sinistros: 
+    * Sem sinistros cadastrados.
+Condutores: 
+---------------------------------------------
+CPF: 453.455.012-03
+Nome: Tom Jobim
+Telefone: (11) 91234-1234
+Endereco: Rua da Bossa Nova, 420
+Email: tomjobim@gmail.com
+Data Nascimento: 25/01/1927
+---------------------------------------------
+CPF: 454.565.219-03
+Nome: John Piper
+Telefone: (11) 91212-2121
+Endereco: Rua do Condutor Piper, 901
+Email: piper@gmail.com
+Data Nascimento: 11/01/1946
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Condutores Seguro 4:
+---------------------------------------------
+CPF: 453.455.012-03
+Nome: Tom Jobim
+Telefone: (11) 91234-1234
+Endereco: Rua da Bossa Nova, 420
+Email: tomjobim@gmail.com
+Data Nascimento: 25/01/1927
+---------------------------------------------
+CPF: 454.565.219-03
+Nome: John Piper
+Telefone: (11) 91212-2121
+Endereco: Rua do Condutor Piper, 901
+Email: piper@gmail.com
+Data Nascimento: 11/01/1946
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Veiculos:
+---------------------------------------------
+Placa: DAC-1234
+Marca: BMW
+Modelo: Serie 3
+Ano de Fabricacao: 2023
+Seguro 004: 13/06/2023 - 13/06/2025
+---------------------------------------------
+Placa: DAC-4321
+Marca: BMW
+Modelo: Serie 5
+Ano de Fabricacao: 2022
+Seguro: Nao possui
+---------------------------------------------
+Placa: CAD-1234
+Marca: Ferrari
+Modelo: Roma
+Ano de Fabricacao: 2021
+Seguro: Nao possui
+---------------------------------------------
+Placa: CAD-4321
+Marca: Ferrari
+Modelo: SF90
+Ano de Fabricacao: 2022
+Seguro: Nao possui
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: 
+#################### Menu ###################
+|-------------------------------------------|
+| Opcao 1 - Admin                           |
+| Opcao 2 - Area Seguradora                 |
+| Opcao 3 - Area Cliente - Pessoa Juridica  |
+| Opcao 4 - Area Cliente - Pessoa Fisica    |
+| Opcao 0 - Sair                            |
+|-------------------------------------------|
+Digite uma opcao: Login do Cliente:
+Digite o documento do cliente: Login realizado com sucesso!
+Bem vindo(a) Pedro!
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja excluir o condutor: Insira o CPF do condutor: Condutor excluido com sucesso!
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Condutores Seguro 4:
+---------------------------------------------
+CPF: 454.565.219-03
+Nome: John Piper
+Telefone: (11) 91212-2121
+Endereco: Rua do Condutor Piper, 901
+Email: piper@gmail.com
+Data Nascimento: 11/01/1946
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Insira o ID do seguro que deseja visualizar: ---------------------------------------------
+ID: 004
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2025
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$145,83
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Veiculo: Serie 3 - DAC-1234
+Cliente: Pedro (CPF: 101.255.787-17)
+Sinistros: 
+    * Sem sinistros cadastrados.
+Condutores: 
+---------------------------------------------
+CPF: 454.565.219-03
+Nome: John Piper
+Telefone: (11) 91212-2121
+Endereco: Rua do Condutor Piper, 901
+Email: piper@gmail.com
+Data Nascimento: 11/01/1946
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Dados do cliente:
+Nome: Pedro
+Telefone: (11) 99999-9999
+Endereco: Rua Pitagoras, Barao Geraldo
+Email: pedro@gmail.com
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor mensal total: R$145,83
+CPF: 101.255.787-17
+Genero: Masculino
+Educacao: Ensino Superior
+Data Nascimento: 25/01/2003
+Quantidade de veiculos: 4
+Quantidade de seguros: 1
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Seguros:
+---------------------------------------------
+ID: 004
+Data Inicio: 13/06/2023
+Data Fim: 13/06/2025
+Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
+Valor Mensal: R$145,83
+Quantidade de sinistros: 0
+Quantidade de condutores: 1
+Veiculo: Serie 3 - DAC-1234
+Cliente: Pedro (CPF: 101.255.787-17)
+---------------------------------------------
+
+######## Area Cliente - Pessoa Fisica #######
+|-------------------------------------------|
+| Opcao 1 - Visualizar dados                |
+| Opcao 2 - Listar Seguros                  |
+| Opcao 3 - Visualizar Seguro               |
+| Opcao 4 - Listar Condutores               |
+| Opcao 5 - Cadastrar Condutor              |
+| Opcao 6 - Excluir Condutor                |
+| Opcao 7 - Listar veiculos                 |
+| Opcao 8 - Cadastrar veiculo               |
+| Opcao 9 - Excluir veiculo                 |
+| Opcao 0 - Voltar                          |
+|-------------------------------------------|
+Digite uma opcao: Veiculos:
+---------------------------------------------
+Placa: DAC-1234
+Marca: BMW
+Modelo: Serie 3
+Ano de Fabricacao: 2023
+Seguro 004: 13/06/2023 - 13/06/2025
+---------------------------------------------
+Placa: DAC-4321
+Marca: BMW
+Modelo: Serie 5
+Ano de Fabricacao: 2022
+Seguro: Nao possui
+---------------------------------------------
+Placa: CAD-1234
+Marca: Ferrari
+Modelo: Roma
+Ano de Fabricacao: 2021
+Seguro: Nao possui
+---------------------------------------------
+Placa: CAD-4321
+Marca: Ferrari
+Modelo: SF90
+Ano de Fabricacao: 2022
+Seguro: Nao possui
 ---------------------------------------------
 
 ######## Area Cliente - Pessoa Fisica #######
@@ -2545,7 +3402,7 @@ CPF: 101.255.787-17
 Genero: Masculino
 Educacao: Ensino Superior
 Data Nascimento: 25/01/2003
-Quantidade de veiculos: 2
+Quantidade de veiculos: 3
 Quantidade de seguros: 0
 
 ######## Area Cliente - Pessoa Fisica #######
@@ -2583,13 +3440,19 @@ Placa: DAC-4321
 Marca: BMW
 Modelo: Serie 5
 Ano de Fabricacao: 2022
-Seguro: Nao possui.
+Seguro: Nao possui
 ---------------------------------------------
 Placa: CAD-1234
 Marca: Ferrari
 Modelo: Roma
 Ano de Fabricacao: 2021
-Seguro: Nao possui.
+Seguro: Nao possui
+---------------------------------------------
+Placa: CAD-4321
+Marca: Ferrari
+Modelo: SF90
+Ano de Fabricacao: 2022
+Seguro: Nao possui
 ---------------------------------------------
 
 ######## Area Cliente - Pessoa Fisica #######
@@ -2616,6 +3479,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login do Cliente:
 Digite o documento do cliente: Login realizado com sucesso!
+Bem vindo(a) Google!
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -2638,7 +3502,7 @@ Data Fim: 12/06/2026
 Seguradora: Pedro Seguros (CNPJ: 61.198.164/0001-60)
 Valor Mensal: R$1869,23
 Quantidade de sinistros: 0
-Quantidade de condutores: 1
+Quantidade de condutores: 2
 Frota 001: 3 veiculo(s)
 Cliente: Google (CNPJ: 06.947.283/0001-60)
 Sinistros: 
@@ -2651,6 +3515,13 @@ Telefone: (19) 98787-7878
 Endereco: Rua do Condutor Andrezinho, 356
 Email: andrezinho@gmail.com
 Data Nascimento: 17/09/1998
+---------------------------------------------
+CPF: 484.258.684-24
+Nome: Mariazinha
+Telefone: (11) 98888-8888
+Endereco: Rua da Condutora Mariazinha, 456
+Email: mariazinha@gmail.com
+Data Nascimento: 02/11/2002
 ---------------------------------------------
 
 ####### Area Cliente - Pessoa Juridica ######
@@ -2676,6 +3547,13 @@ Endereco: Rua do Condutor Andrezinho, 356
 Email: andrezinho@gmail.com
 Data Nascimento: 17/09/1998
 ---------------------------------------------
+CPF: 484.258.684-24
+Nome: Mariazinha
+Telefone: (11) 98888-8888
+Endereco: Rua da Condutora Mariazinha, 456
+Email: mariazinha@gmail.com
+Data Nascimento: 02/11/2002
+---------------------------------------------
 Condutores Seguro 2:
 ---------------------------------------------
 CPF: 752.792.913-82
@@ -2700,7 +3578,7 @@ Data Nascimento: 17/09/1998
 | Opcao 10 - Atualizar Frota                |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o ID do seguro que deseja excluir o condutor: Insira o CPF do condutor: O seguro nao pode ficar sem condutores. Nao foi possivel excluir o condutor.
+Digite uma opcao: Insira o ID do seguro que deseja excluir o condutor: Insira o CPF do condutor: Condutor excluido com sucesso!
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -2782,9 +3660,11 @@ Data Nascimento: 17/09/1998
 Digite uma opcao: Frotas: 
 ---------------------------------------------
 ID: 001
+Seguro 001: 12/06/2023 - 12/06/2026
 Quantidade de veiculos: 3
 ---------------------------------------------
 ID: 002
+Seguro 002: 12/06/2023 - 12/06/2028
 Quantidade de veiculos: 3
 ---------------------------------------------
 
@@ -2804,6 +3684,7 @@ Quantidade de veiculos: 3
 |-------------------------------------------|
 Digite uma opcao: Digite o ID da frota que deseja visualizar: ---------------------------------------------
 ID: 001
+Seguro 001: 12/06/2023 - 12/06/2026
 Quantidade de veiculos: 3
 Veiculos: 
     * Carro 1: Camaro - ABC-1234
@@ -2827,6 +3708,7 @@ Veiculos:
 |-------------------------------------------|
 Digite uma opcao: Digite o ID da frota que deseja visualizar: ---------------------------------------------
 ID: 002
+Seguro 002: 12/06/2023 - 12/06/2028
 Quantidade de veiculos: 3
 Veiculos: 
     * Carro 1: Tucson - MSN-1234
@@ -2941,6 +3823,7 @@ Digite uma opcao: Insira o ID do seguro que deseja visualizar: Seguro nao encont
 Digite uma opcao: Frotas: 
 ---------------------------------------------
 ID: 001
+Seguro 001: 12/06/2023 - 12/06/2026
 Quantidade de veiculos: 3
 ---------------------------------------------
 
@@ -3034,12 +3917,12 @@ Sinistros:
     * Sem sinistros cadastrados.
 Condutores: 
 ---------------------------------------------
-CPF: 752.792.913-82
-Nome: Andrezinho
-Telefone: (19) 98787-7878
-Endereco: Rua do Condutor Andrezinho, 356
-Email: andrezinho@gmail.com
-Data Nascimento: 17/09/1998
+CPF: 484.258.684-24
+Nome: Mariazinha
+Telefone: (11) 98888-8888
+Endereco: Rua da Condutora Mariazinha, 456
+Email: mariazinha@gmail.com
+Data Nascimento: 02/11/2002
 ---------------------------------------------
 
 ####### Area Cliente - Pessoa Juridica ######
@@ -3059,6 +3942,7 @@ Data Nascimento: 17/09/1998
 Digite uma opcao: Frotas: 
 ---------------------------------------------
 ID: 001
+Seguro 001: 12/06/2023 - 12/06/2026
 Quantidade de veiculos: 2
 ---------------------------------------------
 
@@ -3087,6 +3971,7 @@ Digite uma opcao:
 |-------------------------------------------|
 Digite uma opcao: Login da Seguradora:
 Digite o CNPJ da seguradora: Login realizado com sucesso!
+Bem vindo(a) Pedro Seguros!
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -3144,7 +4029,7 @@ CPF: 101.255.787-17
 Genero: Masculino
 Educacao: Ensino Superior
 Data Nascimento: 25/01/2003
-Quantidade de veiculos: 2
+Quantidade de veiculos: 3
 Quantidade de seguros: 0
 ---------------------------------------------
 Nome: Marcelo
@@ -3368,7 +4253,7 @@ CPF: 101.255.787-17
 Genero: Masculino
 Educacao: Ensino Superior
 Data Nascimento: 25/01/2003
-Quantidade de veiculos: 2
+Quantidade de veiculos: 3
 Quantidade de seguros: 0
 ---------------------------------------------
 Nome: Marcelo

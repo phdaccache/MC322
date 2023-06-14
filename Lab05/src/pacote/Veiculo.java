@@ -27,7 +27,7 @@ public class Veiculo {
         joiner.add("Modelo: " + getModelo());
         joiner.add("Ano de Fabricacao: " + getAnoFabricacao());
         if (getSeguro() == null)
-            joiner.add("Seguro: Nao possui.");
+            joiner.add("Seguro: Nao possui");
         else {
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             String dataInicioString = getSeguro().getDataInicio().format(dtf); // Transformando LocalDate em String

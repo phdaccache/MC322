@@ -197,6 +197,8 @@ HB20
 // Voltar
 0
 
+// Visualizar Dados
+1
 // Listar Frotas
 7
 // Visualizar Frota
@@ -244,6 +246,8 @@ Yaris
 // Voltar
 0
 
+// Visualizar Dados
+1
 // Listar Frotas
 7
 // Visualizar Frota
@@ -275,6 +279,8 @@ Toyota
 Etios
 2018
 
+// Visualizar Dados
+1
 // Listar Frotas
 7
 // Visualizar Frota
@@ -318,6 +324,8 @@ Ferrari
 Roma
 2021
 
+// Visualizar Dados
+1
 // Listar Veiculos
 7
 // Voltar
@@ -352,6 +360,8 @@ Tesla
 Model S
 2022
 
+// Visualizar Dados
+1
 // Listar Veiculos
 7
 // Voltar
@@ -386,6 +396,8 @@ Tesla
 Model X
 2020
 
+// Visualizar Dados
+1
 // Listar Veiculos
 7
 // Voltar
@@ -393,7 +405,7 @@ Model X
 
 //////////////// SEGURADORA 1 ////////////////
 
-// Acessar Area Seguradora
+// Acessar Area Seguradora 2
 2
 // Login
 61.198.164/0001-60
@@ -488,6 +500,45 @@ jonas@gmail.com
 // Listar Seguros por Cliente
 6
 06.947.283/0001-60
+// Listar Seguros por Cliente
+6
+101.255.787-17
+// Calcular Receita
+13
+// Voltar
+0
+
+//////////////// SEGURADORA 2 ////////////////
+
+// Acessar Area Seguradora 2
+2
+// Login
+51.990.695/0001-37
+
+// Gerar Seguro 1
+7
+// Opcao Pessoa Fisica
+2
+// Gerando
+381.854.732-77
+TES-1234
+14/06/2023
+14/06/2025
+// Cadastrando condutor obrigatorio
+953.344.933-01
+Joaozinho
+(11) 99999-9999
+Rua do Condutor Joaozinho, 123
+joazinho@gmail.com
+02/11/2002
+
+// Listar Todos os Seguros
+5
+// Listar Seguros por Cliente
+6
+381.854.732-77
+// Calcular Receita
+13
 // Voltar
 0
 
@@ -498,6 +549,8 @@ jonas@gmail.com
 // Login
 06.947.283/0001-60
 
+// Visualizar Dados
+1
 // Listar Seguros
 2
 // Visualizar Seguro
@@ -508,8 +561,8 @@ jonas@gmail.com
 2
 // Listar Condutores
 4
-// Visualizar Dados
-1
+// Listar Frotas
+7
 
 // Atualizar Frota 2
 10
@@ -524,8 +577,30 @@ ix35
 // Voltar
 0
 
+// Cadastrar Condutor
+5
+1
+484.258.684-24
+Mariazinha
+(11) 98888-8888
+Rua da Condutora Mariazinha, 456
+mariazinha@gmail.com
+02/11/2002
+
 // Visualizar Dados
 1
+// Listar Seguros
+2
+// Visualizar Seguro
+3
+1
+// Visualizar Seguro
+3
+2
+// Listar Condutores
+4
+// Listar Frotas
+7
 // Voltar
 0
 
@@ -535,6 +610,25 @@ ix35
 4
 // Login
 101.255.787-17
+
+// Visualizar Dados
+1
+// Listar Seguros
+2
+// Visualizar Seguro
+3
+4
+// Listar Condutores
+4
+// Listar Veiculos
+7
+
+// Cadastrar Veiculo
+8
+CAD-4321
+Ferrari
+SF90
+2022
 
 // Cadastrar Condutor
 5
@@ -546,81 +640,56 @@ Rua do Condutor Piper, 901
 piper@gmail.com
 11/01/1946
 
-// Listar Condutores
-4
+// Visualizar Dados
+1
+// Listar Seguros
+2
 // Visualizar Seguro
 3
 4
+// Listar Condutores
+4
+// Listar Veiculos
+7
 // Voltar
 0
 
 /////////////////////////// TESTES REMOCOES ///////////////////////////
 
-//////////////// REMOCOES CONDUTOR E VEICULO PF1 - PEDRO ////////////////
-
-// Acessar Area Cliente PF1
-4
-// Login
-101.255.787-17
-
-// Excluir Condutor
-6
-4
-453.455.012-03
-// Listar Condutores
-4
-// Visualizar Seguro
-3
-4
-
-// Visualizar Dados
-1
-// Listar Seguros
-2
-// Listar Veiculos
-7
-// Excluir Veiculo
-9
-DAC-1234
-// Visualizar Dados
-1
-// Listar Seguros
-2
-// Listar Veiculos
-7
-// Voltar
-0
-
-//////////////// REMOCOES CONDUTOR E FROTA PJ1 - GOOGLE ////////////////
+//////////////// REMOCOES CONDUTOR, VEICULOS E FROTA PJ1 - GOOGLE ////////////////
 
 // Acessar Area Cliente PJ 1
 3
 // Login
 06.947.283/0001-60
 
+// Visualizar Dados
+1
+// Listar Seguros
+2
 // Visualizar Seguro
 3
 1
+// Visualizar Seguro
+3
+2
 // Listar Condutores
 4
+// Listar Frotas
+7
+// Visualizar Frota
+8
+2
+
+// Excluir Condutor
+6
+1
+484.258.684-24
 // Excluir Condutor
 6
 1
 752.792.913-82
 
-// Visualizar Dados
-1
-// Visualizar Seguro
-3
-2
-// Listar Frotas
-7
-// Visualizar Frota
-8
-1
-// Visualizar Frota
-8
-2
 // Atualizar Frota
 10
 2
@@ -630,32 +699,87 @@ MSN-1234
 MSN-4321
 2
 NSM-1234
+
 // Visualizar Dados
+1
+// Listar Seguros
+2
+// Visualizar Seguro
+3
 1
 // Visualizar Seguro
 3
 2
+// Listar Condutores
+4
 // Listar Frotas
 7
-
-// Atualizar Frota
-10
-1
+// Visualizar Frota
+8
 2
-ABC-4321
 // Voltar
 0
+
+//////////////// REMOCOES CONDUTOR E VEICULO PF1 - PEDRO ////////////////
+
+// Acessar Area Cliente PF1
+4
+// Login
+101.255.787-17
+
 // Visualizar Dados
 1
+// Listar Seguros
+2
 // Visualizar Seguro
 3
-1
-// Listar Frotas
+4
+// Listar Condutores
+4
+// Listar Veiculos
 7
+
+// Excluir Condutor
+6
+4
+453.455.012-03
+
+// Visualizar Dados
+1
+// Listar Seguros
+2
+// Visualizar Seguro
+3
+4
+// Listar Condutores
+4
+// Listar Veiculos
+7
+
+// Excluir Veiculos
+9
+DAC-1234
+9
+CAD-1234
+9
+CAD-4321
+
+// Visualizar Dados
+1
+// Listar Seguros
+2
+// Visualizar Seguro
+3
+4
+// Listar Condutores
+4
+// Listar Veiculos
+7
+
 // Voltar
 0
 
-//////////////// REMOCOES CLIENTE E SEGURO SEGURADORA 1 ////////////////
+//////////////// REMOCOES CLIENTES E SEGUROS SEGURADORA 1 ////////////////
 
 // Acessar Area Seguradora
 2
@@ -689,6 +813,10 @@ ABC-4321
 // Listar Seguros por Cliente
 6
 13.347.016/0001-17
+
+//////////////// EXCLUIR SEGURADORAS ////////////////
+
+
 
 /////////////////////////// ENCERRAR PROGRAMA ///////////////////////////
 
