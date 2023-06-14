@@ -314,7 +314,7 @@ public class Seguradora {
                 int id = scanner.nextInt();
                 scanner.nextLine();
                 if (id > ((ClientePJ)cliente).getListaFrotas().size() || id < 1) {
-                    System.out.printf("Frota de ID %s nao encontrada. Nao foi possivel gerar o seguro.\n", id);
+                    System.out.printf("Frota de ID %03d nao encontrada. Nao foi possivel gerar o seguro.\n", id);
                     return;
                 }
                 frota = ((ClientePJ)cliente).getListaFrotas().get(id - 1);
@@ -373,11 +373,11 @@ public class Seguradora {
                 listaSeguros.remove(seguro);
                 // Cancelar seguro no cliente (tambem remove o seguro do veiculo ou frota)
                 seguro.getCliente().excluirSeguro(seguro);
-                System.out.printf("Seguro de ID %d cancelado!\n", id);
+                System.out.printf("Seguro de ID %03d cancelado!\n", id);
                 return;
             }
         }
-        System.out.printf("Documento %s ou ID %d invalido. Nao foi possivel cancelar o seguro.", documento, id);
+        System.out.printf("Documento %s ou ID %03d invalido. Nao foi possivel cancelar o seguro.", documento, id);
     }
 
     // Cancelar seguro com scanner

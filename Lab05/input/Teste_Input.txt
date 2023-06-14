@@ -699,6 +699,8 @@ MSN-1234
 MSN-4321
 2
 NSM-1234
+// Voltar
+0
 
 // Visualizar Dados
 1
@@ -786,6 +788,8 @@ CAD-4321
 // Login
 61.198.164/0001-60
 
+// Visualizar Dados
+1
 // Listar Clientes
 2
 // Listar Todos os Seguros
@@ -796,13 +800,31 @@ CAD-4321
 // Listar Seguros por Cliente
 6
 13.347.016/0001-17
+// Listar Seguros por Cliente
+6
+522.444.883-22
+// Calcular Receita
+13
+
 // Excluir Cliente PJ1 - Google
 4
 06.947.283/0001-60
+// Excluir Cliente PF1 - Pedro
+4
+101.255.787-17
+
 // Cancelar Seguro PJ2 - Facebook
 8
 13.347.016/0001-17
 3
+
+// Cancelar Seguro PF2 - Marcelo
+8
+522.444.883-22
+5
+
+// Visualizar Dados
+1
 // Listar Clientes
 2
 // Listar Todos os Seguros
@@ -813,6 +835,13 @@ CAD-4321
 // Listar Seguros por Cliente
 6
 13.347.016/0001-17
+// Listar Seguros por Cliente
+6
+522.444.883-22
+// Calcular Receita
+13
+// Voltar
+0
 
 //////////////// EXCLUIR SEGURADORAS ////////////////
 

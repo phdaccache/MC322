@@ -178,13 +178,10 @@ public class ClientePJ extends Cliente {
                     frota.excluirVeiculo(scanner);
                     if (frota.getListaVeiculos().isEmpty()) {
                         removerFrota(frota);
-                        op = 0;
-                        break;
                     }
                     break;
                 case 3:
                     removerFrota(frota);
-                    op = 0;
                     break;
                 case 0:
                     break;
