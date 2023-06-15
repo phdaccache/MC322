@@ -384,16 +384,15 @@ public class Seguradora {
 
     // Cancelar seguro automatico
     public void cancelarSeguro(String documento, int id) {
-        // Procurar seguro na lista de seguros
-        for (Seguro seguro : listaSeguros) {
-            if (seguro.getCliente().getDocumento()[1].equals(documento) && seguro.getId() == id) {
-                // Cancelar seguro na seguradora
-                listaSeguros.remove(seguro);
-                // Cancelar seguro no cliente (tambem remove o seguro do veiculo ou frota. metodo sobrescrito em PF e PJ)
-                seguro.getCliente().excluirSeguro(seguro);
-                System.out.printf("Seguro de ID %03d cancelado!\n", id);
-                return;
-            }
+        Seguro seguro = getSeguro(id);
+
+        if (seguro.getCliente().getDocumento()[1].equals(documento)) {
+            // Cancelar seguro na seguradora
+            listaSeguros.remove(seguro);
+            // Cancelar seguro no cliente (tambem remove o seguro do veiculo ou frota. metodo sobrescrito em PF e PJ)
+            seguro.getCliente().excluirSeguro(seguro);
+            System.out.printf("Seguro de ID %03d cancelado!\n", id);
+            return;
         }
         System.out.printf("Documento %s ou ID %03d invalido. Nao foi possivel cancelar o seguro.", documento, id);
     }
@@ -410,27 +409,50 @@ public class Seguradora {
 
     // Listar todos os sinistros
     public void listarSinistros() {
-        return;
+        for (Cliente cliente: listaClientes) {
+            listarSinistrosPorCliente(cliente.getDocumento()[1]);
+        }
     }
 
     // Listar sinistros por cliente automatico
-    public void listarSinistros(String documento) {
-        return;
+    public void listarSinistrosPorCliente(String documento) {
+        Cliente cliente = getCliente(documento);
+
+        // Caso em que o cliente nao existe
+        if (cliente == null) {
+            System.out.printf("Documento invalido. Nao foi possivel listar os seguros do cliente de documento %s.\n",
+                            documento);
+            return;
+        }
+
+        ArrayList<Sinistro> sinistrosCliente = getSinistrosPorCliente(documento);
+    
+        System.out.printf("Sinistros Cliente %s:\n", cliente.getNome());
+        // Caso em que nao ha sinistros gerados
+        if (sinistrosCliente == null || sinistrosCliente.isEmpty()) {
+            System.out.println("---------------------------------------------");
+            System.out.println("Nao ha sinistros gerados.");
+        }
+
+        // Iterando sobre os sinistros do cliente
+        for (Sinistro sinistro : sinistrosCliente) {
+            System.out.println("---------------------------------------------");
+            System.out.println(sinistro);
+        }
+        System.out.println("---------------------------------------------");
+        System.out.println("");  
     }
 
     // Listar sinistros por cliente com scanner
     public void listarSinistrosPorCliente(Scanner scanner) {
-        return;
+        System.out.print("Insira o documento do cliente que deseja listar os sinistros: ");
+        String documento = scanner.nextLine();
+        listarSinistrosPorCliente(documento);
     }
 
     // Gerar novo sinistro automatico
     public void gerarSinistro(String data, String endereco, String cpfCondutor, int id) {
-        // Procurar seguro na lista de seguros
-        for (Seguro seguro : listaSeguros) {
-            if (seguro.getId() == id) {
-                seguro.gerarSinistro(data, endereco, cpfCondutor);
-            }
-        }
+        getSeguro(id).gerarSinistro(data, endereco, cpfCondutor);
 
         System.out.printf("Nao foi possivel encontrar o seguro de ID %03d.\n", id);
     }
@@ -446,6 +468,8 @@ public class Seguradora {
         System.out.print("Insira o ID do seguro: ");
         int id = scanner.nextInt();
         scanner.nextLine();
+
+        gerarSinistro(data, endereco, cpf, id);
     }
 
     // Excluir sinistro automatico
@@ -503,14 +527,15 @@ public class Seguradora {
     // Retorna todos os sinistros de um cliente
     public ArrayList<Sinistro> getSinistrosPorCliente(String documento) {
         ArrayList<Sinistro> sinistros = new ArrayList<>();
-        // Iterando sobre todos os clientes
-        for (Cliente cliente : listaClientes) {
-            if (cliente.getDocumento()[1].equals(documento)) {
-                // Iterando sobre todos os seguros do cliente
-                for (Seguro seguro : cliente.getListaSeguros()) {
-                    sinistros.addAll(seguro.getListaSinistros());
-                }
-            }
+        Cliente cliente = getCliente(documento);
+
+        // Caso em que o cliente nao existe
+        if (cliente == null) {
+            return null;
+        }
+        // Iterando sobre todos os seguros do cliente
+        for (Seguro seguro : cliente.getListaSeguros()) {
+            sinistros.addAll(seguro.getListaSinistros());
         }
         return sinistros;
     }
@@ -520,6 +545,16 @@ public class Seguradora {
         for (Cliente cliente : listaClientes) {
             if (cliente.getDocumento()[1].equals(documento)) {
                 return cliente;
+            }
+        }
+        return null;
+    }
+
+    // Retorna o seguro atraves do id
+    public Seguro getSeguro(int id) {
+        for (Seguro seguro : listaSeguros) {
+            if (seguro.getId() == id) {
+                return seguro;
             }
         }
         return null;
