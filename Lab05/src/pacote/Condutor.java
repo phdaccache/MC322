@@ -44,6 +44,11 @@ public class Condutor {
         listaSinistros.add(sinistro);
     }
 
+    // Remover sinistro
+    public void removerSinistro(Sinistro sinistro) {
+        listaSinistros.remove(sinistro);
+    }
+
     // Getters e Setters
     public String getCPF() {
         return this.CPF;

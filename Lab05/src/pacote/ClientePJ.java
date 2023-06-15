@@ -111,7 +111,7 @@ public class ClientePJ extends Cliente {
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
-        System.out.println("Frota cadastrada!");
+        System.out.printf("Frota cadastrada! ID: %03d\n", frota.getId());
     }
 
     // Cadastrar frota com scanner

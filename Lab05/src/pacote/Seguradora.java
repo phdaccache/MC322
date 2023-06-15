@@ -270,7 +270,7 @@ public class Seguradora {
         frota.setSeguro(seguro); // Adicionar seguro na frota do cliente
         cliente.setValorMensalTotal(cliente.calcularValorMensalTotal()); // Atualizar valor mensal total do cliente
 
-        System.out.println("Seguro gerado com sucesso!");
+        System.out.printf("Seguro gerado com sucesso! ID: %03d\n", seguro.getId());
     }
 
     // Gerar novo seguro PF automatico
@@ -297,7 +297,7 @@ public class Seguradora {
         veiculo.setSeguro(seguro); // Adicionar seguro no veiculo do cliente
         cliente.setValorMensalTotal(cliente.calcularValorMensalTotal()); // Atualizar valor mensal total do cliente
 
-        System.out.println("Seguro gerado com sucesso!");
+        System.out.printf("Seguro gerado com sucesso! ID: %03d\n", seguro.getId());
     }
 
     // Gerar novo seguro com scanner

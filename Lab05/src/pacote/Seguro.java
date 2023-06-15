@@ -3,7 +3,6 @@ package pacote;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.StringJoiner;
 
 public abstract class Seguro {
@@ -58,19 +57,22 @@ public abstract class Seguro {
         listaCondutores.remove(condutor);
     }
 
-    // Listar todos os sinistros
-    public void listarSinistros() {
-        return;
-    }
-
     // Gerar novo sinistro automatico
     public void gerarSinistro(String data, String endereco, String cpfCondutor) {
-        return;
-    }
+        Condutor condutor = getCondutor(cpfCondutor);
 
-    // Gerar novo sinistro com scanner
-    public void gerarSinistro(Scanner scanner) {
-        return;
+        // Checando se o condutor existe
+        if (condutor == null) {
+            System.out.println("Condutor não encontrado!");
+            return;
+        }
+
+        Sinistro sinistro = new Sinistro(data, endereco, condutor, this);
+
+        listaSinistros.add(sinistro);
+        condutor.adicionarSinistro(sinistro);
+
+        System.out.printf("Sinistro gerado com sucesso! ID: %03d\n", sinistro.getId());
     }
 
     // Excluir sinistro automatico
@@ -78,9 +80,13 @@ public abstract class Seguro {
         return;
     }
 
-    // Excluir sinistro com scanner
-    public void excluirSinistro(Scanner scanner) {
-        return;
+    public Condutor getCondutor(String cpf) {
+        for (Condutor condutor : listaCondutores) {
+            if (condutor.getCPF().equals(cpf)) {
+                return condutor;
+            }
+        }
+        return null;
     }
 
     // Calcular valor mensal
