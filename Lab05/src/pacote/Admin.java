@@ -25,6 +25,12 @@ public class Admin {
 
     // Cadastrar nova seguradora automatico
     public static void cadastrarSeguradora(Seguradora seguradora) {
+        // Checando se foi passado uma seguradora
+        if (seguradora == null) {
+            System.out.println("Nao foi possivel cadastrar a seguradora.");
+            return;
+        }
+        
         // Caso em que o CNPJ e invalido
         if (!Validacao.validarDocumento(seguradora.getCNPJ(), "CNPJ")) {
             System.out.println("CNPJ invalido. Nao foi possivel cadastrar a seguradora.");
@@ -64,32 +70,37 @@ public class Admin {
 
     // Excluir seguradora automatico
     public static void excluirSeguradora(Seguradora seguradora) {
-        String nome = seguradora.getNome();
-        String cnpj = seguradora.getCNPJ();
-        // Checar se a seguradora existe antes de excluir
-        if (listaSeguradoras.contains(seguradora)) {
-            listaSeguradoras.remove(seguradora);
-            System.out.printf("Seguradora '%s' de CNPJ %s removida!\n", nome, cnpj);
+        // Checando se foi passado uma seguradora
+        if (seguradora == null) {
+            System.out.println("Nao foi possivel remover a seguradora.");
             return;
         }
 
-        System.out.printf("CNPJ invalido. Nao foi possivel remover a seguradora '%s' de CNPJ %s.\n", nome, cnpj);
+        String nome = seguradora.getNome();
+        String cnpj = seguradora.getCNPJ();
+
+        // Checar se a seguradora existe antes de excluir
+        if (!listaSeguradoras.contains(seguradora)) {
+            System.out.printf("Nao existe a seguradora '%s' de CNPJ %s. Nao foi possivel remover a seguradora.\n", nome, cnpj);
+            return;
+        }
+
+        listaSeguradoras.remove(seguradora);
+        System.out.printf("Seguradora '%s' de CNPJ %s removida!\n", nome, cnpj);
     }
 
     // Excluir seguradora com scanner
     public static void excluirSeguradora(Scanner scanner) {
+        Seguradora seguradora = null;
         System.out.print("Insira o CNPJ da seguradora que deseja excluir: ");
         String cnpj = scanner.nextLine();
 
-        for (Seguradora seguradora : listaSeguradoras) {
-            if (seguradora.getCNPJ().equals(cnpj)) {
-                String nome = seguradora.getNome();
-                listaSeguradoras.remove(seguradora);
-                System.out.printf("Seguradora '%s' de CNPJ %s removida!\n", nome, cnpj);
-                return;
+        for (Seguradora seg : listaSeguradoras) {
+            if (seg.getCNPJ().equals(cnpj)) {
+                seguradora = seg;
             }
         }
 
-        System.out.printf("CNPJ invalido. Nao foi possivel remover a seguradora de CNPJ %s.\n", cnpj);
+        excluirSeguradora(seguradora);
     }
 }

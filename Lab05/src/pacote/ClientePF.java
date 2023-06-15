@@ -66,13 +66,28 @@ public class ClientePF extends Cliente{
 
     // Cadastrar novo veiculo automatico
     public void cadastrarVeiculo(Veiculo veiculo) {
+        // Checando se foi passado um veiculo
+        if (veiculo == null) {
+            System.out.println("Nao foi possivel cadastrar o veiculo.");
+            return;
+        }
+
         // Caso em que a placa passada e invalida
         if (!Validacao.validarPlaca(veiculo.getPlaca())) {
             System.out.println("Placa invalida. Nao foi possivel cadastrar o veiculo.");
             return;
         }
 
+        // Caso em que o veiculo ja esta cadastrado
+        for (Veiculo veiculoCadastrado : listaVeiculos) {
+            if (veiculoCadastrado.getPlaca().equals(veiculo.getPlaca())) {
+                System.out.println("Veiculo ja cadastrado.");
+                return;
+            }
+        }
+
         listaVeiculos.add(veiculo); // Veiculo adicionado
+
         // Atualizar valor dos seguros
         for (int i = 0; i < getListaSeguros().size(); i++) {
             getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
@@ -100,7 +115,19 @@ public class ClientePF extends Cliente{
 
     // Excluir veiculo automatico
     public void excluirVeiculo(Veiculo veiculo) {
+        // Checando se foi passado um veiculo
+        if (veiculo == null) {
+            System.out.println("Nao foi possivel excluir o veiculo.");
+            return;
+        }
+
         String placa = veiculo.getPlaca();
+
+        // Checando se o veiculo esta cadastrado
+        if (!listaVeiculos.contains(veiculo)) {
+            System.out.printf("Veiculo invalido. Nao foi possivel remover o veiculo de placa %s.\n", placa);
+            return;
+        }
 
         // Excluir seguro associado ao veiculo no cliente
         for (Seguro seguro : getListaSeguros()) {
@@ -118,6 +145,7 @@ public class ClientePF extends Cliente{
         }
         // Excluir veiculo no cliente
         listaVeiculos.remove(veiculo);
+
         // Atualizar valor dos seguros
         for (int i = 0; i < getListaSeguros().size(); i++) {
             getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
@@ -129,22 +157,25 @@ public class ClientePF extends Cliente{
 
     // Excluir veiculo com scanner
     public void excluirVeiculo(Scanner scanner) {
+        Veiculo veiculo = null;
+
         System.out.print("Insira a placa do veiculo que deseja excluir: ");
         String placa = scanner.nextLine();
 
-        for (Veiculo veiculo: listaVeiculos) {
-            if (veiculo.getPlaca().equals(placa)) {
-                excluirVeiculo(veiculo);
-                return;
+        for (Veiculo veic: listaVeiculos) {
+            if (veic.getPlaca().equals(placa)) {
+                veiculo = veic;
             }
         }
 
-        System.out.printf("Veiculo invalido. Nao foi possivel remover o veiculo de placa %s.\n", placa);
+        excluirVeiculo(veiculo);
     }
 
     // Excluir seguro
     public void excluirSeguro(Seguro seguro) {
+        // Removendo o seguro da lista de seguros do cliente
         super.excluirSeguro(seguro);
+        // Removendo o seguro do veiculo
         for (int i = 0; i < listaVeiculos.size(); i++) {
             if (((SeguroPF)seguro).getVeiculo().equals(listaVeiculos.get(i))) {
                 listaVeiculos.get(i).setSeguro(null);

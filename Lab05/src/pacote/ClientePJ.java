@@ -67,9 +67,11 @@ public class ClientePJ extends Cliente {
             System.out.printf("Frota de ID %03d nao encontrada.\n", id);
             return;
         }
+
         Frota frota = listaFrotas.get(id - 1);
         System.out.println("---------------------------------------------");
         System.out.println(frota);
+
         // Listando veiculos
         System.out.println("Veiculos: ");
         if (frota.getListaVeiculos().isEmpty()) {
@@ -94,7 +96,15 @@ public class ClientePJ extends Cliente {
 
     // Cadastrar frota automatico
     public void cadastrarFrota(Frota frota) {
+        // Checando se foi passado uma frota
+        if (frota == null) {
+            System.out.println("Nao foi possivel cadastrar a frota.");
+            return;
+        }
+
+        // Adicionando frota
         listaFrotas.add(frota);
+
         // Atualizar valor dos seguros
         for (int i = 0; i < getListaSeguros().size(); i++) {
             getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
@@ -203,7 +213,21 @@ public class ClientePJ extends Cliente {
 
     // Excluir seguro
     public void excluirSeguro(Seguro seguro) {
+        // Checando se foi passado um seguro
+        if (seguro == null) {
+            System.out.println("Nao foi possivel excluir o seguro.");
+            return;
+        }
+
+        // Checando se o seguro pertence ao cliente
+        if (!getListaSeguros().contains(seguro)) {
+            System.out.println("Nao foi possivel excluir o seguro.");
+            return;
+        }
+
+        // Removendo o seguro da lista de seguros do cleinte
         super.excluirSeguro(seguro);
+        // Removendo o seguro da frota
         for (int i = 0; i < listaFrotas.size(); i++) {
             if (((SeguroPJ)seguro).getFrota().equals(listaFrotas.get(i))) {
                 listaFrotas.get(i).setSeguro(null);

@@ -135,6 +135,24 @@ public abstract class Cliente {
 
     // Cadastrar novo condutor automatico
     public void cadastrarCondutor(Condutor condutor, int idSeguro) {
+        // Checando se foi passado um condutor
+        if (condutor == null) {
+            System.out.println("Condutor nao encontrado.");
+            return;
+        }
+
+        // Caso em que o documento e invalido
+        if (!Validacao.validarDocumento(condutor.getCPF(), "CPF")) {
+            System.out.println("CPF invalido. Nao foi possivel cadastrar o condutor.");
+            return;
+        }
+
+        // Caso em que o nome e invalido
+        if (!Validacao.validarNome(condutor.getNome())) {
+            System.out.println("Nome invalido. Nao foi possivel cadastrar o condutor.");
+            return;
+        }
+
         // Caso em que o cliente nao tem seguros
         if (listaSeguros.isEmpty()) {
             System.out.println("O cliente nao tem seguros.");
@@ -144,6 +162,14 @@ public abstract class Cliente {
         // Iterando sobre os seguros 
         for (int i = 0; i < listaSeguros.size(); i++) {
             if (listaSeguros.get(i).getId() == idSeguro) {
+                // Checando se o seguro ja tem o condutor com esse CPF
+                for (Condutor condutorSeguro : listaSeguros.get(i).getListaCondutores()) {
+                    if (condutorSeguro.getCPF().equals(condutor.getCPF())) {
+                        System.out.println("O condutor ja esta cadastrado nesse seguro.");
+                        return;
+                    }
+                }
+                // Adicionando o condutor ao seguro
                 listaSeguros.get(i).autorizarCondutor(condutor);
                 System.out.println("Condutor cadastrado com sucesso!");
                 return;
@@ -172,18 +198,6 @@ public abstract class Cliente {
         System.out.print("Insira a data de nascimento do condutor: ");
         String nascimento = scanner.nextLine();
 
-        // Caso em que o documento e invalido
-        if (!Validacao.validarDocumento(cpf, "CPF")) {
-            System.out.println("CPF invalido. Nao foi possivel cadastrar o condutor.");
-            return;
-        }
-
-        // Caso em que o nome e invalido
-        if (!Validacao.validarNome(nome)) {
-            System.out.println("Nome invalido. Nao foi possivel cadastrar o condutor.");
-            return;
-        }
-
         cadastrarCondutor(new Condutor(cpf, nome, telefone, endereco, email, nascimento), idSeguro);
     }
 
@@ -194,10 +208,12 @@ public abstract class Cliente {
             if (listaSeguros.get(i).getId() == idSeguro) {
                 // Iterando sobre os condutores
                 for (Condutor condutor : listaSeguros.get(i).getListaCondutores()) {
+                    // Caso em que o seguro so tem um condutor
                     if (listaSeguros.get(i).getListaCondutores().size() < 2) {
                         System.out.println("O seguro nao pode ficar sem condutores. Nao foi possivel excluir o condutor.");
                         return;
                     }
+                    // Excluindo o condutor
                     if (condutor.getCPF().equals(cpf)) {
                         listaSeguros.get(i).desautorizarCondutor(condutor);
                         System.out.println("Condutor excluido com sucesso!");
