@@ -106,8 +106,8 @@ public class ClientePJ extends Cliente {
         listaFrotas.add(frota);
 
         // Atualizar valor dos seguros
-        for (int i = 0; i < getListaSeguros().size(); i++) {
-            getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
+        for (Seguro seguro: getListaSeguros()) {
+            seguro.setValorMensal(seguro.calcularValorMensal());
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
@@ -144,8 +144,8 @@ public class ClientePJ extends Cliente {
             removerFrota(frota);
         }
         // Atualizar valor dos seguros
-        for (int i = 0; i < getListaSeguros().size(); i++) {
-            getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
+        for (Seguro seguro: getListaSeguros()) {
+            seguro.setValorMensal(seguro.calcularValorMensal());
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
@@ -202,8 +202,8 @@ public class ClientePJ extends Cliente {
         } while (op != 0);
 
         // Atualizar valor dos seguros
-        for (int i = 0; i < getListaSeguros().size(); i++) {
-            getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
+        for (Seguro seguro: getListaSeguros()) {
+            seguro.setValorMensal(seguro.calcularValorMensal());
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
@@ -228,9 +228,9 @@ public class ClientePJ extends Cliente {
         // Removendo o seguro da lista de seguros do cleinte
         super.excluirSeguro(seguro);
         // Removendo o seguro da frota
-        for (int i = 0; i < listaFrotas.size(); i++) {
-            if (((SeguroPJ)seguro).getFrota().equals(listaFrotas.get(i))) {
-                listaFrotas.get(i).setSeguro(null);
+        for (Frota frota: listaFrotas) {
+            if (((SeguroPJ)seguro).getFrota().equals(frota)) {
+                frota.setSeguro(null);
             }
         }
     }

@@ -159,25 +159,25 @@ public abstract class Cliente {
             return;
         }
 
-        // Iterando sobre os seguros 
-        for (int i = 0; i < listaSeguros.size(); i++) {
-            if (listaSeguros.get(i).getId() == idSeguro) {
-                // Checando se o seguro ja tem o condutor com esse CPF
-                for (Condutor condutorSeguro : listaSeguros.get(i).getListaCondutores()) {
-                    if (condutorSeguro.getCPF().equals(condutor.getCPF())) {
-                        System.out.println("O condutor ja esta cadastrado nesse seguro.");
-                        return;
-                    }
-                }
-                // Adicionando o condutor ao seguro
-                listaSeguros.get(i).autorizarCondutor(condutor);
-                System.out.println("Condutor cadastrado com sucesso!");
+        Seguro seguro = getSeguro(idSeguro);
+
+        // Caso em que o seguro nao foi encontrado
+        if (seguro == null) {
+            System.out.printf("Seguro de ID %03d nao encontrado.\n", idSeguro);
+            return;
+        }
+
+        // Checando se o seguro ja tem o condutor com esse CPF
+        for (Condutor condutorSeguro : seguro.getListaCondutores()) {
+            if (condutorSeguro.getCPF().equals(condutor.getCPF())) {
+                System.out.println("O condutor ja esta cadastrado nesse seguro.");
                 return;
             }
         }
 
-        // Caso em que o seguro nao foi encontrado
-        System.out.printf("Seguro de ID %03d nao encontrado.\n", idSeguro);
+        // Adicionando o condutor ao seguro
+        seguro.autorizarCondutor(condutor);
+        System.out.println("Condutor cadastrado com sucesso!");
     }
 
     // Cadastrar novo condutor com scanner
@@ -203,30 +203,30 @@ public abstract class Cliente {
 
     // Excluir condutor automatico
     public void excluirCondutor(String cpf, int idSeguro) {
-        // Iterando sobre os seguros
-        for (int i = 0; i < listaSeguros.size(); i++) {
-            if (listaSeguros.get(i).getId() == idSeguro) {
-                // Iterando sobre os condutores
-                for (Condutor condutor : listaSeguros.get(i).getListaCondutores()) {
-                    // Caso em que o seguro so tem um condutor
-                    if (listaSeguros.get(i).getListaCondutores().size() < 2) {
-                        System.out.println("O seguro nao pode ficar sem condutores. Nao foi possivel excluir o condutor.");
-                        return;
-                    }
-                    // Excluindo o condutor
-                    if (condutor.getCPF().equals(cpf)) {
-                        listaSeguros.get(i).desautorizarCondutor(condutor);
-                        System.out.println("Condutor excluido com sucesso!");
-                        return;
-                    }
-                }
-                // Caso em que o condutor nao foi encontrado
-                System.out.printf("Condutor de CPF %s nao encontrado.\n", cpf);
+        Seguro seguro = getSeguro(idSeguro);
+
+        // Caso em que o ID do seguro nao foi encontrado
+        if (seguro == null) {
+            System.out.printf("Seguro de ID %03d nao encontrado.\n", idSeguro);
+            return;
+        }
+
+        // Iterando sobre os condutores
+        for (Condutor condutor : seguro.getListaCondutores()) {
+            // Caso em que o seguro so tem um condutor
+            if (seguro.getListaCondutores().size() < 2) {
+                System.out.println("O seguro nao pode ficar sem condutores. Nao foi possivel excluir o condutor.");
+                return;
+            }
+            // Excluindo o condutor
+            if (condutor.getCPF().equals(cpf)) {
+                seguro.desautorizarCondutor(condutor);
+                System.out.println("Condutor excluido com sucesso!");
                 return;
             }
         }
-        // Caso em que o ID do seguro nao foi encontrado
-        System.out.printf("Seguro de ID %03d nao encontrado.\n", idSeguro);
+        // Caso em que o condutor nao foi encontrado
+        System.out.printf("Condutor de CPF %s nao encontrado.\n", cpf);
     }
 
     // Excluir condutor com scanner

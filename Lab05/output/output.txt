@@ -2097,7 +2097,7 @@ Cliente: Marcelo (CPF: 522.444.883-22)
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 06.947.283/0001-60:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente Google:
 ---------------------------------------------
 ID: 001
 Data Inicio: 12/06/2023
@@ -2138,7 +2138,7 @@ Cliente: Google (CNPJ: 06.947.283/0001-60)
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 101.255.787-17:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente Pedro:
 ---------------------------------------------
 ID: 004
 Data Inicio: 13/06/2023
@@ -2282,7 +2282,7 @@ Cliente: Joao (CPF: 381.854.732-77)
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 381.854.732-77:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente Joao:
 ---------------------------------------------
 ID: 006
 Data Inicio: 14/06/2023
@@ -4379,7 +4379,7 @@ Cliente: Marcelo (CPF: 522.444.883-22)
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 06.947.283/0001-60:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente Google:
 ---------------------------------------------
 ID: 001
 Data Inicio: 12/06/2023
@@ -4410,7 +4410,7 @@ Cliente: Google (CNPJ: 06.947.283/0001-60)
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 13.347.016/0001-17:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente Facebook:
 ---------------------------------------------
 ID: 003
 Data Inicio: 13/06/2023
@@ -4441,7 +4441,7 @@ Cliente: Facebook (CNPJ: 13.347.016/0001-17)
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 522.444.883-22:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente Marcelo:
 ---------------------------------------------
 ID: 005
 Data Inicio: 13/06/2023
@@ -4677,7 +4677,7 @@ Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Do
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 13.347.016/0001-17:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente Facebook:
 ---------------------------------------------
 Nao ha seguros gerados.
 ---------------------------------------------
@@ -4700,7 +4700,7 @@ Nao ha seguros gerados.
 | Opcao 13 - Calcular receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente de documento 522.444.883-22:
+Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Seguros Cliente Marcelo:
 ---------------------------------------------
 Nao ha seguros gerados.
 ---------------------------------------------

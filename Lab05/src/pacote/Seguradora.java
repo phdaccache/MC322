@@ -49,24 +49,21 @@ public class Seguradora {
             System.out.println("Sem clientes cadastrados");
             return;
         }
+
         System.out.println("Pessoas Juridicas:");
         // Iterando sobre os clientes PJ
-        for (Cliente cliente : listaClientes) {
-            if (cliente instanceof ClientePJ) {
-                System.out.println("---------------------------------------------");
-                System.out.println(cliente);
-            }
+        for (Cliente cliente: getClientesPJ()) {
+            System.out.println("---------------------------------------------");
+            System.out.println(cliente);
         }
         System.out.println("---------------------------------------------");
         System.out.println("");
 
         System.out.println("Pessoas Fisicas:");
         // Iterando sobre os clientes PF
-        for (Cliente cliente : listaClientes) {
-            if (cliente instanceof ClientePF) {
-                System.out.println("---------------------------------------------");
-                System.out.println(cliente);
-            }
+        for (Cliente cliente: getClientesPF()) {
+            System.out.println("---------------------------------------------");
+            System.out.println(cliente);
         }
         System.out.println("---------------------------------------------");
     }
@@ -90,16 +87,14 @@ public class Seguradora {
 
         // Caso em que o nome e invalido
         if (!Validacao.validarNome(cliente.getNome())) {
-            System.out.println("Nome invalido. Nao foi possivel cadastrar o cliente.\n");
+            System.out.println("Nome invalido. Nao foi possivel cadastrar o cliente.");
             return;
         }
 
         // Caso em que o cliente ja esta cadastrado
-        for (Cliente clienteCadastrado : listaClientes) {
-            if (clienteCadastrado.getDocumento()[1].equals(documento)) {
-                System.out.println("Cliente ja existe. Nao foi possivel cadastrar o cliente.\n");
-                return;
-            }
+        if (getCliente(documento) != null) {
+            System.out.println("Cliente ja existe. Nao foi possivel cadastrar o cliente.");
+            return;
         }
 
         cliente.setSeguradora(this);
@@ -211,33 +206,24 @@ public class Seguradora {
 
         // Iterando sobre os clientes
         for (Cliente cliente : listaClientes) {
-            System.out.printf("Seguros Cliente %s:\n", cliente.getNome());
-            // Caso em que nao ha seguros
-            if (cliente.getListaSeguros().isEmpty()) {
-                System.out.println("---------------------------------------------");
-                System.out.println("Nao ha seguros gerados.");
-            }
-            // Iterando sobre os seguros de cada cliente
-            for (Seguro seguro: cliente.getListaSeguros()) {
-                System.out.println("---------------------------------------------");
-                System.out.println(seguro);    
-            }
-            System.out.println("---------------------------------------------");
-            System.out.println("");
+            listarSegurosPorCliente(cliente.getDocumento()[1]);
         }
     }
 
     // Listar seguros por cliente automatico
     public void listarSegurosPorCliente(String documento) {
         Cliente cliente = getCliente(documento);
+
+        // Caso em que o cliente nao existe
         if (cliente == null) {
             System.out.printf("Documento invalido. Nao foi possivel listar os seguros do cliente de documento %s.\n",
                             documento);
             return;
         }
+
         ArrayList<Seguro> segurosCliente = getSegurosPorCliente(documento);
 
-        System.out.printf("Seguros Cliente de documento %s:\n", documento);
+        System.out.printf("Seguros Cliente %s:\n", cliente.getNome());
         // Caso em que nao ha seguros gerados
         if (segurosCliente == null || segurosCliente.isEmpty()) {
             System.out.println("---------------------------------------------");
@@ -278,11 +264,11 @@ public class Seguradora {
         SeguroPJ seguro = new SeguroPJ(frota, cliente, inicio, fim, this);
         seguro.autorizarCondutor(condutor); // Autorizar condutor no seguro
         seguro.setValorMensal(seguro.calcularValorMensal()); // Calcular e setar valor mensal do seguro
-        seguro.getFrota().setSeguro(seguro); // Adicionar seguro na frota do cliente
+
         listaSeguros.add(seguro); // Adicionar seguro na seguradora
-        seguro.getCliente().adicionarSeguro(seguro); // Adicionar seguro no cliente
-        // Atualizar valor mensal total do cliente
-        seguro.getCliente().setValorMensalTotal(seguro.getCliente().calcularValorMensalTotal());
+        cliente.adicionarSeguro(seguro); // Adicionar seguro no cliente
+        frota.setSeguro(seguro); // Adicionar seguro na frota do cliente
+        cliente.setValorMensalTotal(cliente.calcularValorMensalTotal()); // Atualizar valor mensal total do cliente
 
         System.out.println("Seguro gerado com sucesso!");
     }
@@ -306,11 +292,10 @@ public class Seguradora {
         seguro.autorizarCondutor(condutor); // Autorizar condutor no seguro
         seguro.setValorMensal(seguro.calcularValorMensal()); // Calcular e setar valor mensal do seguro
         
-        seguro.getVeiculo().setSeguro(seguro); // Adicionar seguro no veiculo do cliente
         listaSeguros.add(seguro); // Adicionar seguro na seguradora
-        seguro.getCliente().adicionarSeguro(seguro); // Adicionar seguro no cliente
-        // Atualizar valor mensal total do cliente
-        seguro.getCliente().setValorMensalTotal(seguro.getCliente().calcularValorMensalTotal());
+        cliente.adicionarSeguro(seguro); // Adicionar seguro no cliente
+        veiculo.setSeguro(seguro); // Adicionar seguro no veiculo do cliente
+        cliente.setValorMensalTotal(cliente.calcularValorMensalTotal()); // Atualizar valor mensal total do cliente
 
         System.out.println("Seguro gerado com sucesso!");
     }
@@ -439,13 +424,28 @@ public class Seguradora {
     }
 
     // Gerar novo sinistro automatico
-    public void gerarSinistro(String data, String endereco, Condutor condutor, int id) {
-        return;
+    public void gerarSinistro(String data, String endereco, String cpfCondutor, int id) {
+        // Procurar seguro na lista de seguros
+        for (Seguro seguro : listaSeguros) {
+            if (seguro.getId() == id) {
+                seguro.gerarSinistro(data, endereco, cpfCondutor);
+            }
+        }
+
+        System.out.printf("Nao foi possivel encontrar o seguro de ID %03d.\n", id);
     }
 
     // Gerar novo sinistro com scanner
     public void gerarSinistro(Scanner scanner) {
-        return;
+        System.out.print("Insira a data do sinistro (dd/MM/yyyy): ");
+        String data = scanner.nextLine();
+        System.out.print("Insira o endereco do sinistro: ");
+        String endereco = scanner.nextLine();
+        System.out.print("Insira o CPF do condutor: ");
+        String cpf = scanner.nextLine();
+        System.out.print("Insira o ID do seguro: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
     }
 
     // Excluir sinistro automatico
@@ -466,6 +466,28 @@ public class Seguradora {
             receita += cliente.getValorMensalTotal();
         }
         System.out.printf("Receita total: R$%.2f\n", receita);
+    }
+
+    // Retorna todos os clientes PJ
+    public ArrayList<ClientePJ> getClientesPJ() {
+        ArrayList<ClientePJ> clientesPJ = new ArrayList<>();
+        for (Cliente cliente : listaClientes) {
+            if (cliente instanceof ClientePJ) {
+                clientesPJ.add((ClientePJ)cliente);
+            }
+        }
+        return clientesPJ;
+    }
+
+    // Retorna todos os clientes PF
+    public ArrayList<ClientePF> getClientesPF() {
+        ArrayList<ClientePF> clientesPF = new ArrayList<>();
+        for (Cliente cliente : listaClientes) {
+            if (cliente instanceof ClientePF) {
+                clientesPF.add((ClientePF)cliente);
+            }
+        }
+        return clientesPF;
     }
 
     // Retorna todos os seguros de um cliente

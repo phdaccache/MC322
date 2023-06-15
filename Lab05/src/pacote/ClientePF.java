@@ -89,8 +89,8 @@ public class ClientePF extends Cliente{
         listaVeiculos.add(veiculo); // Veiculo adicionado
 
         // Atualizar valor dos seguros
-        for (int i = 0; i < getListaSeguros().size(); i++) {
-            getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
+        for (Seguro seguro: getListaSeguros()) {
+            seguro.setValorMensal(seguro.calcularValorMensal());
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
@@ -147,8 +147,8 @@ public class ClientePF extends Cliente{
         listaVeiculos.remove(veiculo);
 
         // Atualizar valor dos seguros
-        for (int i = 0; i < getListaSeguros().size(); i++) {
-            getListaSeguros().get(i).setValorMensal(getListaSeguros().get(i).calcularValorMensal());
+        for (Seguro seguro: getListaSeguros()) {
+            seguro.setValorMensal(seguro.calcularValorMensal());
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
@@ -157,18 +157,10 @@ public class ClientePF extends Cliente{
 
     // Excluir veiculo com scanner
     public void excluirVeiculo(Scanner scanner) {
-        Veiculo veiculo = null;
-
         System.out.print("Insira a placa do veiculo que deseja excluir: ");
         String placa = scanner.nextLine();
 
-        for (Veiculo veic: listaVeiculos) {
-            if (veic.getPlaca().equals(placa)) {
-                veiculo = veic;
-            }
-        }
-
-        excluirVeiculo(veiculo);
+        excluirVeiculo(getVeiculo(placa));
     }
 
     // Excluir seguro
@@ -176,9 +168,9 @@ public class ClientePF extends Cliente{
         // Removendo o seguro da lista de seguros do cliente
         super.excluirSeguro(seguro);
         // Removendo o seguro do veiculo
-        for (int i = 0; i < listaVeiculos.size(); i++) {
-            if (((SeguroPF)seguro).getVeiculo().equals(listaVeiculos.get(i))) {
-                listaVeiculos.get(i).setSeguro(null);
+        for (Veiculo veiculo: listaVeiculos) {
+            if (((SeguroPF)seguro).getVeiculo().equals(veiculo)) {
+                veiculo.setSeguro(null);
                 return;
             }
         }

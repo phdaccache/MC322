@@ -64,7 +64,7 @@ public abstract class Seguro {
     }
 
     // Gerar novo sinistro automatico
-    public void gerarSinistro(String data, String endereco, Condutor condutor, Seguro seguro) {
+    public void gerarSinistro(String data, String endereco, String cpfCondutor) {
         return;
     }
 
