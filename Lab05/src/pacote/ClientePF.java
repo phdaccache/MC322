@@ -40,8 +40,8 @@ public class ClientePF extends Cliente{
         joiner.add("Genero: " + getGenero());
         joiner.add("Educacao: " + getEducacao());
         joiner.add("Data Nascimento: " + dataNascimentoString);
-        joiner.add("Quantidade de veiculos: " + listaVeiculos.size());
-        joiner.add("Quantidade de seguros: " + getListaSeguros().size());
+        joiner.add("Quantidade de Veiculos: " + listaVeiculos.size());
+        joiner.add("Quantidade de Seguros: " + getListaSeguros().size());
 
         return joiner.toString();
     }

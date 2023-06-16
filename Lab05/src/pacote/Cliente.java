@@ -32,14 +32,14 @@ public abstract class Cliente {
         joiner.add("Endereco: " + getEndereco());
         joiner.add("Email: " + getEmail());
         joiner.add(String.format("Seguradora: %s (CNPJ: %s)", getSeguradora().getNome(), getSeguradora().getCNPJ()));
-        joiner.add(String.format("Valor mensal total: R$%.2f", getValorMensalTotal()));
+        joiner.add(String.format("Valor Mensal Total: R$%.2f", getValorMensalTotal()));
 
         return joiner.toString();
     }
 
     // Imprime os dados do cliente pelo toString()
     public void visualizarDados() {
-        System.out.println("Dados do cliente:");
+        System.out.println("Dados do Cliente:");
         System.out.println(toString());
     }
 

@@ -36,9 +36,9 @@ public class ClientePJ extends Cliente {
         joiner.add(super.toString());
         joiner.add("CNPJ: " + getCNPJ());
         joiner.add("Data Fundacao: " + dataFundacaoString);
-        joiner.add("Quantidade de funcionarios: " + qtdFuncionarios);
-        joiner.add("Quantidade de frotas: " + getListaFrotas().size());
-        joiner.add("Quantidade de seguros: " + getListaSeguros().size());
+        joiner.add("Quantidade de Funcionarios: " + qtdFuncionarios);
+        joiner.add("Quantidade de Frotas: " + getListaFrotas().size());
+        joiner.add("Quantidade de Seguros: " + getListaSeguros().size());
 
         return joiner.toString();
     }

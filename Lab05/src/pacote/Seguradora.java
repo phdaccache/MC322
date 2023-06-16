@@ -40,7 +40,7 @@ public class Seguradora {
 
     // Imprime os dados da seguradora pelo toString()
     public void visualizarDados() {
-        System.out.println("Dados seguradora:");
+        System.out.println("Dados Seguradora:");
         System.out.println(toString());
     }
 
@@ -509,7 +509,7 @@ public class Seguradora {
         for (Cliente cliente : listaClientes) {
             receita += cliente.getValorMensalTotal();
         }
-        System.out.printf("Receita total: R$%.2f\n", receita);
+        System.out.printf("Receita Total: R$%.2f\n", receita);
     }
 
     // Retorna todos os clientes PJ

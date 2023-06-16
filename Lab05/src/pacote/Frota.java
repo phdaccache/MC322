@@ -30,7 +30,7 @@ public class Frota {
             joiner.add(String.format("Seguro %03d: %s - %s", getSeguro().getId(),
                                 dataInicioString, dataFimString));
         }
-        joiner.add("Quantidade de veiculos: " + getListaVeiculos().size());
+        joiner.add("Quantidade de Veiculos: " + getListaVeiculos().size());
 
         return joiner.toString();
     }

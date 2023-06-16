@@ -41,8 +41,8 @@ public abstract class Seguro {
         joiner.add("Data Fim: " + dataFimString);
         joiner.add(String.format("Seguradora: %s (CNPJ: %s)", getSeguradora().getNome(), getSeguradora().getCNPJ()));
         joiner.add(String.format("Valor Mensal: R$%.2f", getValorMensal()));
-        joiner.add("Quantidade de sinistros: " + getListaSinistros().size());
-        joiner.add("Quantidade de condutores: " + getListaCondutores().size());
+        joiner.add("Quantidade de Sinistros: " + getListaSinistros().size());
+        joiner.add("Quantidade de Condutores: " + getListaCondutores().size());
 
         return joiner.toString();
     }
@@ -63,7 +63,7 @@ public abstract class Seguro {
 
         // Checando se o condutor existe
         if (condutor == null) {
-            System.out.println("Condutor não encontrado!");
+            System.out.println("Condutor não encontrado.");
             return;
         }
 
