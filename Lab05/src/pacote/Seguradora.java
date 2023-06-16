@@ -452,9 +452,13 @@ public class Seguradora {
 
     // Gerar novo sinistro automatico
     public void gerarSinistro(String data, String endereco, String cpfCondutor, int id) {
-        getSeguro(id).gerarSinistro(data, endereco, cpfCondutor);
-
-        System.out.printf("Nao foi possivel encontrar o seguro de ID %03d.\n", id);
+        Seguro seguro = getSeguro(id);
+        // Caso em que o seguro nao existe
+        if (seguro == null) {
+            System.out.printf("Nao foi possivel gerar o sinistro para o seguro de ID %03d.\n", id);
+            return;
+        }
+        seguro.gerarSinistro(data, endereco, cpfCondutor);
     }
 
     // Gerar novo sinistro com scanner
@@ -474,12 +478,21 @@ public class Seguradora {
 
     // Excluir sinistro automatico
     public void excluirSinistro(int id) {
-        return;
+        Sinistro sinistro = getSinistro(id);
+        // Caso em que o sinistro nao existe
+        if (sinistro == null) {
+            System.out.printf("Nao foi possivel excluir o sinistro de ID %03d.\n", id);
+            return;
+        }
+        sinistro.getSeguro().excluirSinistro(sinistro);
     }
 
     // Excluir sinistro com scanner
     public void excluirSinistro(Scanner scanner) {
-        return;
+        System.out.print("Insira o ID do sinistro que deseja excluir: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        excluirSinistro(id);
     }
 
     // Calcular receita
@@ -555,6 +568,18 @@ public class Seguradora {
         for (Seguro seguro : listaSeguros) {
             if (seguro.getId() == id) {
                 return seguro;
+            }
+        }
+        return null;
+    }
+
+    // Retorna o sinistro atraves do id
+    public Sinistro getSinistro(int id) {
+        for (Seguro seguro : listaSeguros) {
+            for (Sinistro sinistro : seguro.getListaSinistros()) {
+                if (sinistro.getId() == id) {
+                    return sinistro;
+                }
             }
         }
         return null;

@@ -76,8 +76,25 @@ public abstract class Seguro {
     }
 
     // Excluir sinistro automatico
-    public void excluirSinistro(int id) {
-        return;
+    public void excluirSinistro(Sinistro sinistro) {
+        // Checando se foi passado um sinistro
+        if (sinistro == null) {
+            System.out.println("Nao foi possivel excluir o sinistro.");
+            return;
+        }
+
+        // Checando se o sinistro existe
+        if (!listaSinistros.contains(sinistro)) {
+            System.out.printf("Sinistro invalido. Nao foi possivel excluir o sinistro %03d.\n", sinistro.getId());
+            return;
+        }
+
+        // Remover sinistro do condutor
+        sinistro.getCondutor().removerSinistro(sinistro);
+        // Remover sinistro da lista de sinistros
+        listaSinistros.remove(sinistro);
+
+        System.out.printf("Sinistro %03d excluido!\n", sinistro.getId());
     }
 
     public Condutor getCondutor(String cpf) {
