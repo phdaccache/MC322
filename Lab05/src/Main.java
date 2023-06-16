@@ -331,6 +331,7 @@ public class Main {
         seguradora1.listarSinistros();
         seguradora1.listarSinistrosPorCliente("06.947.283/0001-60");
         seguradora1.listarSinistrosPorCliente("101.255.787-17");
+        seguradora1.listarSinistrosPorCliente("13.347.016/0001-17");
         seguradora1.calcularReceita();
         System.out.println("");
 
@@ -366,6 +367,7 @@ public class Main {
         seguradora1.listarSinistros();
         seguradora1.listarSinistrosPorCliente("06.947.283/0001-60");
         seguradora1.listarSinistrosPorCliente("101.255.787-17");
+        seguradora1.listarSinistrosPorCliente("13.347.016/0001-17");
         seguradora1.calcularReceita();
         System.out.println("");
 
