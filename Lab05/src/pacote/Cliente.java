@@ -73,7 +73,7 @@ public abstract class Cliente {
         // Listando sinistros
         System.out.println("Sinistros: ");
         if (seguro.getListaSinistros().isEmpty()) {
-            System.out.println("    * Sem sinistros cadastrados.");
+            System.out.println("    * Sem sinistros gerados.");
         } else {
             for (Sinistro sinistro : seguro.getListaSinistros()) {
                 System.out.println("---------------------------------------------");

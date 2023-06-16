@@ -326,7 +326,66 @@ public class Main {
         System.out.println("");
 
 
-        // Criar 2 sinistro cliente PJ 1, 1 sinistro cliente PJ2, 1 sinistro cliente PJ3 (seguradora2)
+        // Listagens Seguradora
+        seguradora1.listarSeguros();
+        seguradora1.listarSinistros();
+        seguradora1.listarSinistrosPorCliente("06.947.283/0001-60");
+        seguradora1.listarSinistrosPorCliente("101.255.787-17");
+        seguradora1.calcularReceita();
+        System.out.println("");
+
+        // Listagens Cliente PJ
+        cliente1.visualizarDados();
+        System.out.println("");
+        cliente1.listarSeguros();
+        System.out.println("");
+        cliente1.visualizarSeguro(1);
+        System.out.println("");
+        cliente1.visualizarSeguro(2);
+        System.out.println("");
+
+        // Listagens Cliente PF
+        cliente3.visualizarDados();
+        System.out.println("");
+        cliente3.listarSeguros();
+        System.out.println("");
+        cliente3.visualizarSeguro(4);
+        System.out.println("");
+
+        // Gerar Sinistros
+        seguradora1.gerarSinistro("16/06/2023", "Rua Perigosa, 170", "484.258.684-24", 1);
+        seguradora1.gerarSinistro("20/06/2023", "Rua Estranha, 34", "752.792.913-82", 2);
+        seguradora1.gerarSinistro("13/08/2023", "Rua Periculosa, 51", "522.342.883-80", 3);
+        seguradora1.gerarSinistro("27/11/2023", "Rua Suspeita, 7530", "522.342.883-80", 3);
+        seguradora1.gerarSinistro("31/09/2023", "Rua Duvidosa, 99", "453.455.012-03", 4);
+        seguradora2.gerarSinistro("08/10/2023", "Rua Interessante, 101", "953.344.933-01", 6);
+        System.out.println("");
+
+        // Listagens Seguradora
+        seguradora1.listarSeguros();
+        seguradora1.listarSinistros();
+        seguradora1.listarSinistrosPorCliente("06.947.283/0001-60");
+        seguradora1.listarSinistrosPorCliente("101.255.787-17");
+        seguradora1.calcularReceita();
+
+        // Listagens Cliente PJ
+        cliente1.visualizarDados();
+        System.out.println("");
+        cliente1.listarSeguros();
+        System.out.println("");
+        cliente1.visualizarSeguro(1);
+        System.out.println("");
+        cliente1.visualizarSeguro(2);
+        System.out.println("");
+
+        // Listagens Cliente PF
+        cliente3.visualizarDados();
+        System.out.println("");
+        cliente3.listarSeguros();
+        System.out.println("");
+        cliente3.visualizarSeguro(4);
+        System.out.println("");
+
 
         //////////////////// REMOCOES ////////////////////
 
@@ -400,6 +459,7 @@ public class Main {
         cliente3.excluirVeiculo(veiculo9); // Veiculo com seguro
         cliente3.excluirVeiculo(veiculo11);
         cliente3.excluirVeiculo(veiculo17);
+        System.out.println("");
 
         // Listagens Cliente PF
         cliente3.visualizarDados();

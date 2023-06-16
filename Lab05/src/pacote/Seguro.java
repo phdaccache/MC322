@@ -72,7 +72,7 @@ public abstract class Seguro {
         listaSinistros.add(sinistro);
         condutor.adicionarSinistro(sinistro);
 
-        System.out.printf("Sinistro gerado! ID: %03d\n", sinistro.getId());
+        System.out.printf("Sinistro gerado! ID do Sinistro: %03d.\n", sinistro.getId());
     }
 
     // Excluir sinistro automatico

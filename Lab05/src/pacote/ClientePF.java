@@ -94,6 +94,7 @@ public class ClientePF extends Cliente{
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
+        
         System.out.println("Veiculo cadastrado!");
     }
 
@@ -152,6 +153,7 @@ public class ClientePF extends Cliente{
         }
         // Atualizar valor mensal total
         setValorMensalTotal(calcularValorMensalTotal());
+
         System.out.printf("Veiculo de placa %s removido!\n", placa);
     }
 
