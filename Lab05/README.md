@@ -17,7 +17,9 @@ O programa pode ser rodado de duas formas: pelo scanner automático ou pelo scan
 ### 2. Scanner Manual
 * Digite os dados de acordo com o menu interativo e a saída será impressa no console.
 
-* São instanciados alguns objetos para testar o programa antes de rodar o menu.
+* São instanciados e excluídos alguns objetos para testar o programa antes de rodar o menu.
+
+* Dica: Para rodar o programa com objetos já instanciados, comente toda a parte 'REMOCOES' na main (linhas 450 a 643).
 
 
 ## Esquema Menu Interativo
