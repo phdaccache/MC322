@@ -95,10 +95,11 @@ public class Main {
         /******************************* TESTE AUTOMATICO *******************************/
 
         //////////////////// CADASTROS E LISTAGENS ////////////////////
-        System.out.println("\n################################## CADASTROS E LISTAGENS ##################################\n\n");
+        printFormattedTitle("CADASTROS E LISTAGENS");
+        System.out.println("");
 
         // Criar e cadastrar seguradoras
-        System.out.println("#################### Criar e cadastrar seguradoras ####################\n");
+        printFormattedTitle("Criar e Cadastrar Seguradoras");
         Seguradora seguradora1 = new Seguradora("61.198.164/0001-60", "Pedro Seguros", "(11) 91234-5678", "Rua dos Pedros", "pedroseguros@gmail.com");
         Seguradora seguradora2 = new Seguradora("51.990.695/0001-37", "Seguros Magicos", "(11) 98765-4321", "Rua da Magia", "segurosmagicos@gmail.com");
         Admin.cadastrarSeguradora(seguradora1);
@@ -106,7 +107,7 @@ public class Main {
         System.out.println("");
 
         // Criar e cadastrar clientes
-        System.out.println("###################### Criar e cadastrar clientes #####################\n");
+        printFormattedTitle("Criar e Cadastrar Clientes");
         ClientePJ cliente1 = new ClientePJ("Google", "0800 724 8149", "Mountain View, California, EUA", "google@gmail.com", "06.947.283/0001-60", "04/09/1998", 50);
         ClientePJ cliente2 = new ClientePJ("Facebook", "+1 650-543-4800", "R Leopoldo Couto De Magalhaes Junior, 700", "facebook@gmail.com", "13.347.016/0001-17", "01/02/2004", 15);
         ClientePF cliente3 = new ClientePF("Pedro", "(11) 99999-9999", "Rua Pitagoras, Barao Geraldo", "pedro@gmail.com", "101.255.787-17", "Masculino", "Ensino Superior", "25/01/2003");        
@@ -124,8 +125,8 @@ public class Main {
         // Criar frotas
         Frota frota1 = new Frota(1);
         Frota frota2 = new Frota(2);
-        Frota frota3 = new Frota(3);
-        Frota frota4 = new Frota(4);
+        Frota frota3 = new Frota(1);
+        Frota frota4 = new Frota(1);
         // Criar veiculos
         Veiculo veiculo1 = new Veiculo("ABC-1234", "Chevrolet", "Camaro", 2023);
         Veiculo veiculo2 = new Veiculo("ABC-4321", "Chevrolet", "Onix", 2018);        
@@ -136,21 +137,21 @@ public class Main {
         Veiculo veiculo7 = new Veiculo("PAD-4321", "Toyota", "Yaris", 2022);
         Veiculo veiculo8 = new Veiculo("TOP-1234", "Toyota", "Etios", 2018);  
         // Cadastrar veiculos nas frotas
-        System.out.println("#################### Cadastrar veiculos nas frotas ####################\n");      
+        printFormattedTitle("Cadastrar Veiculos nas Frotas");      
         frota1.cadastrarVeiculo(veiculo1);
         frota2.cadastrarVeiculo(veiculo4);
         frota3.cadastrarVeiculo(veiculo6);
         frota4.cadastrarVeiculo(veiculo8);
         System.out.println("");
         // Cadastrar frotas nos clientes
-        System.out.println("#################### Cadastrar frotas nos clientes ####################\n");
+        printFormattedTitle("Cadastrar Frotas nos Clientes PJ");
         cliente1.cadastrarFrota(frota1);
         cliente1.cadastrarFrota(frota2);
         cliente2.cadastrarFrota(frota3);
         cliente5.cadastrarFrota(frota4);
         System.out.println("");
         // Atualizar frotas
-        System.out.println("########################### Atualizar frotas ##########################\n");
+        printFormattedTitle("Atualizar Frotas");
         ArrayList<Veiculo> veiculosF1 = new ArrayList<Veiculo>();
         veiculosF1.add(veiculo2);
         veiculosF1.add(veiculo3);
@@ -166,48 +167,43 @@ public class Main {
         System.out.println("");
 
         // Listagens Admin
-        System.out.println("######################### Listagens do Admin ##########################\n");
+        printFormattedTitle("Listagens do Admin");
         Admin.listarSeguradoras();
         System.out.println("");
 
         // Listagens Seguradora
-        System.out.println("####################### Listagens da Seguradora #######################\n");
-        System.out.println("######################### Visualizar Dados S1 #########################\n");
+        printFormattedTitle("Listagens das Seguradoras");
+        printFormattedTitle("Visualizar Dados Seguradora 1 - Pedro Seguros");
         seguradora1.visualizarDados();
-        System.out.println("");
-        System.out.println("########################## Listar Clientes S1 #########################\n");
+        printFormattedTitle("Listar Clientes Seguradora 1 - Pedro Seguros", "\n");
         seguradora1.listarClientes();
-        System.out.println("");
-        System.out.println("######################### Calcular Receita S1 #########################\n");
+        printFormattedTitle("Calcular Receita Seguradora 1 - Pedro Seguros", "\n");
         seguradora1.calcularReceita();
-        System.out.println("");
-        System.out.println("########################## Listar Seguros S1 ##########################\n");
+        printFormattedTitle("Listar Seguros Seguradora 1 - Pedro Seguros", "\n");
         seguradora1.listarSeguros();
-        System.out.println("");
-        System.out.println("######################### Visualizar Dados S2 #########################\n");
+        printFormattedTitle("Visualizar Dados Seguradora 2 - Seguros Magicos", "\n");
         seguradora2.visualizarDados();
-        System.out.println("");
-        System.out.println("########################## Listar Clientes S2 #########################\n");
+        printFormattedTitle("Listar Clientes Seguradora 2 - Seguros Magicos", "\n");
         seguradora2.listarClientes();
-        System.out.println("");
-        System.out.println("######################### Calcular Receita S2 #########################\n");
+        printFormattedTitle("Calcular Receita Seguradora 2 - Seguros Magicos", "\n");
         seguradora2.calcularReceita();
         System.out.println("");
 
-        // Listagens Cliente
-        System.out.println("######################## Listagens do Cliente #########################\n");
+        // Listagens Cliente PJ
+        printFormattedTitle("Listagens dos Clientes PJ");
+        printFormattedTitle("Visualizar Dados Cliente PJ1 - Google");
         cliente1.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Frotas PJ1 - Google", "\n");
         cliente1.listarFrotas();
-        System.out.println("");
+        printFormattedTitle("Visualizar Frota 001 PJ1 - Google", "\n");
         cliente1.visualizarFrota(1);
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PJ1 - Google", "\n");
         cliente1.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Listar Condutores PJ1 - Google", "\n");
         cliente1.listarCondutores();
-        System.out.println("");
+        printFormattedTitle("Listar Frotas PJ2 - Facebook", "\n");
         cliente2.listarFrotas();
-        System.out.println("");
+        printFormattedTitle("Visualizar Frota 001 PJ2 - Facebook", "\n");
         cliente2.visualizarFrota(1);
         System.out.println("");
 
@@ -219,8 +215,8 @@ public class Main {
         Veiculo veiculo13 = new Veiculo("COR-4321", "Tesla", "Model S", 2022);
         Veiculo veiculo14 = new Veiculo("TES-1234", "Tesla", "Model 3", 2021);
         Veiculo veiculo15 = new Veiculo("TES-4321", "Tesla", "Model X", 2020);
-        // Cadastrar veiculos no cliente
-        System.out.println("#################### Cadastrar veiculos no cliente ####################\n");
+        // Cadastrar veiculos nos clientes
+        printFormattedTitle("Cadastrar Veiculos nos Clientes PF");
         cliente3.cadastrarVeiculo(veiculo9);
         cliente3.cadastrarVeiculo(veiculo10);
         cliente3.cadastrarVeiculo(veiculo11);
@@ -231,21 +227,22 @@ public class Main {
         System.out.println("");
 
         // Listagens cliente PF
-        System.out.println("####################### Listagens do Cliente PF #######################\n");
+        printFormattedTitle("Listagens dos Clientes PF");
+        printFormattedTitle("Visualizar Dados PF1 - Pedro");
         cliente3.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Veiculos PF1 - Pedro", "\n");
         cliente3.listarVeiculos();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PF1 - Pedro", "\n");
         cliente3.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Listar Condutores PF1 - Pedro", "\n");
         cliente3.listarCondutores();
-        System.out.println("");
+        printFormattedTitle("Visualizar Dados PF2 - Marcelo", "\n");
         cliente4.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Veiculos PF2 - Marcelo", "\n");
         cliente4.listarVeiculos();
-        System.out.println("");
+        printFormattedTitle("Visualizar Dados PF3 - Joao", "\n");
         cliente6.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Veiculos PF3 - Joao", "\n");
         cliente6.listarVeiculos();
         System.out.println("");
 
@@ -259,7 +256,7 @@ public class Main {
         Condutor condutor7 = new Condutor("454.565.219-03", "John Piper", "(11) 91212-2121", "Rua do Condutor Piper, 901", "piper@gmail.com", "11/01/1946");
         
         // Gerar Seguros
-        System.out.println("############################ Gerar Seguros ############################\n");
+        printFormattedTitle("Gerar Seguros");
         seguradora1.gerarSeguroPJ(cliente1, frota1, "12/06/2023", "12/06/2026", condutor1);
         seguradora1.gerarSeguroPJ(cliente1, frota2, "12/06/2023", "12/06/2028", condutor1);
         seguradora1.gerarSeguroPJ(cliente2, frota3, "13/06/2023", "13/06/2024", condutor2);
@@ -269,125 +266,142 @@ public class Main {
         System.out.println("");
 
         // Listagens Seguradora
-        System.out.println("######################### Listagens Seguradora ########################\n");
+        printFormattedTitle("Listagens das Seguradoras");
+        printFormattedTitle("Listar Seguros Seguradora 1 - Pedro Seguros");
         seguradora1.listarSeguros();
+        printFormattedTitle("Listar Seguros PJ1 - Google");
         seguradora1.listarSegurosPorCliente("06.947.283/0001-60");
+        printFormattedTitle("Listar Seguros PF1 - Pedro");
         seguradora1.listarSegurosPorCliente("101.255.787-17");
+        printFormattedTitle("Calcular Receita Seguradora 1 - Pedro Seguros");
         seguradora1.calcularReceita();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros Seguradora 2 - Seguros Magicos", "\n");
         seguradora2.listarSeguros();
+        printFormattedTitle("Listar Seguros PJ3 - Microsoft");
         seguradora2.listarSegurosPorCliente("04.712.500/0001-07");
+        printFormattedTitle("Listar Seguros PF3 - Joao");
         seguradora2.listarSegurosPorCliente("381.854.732-77");
+        printFormattedTitle("Calcular Receita Seguradora 2 - Seguros Magicos");
         seguradora2.calcularReceita();
         System.out.println("");
 
         // Listagens Cliente PJ
-        System.out.println("####################### Listagens do Cliente PJ #######################\n");
+        printFormattedTitle("Listagens Cliente PJ1 - Google");
+        printFormattedTitle("Visualizar Dados PJ1 - Google");
         cliente1.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PJ1 - Google", "\n");
         cliente1.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 001 PJ1 - Google", "\n");
         cliente1.visualizarSeguro(1);
-        System.out.println("");
+        printFormattedTitle("Listar Condutores PJ1 - Google", "\n");
         cliente1.listarCondutores();
-        System.out.println("");
+        printFormattedTitle("Listar Frotas PJ1 - Google", "\n");
         cliente1.listarFrotas();
         System.out.println("");
 
         // Atualizar Frota
-        System.out.println("########################### Atualizar Frota ###########################\n");
+        printFormattedTitle("Atualizar Frota Cliente PJ1 - Google");
         ArrayList<Veiculo> veiculosF2Add = new ArrayList<Veiculo>();
         Veiculo veiculo16 = new Veiculo("NSM-1234", "Hyundai", "ix35", 2020);
         veiculosF2Add.add(veiculo16);
         cliente1.atualizarFrota(2, veiculosF2Add, new ArrayList<Veiculo>());
         System.out.println("");
         // Cadastrar Condutor Cliente PJ
-        System.out.println("#################### Cadastrar Condutor Cliente PJ ####################\n");
+        printFormattedTitle("Cadastrar Condutor Cliente PJ1 - Google");
         cliente1.cadastrarCondutor(condutor6, 1);
         System.out.println("");
 
         // Listagens Cliente PJ
-        System.out.println("####################### Listagens do Cliente PJ #######################\n");
+        printFormattedTitle("Listagens Cliente PJ1 - Google");
+        printFormattedTitle("Visualizar Dados PJ1 - Google");
         cliente1.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PJ1 - Google", "\n");
         cliente1.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 001 PJ1 - Google", "\n");
         cliente1.visualizarSeguro(1);
-        System.out.println("");
+        printFormattedTitle("Listar Condutores PJ1 - Google", "\n");
         cliente1.listarCondutores();
-        System.out.println("");
+        printFormattedTitle("Listar Frotas PJ1 - Google", "\n");
         cliente1.listarFrotas();
         System.out.println("");
         
         // Listagens Cliente PF
-        System.out.println("####################### Listagens do Cliente PF #######################\n");
+        printFormattedTitle("Listagens Cliente PF1 - Pedro");
+        printFormattedTitle("Visualizar Dados PF1 - Pedro");
         cliente3.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PF1 - Pedro", "\n");
         cliente3.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 004 PF1 - Pedro", "\n");
         cliente3.visualizarSeguro(4);
-        System.out.println("");
+        printFormattedTitle("Listar Condutores PF1 - Pedro", "\n");
         cliente3.listarCondutores();
-        System.out.println("");
+        printFormattedTitle("Listar Veiculos PF1 - Pedro", "\n");
         cliente3.listarVeiculos();
         System.out.println("");
 
-        // Adicionar Veiculos Cliente PF
-        System.out.println("#################### Adicionar Veiculos Cliente PF ####################\n");
+        // Adicionar Veiculo Cliente PF
+        printFormattedTitle("Adicionar Veiculo Cliente PF1 - Pedro");
         Veiculo veiculo17 = new Veiculo("CAD-4321", "Ferrari", "SF90", 2022);
         cliente3.cadastrarVeiculo(veiculo17);
         System.out.println("");
         // Cadastrar Condutor Cliente PF
-        System.out.println("#################### Cadastrar Condutor Cliente PF ####################\n");
+        printFormattedTitle("Cadastrar Condutor Cliente PF1 - Pedro");
         cliente3.cadastrarCondutor(condutor7, 4);
         System.out.println("");
 
         // Listagens Cliente PF
-        System.out.println("####################### Listagens do Cliente PF #######################\n");
+        printFormattedTitle("Listagens Cliente PF1 - Pedro");
+        printFormattedTitle("Visualizar Dados PF1 - Pedro");
         cliente3.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PF1 - Pedro", "\n");
         cliente3.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 004 PF1 - Pedro", "\n");
         cliente3.visualizarSeguro(4);
-        System.out.println("");
+        printFormattedTitle("Listar Condutores PF1 - Pedro", "\n");
         cliente3.listarCondutores();
-        System.out.println("");
+        printFormattedTitle("Listar Veiculos PF1 - Pedro", "\n");
         cliente3.listarVeiculos();
         System.out.println("");
 
 
         // Listagens Seguradora
-        System.out.println("######################### Listagens Seguradora ########################\n");
-        seguradora1.listarSeguros();
+        printFormattedTitle("Listagens Seguradora 1 - Pedro Seguros");
+        printFormattedTitle("Listar Sinistros Seguradora 1 - Pedro Seguros");
         seguradora1.listarSinistros();
+        printFormattedTitle("Listar Sinistros PJ1 - Google");
         seguradora1.listarSinistrosPorCliente("06.947.283/0001-60");
+        printFormattedTitle("Listar Sinistros PF1 - Pedro");
         seguradora1.listarSinistrosPorCliente("101.255.787-17");
+        printFormattedTitle("Listar Sinistros PJ2 - Facebook");
         seguradora1.listarSinistrosPorCliente("13.347.016/0001-17");
+        printFormattedTitle("Calcular Receita Seguradora 1 - Pedro Seguros");
         seguradora1.calcularReceita();
         System.out.println("");
 
         // Listagens Cliente PJ
-        System.out.println("####################### Listagens do Cliente PJ #######################\n");
+        printFormattedTitle("Listagens Cliente PJ1 - Google");
+        printFormattedTitle("Visualizar Dados PJ1 - Google");
         cliente1.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PJ1 - Google", "\n");
         cliente1.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 001 PJ1 - Google", "\n");
         cliente1.visualizarSeguro(1);
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 002 PJ1 - Google", "\n");
         cliente1.visualizarSeguro(2);
         System.out.println("");
 
         // Listagens Cliente PF
-        System.out.println("####################### Listagens do Cliente PF #######################\n");
+        printFormattedTitle("Listagens Cliente PF1 - Pedro");
+        printFormattedTitle("Visualizar Dados PF1 - Pedro");
         cliente3.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PF1 - Pedro", "\n");
         cliente3.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 004 PF1 - Pedro", "\n");
         cliente3.visualizarSeguro(4);
         System.out.println("");
 
         // Gerar Sinistros
-        System.out.println("########################### Gerar Sinistros ###########################\n");
+        printFormattedTitle("Gerar Sinistros");
         seguradora1.gerarSinistro("16/06/2023", "Rua Perigosa, 170", "484.258.684-24", 1);
         seguradora1.gerarSinistro("20/06/2023", "Rua Estranha, 34", "752.792.913-82", 2);
         seguradora1.gerarSinistro("13/08/2023", "Rua Periculosa, 51", "522.342.883-80", 3);
@@ -397,86 +411,100 @@ public class Main {
         System.out.println("");
 
         // Listagens Seguradora
-        System.out.println("######################### Listagens Seguradora ########################\n");
-        seguradora1.listarSeguros();
+        printFormattedTitle("Listagens Seguradora 1 - Pedro Seguros");
+        printFormattedTitle("Listar Sinistros Seguradora 1 - Pedro Seguros");
         seguradora1.listarSinistros();
+        printFormattedTitle("Listar Sinistros PJ1 - Google");
         seguradora1.listarSinistrosPorCliente("06.947.283/0001-60");
+        printFormattedTitle("Listar Sinistros PF1 - Pedro");
         seguradora1.listarSinistrosPorCliente("101.255.787-17");
+        printFormattedTitle("Listar Sinistros PJ2 - Facebook");
         seguradora1.listarSinistrosPorCliente("13.347.016/0001-17");
+        printFormattedTitle("Calcular Receita Seguradora 1 - Pedro Seguros");
         seguradora1.calcularReceita();
         System.out.println("");
 
         // Listagens Cliente PJ
-        System.out.println("####################### Listagens do Cliente PJ #######################\n");
+        printFormattedTitle("Listagens Cliente PJ1 - Google");
+        printFormattedTitle("Visualizar Dados PJ1 - Google");
         cliente1.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PJ1 - Google", "\n");
         cliente1.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 001 PJ1 - Google", "\n");
         cliente1.visualizarSeguro(1);
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 002 PJ1 - Google", "\n");
         cliente1.visualizarSeguro(2);
         System.out.println("");
 
         // Listagens Cliente PF
-        System.out.println("####################### Listagens do Cliente PF #######################\n");
+        printFormattedTitle("Listagens Cliente PF1 - Pedro");
+        printFormattedTitle("Visualizar Dados PF1 - Pedro");
         cliente3.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PF1 - Pedro", "\n");
         cliente3.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 004 PF1 - Pedro", "\n");
         cliente3.visualizarSeguro(4);
         System.out.println("");
 
 
         //////////////////// REMOCOES ////////////////////
-        System.out.println("\n######################################### REMOCOES ########################################\n\n");
+        printFormattedTitle("REMOCOES");
+        System.out.println("");
 
         // Listagens Seguradora
-        System.out.println("######################### Listagens Seguradora ########################\n");
-        seguradora1.listarSeguros();
+        printFormattedTitle("Listagens Seguradora 1 - Pedro Seguros");
+        printFormattedTitle("Listar Sinistros Seguradora 1 - Pedro Seguros");
         seguradora1.listarSinistros();
+        printFormattedTitle("Listar Sinistros PJ1 - Google");
         seguradora1.listarSinistrosPorCliente("06.947.283/0001-60");
+        printFormattedTitle("Listar Sinistros PJ2 - Facebook");
         seguradora1.listarSinistrosPorCliente("13.347.016/0001-17");
+        printFormattedTitle("Calcular Receita Seguradora 1 - Pedro Seguros");
         seguradora1.calcularReceita();
         System.out.println("");
 
         // Excluir sinistros
-        System.out.println("########################## Excluir sinistros ##########################\n");
+        printFormattedTitle("Excluir Sinistros");
         seguradora1.excluirSinistro(1);
         seguradora1.excluirSinistro(2);
         seguradora1.excluirSinistro(3);
         System.out.println("");
 
         // Listagens Seguradora
-        System.out.println("######################### Listagens Seguradora ########################\n");
-        seguradora1.listarSeguros();
+        printFormattedTitle("Listagens Seguradora 1 - Pedro Seguros");
+        printFormattedTitle("Listar Sinistros Seguradora 1 - Pedro Seguros");
         seguradora1.listarSinistros();
+        printFormattedTitle("Listar Sinistros PJ1 - Google");
         seguradora1.listarSinistrosPorCliente("06.947.283/0001-60");
+        printFormattedTitle("Listar Sinistros PJ2 - Facebook");
         seguradora1.listarSinistrosPorCliente("13.347.016/0001-17");
+        printFormattedTitle("Calcular Receita Seguradora 1 - Pedro Seguros");
         seguradora1.calcularReceita();
         System.out.println("");
 
 
         // Listagens Cliente PJ
-        System.out.println("####################### Listagens do Cliente PJ #######################\n");
+        printFormattedTitle("Listagens Cliente PJ1 - Google");
+        printFormattedTitle("Visualizar Dados PJ1 - Google");
         cliente1.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PJ1 - Google", "\n");
         cliente1.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 001 PJ1 - Google", "\n");
         cliente1.visualizarSeguro(1);
-        System.out.println("");
+        printFormattedTitle("Listar Condutores PJ1 - Google", "\n");
         cliente1.listarCondutores();
-        System.out.println("");
+        printFormattedTitle("Listar Frotas PJ1 - Google", "\n");
         cliente1.listarFrotas();
         System.out.println("");
 
         // Excluir Condutor Cliente PJ
-        System.out.println("##################### Excluir Condutor Cliente PJ #####################\n");
+        printFormattedTitle("Excluir Condutores Cliente PJ1 - Google");
         cliente1.excluirCondutor("484.258.684-24", 1);
         cliente1.excluirCondutor("752.792.913-82", 1); // Nao vai excluir porque o seguro nao pode ficar sem condutor
         System.out.println("");
 
         // Excluir Veiculos e Frota Inteira Cliente PJ
-        System.out.println("################# Excluir Veiculos e Frota Cliente PJ #################\n");
+        printFormattedTitle("Excluir Veiculos e Frota Inteira Cliente PJ1 - Google");
         ArrayList<Veiculo> veiculosRemove = new ArrayList<Veiculo>();
         veiculosRemove.add(veiculo4);
         veiculosRemove.add(veiculo5);
@@ -485,123 +513,132 @@ public class Main {
         System.out.println("");
 
         // Listagens Cliente PJ
-        System.out.println("####################### Listagens do Cliente PJ #######################\n");
+        printFormattedTitle("Listagens Cliente PJ1 - Google");
+        printFormattedTitle("Visualizar Dados PJ1 - Google");
         cliente1.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PJ1 - Google", "\n");
         cliente1.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 001 PJ1 - Google", "\n");
         cliente1.visualizarSeguro(1);
-        System.out.println("");
+        printFormattedTitle("Listar Condutores PJ1 - Google", "\n");
         cliente1.listarCondutores();
-        System.out.println("");
+        printFormattedTitle("Listar Frotas PJ1 - Google", "\n");
         cliente1.listarFrotas();
         System.out.println("");
 
 
         // Listagens Cliente PF
-        System.out.println("####################### Listagens do Cliente PF #######################\n");
+        printFormattedTitle("Listagens Cliente PF1 - Pedro");
+        printFormattedTitle("Visualizar Dados PF1 - Pedro");
         cliente3.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PF1 - Pedro", "\n");
         cliente3.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 004 PF1 - Pedro", "\n");
         cliente3.visualizarSeguro(4);
-        System.out.println("");
+        printFormattedTitle("Listar Condutores PF1 - Pedro", "\n");
         cliente3.listarCondutores();
-        System.out.println("");
+        printFormattedTitle("Listar Veiculos PF1 - Pedro", "\n");
         cliente3.listarVeiculos();
         System.out.println("");
 
         // Excluir Condutor Cliente PF
-        System.out.println("##################### Excluir Condutor Cliente PF #####################\n");
+        printFormattedTitle("Excluir Condutor Cliente PF1 - Pedro");
         cliente3.excluirCondutor("453.455.012-03", 4);
         System.out.println("");
 
         // Listagens Cliente PF
-        System.out.println("####################### Listagens do Cliente PF #######################\n");
+        printFormattedTitle("Listagens Cliente PF1 - Pedro");
+        printFormattedTitle("Visualizar Dados PF1 - Pedro");
         cliente3.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PF1 - Pedro", "\n");
         cliente3.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 004 PF1 - Pedro", "\n");
         cliente3.visualizarSeguro(4);
-        System.out.println("");
+        printFormattedTitle("Listar Condutores PF1 - Pedro", "\n");
         cliente3.listarCondutores();
-        System.out.println("");
+        printFormattedTitle("Listar Veiculos PF1 - Pedro", "\n");
         cliente3.listarVeiculos();
         System.out.println("");
 
         // Excluir Veiculos Cliente PF
-        System.out.println("##################### Excluir Veiculos Cliente PF #####################\n");
+        printFormattedTitle("Excluir Veiculos Cliente PF1 - Pedro");
         cliente3.excluirVeiculo(veiculo9); // Veiculo com seguro
         cliente3.excluirVeiculo(veiculo11);
         cliente3.excluirVeiculo(veiculo17);
         System.out.println("");
 
         // Listagens Cliente PF
-        System.out.println("####################### Listagens do Cliente PF #######################\n");
+        printFormattedTitle("Listagens Cliente PF1 - Pedro");
+        printFormattedTitle("Visualizar Dados PF1 - Pedro");
         cliente3.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros PF1 - Pedro", "\n");
         cliente3.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Visualizar Seguro 004 PF1 - Pedro", "\n");
         cliente3.visualizarSeguro(4);
-        System.out.println("");
+        printFormattedTitle("Listar Condutores PF1 - Pedro", "\n");
         cliente3.listarCondutores();
-        System.out.println("");
+        printFormattedTitle("Listar Veiculos PF1 - Pedro", "\n");
         cliente3.listarVeiculos();
         System.out.println("");
 
 
         // Listagens Seguradora
-        System.out.println("######################### Listagens Seguradora ########################\n");
+        printFormattedTitle("Listagens Seguradora 1 - Pedro Seguros");
+        printFormattedTitle("Visualizar Dados Seguradora 1 - Pedro Seguros");
         seguradora1.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Clientes Seguradora 1 - Pedro Seguros", "\n");
         seguradora1.listarClientes();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros Seguradora 1 - Pedro Seguros", "\n");
         seguradora1.listarSeguros();
+        printFormattedTitle("Calcular Receita Seguradora 1 - Pedro Seguros");
         seguradora1.calcularReceita();
         System.out.println("");
 
         // Excluir Cliente PJ
-        System.out.println("########################## Excluir Cliente PJ #########################\n");
+        printFormattedTitle("Excluir Cliente PJ1 - Google");
         seguradora1.excluirCliente("06.947.283/0001-60");
         System.out.println("");
 
         // Excluir Cliente PF
-        System.out.println("########################## Excluir Cliente PF #########################\n");
+        printFormattedTitle("Excluir Cliente PF1 - Pedro");
         seguradora1.excluirCliente("101.255.787-17");
         System.out.println("");
 
         // Cancelar Seguro PJ
-        System.out.println("########################## Cancelar Seguro PJ #########################\n");
+        printFormattedTitle("Cancelar Seguro 003 PJ2 - Facebook");
         seguradora1.cancelarSeguro("13.347.016/0001-17", 3);
         System.out.println("");
 
         // Cancelar Seguro PF
-        System.out.println("########################## Cancelar Seguro PF #########################\n");
+        printFormattedTitle("Cancelar Seguro 005 PF2 - Marcelo");
         seguradora1.cancelarSeguro("522.444.883-22", 5);
         System.out.println("");
 
         // Listagens Seguradora
-        System.out.println("######################### Listagens Seguradora ########################\n");
+        printFormattedTitle("Listagens Seguradora 1 - Pedro Seguros");
+        printFormattedTitle("Visualizar Dados Seguradora 1 - Pedro Seguros");
         seguradora1.visualizarDados();
-        System.out.println("");
+        printFormattedTitle("Listar Clientes Seguradora 1 - Pedro Seguros", "\n");
         seguradora1.listarClientes();
-        System.out.println("");
+        printFormattedTitle("Listar Seguros Seguradora 1 - Pedro Seguros", "\n");
         seguradora1.listarSeguros();
-        System.out.println("");
+        printFormattedTitle("Calcular Receita Seguradora 1 - Pedro Seguros", "\n");
         seguradora1.calcularReceita();
         System.out.println("");
 
         // Listagens Admin
-        System.out.println("######################### Listagens do Admin ##########################\n");
+        printFormattedTitle("Listagens do Admin");
         Admin.listarSeguradoras();
         System.out.println("");
+
         // Excluir Seguradoras
-        System.out.println("######################### Excluir Seguradoras #########################\n");
+        printFormattedTitle("Excluir Seguradoras");
         Admin.excluirSeguradora(seguradora1);
         Admin.excluirSeguradora(seguradora2);
         System.out.println("");
+
         // Listagens Admin
-        System.out.println("######################### Listagens do Admin ##########################\n");
+        printFormattedTitle("Listagens do Admin");
         Admin.listarSeguradoras();
         System.out.println("");
 
@@ -648,6 +685,25 @@ public class Main {
 
         } catch (IOException e) {
             System.err.println("Erro: " + e.getMessage());
+        }
+    }
+
+    // Retorna o titulo no formato '################################ Titulo ###############################'
+    public static void printFormattedTitle(String title, String ... extraNewLine) {
+        int width = 69; // Tamanho total do titulo
+        int padding = width - title.length();
+        if (extraNewLine.length == 0) {
+            extraNewLine = new String[] {""};
+        }
+
+        if (padding <= 0) { // padding <= 0 indica que o titulo e maior ou igual ao tamanho total
+            System.out.printf("%s%s\n\n", extraNewLine[0], title);; // Se esse for o caso, nao tem espaco para colocar o #. Logo, retorna o titulo
+        } else {
+            int right = padding / 2;
+            int left = padding - right; // O esquerdo e sempre igual ao direito ou igual ao direito + 1
+            String leftPadding = "#".repeat(left);
+            String rightPadding = "#".repeat(right);
+            System.out.printf("%s%s %s %s\n\n", extraNewLine[0], leftPadding, title, rightPadding);
         }
     }
 }
