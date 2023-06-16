@@ -72,6 +72,13 @@ public abstract class Seguro {
         listaSinistros.add(sinistro);
         condutor.adicionarSinistro(sinistro);
 
+        // Atualizar valor dos seguros
+        for (Seguro seguro: getCliente().getListaSeguros()) {
+            seguro.setValorMensal(seguro.calcularValorMensal());
+        }
+        // Atualizar valor mensal total
+        getCliente().setValorMensalTotal(getCliente().calcularValorMensalTotal());
+
         System.out.printf("Sinistro gerado! ID do Sinistro: %03d.\n", sinistro.getId());
     }
 
@@ -93,6 +100,13 @@ public abstract class Seguro {
         sinistro.getCondutor().removerSinistro(sinistro);
         // Remover sinistro da lista de sinistros
         listaSinistros.remove(sinistro);
+
+        // Atualizar valor dos seguros
+        for (Seguro seguro: getCliente().getListaSeguros()) {
+            seguro.setValorMensal(seguro.calcularValorMensal());
+        }
+        // Atualizar valor mensal total
+        getCliente().setValorMensalTotal(getCliente().calcularValorMensalTotal());
 
         System.out.printf("Sinistro %03d excluido!\n", sinistro.getId());
     }

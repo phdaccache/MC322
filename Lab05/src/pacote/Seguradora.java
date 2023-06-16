@@ -393,6 +393,9 @@ public class Seguradora {
             listaSeguros.remove(seguro);
             // Cancelar seguro no cliente (tambem remove o seguro do veiculo ou frota. metodo sobrescrito em PF e PJ)
             seguro.getCliente().excluirSeguro(seguro);
+            // Atualizar valor mensal total do cliente
+            seguro.getCliente().setValorMensalTotal(seguro.getCliente().calcularValorMensalTotal());
+            
             System.out.printf("Seguro de ID %03d cancelado!\n", id);
             return;
         }
