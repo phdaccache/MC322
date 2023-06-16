@@ -46,11 +46,13 @@ public abstract class Cliente {
     // Lista todos os seguros do cliente
     public void listarSeguros() {
         System.out.println("Seguros:");
+
         // Caso em que nao ha seguros gerados
         if (listaSeguros.isEmpty()) {
             System.out.println("    * Nao ha seguros gerados.");
             return;
         }
+        
         // Iterando sobre os seguros
         for (Seguro seguro : listaSeguros) {
             System.out.println("---------------------------------------------");
@@ -251,8 +253,11 @@ public abstract class Cliente {
         return valorMensalTotal;
     }
 
+    // Retorna o documento do cliente
+    public abstract String[] getDocumento();
+
     // Retorna o seguro atraves do ID
-    public Seguro getSeguro(int id) {
+    private Seguro getSeguro(int id) {
         for (Seguro seguro : listaSeguros) {
             if (seguro.getId() == id) {
                 return seguro;
@@ -260,10 +265,6 @@ public abstract class Cliente {
         }
         return null;
     }
-
-    // Retorna o documento do cliente
-    public abstract String[] getDocumento();
-
 
     // Getters e Setters
     public String getNome() {

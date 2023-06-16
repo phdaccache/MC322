@@ -144,6 +144,7 @@ public class ClientePJ extends Cliente {
         if (frota.getListaVeiculos().isEmpty()) {
             removerFrota(frota);
         }
+        
         // Atualizar valor dos seguros
         for (Seguro seguro: getListaSeguros()) {
             seguro.setValorMensal(seguro.calcularValorMensal());

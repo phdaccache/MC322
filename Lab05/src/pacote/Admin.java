@@ -10,11 +10,13 @@ public class Admin {
     // Listar todas as seguradoras
     public static void listarSeguradoras() {
         System.out.println("Seguradoras cadastradas:");
+
         // Caso em que nao ha seguradoras
         if (listaSeguradoras.isEmpty()) {
             System.out.println("    * Nao ha seguradoras cadastradas.");
             return;
         }
+        
         // Iterando sobre as seguradoras
         for (Seguradora seguradora: listaSeguradoras) {
             System.out.println("---------------------------------------------");

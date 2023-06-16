@@ -111,7 +111,7 @@ public abstract class Seguro {
         System.out.printf("Sinistro %03d excluido!\n", sinistro.getId());
     }
 
-    public Condutor getCondutor(String cpf) {
+    private Condutor getCondutor(String cpf) {
         for (Condutor condutor : listaCondutores) {
             if (condutor.getCPF().equals(cpf)) {
                 return condutor;
