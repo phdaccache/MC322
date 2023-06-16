@@ -32,6 +32,8 @@ public class Seguradora {
         joiner.add("Telefone: " + getTelefone());
         joiner.add("Endereco: " + getEndereco());
         joiner.add("Email: " + getEmail());
+        joiner.add("Quantidade de Clientes: " + getListaClientes().size());
+        joiner.add("Quantidade de Seguros: " + getListaSeguros().size());
 
         return joiner.toString();
     }
