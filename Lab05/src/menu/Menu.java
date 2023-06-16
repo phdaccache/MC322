@@ -19,7 +19,7 @@ public class Menu {
     // Imprime Menu no terminal
     public void showMenu() {
         MenuOperacoes menu[] = MenuOperacoes.values();
-        String title = getFormattedTitle("Menu");
+        String title = getTituloFormatado("Menu");
 
         System.out.println(title);
         System.out.println("|-------------------------------------------|");
@@ -116,7 +116,7 @@ public class Menu {
     // Imprime o Submenu de "option" no terminal.
     private void showSubmenu(MenuOperacoes option) {
         SubmenuOperacoes submenu[] = option.getSubOptions();
-        String title = getFormattedTitle(option.getName());
+        String title = getTituloFormatado(option.getName());
 
         System.out.println(title);
         System.out.println("|-------------------------------------------|");
@@ -279,18 +279,18 @@ public class Menu {
     }
 
     // Retorna o titulo do menu (ou submenu) no formato '#################### Menu ###################'
-    private String getFormattedTitle(String title) {
+    private String getTituloFormatado(String titulo) {
         int width = 43; // Tamanho total do titulo
-        int padding = width - title.length();
+        int padding = width - titulo.length();
 
         if (padding <= 0) { // padding <= 0 indica que o titulo e maior ou igual ao tamanho total
-            return title; // Se esse for o caso, nao tem espaco para colocar o #. Logo, retorna o titulo
+            return titulo; // Se esse for o caso, nao tem espaco para colocar o #. Logo, retorna o titulo
         } else {
             int right = padding / 2;
             int left = padding - right; // O esquerdo e sempre igual ao direito ou igual ao direito + 1
             String leftPadding = "#".repeat(left);
             String rightPadding = "#".repeat(right);
-            return String.format("\n%s %s %s", leftPadding, title, rightPadding);
+            return String.format("\n%s %s %s", leftPadding, titulo, rightPadding);
         }
     }
 
