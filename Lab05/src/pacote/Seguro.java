@@ -111,6 +111,9 @@ public abstract class Seguro {
         System.out.printf("Sinistro %03d excluido!\n", sinistro.getId());
     }
 
+    // Calcular valor mensal
+    public abstract double calcularValorMensal();
+
     private Condutor getCondutor(String cpf) {
         for (Condutor condutor : listaCondutores) {
             if (condutor.getCPF().equals(cpf)) {
@@ -119,10 +122,6 @@ public abstract class Seguro {
         }
         return null;
     }
-
-    // Calcular valor mensal
-    public abstract double calcularValorMensal();
-
 
     // Getters e Setters
     public int getId() {
