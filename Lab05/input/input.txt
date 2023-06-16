@@ -405,7 +405,7 @@ Model X
 
 //////////////// SEGURADORA 1 ////////////////
 
-// Acessar Area Seguradora 2
+// Acessar Area Seguradora 1
 2
 // Login
 61.198.164/0001-60
@@ -515,7 +515,7 @@ jonas@gmail.com
 // Login
 51.990.695/0001-37
 
-// Gerar Seguro 1
+// Gerar Seguro 6
 7
 // Opcao Pessoa Fisica
 2
@@ -653,6 +653,8 @@ piper@gmail.com
 7
 // Voltar
 0
+
+
 
 /////////////////////////// TESTES REMOCOES ///////////////////////////
 
