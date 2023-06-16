@@ -81,7 +81,7 @@ public class ClientePF extends Cliente{
         // Caso em que o veiculo ja esta cadastrado
         for (Veiculo veiculoCadastrado : listaVeiculos) {
             if (veiculoCadastrado.getPlaca().equals(veiculo.getPlaca())) {
-                System.out.println("Veiculo ja cadastrado.");
+                System.out.println("Placa invalida. Veiculo ja cadastrado.");
                 return;
             }
         }
@@ -117,7 +117,7 @@ public class ClientePF extends Cliente{
     public void excluirVeiculo(Veiculo veiculo) {
         // Checando se foi passado um veiculo
         if (veiculo == null) {
-            System.out.println("Nao foi possivel excluir o veiculo.");
+            System.out.println("Nao foi possivel remover o veiculo.");
             return;
         }
 

@@ -633,7 +633,7 @@ Digite uma opcao: Frotas:
 |-------------------------------------------|
 Digite uma opcao: Para cadastrar uma frota, e necessario cadastrar pelo menos um veiculo:
 Digite a placa: Digite a marca: Digite o modelo: Digite o ano de fabricacao: Veiculo cadastrado!
-Frota cadastrada!
+Frota cadastrada! ID: 001
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -696,7 +696,7 @@ Digite uma opcao: Frota de ID 001 atualizada!
 |-------------------------------------------|
 Digite uma opcao: Para cadastrar uma frota, e necessario cadastrar pelo menos um veiculo:
 Digite a placa: Digite a marca: Digite o modelo: Digite o ano de fabricacao: Veiculo cadastrado!
-Frota cadastrada!
+Frota cadastrada! ID: 002
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -953,7 +953,7 @@ Digite uma opcao: Frotas:
 |-------------------------------------------|
 Digite uma opcao: Para cadastrar uma frota, e necessario cadastrar pelo menos um veiculo:
 Digite a placa: Digite a marca: Digite o modelo: Digite o ano de fabricacao: Veiculo cadastrado!
-Frota cadastrada!
+Frota cadastrada! ID: 001
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -1182,7 +1182,7 @@ Digite uma opcao: Frotas:
 |-------------------------------------------|
 Digite uma opcao: Para cadastrar uma frota, e necessario cadastrar pelo menos um veiculo:
 Digite a placa: Digite a marca: Digite o modelo: Digite o ano de fabricacao: Veiculo cadastrado!
-Frota cadastrada!
+Frota cadastrada! ID: 001
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -1886,7 +1886,7 @@ Digite uma opcao:
 
 Digite uma opcao: Insira o CNPJ do cliente: Insira o ID da frota: Insira a data de inicio do seguro: Insira a data de fim do seguro: E necessario cadastrar pelo menos um condutor para gerar o seguro.
 Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Para cadastrar mais condutores, acesse a area do cliente.
-Seguro gerado com sucesso!
+Seguro gerado! ID: 001
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -1914,7 +1914,7 @@ Digite uma opcao:
 
 Digite uma opcao: Insira o CNPJ do cliente: Insira o ID da frota: Insira a data de inicio do seguro: Insira a data de fim do seguro: E necessario cadastrar pelo menos um condutor para gerar o seguro.
 Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Para cadastrar mais condutores, acesse a area do cliente.
-Seguro gerado com sucesso!
+Seguro gerado! ID: 002
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -1942,7 +1942,7 @@ Digite uma opcao:
 
 Digite uma opcao: Insira o CNPJ do cliente: Insira o ID da frota: Insira a data de inicio do seguro: Insira a data de fim do seguro: E necessario cadastrar pelo menos um condutor para gerar o seguro.
 Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Para cadastrar mais condutores, acesse a area do cliente.
-Seguro gerado com sucesso!
+Seguro gerado! ID: 003
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -1970,7 +1970,7 @@ Digite uma opcao:
 
 Digite uma opcao: Insira o CPF do cliente: Insira a placa do veiculo: Insira a data de inicio do seguro: Insira a data de fim do seguro: E necessario cadastrar pelo menos um condutor para gerar o seguro.
 Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Para cadastrar mais condutores, acesse a area do cliente.
-Seguro gerado com sucesso!
+Seguro gerado! ID: 004
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -1998,7 +1998,7 @@ Digite uma opcao:
 
 Digite uma opcao: Insira o CPF do cliente: Insira a placa do veiculo: Insira a data de inicio do seguro: Insira a data de fim do seguro: E necessario cadastrar pelo menos um condutor para gerar o seguro.
 Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Para cadastrar mais condutores, acesse a area do cliente.
-Seguro gerado com sucesso!
+Seguro gerado! ID: 005
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -2227,7 +2227,7 @@ Digite uma opcao:
 
 Digite uma opcao: Insira o CPF do cliente: Insira a placa do veiculo: Insira a data de inicio do seguro: Insira a data de fim do seguro: E necessario cadastrar pelo menos um condutor para gerar o seguro.
 Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Para cadastrar mais condutores, acesse a area do cliente.
-Seguro gerado com sucesso!
+Seguro gerado! ID: 006
 
 ############## Area Seguradora ##############
 |-------------------------------------------|
@@ -2588,7 +2588,7 @@ Digite uma opcao: Frota de ID 002 atualizada!
 | Opcao 10 - Atualizar Frota                |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o ID do seguro que deseja adicionar o condutor: Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Condutor cadastrado com sucesso!
+Digite uma opcao: Insira o ID do seguro que deseja adicionar o condutor: Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Condutor cadastrado!
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -2998,7 +2998,7 @@ Digite uma opcao: Digite a placa: Digite a marca: Digite o modelo: Digite o ano 
 | Opcao 9 - Excluir veiculo                 |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o ID do seguro que deseja adicionar o condutor: Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Condutor cadastrado com sucesso!
+Digite uma opcao: Insira o ID do seguro que deseja adicionar o condutor: Insira o CPF do condutor: Insira o nome do condutor: Insira o telefone do condutor: Insira o endereco do condutor: Insira o email do condutor: Insira a data de nascimento do condutor: Condutor cadastrado!
 
 ######## Area Cliente - Pessoa Fisica #######
 |-------------------------------------------|
@@ -3437,7 +3437,7 @@ Veiculos:
 | Opcao 10 - Atualizar Frota                |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o ID do seguro que deseja excluir o condutor: Insira o CPF do condutor: Condutor excluido com sucesso!
+Digite uma opcao: Insira o ID do seguro que deseja excluir o condutor: Insira o CPF do condutor: Condutor de CPF 484.258.684-24 removido!
 
 ####### Area Cliente - Pessoa Juridica ######
 |-------------------------------------------|
@@ -3883,7 +3883,7 @@ Seguro: Nao possui
 | Opcao 9 - Excluir veiculo                 |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
-Digite uma opcao: Insira o ID do seguro que deseja excluir o condutor: Insira o CPF do condutor: Condutor excluido com sucesso!
+Digite uma opcao: Insira o ID do seguro que deseja excluir o condutor: Insira o CPF do condutor: Condutor de CPF 453.455.012-03 removido!
 
 ######## Area Cliente - Pessoa Fisica #######
 |-------------------------------------------|

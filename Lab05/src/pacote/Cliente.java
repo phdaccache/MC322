@@ -170,14 +170,14 @@ public abstract class Cliente {
         // Checando se o seguro ja tem o condutor com esse CPF
         for (Condutor condutorSeguro : seguro.getListaCondutores()) {
             if (condutorSeguro.getCPF().equals(condutor.getCPF())) {
-                System.out.println("O condutor ja esta cadastrado nesse seguro.");
+                System.out.println("CPF invalido. O condutor ja esta cadastrado nesse seguro.");
                 return;
             }
         }
 
         // Adicionando o condutor ao seguro
         seguro.autorizarCondutor(condutor);
-        System.out.println("Condutor cadastrado com sucesso!");
+        System.out.println("Condutor cadastrado!");
     }
 
     // Cadastrar novo condutor com scanner
@@ -221,7 +221,7 @@ public abstract class Cliente {
             // Excluindo o condutor
             if (condutor.getCPF().equals(cpf)) {
                 seguro.desautorizarCondutor(condutor);
-                System.out.println("Condutor excluido com sucesso!");
+                System.out.printf("Condutor de CPF %s removido!\n", cpf);
                 return;
             }
         }

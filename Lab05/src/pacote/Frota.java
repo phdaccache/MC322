@@ -70,7 +70,7 @@ public class Frota {
         // Caso em que o veiculo ja esta cadastrado
         for (Veiculo veiculoCadastrado : listaVeiculos) {
             if (veiculoCadastrado.getPlaca().equals(veiculo.getPlaca())) {
-                System.out.println("Veiculo ja cadastrado.");
+                System.out.println("Placa invalida. Veiculo ja cadastrado.");
                 return;
             }
         }

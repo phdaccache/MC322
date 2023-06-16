@@ -159,7 +159,7 @@ public class Seguradora {
                                         genero, educacao, dataNascimento);    
                 break;
             default:
-                System.out.println("Opcao invalida");
+                System.out.println("Opcao invalida.");
                 break;
         }
 
@@ -257,7 +257,8 @@ public class Seguradora {
 
         // Checando se a frota ja possui um seguro
         if (frota.getSeguro() != null) {
-            System.out.println("A frota ja possui um seguro.");
+            System.out.printf("Nao foi possivel gerar o seguro. A frota de ID %03d ja esta segurada.\n",
+                            frota.getId());
             return;
         }
 
@@ -270,7 +271,7 @@ public class Seguradora {
         frota.setSeguro(seguro); // Adicionar seguro na frota do cliente
         cliente.setValorMensalTotal(cliente.calcularValorMensalTotal()); // Atualizar valor mensal total do cliente
 
-        System.out.printf("Seguro gerado com sucesso! ID: %03d\n", seguro.getId());
+        System.out.printf("Seguro gerado! ID: %03d\n", seguro.getId());
     }
 
     // Gerar novo seguro PF automatico
@@ -284,7 +285,8 @@ public class Seguradora {
 
         // Checando se o veiculo ja possui um seguro
         if (veiculo.getSeguro() != null) {
-            System.out.println("O veiculo ja possui um seguro.");
+            System.out.printf("Nao foi possivel gerar o seguro. O veiculo de placa %s ja esta segurado.\n",
+                            veiculo.getPlaca());
             return;
         }
 
@@ -297,7 +299,7 @@ public class Seguradora {
         veiculo.setSeguro(seguro); // Adicionar seguro no veiculo do cliente
         cliente.setValorMensalTotal(cliente.calcularValorMensalTotal()); // Atualizar valor mensal total do cliente
 
-        System.out.printf("Seguro gerado com sucesso! ID: %03d\n", seguro.getId());
+        System.out.printf("Seguro gerado! ID: %03d\n", seguro.getId());
     }
 
     // Gerar novo seguro com scanner

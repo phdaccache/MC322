@@ -72,7 +72,7 @@ public abstract class Seguro {
         listaSinistros.add(sinistro);
         condutor.adicionarSinistro(sinistro);
 
-        System.out.printf("Sinistro gerado com sucesso! ID: %03d\n", sinistro.getId());
+        System.out.printf("Sinistro gerado! ID: %03d\n", sinistro.getId());
     }
 
     // Excluir sinistro automatico
@@ -85,7 +85,7 @@ public abstract class Seguro {
 
         // Checando se o sinistro existe
         if (!listaSinistros.contains(sinistro)) {
-            System.out.printf("Sinistro invalido. Nao foi possivel excluir o sinistro %03d.\n", sinistro.getId());
+            System.out.printf("Sinistro invalido. Nao foi possivel excluir o sinistro de ID %03d.\n", sinistro.getId());
             return;
         }
 
