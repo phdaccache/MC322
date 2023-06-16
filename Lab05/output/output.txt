@@ -94,8 +94,8 @@ Bem vindo(a) Pedro Seguros!
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -120,8 +120,8 @@ Quantidade de Seguros: 0
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -139,8 +139,8 @@ Digite uma opcao: Sem clientes cadastrados
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -165,8 +165,8 @@ Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o 
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -191,8 +191,8 @@ Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o 
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -217,8 +217,8 @@ Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o 
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -243,8 +243,8 @@ Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o 
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -316,8 +316,8 @@ Quantidade de Seguros: 0
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -335,8 +335,8 @@ Digite uma opcao: Receita Total: R$0,00
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -365,8 +365,8 @@ Bem vindo(a) Seguros Magicos!
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -391,8 +391,8 @@ Quantidade de Seguros: 0
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -410,8 +410,8 @@ Digite uma opcao: Sem clientes cadastrados
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -436,8 +436,8 @@ Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o 
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -462,8 +462,8 @@ Digite uma opcao: Insira o nome: Insira o telefone: Insira o endereco: Insira o 
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -510,8 +510,8 @@ Quantidade de Seguros: 0
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -529,8 +529,8 @@ Digite uma opcao: Receita Total: R$0,00
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -1880,8 +1880,8 @@ Bem vindo(a) Pedro Seguros!
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -1908,8 +1908,8 @@ Seguro gerado! ID do Seguro: 001.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -1936,8 +1936,8 @@ Seguro gerado! ID do Seguro: 002.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -1964,8 +1964,8 @@ Seguro gerado! ID do Seguro: 003.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -1992,8 +1992,8 @@ Seguro gerado! ID do Seguro: 004.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -2020,8 +2020,8 @@ Seguro gerado! ID do Seguro: 005.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -2100,8 +2100,8 @@ Cliente: Marcelo (CPF: 522.444.883-22)
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -2141,8 +2141,8 @@ Cliente: Google (CNPJ: 06.947.283/0001-60)
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -2172,8 +2172,8 @@ Cliente: Pedro (CPF: 101.255.787-17)
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -2191,8 +2191,8 @@ Digite uma opcao: Receita Total: R$5628,55
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -2221,8 +2221,8 @@ Bem vindo(a) Seguros Magicos!
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -2249,8 +2249,8 @@ Seguro gerado! ID do Seguro: 006.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -2285,8 +2285,8 @@ Cliente: Joao (CPF: 381.854.732-77)
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -2316,8 +2316,8 @@ Cliente: Joao (CPF: 381.854.732-77)
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -2335,8 +2335,8 @@ Digite uma opcao: Receita Total: R$156,25
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3439,8 +3439,8 @@ Bem vindo(a) Pedro Seguros!
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3477,8 +3477,8 @@ Nao ha sinistros gerados.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3500,8 +3500,8 @@ Nao ha sinistros gerados.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3519,8 +3519,8 @@ Digite uma opcao: Receita Total: R$5546,50
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3538,8 +3538,8 @@ Digite uma opcao: Insira a data do sinistro (dd/MM/yyyy): Insira o endereco do s
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3557,8 +3557,8 @@ Digite uma opcao: Insira a data do sinistro (dd/MM/yyyy): Insira o endereco do s
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3576,8 +3576,8 @@ Digite uma opcao: Insira a data do sinistro (dd/MM/yyyy): Insira o endereco do s
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3595,8 +3595,8 @@ Digite uma opcao: Insira a data do sinistro (dd/MM/yyyy): Insira o endereco do s
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3614,8 +3614,8 @@ Digite uma opcao: Insira a data do sinistro (dd/MM/yyyy): Insira o endereco do s
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3676,8 +3676,8 @@ Nao ha sinistros gerados.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3709,8 +3709,8 @@ Seguro 002: 12/06/2023 - 12/06/2028
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -3728,8 +3728,8 @@ Digite uma opcao: Receita Total: R$6229,80
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -4004,8 +4004,8 @@ Bem vindo(a) Pedro Seguros!
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -4023,8 +4023,8 @@ Digite uma opcao: Insira o ID do sinistro que deseja excluir: Sinistro 001 exclu
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -4042,8 +4042,8 @@ Digite uma opcao: Insira o ID do sinistro que deseja excluir: Sinistro 002 exclu
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -4061,8 +4061,8 @@ Digite uma opcao: Insira o ID do sinistro que deseja excluir: Sinistro 003 exclu
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -4107,8 +4107,8 @@ Nao ha sinistros gerados.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -4130,8 +4130,8 @@ Nao ha sinistros gerados.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -4149,8 +4149,8 @@ Digite uma opcao: Receita Total: R$5663,77
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5437,8 +5437,8 @@ Bem vindo(a) Pedro Seguros!
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5463,8 +5463,8 @@ Quantidade de Seguros: 3
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5536,8 +5536,8 @@ Quantidade de Seguros: 1
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5598,8 +5598,8 @@ Cliente: Marcelo (CPF: 522.444.883-22)
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5629,8 +5629,8 @@ Cliente: Google (CNPJ: 06.947.283/0001-60)
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5660,8 +5660,8 @@ Cliente: Facebook (CNPJ: 13.347.016/0001-17)
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5691,8 +5691,8 @@ Cliente: Marcelo (CPF: 522.444.883-22)
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5710,8 +5710,8 @@ Digite uma opcao: Receita Total: R$3638,36
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5729,8 +5729,8 @@ Digite uma opcao: Insira o documento do cliente que deseja excluir: Cliente Goog
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5748,8 +5748,8 @@ Digite uma opcao: Insira o documento do cliente que deseja excluir: Cliente Pedr
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5767,8 +5767,8 @@ Digite uma opcao: Insira o documento do cliente que deseja cancelar o seguro: In
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5786,8 +5786,8 @@ Digite uma opcao: Insira o documento do cliente que deseja cancelar o seguro: In
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5812,8 +5812,8 @@ Quantidade de Seguros: 0
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5860,8 +5860,8 @@ Quantidade de Seguros: 0
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5879,8 +5879,8 @@ Digite uma opcao: Nao ha seguros gerados.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5898,8 +5898,8 @@ Digite uma opcao: Insira o documento do cliente que deseja listar os seguros: Do
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5921,8 +5921,8 @@ Nao ha seguros gerados.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5944,8 +5944,8 @@ Nao ha seguros gerados.
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|
@@ -5963,8 +5963,8 @@ Digite uma opcao: Receita Total: R$0,00
 | Opcao 8 - Cancelar Seguro                 |
 | Opcao 9 - Listar Todos os Sinistros       |
 | Opcao 10 - Listar Sinistros por Cliente   |
-| Opcao 11 - Gerar Cinistro                 |
-| Opcao 12 - Excluir Cinistro               |
+| Opcao 11 - Gerar Sinistro                 |
+| Opcao 12 - Excluir Sinistro               |
 | Opcao 13 - Calcular Receita               |
 | Opcao 0 - Voltar                          |
 |-------------------------------------------|

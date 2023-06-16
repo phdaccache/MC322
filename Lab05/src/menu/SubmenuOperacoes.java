@@ -19,8 +19,8 @@ public enum SubmenuOperacoes {
 	CANCELAR_SEGURO("Cancelar Seguro"),
     LISTAR_SINISTROS_SEGURADORA("Listar Todos os Sinistros"),
     LISTAR_SINISTROS_SEGURADORA_CLIENTE("Listar Sinistros por Cliente"),
-	GERAR_SINISTRO("Gerar Cinistro"),
-    EXCLUIR_SINISTRO("Excluir Cinistro"),
+	GERAR_SINISTRO("Gerar Sinistro"),
+    EXCLUIR_SINISTRO("Excluir Sinistro"),
     CALCULAR_RECEITA_SEGURADORA("Calcular Receita"),
     // Cliente PJ
     VISUALIZAR_DADOS_CLIENTE_PJ("Visualizar Dados"),
