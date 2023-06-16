@@ -125,7 +125,7 @@ public class ClientePJ extends Cliente {
     }
 
     // Atualizar frota automatico
-    public void atualizarFrota(int id, ArrayList<Veiculo> veiculosAdicionar, ArrayList<Veiculo> veiculosRemover) {
+    public void atualizarFrota(int id, ArrayList<Veiculo> vAdd, ArrayList<Veiculo> vDel) {
         // Caso em que a frota nao existe
         if (id > listaFrotas.size() || id < 1) {
             System.out.printf("Frota de ID %03d nao encontrada.\n", id);
@@ -133,11 +133,11 @@ public class ClientePJ extends Cliente {
         }
         Frota frota = listaFrotas.get(id - 1);
         // Adicionar veiculos
-        for (Veiculo veiculo : veiculosAdicionar) {
+        for (Veiculo veiculo : vAdd) {
             frota.cadastrarVeiculo(veiculo);
         }
         // Remover veiculos
-        for (Veiculo veiculo : veiculosRemover) {
+        for (Veiculo veiculo : vDel) {
             frota.excluirVeiculo(veiculo);
         }
         // Caso em que os veiculos sao nulos (remover frota inteira)
