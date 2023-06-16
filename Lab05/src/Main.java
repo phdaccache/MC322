@@ -367,6 +367,7 @@ public class Main {
         seguradora1.listarSinistrosPorCliente("06.947.283/0001-60");
         seguradora1.listarSinistrosPorCliente("101.255.787-17");
         seguradora1.calcularReceita();
+        System.out.println("");
 
         // Listagens Cliente PJ
         cliente1.visualizarDados();
