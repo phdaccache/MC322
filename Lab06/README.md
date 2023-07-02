@@ -1,18 +1,20 @@
-## Getting Started
+# Laboratório 6 - Sistema de Seguradora
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Esquema Menu Interativo
+O menu interativo é disponibilizado ao usuário pelo terminal.
 
-## Folder Structure
+![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Menu_Interativo.png)
 
-The workspace contains two folders by default, where:
+## Diagrama de Classe Resumido
+Diagrama de classe sem a especificação dos atributos e dos métodos para melhor visualização do esquema da seguradora.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Diagrama_Resumido.png)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Diagrama de Classe Completo
+Diagrama de classe com todos os atributos e métodos de cada objeto.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+* OBS: não contém os métodos privados.
 
-## Dependency Management
+* Dica: Abrir a imagem em uma nova guia para poder dar zoom.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+![](https://github.com/phdaccache/MC322/blob/main/Lab05/images/Diagrama_Completo.png)
