@@ -333,7 +333,7 @@ public class Seguradora {
                     System.out.printf("Frota de ID %03d nao encontrada. Nao foi possivel gerar o seguro.\n", id);
                     return;
                 }
-                frota = ((ClientePJ)cliente).getListaFrotas().get(id - 1);
+                frota = ((ClientePJ)cliente).getFrota(id);
                 // Pegar informacoes do seguro
                 System.out.print("Insira a data de inicio do seguro: ");
                 String inicio = scanner.nextLine();

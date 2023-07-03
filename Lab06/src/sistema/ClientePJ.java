@@ -68,7 +68,7 @@ public class ClientePJ extends Cliente {
             return;
         }
 
-        Frota frota = listaFrotas.get(id - 1);
+        Frota frota = getFrota(id);
         System.out.println("---------------------------------------------");
         System.out.println(frota);
 
@@ -131,7 +131,7 @@ public class ClientePJ extends Cliente {
             System.out.printf("Frota de ID %03d nao encontrada.\n", id);
             return;
         }
-        Frota frota = listaFrotas.get(id - 1);
+        Frota frota = getFrota(id);
         // Adicionar veiculos
         for (Veiculo veiculo : vAdd) {
             frota.cadastrarVeiculo(veiculo);
@@ -167,7 +167,7 @@ public class ClientePJ extends Cliente {
             return;
         }
 
-        Frota frota = listaFrotas.get(id - 1);
+        Frota frota = getFrota(id);
 
         int op;
         do {
@@ -251,7 +251,7 @@ public class ClientePJ extends Cliente {
 
     // Retorna todos os veiculos de uma frota
     public ArrayList<Veiculo> getVeiculosPorFrota(int id) {
-        return listaFrotas.get(id - 1).getListaVeiculos();
+        return getFrota(id).getListaVeiculos();
     }
 
     // Remover frota
@@ -274,6 +274,16 @@ public class ClientePJ extends Cliente {
         // Excluir frota no cliente
         listaFrotas.remove(frota);
         System.out.printf("Frota de ID %03d removida!\n", id);
+    }
+
+    // Retorna a Frota atraves do id
+    public Frota getFrota(int id) {
+        for (Frota frota : listaFrotas) {
+            if (frota.getId() == id) {
+                return frota;
+            }
+        }
+        return null;
     }
     
 
