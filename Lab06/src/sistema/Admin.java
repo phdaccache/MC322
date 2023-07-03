@@ -105,4 +105,14 @@ public class Admin {
 
         excluirSeguradora(seguradora);
     }
+
+    // Retorna a seguradora atraves do CNPJ
+    public static Seguradora getSeguradora(String cnpj) {
+        for (Seguradora seguradora : listaSeguradoras) {
+            if (seguradora.getCNPJ().equals(cnpj)) {
+                return seguradora;
+            }
+        }
+        return null;
+    }
 }

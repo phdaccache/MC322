@@ -590,7 +590,7 @@ public class Seguradora {
     }
 
     // Retorna o cliente atraves do documento
-    private Cliente getCliente(String documento) {
+    public Cliente getCliente(String documento) {
         for (Cliente cliente : listaClientes) {
             if (cliente.getDocumento()[1].equals(documento)) {
                 return cliente;
@@ -600,7 +600,7 @@ public class Seguradora {
     }
 
     // Retorna o seguro atraves do id
-    private Seguro getSeguro(int id) {
+    public Seguro getSeguro(int id) {
         for (Seguro seguro : listaSeguros) {
             if (seguro.getId() == id) {
                 return seguro;

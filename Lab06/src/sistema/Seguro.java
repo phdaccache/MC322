@@ -127,7 +127,7 @@ public abstract class Seguro {
     // Calcular valor mensal
     public abstract double calcularValorMensal();
 
-    private Condutor getCondutor(String cpf) {
+    public Condutor getCondutor(String cpf) {
         for (Condutor condutor : listaCondutores) {
             if (condutor.getCPF().equals(cpf)) {
                 return condutor;
