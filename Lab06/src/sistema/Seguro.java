@@ -31,6 +31,19 @@ public abstract class Seguro {
         this.listaCondutores = new ArrayList<>();
     }
 
+    public Seguro(int id, String dataInicio, String dataFim, Seguradora seguradora, Cliente cliente) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        
+        this.id = id;
+        this.dataInicio = LocalDate.parse(dataInicio, dtf); // Transformando String em LocalDate
+        this.dataFim = LocalDate.parse(dataFim, dtf); // Transformando String em LocalDate
+        this.seguradora = seguradora;
+        this.cliente = cliente;
+        this.valorMensal = 0;
+        this.listaSinistros = new ArrayList<>();
+        this.listaCondutores = new ArrayList<>();
+    }
+
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");

@@ -16,6 +16,29 @@ public class Main {
         System.out.println("LABORATORIO 6 - SISTEMA DE SEGURADORA");
         System.out.println("");
 
+        System.out.println("FUNCIONAMENTO DO PROGRAMA:");
+        System.out.println("");
+
+        System.out.println("* E possivel aceitar ou negar essas opcoes no inicio do programa:");
+        System.out.println("");
+
+        System.out.println("    1. Carregar arquivos salvos:");
+        System.out.println("        * Inicia o programa com alguns objetos ja instanciados.");
+        System.out.println("        * Esses objetos sao carregados de 'src/arquivos/arquivosCSV'.");
+        System.out.println("");
+
+        System.out.println("    2. Rodar o teste automatico:");
+        System.out.println("        * Instancia objetos direto da main e testa suas funcionalidades.");
+        System.out.println("        * Todos os objetos sao excluidos apos o teste.");
+        System.out.println("");
+
+        System.out.println("* E possivel aceitar ou negar essa opcao ao fim do programa:");
+        System.out.println("");
+
+        System.out.println("    2. Salvar os objetos criados:");
+        System.out.println("        * Salva todos os objetos em 'src/arquivos/arquivosCSV'.");
+        System.out.println("");
+
         // Opcao de carregar os arquivos csv no programa
         System.out.print("Deseja carregar os arquivos salvos? (s/n): ");
         String op = scanner.nextLine();
@@ -26,10 +49,10 @@ public class Main {
         }
 
         // Execucao normal do programa
-        runMain();
+        runMain(scanner);
 
         // Opcao de gravar os arquivos csv no programa
-        System.out.print("Deseja gravar os arquivos? (s/n): ");
+        System.out.print("Deseja salvar os objetos criados? (s/n): ");
         String op2 = scanner.nextLine();
         System.out.println("");
 
@@ -46,9 +69,31 @@ public class Main {
         scanner.close();
     }
 
-    public static void runMain() {
-        /******************************* TESTE AUTOMATICO *******************************/
+    public static void runMain(Scanner scanner) {
+        // Opcao de rodar o teste automatico
+        System.out.print("Deseja rodar o teste automatico? (s/n): ");
+        String op = scanner.nextLine();
+        System.out.println("");
 
+        if (op.equals("s") || op.equals("S")) {
+            runTesteAutomatico();
+        }
+
+        /******************************* MENU INTERATIVO *******************************/
+      
+        Menu menu = new Menu(scanner);
+        MenuOperacoes option;
+
+        // Executa menu (imprime, recebe a opcao e executa a opcao) de acordo com a opcao passada
+        do {
+            menu.showMenu();
+            option = menu.readOptionMenu();
+            menu.runMenuOption(option);
+        } while (option != MenuOperacoes.SAIR);
+    }
+
+    // Executa o teste automatico
+    public static void runTesteAutomatico() {
         //////////////////// CADASTROS E LISTAGENS ////////////////////
         imprimirTituloFormatado("CADASTROS E LISTAGENS");
         System.out.println("");
@@ -596,20 +641,6 @@ public class Main {
         imprimirTituloFormatado("Listagens do Admin");
         Admin.listarSeguradoras();
         System.out.println("");
-
-
-        /******************************* MENU INTERATIVO *******************************/
-
-        Scanner scanner = new Scanner(System.in);        
-        Menu menu = new Menu(scanner);
-        MenuOperacoes option;
-
-        // Executa menu (imprime, recebe a opcao e executa a opcao) de acordo com a opcao passada
-        do {
-            menu.showMenu();
-            option = menu.readOptionMenu();
-            menu.runMenuOption(option);
-        } while (option != MenuOperacoes.SAIR);
     }
 
     // Retorna o titulo no formato '################################ Titulo ###############################'

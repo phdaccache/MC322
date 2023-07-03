@@ -22,6 +22,15 @@ public class Sinistro {
         this.condutor = condutor;
         this.seguro = seguro;
     }
+
+    public Sinistro(int id, String data, String endereco, Condutor condutor, Seguro seguro) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        this.id = id;
+        this.data = LocalDate.parse(data, dtf); // Transformando String em LocalDate
+        this.endereco = endereco;
+        this.condutor = condutor;
+        this.seguro = seguro;
+    }
     
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
