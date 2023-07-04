@@ -20,6 +20,7 @@ public class ArquivoSeguradora implements I_Arquivo {
             escritor.write(header);
             for (Seguradora seguradora : Admin.listaSeguradoras) {
                 String dados = getDados(seguradora);
+                escritor.write("\n");
                 escritor.write(dados);
             }
             escritor.close();
@@ -67,17 +68,17 @@ public class ArquivoSeguradora implements I_Arquivo {
         dados += seguradora.getTelefone() + ",";
         dados += seguradora.getEndereco() + ",";
         dados += seguradora.getEmail() + ",";
+
         dados += "\"";
         for (Cliente cliente : seguradora.getListaClientes()) {
             dados += cliente.getDocumento()[1] + ",";
         }
-        dados = dados.substring(0, dados.length() - 1);
-        dados += "\"";
+        dados += "\",";
+
         dados += "\"";
         for (Seguro seguro : seguradora.getListaSeguros()) {
             dados += seguro.getId() + ",";
         }
-        dados = dados.substring(0, dados.length() - 1);
         dados += "\"";
 
         return dados;
