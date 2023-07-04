@@ -52,7 +52,7 @@ public class Main {
         runMain(scanner);
 
         // Opcao de gravar os arquivos csv no programa
-        System.out.print("Deseja salvar os objetos criados? (s/n): ");
+        System.out.print("Deseja salvar as alteracoes? (s/n): ");
         String op2 = scanner.nextLine();
         System.out.println("");
 
@@ -71,7 +71,7 @@ public class Main {
 
     public static void runMain(Scanner scanner) {
         // Opcao de rodar o teste automatico
-        System.out.print("Deseja rodar o teste automatico? (s/n): ");
+        System.out.print("\nDeseja rodar o teste automatico? (s/n): ");
         String op = scanner.nextLine();
         System.out.println("");
 

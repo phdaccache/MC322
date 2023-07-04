@@ -24,10 +24,11 @@ public class ArquivoSeguradora implements I_Arquivo {
                 escritor.write(dados);
             }
             escritor.close();
+            return true;
         } catch(Exception e){
             System.out.println("Erro ao gravar arquivo: " + e.getMessage());
+            return false;
         }
-        return true;
     }
 
     @Override
@@ -47,10 +48,6 @@ public class ArquivoSeguradora implements I_Arquivo {
                 retorno.add(dados);
             }
             br.close();
-
-            if (!retorno.isEmpty()) {
-                System.out.println("Seguradoras carregadas!");
-            }
             return retorno;
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo não encontrado: " + e.getMessage());

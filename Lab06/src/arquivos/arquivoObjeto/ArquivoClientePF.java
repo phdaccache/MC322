@@ -4,14 +4,37 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+
+import sistema.*;
 
 
 public class ArquivoClientePF implements I_Arquivo {
     @Override
     public boolean gravarDados() {
-        return false;
+        String header = "nome,telefone,endereco,email,cpf,genero,educacao,nascimento,cnpjSeguradora,valorMensalTotal,listaSeguros,listaVeiculos";
+        File file = new File("src/arquivos/arquivosCSV/clientesPF.csv");
+        try{
+            FileWriter escritor = new FileWriter(file, false);
+            escritor.write(header);
+            for (Seguradora seguradora : Admin.listaSeguradoras) {
+                for (Cliente cliente : seguradora.getListaClientes()) {
+                    if (cliente instanceof ClientePF) {
+                        String dados = getDados(cliente);
+                        escritor.write("\n");
+                        escritor.write(dados);
+                    }
+                }
+            }
+            escritor.close();
+            return true;
+        } catch(Exception e){
+            System.out.println("Erro ao gravar arquivo: " + e.getMessage());
+            return false;
+        }
     }
 
     @Override
@@ -31,10 +54,6 @@ public class ArquivoClientePF implements I_Arquivo {
                 retorno.add(dados);
             }
             br.close();
-
-            if (!retorno.isEmpty()) {
-                System.out.println("Clientes PF carregados!");
-            }
             return retorno;
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo não encontrado: " + e.getMessage());
@@ -43,5 +62,35 @@ public class ArquivoClientePF implements I_Arquivo {
             System.out.println("Erro na leitura do arquivo: " + e.getMessage());
             return null;
         }
+    }
+
+    private String getDados(Cliente cliente) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        String dados = "";
+        dados += cliente.getNome() + ",";
+        dados += cliente.getTelefone() + ",";
+        dados += cliente.getEndereco() + ",";
+        dados += cliente.getEmail() + ",";
+        dados += cliente.getDocumento()[1] + ",";
+        dados += ((ClientePF)cliente).getGenero() + ",";
+        dados += ((ClientePF)cliente).getEducacao() + ",";
+        dados += ((ClientePF)cliente).getDataNascimento().format(dtf) + ",";
+        dados += cliente.getSeguradora().getCNPJ() + ",";
+        dados += cliente.getValorMensalTotal() + ",";
+
+        dados += "\"";
+        for (Seguro seguro : cliente.getListaSeguros()) {
+            dados += seguro.getId() + ",";
+        }
+        dados += "\",";
+
+        dados += "\"";
+        for (Veiculo veiculo : ((ClientePF)cliente).getListaVeiculos()) {
+            dados += veiculo.getPlaca() + ",";
+        }
+        dados += "\"";
+
+        return dados;
     }
 }

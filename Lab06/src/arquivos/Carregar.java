@@ -12,12 +12,13 @@ public class Carregar {
         // Fazendo a leitura do arquivo
         ArrayList<String[]> listaSeguradoras = seguradoras.lerDados();
         // Adicionando os objetos
-        if (listaSeguradoras != null) {
+        if (listaSeguradoras != null && !listaSeguradoras.isEmpty()) {
             for (int i = 0; i < listaSeguradoras.size(); i++) {
                 String[] dados = listaSeguradoras.get(i);
                 Seguradora seguradora = new Seguradora(dados[0], dados[1], dados[2], dados[3], dados[4]);
                 Admin.cadastrarSeguradora(seguradora);
             }
+            System.out.println("Seguradoras carregadas!");
         }
 
         // Instanciando o arquivo
@@ -25,7 +26,7 @@ public class Carregar {
         // Fazendo a leitura do arquivo
         ArrayList<String[]> listaClientesPF = clientesPF.lerDados();
         // Adicionando os objetos
-        if (listaClientesPF != null) {
+        if (listaClientesPF != null && !listaClientesPF.isEmpty()) {
             for (int i = 0; i < listaClientesPF.size(); i++) {
                 String[] dados = listaClientesPF.get(i);
                 ClientePF clientePF = new ClientePF(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], dados[6], dados[7]);
@@ -35,6 +36,7 @@ public class Carregar {
                     }
                 }
             }
+            System.out.println("Clientes PF carregados!");
         }
 
         // Instanciando o arquivo
@@ -42,7 +44,7 @@ public class Carregar {
         // Fazendo a leitura do arquivo
         ArrayList<String[]> listaClientesPJ = clientesPJ.lerDados();
         // Adicionando os objetos
-        if (listaClientesPJ != null) {
+        if (listaClientesPJ != null && !listaClientesPJ.isEmpty()) {
             for (int i = 0; i < listaClientesPJ.size(); i++) {
                 String[] dados = listaClientesPJ.get(i);
                 ClientePJ clientePJ = new ClientePJ(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], Integer.parseInt(dados[6]));
@@ -52,6 +54,7 @@ public class Carregar {
                     }
                 }
             }
+            System.out.println("Clientes PJ carregados!");
         }
     }
 }
