@@ -7,17 +7,16 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import sistema.ClientePF;
 
-public class ArquivoClientePF implements I_Arquivo<ClientePF> {
+public class ArquivoClientePF implements I_Arquivo {
     @Override
-    public boolean gravarDados(ArrayList<ClientePF> listaClientesPF) {
+    public boolean gravarDados() {
         return false;
     }
 
     @Override
-    public ArrayList<ClientePF> lerDados() {
-        ArrayList<ClientePF> retorno = new ArrayList<>();
+    public ArrayList<String[]> lerDados() {
+        ArrayList<String[]> retorno = new ArrayList<>();
 
         try {
             File file = new File("src/arquivos/arquivosCSV/clientesPF.csv");
@@ -28,7 +27,8 @@ public class ArquivoClientePF implements I_Arquivo<ClientePF> {
 
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(demilitador);
-                retorno.add(new ClientePF(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], dados[6], dados[7]));
+                //retorno.add(new ClientePF(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], dados[6], dados[7]));
+                retorno.add(dados);
             }
             br.close();
 

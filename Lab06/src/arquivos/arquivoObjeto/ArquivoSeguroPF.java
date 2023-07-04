@@ -7,17 +7,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import sistema.*;
-
-public class ArquivoSeguroPF implements I_Arquivo<SeguroPF> {
+public class ArquivoSeguroPF implements I_Arquivo {
     @Override
-    public boolean gravarDados(ArrayList<SeguroPF> listaSegurosPF) {
+    public boolean gravarDados() {
         return false;
     }
 
     @Override
-    public ArrayList<SeguroPF> lerDados() {
-        ArrayList<SeguroPF> retorno = new ArrayList<>();
+    public ArrayList<String[]> lerDados() {
+        ArrayList<String[]> retorno = new ArrayList<>();
 
         try {
             File file = new File("src/arquivos/arquivosCSV/segurosPF.csv");
@@ -28,10 +26,11 @@ public class ArquivoSeguroPF implements I_Arquivo<SeguroPF> {
 
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(demilitador);
-                Seguradora seguradora = Admin.getSeguradora(dados[4]);
-                ClientePF cliente = (ClientePF)seguradora.getCliente(dados[1]);
-                Veiculo veiculo = ((ClientePF)cliente).getVeiculo(dados[0]);
-                retorno.add(new SeguroPF(veiculo, cliente, dados[2], dados[3], seguradora));
+                //Seguradora seguradora = Admin.getSeguradora(dados[4]);
+                //ClientePF cliente = (ClientePF)seguradora.getCliente(dados[1]);
+                //Veiculo veiculo = ((ClientePF)cliente).getVeiculo(dados[0]);
+                //retorno.add(new SeguroPF(veiculo, cliente, dados[2], dados[3], seguradora));
+                retorno.add(dados);
             }
             br.close();
 

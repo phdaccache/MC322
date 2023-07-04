@@ -7,17 +7,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import sistema.Frota;
-
-public class ArquivoFrota implements I_Arquivo<Frota> {
+public class ArquivoFrota implements I_Arquivo {
     @Override
-    public boolean gravarDados(ArrayList<Frota> listaFrotas) {
+    public boolean gravarDados() {
         return false;
     }
 
     @Override
-    public ArrayList<Frota> lerDados() {
-        ArrayList<Frota> retorno = new ArrayList<>();
+    public ArrayList<String[]> lerDados() {
+        ArrayList<String[]> retorno = new ArrayList<>();
 
         try {
             File file = new File("src/arquivos/arquivosCSV/frotas.csv");
@@ -28,7 +26,8 @@ public class ArquivoFrota implements I_Arquivo<Frota> {
 
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(demilitador);
-                retorno.add(new Frota(Integer.parseInt(dados[0])));
+                //retorno.add(new Frota(Integer.parseInt(dados[0])));
+                retorno.add(dados);
             }
             br.close();
 

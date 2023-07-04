@@ -7,17 +7,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import sistema.Veiculo;
-
-public class ArquivoVeiculo implements I_Arquivo<Veiculo> {
+public class ArquivoVeiculo implements I_Arquivo {
     @Override
-    public boolean gravarDados(ArrayList<Veiculo> listaVeiculos) {
+    public boolean gravarDados() {
         return false;
     }
 
     @Override
-    public ArrayList<Veiculo> lerDados() {
-        ArrayList<Veiculo> retorno = new ArrayList<>();
+    public ArrayList<String[]> lerDados() {
+        ArrayList<String[]> retorno = new ArrayList<>();
 
         try {
             File file = new File("src/arquivos/arquivosCSV/veiculos.csv");
@@ -28,7 +26,8 @@ public class ArquivoVeiculo implements I_Arquivo<Veiculo> {
 
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(demilitador);
-                retorno.add(new Veiculo(dados[0], dados[1], dados[2], Integer.parseInt(dados[3])));
+                //retorno.add(new Veiculo(dados[0], dados[1], dados[2], Integer.parseInt(dados[3])));
+                retorno.add(dados);
             }
             br.close();
 

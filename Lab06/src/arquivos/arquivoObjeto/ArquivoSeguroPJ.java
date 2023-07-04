@@ -7,17 +7,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import sistema.*;
-
-public class ArquivoSeguroPJ implements I_Arquivo<SeguroPJ> {
+public class ArquivoSeguroPJ implements I_Arquivo {
     @Override
-    public boolean gravarDados(ArrayList<SeguroPJ> listaSegurosPJ) {
+    public boolean gravarDados() {
         return false;
     }
 
     @Override
-    public ArrayList<SeguroPJ> lerDados() {
-        ArrayList<SeguroPJ> retorno = new ArrayList<>();
+    public ArrayList<String[]> lerDados() {
+        ArrayList<String[]> retorno = new ArrayList<>();
 
         try {
             File file = new File("src/arquivos/arquivosCSV/segurosPJ.csv");
@@ -28,10 +26,11 @@ public class ArquivoSeguroPJ implements I_Arquivo<SeguroPJ> {
 
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(demilitador);
-                Seguradora seguradora = Admin.getSeguradora(dados[4]);
-                ClientePJ cliente = (ClientePJ)seguradora.getCliente(dados[1]);
-                Frota frota = ((ClientePJ)cliente).getFrota(Integer.parseInt(dados[0]));
-                retorno.add(new SeguroPJ(frota, cliente, dados[2], dados[3], seguradora));
+                // Seguradora seguradora = Admin.getSeguradora(dados[4]);
+                // ClientePJ cliente = (ClientePJ)seguradora.getCliente(dados[1]);
+                // Frota frota = ((ClientePJ)cliente).getFrota(Integer.parseInt(dados[0]));
+                // retorno.add(new SeguroPJ(frota, cliente, dados[2], dados[3], seguradora));
+                retorno.add(dados);
             }
             br.close();
 

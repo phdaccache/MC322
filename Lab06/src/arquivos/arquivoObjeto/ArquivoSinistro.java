@@ -7,17 +7,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import sistema.*;
-
-public class ArquivoSinistro implements I_Arquivo<Sinistro> {
+public class ArquivoSinistro implements I_Arquivo {
     @Override
-    public boolean gravarDados(ArrayList<Sinistro> listaSinistros) {
+    public boolean gravarDados() {
         return false;
     }
 
     @Override
-    public ArrayList<Sinistro> lerDados() {
-        ArrayList<Sinistro> retorno = new ArrayList<>();
+    public ArrayList<String[]> lerDados() {
+        ArrayList<String[]> retorno = new ArrayList<>();
 
         try {
             File file = new File("src/arquivos/arquivosCSV/sinistros.csv");
@@ -28,15 +26,16 @@ public class ArquivoSinistro implements I_Arquivo<Sinistro> {
 
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(demilitador);
-                Seguro seguro = null;
-                for (Seguradora seguradora : Admin.listaSeguradoras) {
-                    Seguro seg;
-                    if ((seg = seguradora.getSeguro(Integer.parseInt(dados[3]))) != null) {
-                        seguro = seg;
-                    }
-                }
-                Condutor condutor = seguro.getCondutor(dados[2]);
-                retorno.add(new Sinistro(dados[0], dados[1], condutor, seguro));
+                // Seguro seguro = null;
+                // for (Seguradora seguradora : Admin.listaSeguradoras) {
+                //     Seguro seg;
+                //     if ((seg = seguradora.getSeguro(Integer.parseInt(dados[3]))) != null) {
+                //         seguro = seg;
+                //     }
+                // }
+                // Condutor condutor = seguro.getCondutor(dados[2]);
+                // retorno.add(new Sinistro(dados[0], dados[1], condutor, seguro));
+                retorno.add(dados);
             }
             br.close();
 
