@@ -23,5 +23,41 @@ public class Gravar {
         if (status3) {
             System.out.println("Alteracoes nos clientes PJ salvas!");
         }
+
+        ArquivoVeiculo veiculos = new ArquivoVeiculo();
+        boolean status4 = veiculos.gravarDados();
+        if (status4) {
+            System.out.println("Alteracoes nos veiculos salvas!");
+        }
+
+        ArquivoFrota frotas = new ArquivoFrota();
+        boolean status5 = frotas.gravarDados();
+        if (status5) {
+            System.out.println("Alteracoes nas frotas salvas!");
+        }
+
+        ArquivoSeguroPF segurosPF = new ArquivoSeguroPF();
+        boolean status6 = segurosPF.gravarDados();
+        if (status6) {
+            System.out.println("Alteracoes nos seguros PF salvas!");
+        }
+
+        ArquivoSeguroPJ segurosPJ = new ArquivoSeguroPJ();
+        boolean status7 = segurosPJ.gravarDados();
+        if (status7) {
+            System.out.println("Alteracoes nos seguros PJ salvas!");
+        }
+
+        ArquivoCondutor condutores = new ArquivoCondutor();
+        boolean status8 = condutores.gravarDados();
+        if (status8) {
+            System.out.println("Alteracoes nos condutores salvas!");
+        }
+
+        ArquivoSinistro sinistros = new ArquivoSinistro();
+        boolean status9 = sinistros.gravarDados();
+        if (status9) {
+            System.out.println("Alteracoes nos sinistros salvas!");
+        }
     }
 }

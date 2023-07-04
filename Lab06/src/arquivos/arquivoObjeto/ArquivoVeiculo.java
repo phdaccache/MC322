@@ -4,13 +4,37 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ArquivoVeiculo implements I_Arquivo {
+import sistema.*;
+
+public class ArquivoVeiculo implements I_Arquivo<Veiculo> {
     @Override
     public boolean gravarDados() {
-        return false;
+        String header = "placa,marca,modelo,ano,idSeguro,cpfCliente";
+        File file = new File("src/arquivos/arquivosCSV/veiculos.csv");
+        try{
+            FileWriter escritor = new FileWriter(file, false);
+            escritor.write(header);
+            for (Seguradora seguradora : Admin.listaSeguradoras) {
+                for (Cliente cliente : seguradora.getListaClientes()) {
+                    if (cliente instanceof ClientePF) {
+                        for (Veiculo veiculo : ((ClientePF)cliente).getListaVeiculos()) {
+                            String dados = getDados(veiculo);
+                            escritor.write("\n");
+                            escritor.write(dados);
+                        }
+                    }
+                }
+            }
+            escritor.close();
+            return true;
+        } catch(Exception e){
+            System.out.println("Erro ao gravar arquivo: " + e.getMessage());
+            return false;
+        }
     }
 
     @Override
@@ -26,7 +50,6 @@ public class ArquivoVeiculo implements I_Arquivo {
 
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(demilitador);
-                //retorno.add(new Veiculo(dados[0], dados[1], dados[2], Integer.parseInt(dados[3])));
                 retorno.add(dados);
             }
             br.close();
@@ -42,5 +65,25 @@ public class ArquivoVeiculo implements I_Arquivo {
             System.out.println("Erro na leitura do arquivo: " + e.getMessage());
             return null;
         }
+    }
+
+    @Override
+    public String getDados(Veiculo veiculo) {
+        String dados = "";
+        dados += veiculo.getPlaca() + ",";
+        dados += veiculo.getMarca() + ",";
+        dados += veiculo.getModelo() + ",";
+        dados += veiculo.getAnoFabricacao() + ",";
+        dados += veiculo.getSeguro().getId() + ",";
+
+        for (Seguradora seguradora : Admin.listaSeguradoras) {
+            for (Cliente cliente : seguradora.getListaClientes()) {
+                if (((ClientePF)cliente).getListaVeiculos().contains(veiculo)) {
+                    dados += cliente.getDocumento()[1];
+                }
+            }
+        }
+
+        return dados;
     }
 }

@@ -4,13 +4,36 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-public class ArquivoSinistro implements I_Arquivo {
+import sistema.*;
+
+public class ArquivoSinistro implements I_Arquivo<Sinistro> {
     @Override
     public boolean gravarDados() {
-        return false;
+        String header = "data,endereco,cpfCondutor,idSeguro";
+        File file = new File("src/arquivos/arquivosCSV/condutores.csv");
+        try{
+            FileWriter escritor = new FileWriter(file, false);
+            escritor.write(header);
+            for (Seguradora seguradora : Admin.listaSeguradoras) {
+                for (Seguro seguro : seguradora.getListaSeguros()) {
+                    for (Sinistro sinistro : seguro.getListaSinistros()) {
+                        String dados = getDados(sinistro);
+                        escritor.write("\n");
+                        escritor.write(dados);
+                    }
+                }
+            }
+            escritor.close();
+            return true;
+        } catch(Exception e){
+            System.out.println("Erro ao gravar arquivo: " + e.getMessage());
+            return false;
+        }
     }
 
     @Override
@@ -50,5 +73,18 @@ public class ArquivoSinistro implements I_Arquivo {
             System.out.println("Erro na leitura do arquivo: " + e.getMessage());
             return null;
         }
+    }
+
+    @Override
+    public String getDados(Sinistro sinistro) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        String dados = "";
+        dados += sinistro.getData().format(dtf) + ",";
+        dados += sinistro.getEndereco() + ",";
+        dados += sinistro.getCondutor().getCPF() + ",";
+        dados += sinistro.getSeguro().getId();
+
+        return dados;
     }
 }

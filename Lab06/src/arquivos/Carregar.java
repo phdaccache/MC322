@@ -7,11 +7,9 @@ import sistema.*;
 
 public class Carregar {
     public static void carregarDados() {
-        // Instanciando o arquivo
+        // Carregando seguradoras
         ArquivoSeguradora seguradoras = new ArquivoSeguradora();
-        // Fazendo a leitura do arquivo
         ArrayList<String[]> listaSeguradoras = seguradoras.lerDados();
-        // Adicionando os objetos
         if (listaSeguradoras != null && !listaSeguradoras.isEmpty()) {
             for (int i = 0; i < listaSeguradoras.size(); i++) {
                 String[] dados = listaSeguradoras.get(i);
@@ -21,11 +19,9 @@ public class Carregar {
             System.out.println("Seguradoras carregadas!");
         }
 
-        // Instanciando o arquivo
+        // Carregando clientes PF
         ArquivoClientePF clientesPF = new ArquivoClientePF();
-        // Fazendo a leitura do arquivo
         ArrayList<String[]> listaClientesPF = clientesPF.lerDados();
-        // Adicionando os objetos
         if (listaClientesPF != null && !listaClientesPF.isEmpty()) {
             for (int i = 0; i < listaClientesPF.size(); i++) {
                 String[] dados = listaClientesPF.get(i);
@@ -39,11 +35,9 @@ public class Carregar {
             System.out.println("Clientes PF carregados!");
         }
 
-        // Instanciando o arquivo
+        // Carregando clientes PJ
         ArquivoClientePJ clientesPJ = new ArquivoClientePJ();
-        // Fazendo a leitura do arquivo
         ArrayList<String[]> listaClientesPJ = clientesPJ.lerDados();
-        // Adicionando os objetos
         if (listaClientesPJ != null && !listaClientesPJ.isEmpty()) {
             for (int i = 0; i < listaClientesPJ.size(); i++) {
                 String[] dados = listaClientesPJ.get(i);
@@ -56,5 +50,25 @@ public class Carregar {
             }
             System.out.println("Clientes PJ carregados!");
         }
+
+        // Carregando veiculos
+        ArquivoVeiculo veiculos = new ArquivoVeiculo();
+        ArrayList<String[]> listaVeiculos = veiculos.lerDados();
+        if (listaVeiculos!= null && !listaVeiculos.isEmpty()) {
+            for (int i = 0; i < listaVeiculos.size(); i++) {
+                String[] dados = listaVeiculos.get(i);
+                Veiculo veiculo = new Veiculo(dados[0], dados[1], dados[2], Integer.parseInt(dados[3]));
+                for (Seguradora seguradora : Admin.listaSeguradoras) {
+                    for (Cliente cliente : seguradora.getListaClientes()) {
+                        if (cliente.getDocumento()[1].equals(dados[5])) {
+                            ((ClientePF)cliente).cadastrarVeiculo(veiculo);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Carregando frotas
+
     }
 }

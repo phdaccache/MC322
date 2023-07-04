@@ -4,13 +4,35 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ArquivoCondutor implements I_Arquivo {
+import sistema.*;
+
+public class ArquivoCondutor implements I_Arquivo<Condutor> {
     @Override
     public boolean gravarDados() {
-        return false;
+        String header = "cpf,nome,telefone,endereco,email,nascimento,listaSinistros";
+        File file = new File("src/arquivos/arquivosCSV/condutores.csv");
+        try{
+            FileWriter escritor = new FileWriter(file, false);
+            escritor.write(header);
+            for (Seguradora seguradora : Admin.listaSeguradoras) {
+                for (Seguro seguro : seguradora.getListaSeguros()) {
+                    for (Condutor condutor : seguro.getListaCondutores()) {
+                        String dados = getDados(condutor);
+                        escritor.write("\n");
+                        escritor.write(dados);
+                    }
+                }
+            }
+            escritor.close();
+            return true;
+        } catch(Exception e){
+            System.out.println("Erro ao gravar arquivo: " + e.getMessage());
+            return false;
+        }
     }
 
     @Override
@@ -42,5 +64,22 @@ public class ArquivoCondutor implements I_Arquivo {
             System.out.println("Erro na leitura do arquivo: " + e.getMessage());
             return null;
         }
+    }
+
+    @Override
+    public String getDados(Condutor condutor) {
+        String dados = "";
+        dados += condutor.getCPF() + ",";
+        dados += condutor.getNome() + ",";
+        dados += condutor.getTelefone() + ",";
+        dados += condutor.getEndereco() + ",";
+
+        dados += "\"";
+        for (Sinistro sinistro : condutor.getListaSinistros()) {
+            dados += sinistro.getId() + ",";
+        }
+        dados += "\"";
+
+        return dados;
     }
 }

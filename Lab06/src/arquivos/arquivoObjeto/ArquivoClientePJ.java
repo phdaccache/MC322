@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import sistema.*;
 
-public class ArquivoClientePJ implements I_Arquivo {
+public class ArquivoClientePJ implements I_Arquivo<ClientePJ> {
     @Override
     public boolean gravarDados() {
         String header = "nome,telefone,endereco,email,cnpj,fundacao,qtdFuncionarios,cnpjSeguradora,valorMensalTotal,listaSeguros,listaFrotas";
@@ -22,7 +22,7 @@ public class ArquivoClientePJ implements I_Arquivo {
             for (Seguradora seguradora : Admin.listaSeguradoras) {
                 for (Cliente cliente : seguradora.getListaClientes()) {
                     if (cliente instanceof ClientePJ) {
-                        String dados = getDados(cliente);
+                        String dados = getDados((ClientePJ)cliente);
                         escritor.write("\n");
                         escritor.write(dados);
                     }
@@ -49,7 +49,6 @@ public class ArquivoClientePJ implements I_Arquivo {
 
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(demilitador);
-                //retorno.add(new ClientePJ(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], Integer.parseInt(dados[6])));
                 retorno.add(dados);
             }
             br.close();
@@ -63,7 +62,8 @@ public class ArquivoClientePJ implements I_Arquivo {
         }
     }
 
-    private String getDados(Cliente cliente) {
+    @Override
+    public String getDados(ClientePJ cliente) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         String dados = "";
@@ -72,8 +72,8 @@ public class ArquivoClientePJ implements I_Arquivo {
         dados += cliente.getEndereco() + ",";
         dados += cliente.getEmail() + ",";
         dados += cliente.getDocumento()[1] + ",";
-        dados += ((ClientePJ)cliente).getDataFundacao().format(dtf) + ",";
-        dados += ((ClientePJ)cliente).getQtdFuncionarios() + ",";
+        dados += cliente.getDataFundacao().format(dtf) + ",";
+        dados += cliente.getQtdFuncionarios() + ",";
         dados += cliente.getSeguradora().getCNPJ() + ",";
         dados += cliente.getValorMensalTotal() + ",";
 

@@ -4,13 +4,37 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ArquivoFrota implements I_Arquivo {
+import sistema.*;
+
+public class ArquivoFrota implements I_Arquivo<Frota> {
     @Override
     public boolean gravarDados() {
-        return false;
+        String header = "idFrota,idSeguro,listaVeiculos,cnpjCliente";
+        File file = new File("src/arquivos/arquivosCSV/frotas.csv");
+        try{
+            FileWriter escritor = new FileWriter(file, false);
+            escritor.write(header);
+            for (Seguradora seguradora : Admin.listaSeguradoras) {
+                for (Cliente cliente : seguradora.getListaClientes()) {
+                    if (cliente instanceof ClientePJ) {
+                        for (Frota frota : ((ClientePJ)cliente).getListaFrotas()) {
+                            String dados = getDados(frota);
+                            escritor.write("\n");
+                            escritor.write(dados);
+                        }
+                    }
+                }
+            }
+            escritor.close();
+            return true;
+        } catch(Exception e){
+            System.out.println("Erro ao gravar arquivo: " + e.getMessage());
+            return false;
+        }
     }
 
     @Override
@@ -42,5 +66,30 @@ public class ArquivoFrota implements I_Arquivo {
             System.out.println("Erro na leitura do arquivo: " + e.getMessage());
             return null;
         }
+    }
+
+    @Override
+    public String getDados(Frota frota) {
+        String dados = "";
+        dados += frota.getId() + ",";
+        dados += frota.getSeguro().getId() + ",";
+
+        dados += "\"";
+        for (Veiculo veiculo : frota.getListaVeiculos()) {
+            dados += veiculo.getPlaca() + ",";
+        }
+        dados += "\",";
+
+        for (Seguradora seguradora : Admin.listaSeguradoras) {
+            for (Cliente cliente : seguradora.getListaClientes()) {
+                for (Frota f : ((ClientePJ)cliente).getListaFrotas()) {
+                    if (f.getId() == frota.getId()) {
+                        dados += cliente.getDocumento()[1];
+                    }
+                }
+            }
+        }
+
+        return dados;
     }
 }

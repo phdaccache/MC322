@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import sistema.*;
 
-public class ArquivoSeguradora implements I_Arquivo {
+public class ArquivoSeguradora implements I_Arquivo<Seguradora> {
     @Override
     public boolean gravarDados() {
         String header = "cnpj,nome,telefone,endereco,email,listaClientes,listaSeguros";
@@ -44,7 +44,6 @@ public class ArquivoSeguradora implements I_Arquivo {
 
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(demilitador);
-                //retorno.add(new Seguradora(dados[0], dados[1], dados[2], dados[3], dados[4]));
                 retorno.add(dados);
             }
             br.close();
@@ -58,7 +57,8 @@ public class ArquivoSeguradora implements I_Arquivo {
         }
     }
 
-    private String getDados(Seguradora seguradora) {
+    @Override
+    public String getDados(Seguradora seguradora) {
         String dados = "";
         dados += seguradora.getCNPJ() + ",";
         dados += seguradora.getNome() + ",";

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import sistema.*;
 
 
-public class ArquivoClientePF implements I_Arquivo {
+public class ArquivoClientePF implements I_Arquivo<ClientePF> {
     @Override
     public boolean gravarDados() {
         String header = "nome,telefone,endereco,email,cpf,genero,educacao,nascimento,cnpjSeguradora,valorMensalTotal,listaSeguros,listaVeiculos";
@@ -23,7 +23,7 @@ public class ArquivoClientePF implements I_Arquivo {
             for (Seguradora seguradora : Admin.listaSeguradoras) {
                 for (Cliente cliente : seguradora.getListaClientes()) {
                     if (cliente instanceof ClientePF) {
-                        String dados = getDados(cliente);
+                        String dados = getDados((ClientePF)cliente);
                         escritor.write("\n");
                         escritor.write(dados);
                     }
@@ -50,7 +50,6 @@ public class ArquivoClientePF implements I_Arquivo {
 
             while ((linha = br.readLine()) != null) {
                 String[] dados = linha.split(demilitador);
-                //retorno.add(new ClientePF(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], dados[6], dados[7]));
                 retorno.add(dados);
             }
             br.close();
@@ -64,7 +63,8 @@ public class ArquivoClientePF implements I_Arquivo {
         }
     }
 
-    private String getDados(Cliente cliente) {
+    @Override
+    public String getDados(ClientePF cliente) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         String dados = "";
@@ -73,9 +73,9 @@ public class ArquivoClientePF implements I_Arquivo {
         dados += cliente.getEndereco() + ",";
         dados += cliente.getEmail() + ",";
         dados += cliente.getDocumento()[1] + ",";
-        dados += ((ClientePF)cliente).getGenero() + ",";
-        dados += ((ClientePF)cliente).getEducacao() + ",";
-        dados += ((ClientePF)cliente).getDataNascimento().format(dtf) + ",";
+        dados += cliente.getGenero() + ",";
+        dados += cliente.getEducacao() + ",";
+        dados += cliente.getDataNascimento().format(dtf) + ",";
         dados += cliente.getSeguradora().getCNPJ() + ",";
         dados += cliente.getValorMensalTotal() + ",";
 
