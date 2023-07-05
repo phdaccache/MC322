@@ -1,9 +1,6 @@
 # Laboratório 6 - Sistema de Seguradora
 
 ## Funcionamento do Programa
-
-*** 
-
 É possível aceitar ou negar essas opções no início do programa:
 
 ### 1. Carregar arquivos salvos
