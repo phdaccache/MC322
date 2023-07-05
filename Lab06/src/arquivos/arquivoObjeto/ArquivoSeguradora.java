@@ -69,10 +69,16 @@ public class ArquivoSeguradora implements I_Arquivo<Seguradora> {
         for (Cliente cliente : seguradora.getListaClientes()) {
             dados += cliente.getDocumento()[1] + ";";
         }
+        if (seguradora.getListaClientes() == null || seguradora.getListaClientes().isEmpty()) {
+            dados += " ";
+        }
         dados += ",";
 
         for (Seguro seguro : seguradora.getListaSeguros()) {
             dados += seguro.getId() + ";";
+        }
+        if (seguradora.getListaSeguros() == null || seguradora.getListaSeguros().isEmpty()) {
+            dados += " ";
         }
 
         return dados;

@@ -80,10 +80,16 @@ public class ArquivoClientePJ implements I_Arquivo<ClientePJ> {
         for (Seguro seguro : cliente.getListaSeguros()) {
             dados += seguro.getId() + ";";
         }
+        if (cliente.getListaSeguros() == null || cliente.getListaSeguros().isEmpty()) {
+            dados += " ";
+        }
         dados += ",";
 
         for (Frota frota : ((ClientePJ)cliente).getListaFrotas()) {
             dados += frota.getId() + ";";
+        }
+        if (((ClientePJ)cliente).getListaFrotas() == null || ((ClientePJ)cliente).getListaFrotas().isEmpty()) {
+            dados += " ";
         }
 
         return dados;

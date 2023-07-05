@@ -85,10 +85,16 @@ public class ArquivoSeguroPF implements I_Arquivo<SeguroPF> {
         for (Sinistro sinistro : seguro.getListaSinistros()) {
             dados += sinistro.getId() + ";";
         }
+        if (seguro.getListaSinistros() == null || seguro.getListaSinistros().isEmpty()) {
+            dados += " ";
+        }
         dados += ",";
 
         for (Condutor condutor : seguro.getListaCondutores()) {
             dados += condutor.getCPF() + ";";
+        }
+        if (seguro.getListaCondutores() == null || seguro.getListaCondutores().isEmpty()) {
+            dados += " ";
         }
         dados += ",";
 

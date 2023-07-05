@@ -76,6 +76,9 @@ public class ArquivoCondutor implements I_Arquivo<Condutor> {
         for (Sinistro sinistro : condutor.getListaSinistros()) {
             dados += sinistro.getId() + ";";
         }
+        if (condutor.getListaSinistros() == null || condutor.getListaSinistros().isEmpty()) {
+            dados += " ";
+        }
 
         return dados;
     }
