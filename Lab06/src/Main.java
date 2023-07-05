@@ -35,7 +35,7 @@ public class Main {
         System.out.println("* E possivel aceitar ou negar essa opcao ao fim do programa:");
         System.out.println("");
 
-        System.out.println("    2. Salvar os objetos criados:");
+        System.out.println("    2. Salvar as alteracoes:");
         System.out.println("        * Salva todos os objetos em 'src/arquivos/arquivosCSV'.");
         System.out.println("");
 
