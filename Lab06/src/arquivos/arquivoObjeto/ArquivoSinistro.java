@@ -15,7 +15,7 @@ public class ArquivoSinistro implements I_Arquivo<Sinistro> {
     @Override
     public boolean gravarDados() {
         String header = "data,endereco,cpfCondutor,idSeguro";
-        File file = new File("src/arquivos/arquivosCSV/condutores.csv");
+        File file = new File("src/arquivos/arquivosCSV/sinistros.csv");
         try{
             FileWriter escritor = new FileWriter(file, false);
             escritor.write(header);

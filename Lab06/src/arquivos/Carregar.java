@@ -131,8 +131,8 @@ public class Carregar {
         Admin.listaSeguradoras.addAll(listaSeguradoras);
 
         // Adicionando clientes
-        for (int i = 0; i < listaSeguradoras.size(); i++) {
-            Seguradora seguradora = listaSeguradoras.get(i);
+        for (int i = 0; i < Admin.listaSeguradoras.size(); i++) {
+            Seguradora seguradora = Admin.listaSeguradoras.get(i);
             List<String> clientes = documentosClientes.get(i);
             for (Cliente cliente : listaClientesPF) {
                 if (clientes.contains(cliente.getDocumento()[1])) {
