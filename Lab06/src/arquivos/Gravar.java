@@ -60,6 +60,10 @@ public class Gravar {
             System.out.println("Alteracoes nos sinistros salvas!");
         }
 
+        if (status1 && status2 && status3 && status4 && status5 && status6 && status7 && status8 && status9) {
+            System.out.println("Todas as alteracoes salvas!");
+        }
+
         System.out.println("");
     }
 }
