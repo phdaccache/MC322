@@ -15,6 +15,14 @@ public class SeguroPJ extends Seguro {
         this.frota = frota;
     }
 
+    public SeguroPJ(int id, Frota frota, ClientePJ cliente, String dataInicio,
+                    String dataFim, Seguradora seguradora) {
+
+        super(id, dataInicio, dataFim, seguradora, cliente);
+
+        this.frota = frota;
+    }
+
     public String toString() {
         StringJoiner joiner = new StringJoiner("\n");
 

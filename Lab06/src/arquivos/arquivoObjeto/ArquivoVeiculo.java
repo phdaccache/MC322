@@ -13,7 +13,7 @@ import sistema.*;
 public class ArquivoVeiculo implements I_Arquivo<Veiculo> {
     @Override
     public boolean gravarDados() {
-        String header = "placa,marca,modelo,ano,idSeguro,cpfCliente";
+        String header = "placa,marca,modelo,ano,idSeguro,cpfCliente/idFrota";
         File file = new File("src/arquivos/arquivosCSV/veiculos.csv");
         try{
             FileWriter escritor = new FileWriter(file, false);
