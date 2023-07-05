@@ -59,5 +59,7 @@ public class Gravar {
         if (status9) {
             System.out.println("Alteracoes nos sinistros salvas!");
         }
+
+        System.out.println("");
     }
 }
