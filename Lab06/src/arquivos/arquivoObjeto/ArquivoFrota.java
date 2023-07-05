@@ -79,7 +79,13 @@ public class ArquivoFrota implements I_Arquivo<Frota> {
     public String getDados(Frota frota) {
         String dados = "";
         dados += frota.getId() + ",";
-        dados += frota.getSeguro().getId() + ",";
+
+        Seguro seguro = frota.getSeguro();
+        if (seguro != null) {
+            dados += seguro.getId() + ",";
+        } else {
+            dados += " ,";
+        }
 
         dados += "\"";
         for (Veiculo veiculo : frota.getListaVeiculos()) {

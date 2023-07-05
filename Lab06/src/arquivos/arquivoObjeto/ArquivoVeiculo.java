@@ -74,7 +74,13 @@ public class ArquivoVeiculo implements I_Arquivo<Veiculo> {
         dados += veiculo.getMarca() + ",";
         dados += veiculo.getModelo() + ",";
         dados += veiculo.getAnoFabricacao() + ",";
-        dados += veiculo.getSeguro().getId() + ",";
+
+        Seguro seguro = veiculo.getSeguro();
+        if (seguro != null) {
+            dados += seguro.getId() + ",";
+        } else {
+            dados += " ,";
+        }
 
         for (Seguradora seguradora : Admin.listaSeguradoras) {
             for (Cliente cliente : seguradora.getListaClientes()) {
