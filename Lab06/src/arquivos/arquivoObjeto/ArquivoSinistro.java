@@ -71,7 +71,7 @@ public class ArquivoSinistro implements I_Arquivo<Sinistro> {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         String dados = "";
-        dados += sinistro.getId();
+        dados += sinistro.getId() + ",";
         dados += sinistro.getData().format(dtf) + ",";
         dados += sinistro.getEndereco().replace(',', ';') + ",";
         dados += sinistro.getCondutor().getCPF() + ",";
