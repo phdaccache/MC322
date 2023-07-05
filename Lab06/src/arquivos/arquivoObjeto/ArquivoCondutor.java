@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 import sistema.*;
@@ -67,11 +68,15 @@ public class ArquivoCondutor implements I_Arquivo<Condutor> {
 
     @Override
     public String getDados(Condutor condutor) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
         String dados = "";
         dados += condutor.getCPF() + ",";
         dados += condutor.getNome().replace(',', ';') + ",";
         dados += condutor.getTelefone().replace(',', ';') + ",";
         dados += condutor.getEndereco().replace(',', ';') + ",";
+        dados += condutor.getEmail().replace(',', ';') + ",";
+        dados += condutor.getDataNascimento().format(dtf) + ",";
 
         for (Sinistro sinistro : condutor.getListaSinistros()) {
             dados += sinistro.getId() + ";";

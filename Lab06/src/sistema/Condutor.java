@@ -1,5 +1,7 @@
 package sistema;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.StringJoiner;
 
@@ -10,20 +12,21 @@ public class Condutor {
     private String telefone;
     private String endereco;
     private String email;
-    private String dataNascimento;
+    private LocalDate dataNascimento;
     private ArrayList<Sinistro> listaSinistros;
 
 
     // Construtor
     public Condutor(String CPF, String nome, String telefone,
                     String endereco, String email, String dataNascimento) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         this.CPF = CPF;
         this.nome = nome;
         this.telefone = telefone;
         this.endereco = endereco;
         this.email = email;
-        this.dataNascimento = dataNascimento;
+        this.dataNascimento = LocalDate.parse(dataNascimento, dtf); // Transformando String em LocalDate
         this.listaSinistros = new ArrayList<>();
     }
 
@@ -86,11 +89,11 @@ public class Condutor {
         this.email = email;
     }
 
-    public String getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return this.dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
