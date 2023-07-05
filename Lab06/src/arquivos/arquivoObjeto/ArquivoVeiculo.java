@@ -84,8 +84,10 @@ public class ArquivoVeiculo implements I_Arquivo<Veiculo> {
 
         for (Seguradora seguradora : Admin.listaSeguradoras) {
             for (Cliente cliente : seguradora.getListaClientes()) {
-                if (((ClientePF)cliente).getListaVeiculos().contains(veiculo)) {
-                    dados += cliente.getDocumento()[1];
+                if (cliente instanceof ClientePF) {  
+                    if (((ClientePF)cliente).getListaVeiculos().contains(veiculo)) {
+                        dados += cliente.getDocumento()[1];
+                    }
                 }
             }
         }
