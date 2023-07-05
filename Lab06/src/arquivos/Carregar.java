@@ -136,11 +136,13 @@ public class Carregar {
             List<String> clientes = documentosClientes.get(i);
             for (Cliente cliente : listaClientesPF) {
                 if (clientes.contains(cliente.getDocumento()[1])) {
+                    cliente.setSeguradora(seguradora);
                     seguradora.getListaClientes().add(cliente);
                 }      
             }
             for (Cliente cliente : listaClientesPJ) {
                 if (clientes.contains(cliente.getDocumento()[1])) {
+                    cliente.setSeguradora(seguradora);
                     seguradora.getListaClientes().add(cliente);
                 }      
             }
