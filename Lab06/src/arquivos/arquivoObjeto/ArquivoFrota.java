@@ -87,17 +87,18 @@ public class ArquivoFrota implements I_Arquivo<Frota> {
             dados += " ,";
         }
 
-        dados += "\"";
         for (Veiculo veiculo : frota.getListaVeiculos()) {
             dados += veiculo.getPlaca() + ",";
         }
-        dados += "\",";
+        dados += ",";
 
         for (Seguradora seguradora : Admin.listaSeguradoras) {
             for (Cliente cliente : seguradora.getListaClientes()) {
-                for (Frota f : ((ClientePJ)cliente).getListaFrotas()) {
-                    if (f.getId() == frota.getId()) {
-                        dados += cliente.getDocumento()[1];
+                if (cliente instanceof ClientePJ) {
+                    for (Frota f : ((ClientePJ)cliente).getListaFrotas()) {
+                        if (f.getId() == frota.getId()) {
+                            dados += cliente.getDocumento()[1];
+                        }
                     }
                 }
             }
@@ -112,15 +113,15 @@ public class ArquivoFrota implements I_Arquivo<Frota> {
         dados += veiculo.getMarca() + ",";
         dados += veiculo.getModelo() + ",";
         dados += veiculo.getAnoFabricacao() + ",";
-        dados += id + ",";
 
-        for (Seguradora seguradora : Admin.listaSeguradoras) {
-            for (Cliente cliente : seguradora.getListaClientes()) {
-                if (((ClientePJ)cliente).getListaFrotas().contains(frota)) {
-                    dados += cliente.getDocumento()[1];
-                }
-            }
+        Seguro seguro = frota.getSeguro();
+        if (seguro != null) {
+            dados += seguro.getId() + ",";
+        } else {
+            dados += " ,";
         }
+
+        dados += id;
 
         return dados;
     }
