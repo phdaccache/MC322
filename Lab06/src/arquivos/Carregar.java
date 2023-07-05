@@ -62,6 +62,7 @@ public class Carregar {
             for (int i = 0; i < dadosClientesPF.size(); i++) {
                 String[] dados = dadosClientesPF.get(i);
                 ClientePF clientePF = new ClientePF(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], dados[6], dados[7]);
+                clientePF.setValorMensalTotal(Double.parseDouble(dados[9]));
                 listaClientesPF.add(clientePF);
 
                 List<String> seguros = new ArrayList<String>(Arrays.asList(dados[10].split(";")));
@@ -79,6 +80,7 @@ public class Carregar {
             for (int i = 0; i < dadosClientesPJ.size(); i++) {
                 String[] dados = dadosClientesPJ.get(i);
                 ClientePJ clientePJ = new ClientePJ(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], Integer.parseInt(dados[6]));
+                clientePJ.setValorMensalTotal(Double.parseDouble(dados[8]));
                 listaClientesPJ.add(clientePJ);
 
                 List<String> seguros = new ArrayList<String>(Arrays.asList(dados[9].split(";")));
@@ -189,11 +191,23 @@ public class Carregar {
         if (dadosSegurosPF != null && !dadosSegurosPF.isEmpty()) {
             for (int i = 0; i < dadosSegurosPF.size(); i++) {
                 String[] dados = dadosSegurosPF.get(i);
-                Seguradora seguradora = Admin.getSeguradora(dados[4]);
-                ClientePF cliente = (ClientePF)seguradora.getCliente(dados[1]);
-                Veiculo veiculo = ((ClientePF)cliente).getVeiculo(dados[0]);
-                SeguroPF seguroPF = new SeguroPF(veiculo, cliente, dados[2], dados[3], seguradora);
+                Seguradora seguradora = Admin.getSeguradora(dados[3]);
+                ClientePF cliente = (ClientePF)seguradora.getCliente(dados[4]);
+                Veiculo veiculo = ((ClientePF)cliente).getVeiculo(dados[8]);
+                SeguroPF seguroPF = new SeguroPF(Integer.parseInt(dados[0]), veiculo, cliente, dados[1], dados[2], seguradora);
+                
+                seguroPF.setValorMensal(Double.parseDouble(dados[5]));
+                seguradora.getListaSeguros().add(seguroPF);
+                cliente.getListaSeguros().add(seguroPF);
+                veiculo.setSeguro(seguroPF);
                 listaSegurosPF.add(seguroPF);
+
+                List<String> cpfscondutoresPF = new ArrayList<String>(Arrays.asList(dados[7].split(";")));
+                for (Condutor condutor : listaCondutores) {
+                    if (cpfscondutoresPF.contains(condutor.getCPF())) {
+                        seguroPF.getListaCondutores().add(condutor);
+                    }
+                }
             }
         }
 
@@ -203,11 +217,23 @@ public class Carregar {
         if (dadosSegurosPJ != null && !dadosSegurosPJ.isEmpty()) {
             for (int i = 0; i < dadosSegurosPJ.size(); i++) {
                 String[] dados = dadosSegurosPJ.get(i);
-                Seguradora seguradora = Admin.getSeguradora(dados[4]);
-                ClientePJ cliente = (ClientePJ)seguradora.getCliente(dados[1]);
-                Frota frota = ((ClientePJ)cliente).getFrota(Integer.parseInt(dados[0]));
-                SeguroPJ seguroPJ = new SeguroPJ(frota, cliente, dados[2], dados[3], seguradora);
+                Seguradora seguradora = Admin.getSeguradora(dados[3]);
+                ClientePJ cliente = (ClientePJ)seguradora.getCliente(dados[4]);
+                Frota frota = ((ClientePJ)cliente).getFrota(Integer.parseInt(dados[8]));
+                SeguroPJ seguroPJ = new SeguroPJ(Integer.parseInt(dados[0]), frota, cliente, dados[1], dados[2], seguradora);
+                
+                seguroPJ.setValorMensal(Double.parseDouble(dados[5]));
+                seguradora.getListaSeguros().add(seguroPJ);
+                cliente.getListaSeguros().add(seguroPJ);
+                frota.setSeguro(seguroPJ);
                 listaSegurosPJ.add(seguroPJ);
+
+                List<String> cpfscondutoresPJ = new ArrayList<String>(Arrays.asList(dados[7].split(";")));
+                for (Condutor condutor : listaCondutores) {
+                    if (cpfscondutoresPJ.contains(condutor.getCPF())) {
+                        seguroPJ.getListaCondutores().add(condutor);
+                    }
+                }
             }
         }
 
@@ -220,12 +246,14 @@ public class Carregar {
                 Seguro seguro = null;
                 for (Seguradora seguradora : Admin.listaSeguradoras) {
                     Seguro seg;
-                    if ((seg = seguradora.getSeguro(Integer.parseInt(dados[3]))) != null) {
+                    if ((seg = seguradora.getSeguro(Integer.parseInt(dados[4]))) != null) {
                         seguro = seg;
                     }
                 }
-                Condutor condutor = seguro.getCondutor(dados[2]);
-                Sinistro sinistro = new Sinistro(dados[0], dados[1], condutor, seguro);
+                Condutor condutor = seguro.getCondutor(dados[3]);
+                Sinistro sinistro = new Sinistro(Integer.parseInt(dados[0]), dados[1], dados[2], condutor, seguro);
+                seguro.getListaSinistros().add(sinistro);
+                condutor.getListaSinistros().add(sinistro);
                 listaSinistros.add(sinistro);
             }
         }

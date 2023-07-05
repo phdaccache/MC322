@@ -14,7 +14,7 @@ import sistema.*;
 public class ArquivoSinistro implements I_Arquivo<Sinistro> {
     @Override
     public boolean gravarDados() {
-        String header = "data,endereco,cpfCondutor,idSeguro";
+        String header = "idSinistro,data,endereco,cpfCondutor,idSeguro";
         File file = new File("src/arquivos/arquivosCSV/sinistros.csv");
         try{
             FileWriter escritor = new FileWriter(file, false);
@@ -71,6 +71,7 @@ public class ArquivoSinistro implements I_Arquivo<Sinistro> {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         String dados = "";
+        dados += sinistro.getId();
         dados += sinistro.getData().format(dtf) + ",";
         dados += sinistro.getEndereco() + ",";
         dados += sinistro.getCondutor().getCPF() + ",";
