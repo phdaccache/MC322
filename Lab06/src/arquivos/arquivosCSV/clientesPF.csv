@@ -1,3 +1,3 @@
 nome,telefone,endereco,email,cpf,genero,educacao,nascimento,cnpjSeguradora,valorMensalTotal,listaSeguros,listaVeiculos
-Pedro,(11) 91234-1234,Rua 1,pedro@gmail.com,92959035100,masculino,Ensino Superior Incompleto,25/01/2003,61.198.164/0001-60,0.0, , 
+Pedro,(11) 91234-1234,Rua 1,pedro@gmail.com,92959035100,masculino,Ensino Superior Incompleto,25/01/2003,61.198.164/0001-60,0.0, ,BMW-1234;
 Carlos,(11) 8888-8888,Rua 2,carlos@gmail.com,99762742974,masculino,Mestrado,21/04/1957,61.198.164/0001-60,0.0, , 

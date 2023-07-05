@@ -88,7 +88,7 @@ public class ArquivoFrota implements I_Arquivo<Frota> {
         }
 
         for (Veiculo veiculo : frota.getListaVeiculos()) {
-            dados += veiculo.getPlaca() + ",";
+            dados += veiculo.getPlaca() + ";";
         }
         dados += ",";
 
