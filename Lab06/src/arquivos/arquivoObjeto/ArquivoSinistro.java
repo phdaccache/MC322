@@ -73,7 +73,7 @@ public class ArquivoSinistro implements I_Arquivo<Sinistro> {
         String dados = "";
         dados += sinistro.getId();
         dados += sinistro.getData().format(dtf) + ",";
-        dados += sinistro.getEndereco() + ",";
+        dados += sinistro.getEndereco().replace(',', ';') + ",";
         dados += sinistro.getCondutor().getCPF() + ",";
         dados += sinistro.getSeguro().getId();
 

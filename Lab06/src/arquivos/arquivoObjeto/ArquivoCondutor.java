@@ -69,9 +69,9 @@ public class ArquivoCondutor implements I_Arquivo<Condutor> {
     public String getDados(Condutor condutor) {
         String dados = "";
         dados += condutor.getCPF() + ",";
-        dados += condutor.getNome() + ",";
-        dados += condutor.getTelefone() + ",";
-        dados += condutor.getEndereco() + ",";
+        dados += condutor.getNome().replace(',', ';') + ",";
+        dados += condutor.getTelefone().replace(',', ';') + ",";
+        dados += condutor.getEndereco().replace(',', ';') + ",";
 
         for (Sinistro sinistro : condutor.getListaSinistros()) {
             dados += sinistro.getId() + ";";

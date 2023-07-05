@@ -44,7 +44,10 @@ public class Carregar {
         if (dadosSeguradora != null && !dadosSeguradora.isEmpty()) {
             for (int i = 0; i < dadosSeguradora.size(); i++) {
                 String[] dados = dadosSeguradora.get(i);
-                Seguradora seguradora = new Seguradora(dados[0], dados[1], dados[2], dados[3], dados[4]);
+                Seguradora seguradora = new Seguradora(dados[0], dados[1].replace(';', ','),
+                                                       dados[2].replace(';', ','),
+                                                       dados[3].replace(';', ','),
+                                                       dados[4].replace(';', ','));
                 listaSeguradoras.add(seguradora);
 
                 List<String> clientes = new ArrayList<String>(Arrays.asList(dados[5].split(";")));
@@ -61,7 +64,14 @@ public class Carregar {
         if (dadosClientesPF != null && !dadosClientesPF.isEmpty()) {
             for (int i = 0; i < dadosClientesPF.size(); i++) {
                 String[] dados = dadosClientesPF.get(i);
-                ClientePF clientePF = new ClientePF(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], dados[6], dados[7]);
+                ClientePF clientePF = new ClientePF(dados[0].replace(';', ','),
+                                                    dados[1].replace(';', ','),
+                                                    dados[2].replace(';', ','),
+                                                    dados[3].replace(';', ','),
+                                                    dados[4],
+                                                    dados[5].replace(';', ','),
+                                                    dados[6].replace(';', ','),
+                                                    dados[7]);
                 clientePF.setValorMensalTotal(Double.parseDouble(dados[9]));
                 listaClientesPF.add(clientePF);
 
@@ -79,7 +89,11 @@ public class Carregar {
         if (dadosClientesPJ != null && !dadosClientesPJ.isEmpty()) {
             for (int i = 0; i < dadosClientesPJ.size(); i++) {
                 String[] dados = dadosClientesPJ.get(i);
-                ClientePJ clientePJ = new ClientePJ(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], Integer.parseInt(dados[6]));
+                ClientePJ clientePJ = new ClientePJ(dados[0].replace(';', ','),
+                                                    dados[1].replace(';', ','),
+                                                    dados[2].replace(';', ','),
+                                                    dados[3].replace(';', ','),
+                                                    dados[4], dados[5], Integer.parseInt(dados[6]));
                 clientePJ.setValorMensalTotal(Double.parseDouble(dados[8]));
                 listaClientesPJ.add(clientePJ);
 
@@ -97,7 +111,10 @@ public class Carregar {
         if (dadosVeiculos != null && !dadosVeiculos.isEmpty()) {
             for (int i = 0; i < dadosVeiculos.size(); i++) {
                 String[] dados = dadosVeiculos.get(i);
-                Veiculo veiculo = new Veiculo(dados[0], dados[1], dados[2], Integer.parseInt(dados[3]));
+                Veiculo veiculo = new Veiculo(dados[0],
+                                              dados[1].replace(';', ','),
+                                              dados[2].replace(';', ','),
+                                              Integer.parseInt(dados[3]));
                 listaVeiculos.add(veiculo);
             }
         }
@@ -122,7 +139,12 @@ public class Carregar {
         if (dadosCondutores != null && !dadosCondutores.isEmpty()) {
             for (int i = 0; i < dadosCondutores.size(); i++) {
                 String[] dados = dadosCondutores.get(i);
-                Condutor condutor = new Condutor(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5]);
+                Condutor condutor = new Condutor(dados[0],
+                                                 dados[1].replace(';', ','),
+                                                 dados[2].replace(';', ','),
+                                                 dados[3].replace(';', ','),
+                                                 dados[4].replace(';', ','),
+                                                 dados[5]);
                 listaCondutores.add(condutor);
             }
         }
@@ -194,7 +216,9 @@ public class Carregar {
                 Seguradora seguradora = Admin.getSeguradora(dados[3]);
                 ClientePF cliente = (ClientePF)seguradora.getCliente(dados[4]);
                 Veiculo veiculo = ((ClientePF)cliente).getVeiculo(dados[8]);
-                SeguroPF seguroPF = new SeguroPF(Integer.parseInt(dados[0]), veiculo, cliente, dados[1], dados[2], seguradora);
+                SeguroPF seguroPF = new SeguroPF(Integer.parseInt(dados[0]),
+                                                 veiculo, cliente, dados[1],
+                                                 dados[2], seguradora);
                 
                 seguroPF.setValorMensal(Double.parseDouble(dados[5]));
                 seguradora.getListaSeguros().add(seguroPF);
@@ -220,7 +244,9 @@ public class Carregar {
                 Seguradora seguradora = Admin.getSeguradora(dados[3]);
                 ClientePJ cliente = (ClientePJ)seguradora.getCliente(dados[4]);
                 Frota frota = ((ClientePJ)cliente).getFrota(Integer.parseInt(dados[8]));
-                SeguroPJ seguroPJ = new SeguroPJ(Integer.parseInt(dados[0]), frota, cliente, dados[1], dados[2], seguradora);
+                SeguroPJ seguroPJ = new SeguroPJ(Integer.parseInt(dados[0]),
+                                                 frota, cliente, dados[1],
+                                                 dados[2], seguradora);
                 
                 seguroPJ.setValorMensal(Double.parseDouble(dados[5]));
                 seguradora.getListaSeguros().add(seguroPJ);
@@ -251,7 +277,10 @@ public class Carregar {
                     }
                 }
                 Condutor condutor = seguro.getCondutor(dados[3]);
-                Sinistro sinistro = new Sinistro(Integer.parseInt(dados[0]), dados[1], dados[2], condutor, seguro);
+                Sinistro sinistro = new Sinistro(Integer.parseInt(dados[0]),
+                                                 dados[1],
+                                                 dados[2].replace(';', ','),
+                                                 condutor, seguro);
                 seguro.getListaSinistros().add(sinistro);
                 condutor.getListaSinistros().add(sinistro);
                 listaSinistros.add(sinistro);

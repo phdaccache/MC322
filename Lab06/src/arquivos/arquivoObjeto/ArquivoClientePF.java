@@ -68,13 +68,13 @@ public class ArquivoClientePF implements I_Arquivo<ClientePF> {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         String dados = "";
-        dados += cliente.getNome() + ",";
-        dados += cliente.getTelefone() + ",";
-        dados += cliente.getEndereco() + ",";
-        dados += cliente.getEmail() + ",";
+        dados += cliente.getNome().replace(',', ';') + ",";
+        dados += cliente.getTelefone().replace(',', ';') + ",";
+        dados += cliente.getEndereco().replace(',', ';') + ",";
+        dados += cliente.getEmail().replace(',', ';') + ",";
         dados += cliente.getDocumento()[1] + ",";
-        dados += cliente.getGenero() + ",";
-        dados += cliente.getEducacao() + ",";
+        dados += cliente.getGenero().replace(',', ';') + ",";
+        dados += cliente.getEducacao().replace(',', ';') + ",";
         dados += cliente.getDataNascimento().format(dtf) + ",";
         dados += cliente.getSeguradora().getCNPJ() + ",";
         dados += cliente.getValorMensalTotal() + ",";

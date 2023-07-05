@@ -71,8 +71,8 @@ public class ArquivoVeiculo implements I_Arquivo<Veiculo> {
     public String getDados(Veiculo veiculo) {
         String dados = "";
         dados += veiculo.getPlaca() + ",";
-        dados += veiculo.getMarca() + ",";
-        dados += veiculo.getModelo() + ",";
+        dados += veiculo.getMarca().replace(',', ';') + ",";
+        dados += veiculo.getModelo().replace(',', ';') + ",";
         dados += veiculo.getAnoFabricacao() + ",";
 
         Seguro seguro = veiculo.getSeguro();

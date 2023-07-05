@@ -61,10 +61,10 @@ public class ArquivoSeguradora implements I_Arquivo<Seguradora> {
     public String getDados(Seguradora seguradora) {
         String dados = "";
         dados += seguradora.getCNPJ() + ",";
-        dados += seguradora.getNome() + ",";
-        dados += seguradora.getTelefone() + ",";
-        dados += seguradora.getEndereco() + ",";
-        dados += seguradora.getEmail() + ",";
+        dados += seguradora.getNome().replace(',', ';') + ",";
+        dados += seguradora.getTelefone().replace(',', ';') + ",";
+        dados += seguradora.getEndereco().replace(',', ';') + ",";
+        dados += seguradora.getEmail().replace(',', ';') + ",";
 
         for (Cliente cliente : seguradora.getListaClientes()) {
             dados += cliente.getDocumento()[1] + ";";

@@ -67,10 +67,10 @@ public class ArquivoClientePJ implements I_Arquivo<ClientePJ> {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         String dados = "";
-        dados += cliente.getNome() + ",";
-        dados += cliente.getTelefone() + ",";
-        dados += cliente.getEndereco() + ",";
-        dados += cliente.getEmail() + ",";
+        dados += cliente.getNome().replace(',', ';') + ",";
+        dados += cliente.getTelefone().replace(',', ';') + ",";
+        dados += cliente.getEndereco().replace(',', ';') + ",";
+        dados += cliente.getEmail().replace(',', ';') + ",";
         dados += cliente.getDocumento()[1] + ",";
         dados += cliente.getDataFundacao().format(dtf) + ",";
         dados += cliente.getQtdFuncionarios() + ",";
