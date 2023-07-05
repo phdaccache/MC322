@@ -82,17 +82,15 @@ public class ArquivoSeguroPJ implements I_Arquivo<SeguroPJ> {
         dados += seguro.getCliente().getDocumento()[1] + ",";
         dados += seguro.getValorMensal() + ",";
 
-        dados += "\"";
         for (Sinistro sinistro : seguro.getListaSinistros()) {
-            dados += sinistro.getId() + ",";
+            dados += sinistro.getId() + ";";
         }
-        dados += "\",";
+        dados += ",";
 
-        dados += "\"";
         for (Condutor condutor : seguro.getListaCondutores()) {
-            dados += condutor.getCPF() + ",";
+            dados += condutor.getCPF() + ";";
         }
-        dados += "\",";
+        dados += ",";
 
         dados += seguro.getFrota().getId();
 

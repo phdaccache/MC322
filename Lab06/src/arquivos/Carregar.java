@@ -47,9 +47,9 @@ public class Carregar {
                 Seguradora seguradora = new Seguradora(dados[0], dados[1], dados[2], dados[3], dados[4]);
                 listaSeguradoras.add(seguradora);
 
-                List<String> clientes = new ArrayList<String>(Arrays.asList(dados[5].split(",")));
+                List<String> clientes = new ArrayList<String>(Arrays.asList(dados[5].split(";")));
                 documentosClientes.add(clientes);
-                List<String> seguros = new ArrayList<String>(Arrays.asList(dados[6].split(",")));
+                List<String> seguros = new ArrayList<String>(Arrays.asList(dados[6].split(";")));
                 idsSegurosSeguradora.add(seguros);
             }
             System.out.println("Seguradoras carregadas!");
@@ -64,9 +64,9 @@ public class Carregar {
                 ClientePF clientePF = new ClientePF(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], dados[6], dados[7]);
                 listaClientesPF.add(clientePF);
 
-                List<String> seguros = new ArrayList<String>(Arrays.asList(dados[10].split(",")));
+                List<String> seguros = new ArrayList<String>(Arrays.asList(dados[10].split(";")));
                 idsSegurosClientePF.add(seguros);
-                List<String> veiculos = new ArrayList<String>(Arrays.asList(dados[11].split(",")));
+                List<String> veiculos = new ArrayList<String>(Arrays.asList(dados[11].split(";")));
                 placasVeiculosClientePF.add(veiculos);
             }
             System.out.println("Clientes PF carregados!");
@@ -81,9 +81,9 @@ public class Carregar {
                 ClientePJ clientePJ = new ClientePJ(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], Integer.parseInt(dados[6]));
                 listaClientesPJ.add(clientePJ);
 
-                List<String> seguros = new ArrayList<String>(Arrays.asList(dados[9].split(",")));
+                List<String> seguros = new ArrayList<String>(Arrays.asList(dados[9].split(";")));
                 idsSegurosClientePJ.add(seguros);
-                List<String> frotas = new ArrayList<String>(Arrays.asList(dados[10].split(",")));
+                List<String> frotas = new ArrayList<String>(Arrays.asList(dados[10].split(";")));
                 idsFrotasClientePJ.add(frotas);
             }
             System.out.println("Clientes PJ carregados!");
@@ -109,7 +109,7 @@ public class Carregar {
                 Frota frota = new Frota(Integer.parseInt(dados[0]));
                 listaFrotas.add(frota);
 
-                List<String> veiculosFrota = new ArrayList<String>(Arrays.asList(dados[2].split(",")));
+                List<String> veiculosFrota = new ArrayList<String>(Arrays.asList(dados[2].split(";")));
                 placasVeiculosFrota.add(veiculosFrota);
             }
         }

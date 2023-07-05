@@ -77,17 +77,14 @@ public class ArquivoClientePJ implements I_Arquivo<ClientePJ> {
         dados += cliente.getSeguradora().getCNPJ() + ",";
         dados += cliente.getValorMensalTotal() + ",";
 
-        dados += "\"";
         for (Seguro seguro : cliente.getListaSeguros()) {
-            dados += seguro.getId() + ",";
+            dados += seguro.getId() + ";";
         }
-        dados += "\",";
+        dados += ",";
 
-        dados += "\"";
         for (Frota frota : ((ClientePJ)cliente).getListaFrotas()) {
-            dados += frota.getId() + ",";
+            dados += frota.getId() + ";";
         }
-        dados += "\"";
 
         return dados;
     }

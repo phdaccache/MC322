@@ -79,17 +79,14 @@ public class ArquivoClientePF implements I_Arquivo<ClientePF> {
         dados += cliente.getSeguradora().getCNPJ() + ",";
         dados += cliente.getValorMensalTotal() + ",";
 
-        dados += "\"";
         for (Seguro seguro : cliente.getListaSeguros()) {
-            dados += seguro.getId() + ",";
+            dados += seguro.getId() + ";";
         }
-        dados += "\",";
+        dados += ",";
 
-        dados += "\"";
         for (Veiculo veiculo : ((ClientePF)cliente).getListaVeiculos()) {
-            dados += veiculo.getPlaca() + ",";
+            dados += veiculo.getPlaca() + ";";
         }
-        dados += "\"";
 
         return dados;
     }

@@ -73,11 +73,9 @@ public class ArquivoCondutor implements I_Arquivo<Condutor> {
         dados += condutor.getTelefone() + ",";
         dados += condutor.getEndereco() + ",";
 
-        dados += "\"";
         for (Sinistro sinistro : condutor.getListaSinistros()) {
-            dados += sinistro.getId() + ",";
+            dados += sinistro.getId() + ";";
         }
-        dados += "\"";
 
         return dados;
     }
