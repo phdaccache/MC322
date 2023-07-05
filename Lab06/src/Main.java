@@ -30,12 +30,16 @@ public class Main {
         System.out.println("    2. Rodar o teste automatico:");
         System.out.println("        * Instancia objetos direto da main e testa suas funcionalidades.");
         System.out.println("        * Todos os objetos sao excluidos apos o teste.");
+        System.out.println("        * Dica: caso nao seja possivel visualizar a saida inteira no console, siga esses passos:");
+        System.out.println("            1. Acesse File -> Preferences -> Settings.");
+        System.out.println("            2. Na barra de pesquisa, digite 'scrollback'.");
+        System.out.println("            3. Na opcao 'Terminal > Integrated: Scrollback', altere o valor de 1000 para 3000 ou mais.");
         System.out.println("");
 
         System.out.println("* E possivel aceitar ou negar essa opcao ao fim do programa:");
         System.out.println("");
 
-        System.out.println("    2. Salvar as alteracoes:");
+        System.out.println("    1. Salvar as alteracoes:");
         System.out.println("        * Salva todos os objetos em 'src/arquivos/arquivosCSV'.");
         System.out.println("");
 
