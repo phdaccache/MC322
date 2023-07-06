@@ -9,33 +9,6 @@ import sistema.*;
 
 public class Carregar {
     public static void carregarDados() {
-        /******************************* CRIANDO LISTAS DE OBJETOS *******************************/
-
-        ArrayList<Seguradora> listaSeguradoras = new ArrayList<>();
-        ArrayList<ClientePF> listaClientesPF = new ArrayList<>();
-        ArrayList<ClientePJ> listaClientesPJ = new ArrayList<>();
-        ArrayList<Veiculo> listaVeiculos = new ArrayList<>();
-        ArrayList<Frota> listaFrotas = new ArrayList<>();
-        ArrayList<SeguroPF> listaSegurosPF = new ArrayList<>();
-        ArrayList<SeguroPJ> listaSegurosPJ = new ArrayList<>();
-        ArrayList<Condutor> listaCondutores = new ArrayList<>();
-        ArrayList<Sinistro> listaSinistros = new ArrayList<>();
-
-        // Seguradora
-        ArrayList<List<String>> documentosClientes = new ArrayList<>();
-        ArrayList<List<String>> idsSegurosSeguradora = new ArrayList<>();
-
-        // Cliente PF
-        ArrayList<List<String>> idsSegurosClientePF = new ArrayList<>();
-        ArrayList<List<String>> placasVeiculosClientePF = new ArrayList<>();
-
-        // Cliente PJ
-        ArrayList<List<String>> idsSegurosClientePJ = new ArrayList<>();
-        ArrayList<List<String>> idsFrotasClientePJ = new ArrayList<>();
-
-        // Frota
-        ArrayList<List<String>> placasVeiculosFrota = new ArrayList<>();
-
         /******************************* CARREGANDO OBJETOS *******************************/
 
         // Carregando seguradoras
@@ -48,12 +21,7 @@ public class Carregar {
                                                        dados[2].replace(';', ','),
                                                        dados[3].replace(';', ','),
                                                        dados[4].replace(';', ','));
-                listaSeguradoras.add(seguradora);
-
-                List<String> clientes = new ArrayList<String>(Arrays.asList(dados[5].split(";")));
-                documentosClientes.add(clientes);
-                List<String> seguros = new ArrayList<String>(Arrays.asList(dados[6].split(";")));
-                idsSegurosSeguradora.add(seguros);
+                Admin.listaSeguradoras.add(seguradora);
             }
             System.out.println("Seguradoras carregadas!");
         }
@@ -72,13 +40,10 @@ public class Carregar {
                                                     dados[5].replace(';', ','),
                                                     dados[6].replace(';', ','),
                                                     dados[7]);
+                Seguradora seguradora = Admin.getSeguradora(dados[8]);
                 clientePF.setValorMensalTotal(Double.parseDouble(dados[9]));
-                listaClientesPF.add(clientePF);
-
-                List<String> seguros = new ArrayList<String>(Arrays.asList(dados[10].split(";")));
-                idsSegurosClientePF.add(seguros);
-                List<String> veiculos = new ArrayList<String>(Arrays.asList(dados[11].split(";")));
-                placasVeiculosClientePF.add(veiculos);
+                clientePF.setSeguradora(seguradora);
+                seguradora.getListaClientes().add(clientePF);
             }
             System.out.println("Clientes PF carregados!");
         }
@@ -94,15 +59,28 @@ public class Carregar {
                                                     dados[2].replace(';', ','),
                                                     dados[3].replace(';', ','),
                                                     dados[4], dados[5], Integer.parseInt(dados[6]));
+                Seguradora seguradora = Admin.getSeguradora(dados[7]);
                 clientePJ.setValorMensalTotal(Double.parseDouble(dados[8]));
-                listaClientesPJ.add(clientePJ);
-
-                List<String> seguros = new ArrayList<String>(Arrays.asList(dados[9].split(";")));
-                idsSegurosClientePJ.add(seguros);
-                List<String> frotas = new ArrayList<String>(Arrays.asList(dados[10].split(";")));
-                idsFrotasClientePJ.add(frotas);
+                clientePJ.setSeguradora(seguradora);
+                seguradora.getListaClientes().add(clientePJ);
             }
             System.out.println("Clientes PJ carregados!");
+        }
+
+        // Carregando frotas
+        ArquivoFrota frotas = new ArquivoFrota();
+        ArrayList<String[]> dadosFrotas = frotas.lerDados();
+        if (dadosFrotas != null && !dadosFrotas.isEmpty()) {
+            for (int i = 0; i < dadosFrotas.size(); i++) {
+                String[] dados = dadosFrotas.get(i);
+                Frota frota = new Frota(Integer.parseInt(dados[0]));
+                for (Seguradora seguradora : Admin.listaSeguradoras) {
+                    Cliente cliente = seguradora.getCliente(dados[3]);
+                    if (cliente != null && cliente instanceof ClientePJ) {
+                        ((ClientePJ)cliente).getListaFrotas().add(frota);
+                    }
+                }
+            }
         }
 
         // Carregando veiculos
@@ -115,25 +93,29 @@ public class Carregar {
                                               dados[1].replace(';', ','),
                                               dados[2].replace(';', ','),
                                               Integer.parseInt(dados[3]));
-                listaVeiculos.add(veiculo);
-            }
-        }
-
-        // Carregando frotas
-        ArquivoFrota frotas = new ArquivoFrota();
-        ArrayList<String[]> dadosFrotas = frotas.lerDados();
-        if (dadosFrotas != null && !dadosFrotas.isEmpty()) {
-            for (int i = 0; i < dadosFrotas.size(); i++) {
-                String[] dados = dadosFrotas.get(i);
-                Frota frota = new Frota(Integer.parseInt(dados[0]));
-                listaFrotas.add(frota);
-
-                List<String> veiculosFrota = new ArrayList<String>(Arrays.asList(dados[2].split(";")));
-                placasVeiculosFrota.add(veiculosFrota);
+                for (Seguradora seguradora : Admin.listaSeguradoras) {
+                    // Carregando veiculos de clientes PF
+                    Cliente cliente = seguradora.getCliente(dados[5]);
+                    if (cliente instanceof ClientePF) {     
+                        if (cliente != null) {
+                            ((ClientePF)cliente).getListaVeiculos().add(veiculo);
+                        }
+                    }
+                    // Carregando veiculos das frotas
+                    else if (cliente instanceof ClientePJ) {
+                        for (Cliente cl : seguradora.getListaClientes()) {
+                            Frota frota = ((ClientePJ)cl).getFrota(Integer.parseInt(dados[5]));
+                            if (frota != null) {
+                                frota.getListaVeiculos().add(veiculo);
+                            }
+                        }
+                    }
+                }
             }
         }
 
         // Carregando condutores
+        ArrayList<Condutor> listaCondutores = new ArrayList<>();
         ArquivoCondutor condutores = new ArquivoCondutor();
         ArrayList<String[]> dadosCondutores = condutores.lerDados();
         if (dadosCondutores != null && !dadosCondutores.isEmpty()) {
@@ -148,64 +130,6 @@ public class Carregar {
                 listaCondutores.add(condutor);
             }
         }
-
-        /******************************* ATUALIZANDO OBJETOS *******************************/
-
-        // Adicionando seguradoras
-        Admin.listaSeguradoras.addAll(listaSeguradoras);
-
-        // Adicionando clientes
-        for (int i = 0; i < Admin.listaSeguradoras.size(); i++) {
-            Seguradora seguradora = Admin.listaSeguradoras.get(i);
-            List<String> clientes = documentosClientes.get(i);
-            for (Cliente cliente : listaClientesPF) {
-                if (clientes.contains(cliente.getDocumento()[1])) {
-                    cliente.setSeguradora(seguradora);
-                    seguradora.getListaClientes().add(cliente);
-                }      
-            }
-            for (Cliente cliente : listaClientesPJ) {
-                if (clientes.contains(cliente.getDocumento()[1])) {
-                    cliente.setSeguradora(seguradora);
-                    seguradora.getListaClientes().add(cliente);
-                }      
-            }
-        }
-
-        // Adicionando veiculos
-        for (int i = 0; i < listaClientesPF.size(); i++) {
-            ClientePF clientePF = listaClientesPF.get(i);
-            List<String> veiculosPF = placasVeiculosClientePF.get(i);
-            for (Veiculo veiculo : listaVeiculos) {
-                if (veiculosPF.contains(veiculo.getPlaca())) {
-                    clientePF.getListaVeiculos().add(veiculo);
-                }
-            }
-        }
-
-        // Adicionando frotas
-        for (int i = 0; i < listaClientesPJ.size(); i++) {
-            ClientePJ clientePJ = listaClientesPJ.get(i);
-            List<String> frotasPJ = idsFrotasClientePJ.get(i);
-            for (Frota frota : listaFrotas) {
-                if (frotasPJ.contains(Integer.toString(frota.getId()))) {
-                    clientePJ.getListaFrotas().add(frota);
-                }
-            }
-        }
-
-        // Adicionando veiculos nas frotas
-        for (int i = 0; i < listaFrotas.size(); i++) {
-            Frota frota = listaFrotas.get(i);
-            List<String> veiculosFrota = placasVeiculosFrota.get(i);
-            for (Veiculo veiculo : listaVeiculos) {
-                if (veiculosFrota.contains(veiculo.getPlaca())) {
-                    frota.getListaVeiculos().add(veiculo);
-                }
-            }
-        }
-
-        /******************************* CARREGANDO OBJETOS FINAIS *******************************/
 
         // Carregando seguros PF
         ArquivoSeguroPF segurosPF = new ArquivoSeguroPF();
@@ -224,7 +148,6 @@ public class Carregar {
                 seguradora.getListaSeguros().add(seguroPF);
                 cliente.getListaSeguros().add(seguroPF);
                 veiculo.setSeguro(seguroPF);
-                listaSegurosPF.add(seguroPF);
 
                 List<String> cpfscondutoresPF = new ArrayList<String>(Arrays.asList(dados[7].split(";")));
                 for (Condutor condutor : listaCondutores) {
@@ -252,7 +175,6 @@ public class Carregar {
                 seguradora.getListaSeguros().add(seguroPJ);
                 cliente.getListaSeguros().add(seguroPJ);
                 frota.setSeguro(seguroPJ);
-                listaSegurosPJ.add(seguroPJ);
 
                 List<String> cpfscondutoresPJ = new ArrayList<String>(Arrays.asList(dados[7].split(";")));
                 for (Condutor condutor : listaCondutores) {
@@ -283,7 +205,6 @@ public class Carregar {
                                                  condutor, seguro);
                 seguro.getListaSinistros().add(sinistro);
                 condutor.getListaSinistros().add(sinistro);
-                listaSinistros.add(sinistro);
             }
         }
     }
