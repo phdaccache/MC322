@@ -96,13 +96,11 @@ public class Carregar {
                 for (Seguradora seguradora : Admin.listaSeguradoras) {
                     // Carregando veiculos de clientes PF
                     Cliente cliente = seguradora.getCliente(dados[5]);
-                    if (cliente instanceof ClientePF) {     
-                        if (cliente != null) {
-                            ((ClientePF)cliente).getListaVeiculos().add(veiculo);
-                        }
+                    if (cliente instanceof ClientePF && cliente != null) {     
+                        ((ClientePF)cliente).getListaVeiculos().add(veiculo);
                     }
                     // Carregando veiculos das frotas
-                    else if (cliente instanceof ClientePJ) {
+                    else {
                         for (Cliente cl : seguradora.getListaClientes()) {
                             Frota frota = ((ClientePJ)cl).getFrota(Integer.parseInt(dados[5]));
                             if (frota != null) {
