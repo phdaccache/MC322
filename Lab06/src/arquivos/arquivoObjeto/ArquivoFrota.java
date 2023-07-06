@@ -17,16 +17,20 @@ public class ArquivoFrota implements I_Arquivo<Frota> {
         File file = new File("src/arquivos/arquivosCSV/frotas.csv");
         File file2 = new File("src/arquivos/arquivosCSV/veiculos.csv");
         try{
-            FileWriter escritor = new FileWriter(file, false);
+            FileWriter escritor = new FileWriter(file, false); // Gravar as frotas
             escritor.write(header);
-            FileWriter escritor2 = new FileWriter(file2, true);
+            // No escritor2, append esta como true porque a gravacao da frota e feita depois da dos veiculos
+            // Entao e so adicionar os veiculos das frotas em 'veiculos.csv', pois o resto ja esta la
+            FileWriter escritor2 = new FileWriter(file2, true); // Gravar os veiculos
             for (Seguradora seguradora : Admin.listaSeguradoras) {
                 for (Cliente cliente : seguradora.getListaClientes()) {
                     if (cliente instanceof ClientePJ) {
                         for (Frota frota : ((ClientePJ)cliente).getListaFrotas()) {
+                            // Gravando os dados da frota
                             String dados = getDados(frota);
                             escritor.write("\n");
                             escritor.write(dados);
+                            // Gravando os dados dos veiculos
                             for (Veiculo veiculo : frota.getListaVeiculos()) {
                                 String dados2 = getDados(veiculo, frota.getId(), frota);
                                 escritor2.write("\n");

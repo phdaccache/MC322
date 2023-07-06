@@ -16,6 +16,8 @@ public class Sinistro {
     // Construtor
     public Sinistro(String data, String endereco, Condutor condutor, Seguro seguro) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        // Nao definir contador_id como 1 no comeco porque podem ter sinistros carregados dos arquivos
         contador_id = condutor.getListaSinistros().size() + 1;
         this.id = contador_id++;
         this.data = LocalDate.parse(data, dtf); // Transformando String em LocalDate

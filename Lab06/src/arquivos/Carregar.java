@@ -9,8 +9,6 @@ import sistema.*;
 
 public class Carregar {
     public static void carregarDados() {
-        /******************************* CARREGANDO OBJETOS *******************************/
-
         // Carregando seguradoras
         ArquivoSeguradora seguradoras = new ArquivoSeguradora();
         ArrayList<String[]> dadosSeguradora = seguradoras.lerDados();
@@ -95,7 +93,7 @@ public class Carregar {
                         ((ClientePF)cliente).getListaVeiculos().add(veiculo);
                     }
                     // Carregando veiculos das frotas
-                    else {
+                    else { // Caso nao encontre o cliente pelo dados[5] (nesse caso e o id da frota)
                         for (Cliente cl : seguradora.getListaClientes()) {
                             if (cl instanceof ClientePJ) {
                                 Frota frota = ((ClientePJ)cl).getFrota(Integer.parseInt(dados[5]));
