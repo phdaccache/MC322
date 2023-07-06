@@ -15,8 +15,7 @@ public class Carregar {
         ArquivoSeguradora seguradoras = new ArquivoSeguradora();
         ArrayList<String[]> dadosSeguradora = seguradoras.lerDados();
         if (dadosSeguradora != null && !dadosSeguradora.isEmpty()) {
-            for (int i = 0; i < dadosSeguradora.size(); i++) {
-                String[] dados = dadosSeguradora.get(i);
+            for (String[] dados : dadosSeguradora) {
                 Seguradora seguradora = new Seguradora(dados[0], dados[1].replace(';', ','),
                                                        dados[2].replace(';', ','),
                                                        dados[3].replace(';', ','),
@@ -30,8 +29,7 @@ public class Carregar {
         ArquivoClientePF clientesPF = new ArquivoClientePF();
         ArrayList<String[]> dadosClientesPF = clientesPF.lerDados();
         if (dadosClientesPF != null && !dadosClientesPF.isEmpty()) {
-            for (int i = 0; i < dadosClientesPF.size(); i++) {
-                String[] dados = dadosClientesPF.get(i);
+            for (String[] dados : dadosClientesPF) {
                 ClientePF clientePF = new ClientePF(dados[0].replace(';', ','),
                                                     dados[1].replace(';', ','),
                                                     dados[2].replace(';', ','),
@@ -52,8 +50,7 @@ public class Carregar {
         ArquivoClientePJ clientesPJ = new ArquivoClientePJ();
         ArrayList<String[]> dadosClientesPJ = clientesPJ.lerDados();
         if (dadosClientesPJ != null && !dadosClientesPJ.isEmpty()) {
-            for (int i = 0; i < dadosClientesPJ.size(); i++) {
-                String[] dados = dadosClientesPJ.get(i);
+            for (String[] dados : dadosClientesPJ) {
                 ClientePJ clientePJ = new ClientePJ(dados[0].replace(';', ','),
                                                     dados[1].replace(';', ','),
                                                     dados[2].replace(';', ','),
@@ -71,8 +68,7 @@ public class Carregar {
         ArquivoFrota frotas = new ArquivoFrota();
         ArrayList<String[]> dadosFrotas = frotas.lerDados();
         if (dadosFrotas != null && !dadosFrotas.isEmpty()) {
-            for (int i = 0; i < dadosFrotas.size(); i++) {
-                String[] dados = dadosFrotas.get(i);
+            for (String[] dados : dadosFrotas) {
                 Frota frota = new Frota(Integer.parseInt(dados[0]));
                 for (Seguradora seguradora : Admin.listaSeguradoras) {
                     Cliente cliente = seguradora.getCliente(dados[3]);
@@ -87,8 +83,7 @@ public class Carregar {
         ArquivoVeiculo veiculos = new ArquivoVeiculo();
         ArrayList<String[]> dadosVeiculos = veiculos.lerDados();
         if (dadosVeiculos != null && !dadosVeiculos.isEmpty()) {
-            for (int i = 0; i < dadosVeiculos.size(); i++) {
-                String[] dados = dadosVeiculos.get(i);
+            for (String dados[] : dadosVeiculos) {
                 Veiculo veiculo = new Veiculo(dados[0],
                                               dados[1].replace(';', ','),
                                               dados[2].replace(';', ','),
@@ -102,9 +97,11 @@ public class Carregar {
                     // Carregando veiculos das frotas
                     else {
                         for (Cliente cl : seguradora.getListaClientes()) {
-                            Frota frota = ((ClientePJ)cl).getFrota(Integer.parseInt(dados[5]));
-                            if (frota != null) {
-                                frota.getListaVeiculos().add(veiculo);
+                            if (cl instanceof ClientePJ) {
+                                Frota frota = ((ClientePJ)cl).getFrota(Integer.parseInt(dados[5]));
+                                if (frota != null) {
+                                    frota.getListaVeiculos().add(veiculo);
+                                }
                             }
                         }
                     }
@@ -117,8 +114,7 @@ public class Carregar {
         ArquivoCondutor condutores = new ArquivoCondutor();
         ArrayList<String[]> dadosCondutores = condutores.lerDados();
         if (dadosCondutores != null && !dadosCondutores.isEmpty()) {
-            for (int i = 0; i < dadosCondutores.size(); i++) {
-                String[] dados = dadosCondutores.get(i);
+            for (String[] dados : dadosCondutores) {
                 Condutor condutor = new Condutor(dados[0],
                                                  dados[1].replace(';', ','),
                                                  dados[2].replace(';', ','),
@@ -133,8 +129,7 @@ public class Carregar {
         ArquivoSeguroPF segurosPF = new ArquivoSeguroPF();
         ArrayList<String[]> dadosSegurosPF = segurosPF.lerDados();
         if (dadosSegurosPF != null && !dadosSegurosPF.isEmpty()) {
-            for (int i = 0; i < dadosSegurosPF.size(); i++) {
-                String[] dados = dadosSegurosPF.get(i);
+            for (String[] dados : dadosSegurosPF) {
                 Seguradora seguradora = Admin.getSeguradora(dados[3]);
                 ClientePF cliente = (ClientePF)seguradora.getCliente(dados[4]);
                 Veiculo veiculo = ((ClientePF)cliente).getVeiculo(dados[8]);
@@ -160,8 +155,7 @@ public class Carregar {
         ArquivoSeguroPJ segurosPJ = new ArquivoSeguroPJ();
         ArrayList<String[]> dadosSegurosPJ = segurosPJ.lerDados();
         if (dadosSegurosPJ != null && !dadosSegurosPJ.isEmpty()) {
-            for (int i = 0; i < dadosSegurosPJ.size(); i++) {
-                String[] dados = dadosSegurosPJ.get(i);
+            for (String[] dados : dadosSegurosPJ) {
                 Seguradora seguradora = Admin.getSeguradora(dados[3]);
                 ClientePJ cliente = (ClientePJ)seguradora.getCliente(dados[4]);
                 Frota frota = ((ClientePJ)cliente).getFrota(Integer.parseInt(dados[8]));
@@ -187,8 +181,7 @@ public class Carregar {
         ArquivoSinistro sinistros = new ArquivoSinistro();
         ArrayList<String[]> dadosSinistros = sinistros.lerDados();
         if (dadosSinistros != null && !dadosSinistros.isEmpty()) {
-            for (int i = 0; i < dadosSinistros.size(); i++) {
-                String dados[] = dadosSinistros.get(i);
+            for (String[] dados : dadosSinistros) {
                 Seguro seguro = null;
                 for (Seguradora seguradora : Admin.listaSeguradoras) {
                     Seguro seg;
