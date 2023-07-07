@@ -6,7 +6,7 @@ import java.util.StringJoiner;
 
 public class Sinistro {
     // Atributos
-    private static int contador_id = 1;
+    private static int contador_id;
     private final int id;
     private LocalDate data;
     private String endereco;
@@ -16,6 +16,9 @@ public class Sinistro {
     // Construtor
     public Sinistro(String data, String endereco, Condutor condutor, Seguro seguro) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        // Nao definir contador_id como 1 no comeco porque podem ter sinistros carregados dos arquivos
+        contador_id = condutor.getListaSinistros().size() + 1;
         this.id = contador_id++;
         this.data = LocalDate.parse(data, dtf); // Transformando String em LocalDate
         this.endereco = endereco;

@@ -7,7 +7,7 @@ import java.util.StringJoiner;
 
 public abstract class Seguro {
     // Atributos
-    private static int contador_id = 1;
+    private static int contador_id;
     private final int id;
     private Cliente cliente;
     private LocalDate dataInicio;
@@ -21,6 +21,8 @@ public abstract class Seguro {
     public Seguro(String dataInicio, String dataFim, Seguradora seguradora, Cliente cliente) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         
+        // Nao definir contador_id como 1 no comeco porque podem ter seguros carregados dos arquivos
+        contador_id = seguradora.getListaSeguros().size() + 1;
         this.id = contador_id++;
         this.dataInicio = LocalDate.parse(dataInicio, dtf); // Transformando String em LocalDate
         this.dataFim = LocalDate.parse(dataFim, dtf); // Transformando String em LocalDate
